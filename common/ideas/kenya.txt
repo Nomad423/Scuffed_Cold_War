@@ -1,0 +1,634 @@
+ideas = {
+	#wtf, who put this here
+	country = {	
+		viet_cong = {
+				picture = neutrality_idea
+				
+				allowed = { always = no }
+				allowed_civil_war = {  }
+				
+				modifier = { 
+					conscription_factor = -0.15
+					communism_drift = 0.001
+					stability_factor = -0.15
+				}
+				
+			}
+		Hoa_Hao_militias = {
+				picture = neutrality_idea
+				
+				allowed = { always = no }
+				allowed_civil_war = {  }
+				
+				modifier = { 
+					conscription_factor = -0.1
+					conservative_drift = 0.001
+					stability_factor = -0.1
+				}
+				
+			}
+		Cao_Dai_militias = {
+				picture = neutrality_idea
+				
+				allowed = { always = no }
+				allowed_civil_war = {  }
+				
+				modifier = { 
+					conscription_factor = -0.1
+					nationalist_drift = 0.001
+					stability_factor = -0.1
+				}
+				
+			}
+		pm_diem = {
+				picture = neutrality_idea
+				
+				allowed = { always = no }
+				allowed_civil_war = {  }
+				
+				modifier = { 
+					stability_factor = -0.10
+				}
+				
+			}
+	#actual Kenyan Ideas
+		idea_KEN_kakuzi_limited_co = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+				 MONTHLY_POPULATION = +0.04
+				
+			}
+			
+		}
+		idea_KEN_rea_vipingo_co = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+				 MONTHLY_POPULATION = +0.04
+				
+			}
+			
+		}
+		idea_KEN_unga_group_limited_co = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+				 MONTHLY_POPULATION = +0.04
+				
+			}
+			
+		}
+		idea_KEN_white_highland_settlement = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+				 MONTHLY_POPULATION = +0.05
+				
+			}
+			
+		}
+		idea_KEN_veteran_property_leases = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+				 MONTHLY_POPULATION = +0.05
+				
+			}
+			
+		}
+		idea_KEN_crackdown_on_student_groups = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+				 nationalist_drift = -0.02
+				
+			}
+			
+		}
+		idea_KEN_british_propoganda = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+				resistance_growth = -0.2
+				
+			}
+			
+		}
+		idea_KEN_disnformation_campaigns = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+				nationalist_drift = -0.03
+				
+			}
+			
+		}
+		idea_KEN_continue_indian_immigration = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+				MONTHLY_POPULATION = 0.02
+				
+			}
+			
+		}
+		idea_KEN_british_business = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+				consumer_goods_factor = -0.02
+				
+			}
+			
+		}
+		idea_KEN_Kenyan_Middle_Class = {
+			
+			picture = GFX_kenyan_middle_class
+
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.02
+				trade_opinion_factor = 0.15
+			}
+			
+		}
+		idea_KEN_Kenyan_resource_extraction = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				#local_resources_factor = 0.05
+			}
+			
+		}
+		idea_KEN_kenyan_consumerism = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.02
+				political_power_gain = 0.15
+			}
+			
+		}
+		idea_KEN_east_african_economc_hegemony = {
+	
+			picture = GFX_east_african_hegemony
+
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.03
+				political_power_gain = 0.30
+			}
+			
+		}
+		idea_KEN_trade_unions = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = 0.03
+				political_power_gain = -0.25
+			}
+			
+		}
+		idea_KEN_expand_the_air_lifts = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.02
+			}
+			
+		}
+		idea_KEN_high_government_salaries = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.05
+			}
+			
+		}
+		East_African_Federation = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.5
+				fascism_drift = -0.10
+				conservative_drift = -0.10
+				neutrality_drift = -0.10
+			}
+			
+		}
+		female_suffarage = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.10
+				fascism_drift = -0.05
+				conservative_drift = -0.05
+				neutrality_drift = -0.05
+			}
+			
+		}
+		idea_KEN_strong_executive_branch = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.5
+			}
+			
+		}
+		idea_KEN_extra_judicial_sentancing = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.5
+			}
+			
+		}
+		idea_KEN_not_yet_uhuru = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+			
+		}
+		idea_KEN_secularization = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = 0.05
+				research_speed_factor = 0.01
+			}
+			
+		}
+		idea_KEN_raise_recruitment_standards = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.1
+			}
+			
+		}
+		idea_KEN_fire_arm_production = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1 
+			}
+			
+		}
+		idea_KEN_federalism = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = +0.05
+				stability_factor = 0.05
+			}
+			
+		}
+		idea_KEN_anti_pan_africanism = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				nationalist_drift = -0.10 
+			}
+			
+		}
+		idea_KEN_rise_o_voices_of_kenya = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_dig_in = 1 
+				dig_in_speed = 1.0
+			}
+			
+		}
+		idea_KEN_war_communism = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				defence = 0.2
+				offence = 0.1 
+				industrial_capacity_factory = 0.2
+			}
+			
+		}
+		idea_KEN_state_religion = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = +0.35
+			}
+			
+		}
+		idea_KEN_kikuyu_ethno_state = {
+	
+			allowed = {
+			
+				original_tag = KEN
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = +0.35
+			}
+			
+		}
+		
+		}
+		materiel_manufacturer = {
+			designer = yes
+
+			cooper_motors_limited = {
+			
+				picture = coopers_motors_limited
+	
+				allowed = {
+					original_TAG = KEN
+				}
+				cost = 75
+	
+				available = {
+					OR = {
+						has_completed_focus = KEN_50s_cooper_motors_limited
+						date > 1960.1.1
+					}
+				}
+				
+				research_bonus = {
+					motorized_equipment = 0.20
+				}
+				
+				traits = { motorized_equipment_manufacturer }
+	
+				equipment_bonus = {
+					motorized_equipment = {
+						maximum_speed = 0.05
+					}
+					mechanized_equipment = {
+						maximum_speed = 0.05
+					}
+				}
+				
+			}
+		}
+		industrial_concern = {
+		
+		
+			kenyan_power_and_lighting_co = {
+			
+				picture = industrial_concern_1
+				
+				allowed = {
+					original_tag = KEN
+				}
+				available = {
+					OR = {
+						has_completed_focus = KEN_50s_founding_of_kenyan_power_and_lighting_co
+						date > 1960.1.1
+					}
+				}
+				
+				research_bonus = {
+					grid = 0.25
+					production = 0.20
+					rgo = 0.20
+					construction_tech = 0.15
+					
+				}
+				
+				traits = { industrial_concern }
+			}
+	
+					
+		}
+}

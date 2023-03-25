@@ -1,0 +1,371 @@
+Yugoslavia_influence_decisions = {
+
+YUG_proclaim_balkan_federation = {
+
+		icon = contract
+
+		allowed = {
+			tag = YUG
+		}
+
+	   available = {
+			 tag = YUG
+			 owns_state = 44
+			 owns_state = 1012
+			 owns_state = 909
+			 owns_state = 48
+			 owns_state = 1208
+			 owns_state = 212
+			 owns_state = 211
+			 owns_state = 77
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			tag = YUG
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = YUG_Greater_Balkan
+			news_event = yug.20
+			set_party_name = { 
+				ideology = trotskyism 
+				long_name = "Savez Komunista Balkana" 
+				name = "SKB" 
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	YUG_Apply_to_Join_NATO = {
+
+		icon = contract
+		allowed = {
+			tag = YUG
+		}
+		
+		visible = {
+			has_completed_focus = YUG_Accept_Diljas_Critique
+		}
+
+		available = {
+			tag = YUG
+			
+		}
+		
+		complete_effect = {
+			USA = { country_event = YUG_NATO.1 }
+		}
+		cost = 0
+
+		fire_only_once = yes
+		selectable_mission = no
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Spread_Titoist_Propaganda_ALB = {
+
+		icon = contract
+
+		available = {
+			tag = YUG
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = influence_gain_100
+			ALB = {
+				add_popularity = {
+					ideology = trotskyism 
+					popularity = 0.01
+				}
+				for_loop_effect = {
+					end = influence_array^num
+					value = v
+					if = {
+						limit = {
+							check_variable = { influence_array^v = PREV }
+						}
+						add_to_variable = { influence_array_val^v = 150 }
+						set_country_flag = found
+					}
+				}
+				if = {
+					limit = { NOT = { has_country_flag = found } }
+						add_to_array = { influence_array = PREV.id }
+						add_to_array = { influence_array_val = 150 }
+				}
+				clr_country_flag = found
+				recalculate_influence = yes				
+			}
+		}
+
+		cost = 100
+		days_re_enable = 365
+
+		fire_only_once = no
+		selectable_mission = no
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Spread_Titoist_Propaganda_BUL = {
+
+		icon = contract
+
+		available = {
+			tag = YUG
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = influence_gain_100
+			BUL = {
+				add_popularity = {
+					ideology = trotskyism 
+					popularity = 0.01
+				}
+				for_loop_effect = {
+					end = influence_array^num
+					value = v
+					if = {
+						limit = {
+							check_variable = { influence_array^v = PREV }
+						}
+						add_to_variable = { influence_array_val^v = 100 }
+						set_country_flag = found
+					}
+				}
+				if = {
+					limit = { NOT = { has_country_flag = found } }
+						add_to_array = { influence_array = PREV.id }
+						add_to_array = { influence_array_val = 100 }
+				}
+				clr_country_flag = found
+				recalculate_influence = yes				
+			}
+		}
+
+		cost = 100
+		days_re_enable = 365
+
+		fire_only_once = no
+		selectable_mission = no
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Spread_Titoist_Propaganda_PDG = {
+
+		icon = contract
+
+		available = {
+			tag = YUG
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = influence_gain_100
+			PDG = {
+				add_popularity = {
+					ideology = trotskyism 
+					popularity = 0.01
+				}
+				for_loop_effect = {
+					end = influence_array^num
+					value = v
+					if = {
+						limit = {
+							check_variable = { influence_array^v = PREV }
+						}
+						add_to_variable = { influence_array_val^v = 100 }
+						set_country_flag = found
+					}
+				}
+				if = {
+					limit = { NOT = { has_country_flag = found } }
+						add_to_array = { influence_array = PREV.id }
+						add_to_array = { influence_array_val = 100 }
+				}
+				clr_country_flag = found
+				recalculate_influence = yes				
+			}
+		}
+
+		cost = 100
+		days_re_enable = 365
+
+		fire_only_once = no
+		selectable_mission = no
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Integrate_BUL = {
+
+		icon = contract
+
+		available = {
+			tag = YUG
+			country_exists = BUL
+			has_war = no
+			custom_trigger_tooltip = {
+				tooltip = Integration_YUG
+				check_variable = { BUL.influence_array^0 = ROOT }
+				check_variable = { BUL.influence_array_calc^0 > 0.74 }
+			}
+		}
+		
+		complete_effect = {
+			SOV = {
+				country_event = {
+					id = yug_annex.1
+					days = 1
+				}
+			}
+		}
+
+		cost = 0
+		days_re_enable = 0
+
+		fire_only_once = yes
+		selectable_mission = no
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Intervene_in_the_Greek_Civil_War = {
+
+		icon = contract
+
+		available = {
+			tag = YUG
+			country_exists = PDG
+			country_exists = GRE
+			PDG = { NOT = { is_in_faction_with = SOV } }
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				news_event = YUG_GREEK_CIVIL_WAR.1
+			}
+			declare_war_on = {
+				target = GRE
+				type = puppet_wargoal_focus
+			}
+			PDG = {
+				for_loop_effect = {
+					end = influence_array^num
+					value = v
+					if = {
+						limit = {
+							check_variable = { influence_array^v = PREV }
+						}
+						add_to_variable = { influence_array_val^v = 500 }
+						set_country_flag = found
+					}
+				}
+				if = {
+					limit = { NOT = { has_country_flag = found } }
+						add_to_array = { influence_array = PREV.id }
+						add_to_array = { influence_array_val = 500 }
+				}
+				clr_country_flag = found
+				recalculate_influence = yes				
+			}
+		}
+
+		cost = 0
+		days_re_enable = 0
+
+		fire_only_once = yes
+		selectable_mission = no
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Integrate_ALB = {
+
+		icon = contract
+
+		available = {
+			tag = YUG
+			country_exists = ALB
+			has_war = no
+			custom_trigger_tooltip = {
+				tooltip = Integration_YUG
+				check_variable = { ALB.influence_array^0 = ROOT }
+				check_variable = { ALB.influence_array_calc^0 > 0.74 }
+			}
+		}
+		
+		complete_effect = {
+			SOV = {
+				country_event = {
+					id = yug_annex.2
+					days = 1
+				}
+			}
+		}
+
+		cost = 0
+		days_re_enable = 0
+
+		fire_only_once = yes
+		selectable_mission = no
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Integrate_PDG = {
+
+		icon = contract
+
+		available = {
+			tag = YUG
+			country_exists = PDG
+			has_war = no
+			custom_trigger_tooltip = {
+				tooltip = Integration_YUG
+				check_variable = { PDG.influence_array^0 = ROOT }
+				check_variable = { PDG.influence_array_calc^0 > 0.74 }
+			}
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				news_event = YUG_INTEGRATION.1
+			}
+			annex_country = {
+				target = PDG
+				transfer_troops = yes
+			}
+			every_owned_state = {
+				limit = { is_core_of = PDG }
+				add_core_of = YUG
+			}
+		}
+
+		cost = 0
+		days_re_enable = 0
+
+		fire_only_once = yes
+		selectable_mission = no
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

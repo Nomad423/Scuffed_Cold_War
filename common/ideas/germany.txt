@@ -1,0 +1,415 @@
+ideas = {
+
+	country = {
+		sour_loser = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.5
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		
+		general_staff = {
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_Factor = 0.05
+				planning_speed = 0.25
+			}
+		}
+
+		triumphant_will = {
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			modifier = {
+				political_power_gain = 0.1
+				drift_defence_factor = 0.5
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		
+		GER_air_innovations_2_idea = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			picture = generic_air_bonus
+		
+			research_bonus = {
+				battlefield_support_tree = 0.10
+				jet_technology = 0.10
+			}
+
+		}	
+		WGR_bav_nationalist = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			picture = generic_democratic_drift_bonus
+		
+			modifier = {
+				nationalist_drift = 0.12
+			}
+
+		}
+		GER_rocketry_idea = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			research_bonus = {
+				rocketry = 0.10
+			}
+
+			picture = generic_research_bonus
+	
+			modifier = {
+				production_speed_rocket_site_factor = 0.15
+			}
+	
+		}
+
+		rhineland_challenge_met = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+			
+			picture = generic_democratic_drift_bonus
+
+			modifier = {
+				stability_factor = -0.10
+			}
+		}
+
+	}
+	
+
+	
+	# TECHNOLOGY
+	tank_manufacturer = { 
+		henschel = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { fast_tank_manufacturer }
+			
+
+		}
+		
+		GER_MAN = {
+
+			picture = GER_MAN
+			
+			allowed = {
+				original_tag = GER
+			}
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { medium_tank_manufacturer }
+
+
+		}
+	}
+	
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		germaniawerft = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			equipment_bonus = {
+				
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+		}
+		
+		blohm_und_voss = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+			equipment_bonus = {
+				
+			}
+			
+		}	
+	}
+	
+	aircraft_manufacturer = { 
+			
+		designer = yes
+		
+		messerschmitt = {
+			
+			allowed = {
+				original_tag = GER
+			}
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				
+			}
+			
+
+		}
+		
+		junkers = { 
+			allowed = {
+				original_tag = GER
+			}
+						
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { CAS_manufacturer }
+			
+			equipment_bonus = {
+				
+			}
+			
+
+		}	
+		
+
+		focke_wulf = { 
+
+			
+			allowed = {
+				original_tag = GER
+			}
+			
+						
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+
+		}
+		
+		heinkel = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+			
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+
+		}
+		
+		dornier = {
+
+			allowed = {
+				original_tag = GER
+			}
+			
+						
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+
+		}	
+
+
+	}
+	
+	industrial_concern = {
+		
+		ig_faben = {
+			
+			allowed = {
+				original_tag = GER
+			}
+			
+			research_bonus = {
+				industry = 0.05
+				synth_resources = 0.1
+			}
+			
+			traits = { refinery_concern }
+			
+
+		}
+		
+		krupp = {
+			
+			allowed = {
+				original_tag = GER
+			}
+			
+			research_bonus = {
+				industry = 0.10
+				
+			}
+			
+			traits = { industrial_concern }
+		}
+
+		siemens = {
+			
+			allowed = {
+				original_tag = GER
+			}
+			
+			research_bonus = {
+				electronics = 0.10
+			}
+			
+			traits = { electronics_concern }
+		}		
+	}
+	
+	materiel_manufacturer = {
+		
+		designer = yes
+		
+		rheinmetall = {
+			
+			allowed = {
+				original_tag = GER
+			}
+			
+			research_bonus = {
+				artillery = 0.10
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+				# +10% arty/at/aa research speed
+			}
+		}
+		
+		mauser = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+
+		}
+		
+		
+
+		
+		opel = {
+			
+			allowed = {
+				original_tag = GER
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.10
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+	
+
+
+
+}

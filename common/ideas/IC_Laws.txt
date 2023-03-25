@@ -1,0 +1,2162 @@
+ideas = {
+	hidden_ideas = {
+		IMF_Recent_Change = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+		}
+		policy_union_temp_0 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				#min_export= 0.10
+				production_factory_max_efficiency_factor = -0.05
+				drift_defence_factor = 0.10
+			}
+		}
+
+		policy_union_temp_1 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = -0.025
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+		policy_union_temp_2 = {
+			removal_cost = -1
+			allowed = { always = no } 
+
+			modifier = {
+				#stability_factor = 0.05
+				#production_factory_efficiency_gain_factor = 0.1
+				#production_factory_max_efficiency_factor = 0.075
+				#min_export= -0.05
+				political_power_gain = 0.1 
+			}
+		}
+		policy_union_temp_3 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				drift_defence_factor = 0.05
+
+				stability_factor = 0.025
+				production_speed_buildings_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+
+			}
+		}
+		policy_union_temp_4 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = 0.05
+				production_speed_buildings_factor = -0.1
+				political_power_factor = 0.2
+				#min_export= -0.10
+				drift_defence_factor = 0.10
+
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+
+			}
+		}
+		policy_saga_temp_0 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.15
+				drift_defence_factor = 0.25
+				consumer_goods_factor = 0.015
+			}
+		}
+		policy_saga_temp_1 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+				drift_defence_factor = 0.15
+				consumer_goods_factor = 0.01
+			}
+		}
+		policy_saga_temp_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+			}
+		}
+		policy_saga_temp_3 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				war_support_factor = 0.025
+				conscription_factor = 0.025
+			}
+		}
+		policy_saga_temp_4 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				war_support_factor = 0.1
+				conscription_factor = 0.05
+				consumer_goods_factor = -0.01
+			}
+		}
+		policy_saga_temp_4a = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				war_support_factor = 0.15
+				conscription_factor = 0.05
+				consumer_goods_factor = -0.015
+			}
+		}
+		policy_voting_temp_0 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = -0.1
+				drift_defence_factor = 0.5	
+				stability_factor = -0.1
+			}
+		}
+		policy_voting_temp_1 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = -0.05
+				drift_defence_factor = 0.25	
+				stability_factor = -0.05
+			}
+		}
+		policy_voting_temp_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = 0.15
+				drift_defence_factor = 0.15	
+				stability_factor = -0.025
+			}
+		}
+		policy_voting_temp_3 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = 0.15
+				drift_defence_factor = -0.15	
+				stability_factor = 0.05
+			}
+		}
+		policy_religion_temp_0 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			modifier = {
+				war_support_factor = 0.25
+				justify_war_goal_time = -0.20
+				stability_factor = 0.15
+				MONTHLY_POPULATION = 0.3
+				research_speed_factor = -0.2
+				drift_defence_factor = 0.25
+			}
+		}
+		policy_religion_temp_0a = { 
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			modifier = {
+				war_support_factor = 0.15
+				justify_war_goal_time = -0.13
+				MONTHLY_POPULATION = -0.15
+				drift_defence_factor = 0.25
+			}
+		}
+		policy_religion_temp_1 = { 
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.2
+				MONTHLY_POPULATION = 0.25
+				research_speed_factor = -0.15
+				drift_defence_factor = 0.15
+			}
+		}
+		policy_religion_temp_2 = { 
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			modifier = {
+				war_support_factor = 0.1
+				MONTHLY_POPULATION = 0.1
+				research_speed_factor = -0.1
+				drift_defence_factor = 0.15
+			}
+		}
+		policy_religion_temp_3 = { 
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			modifier = {
+				stability_factor = 0.1
+				research_speed_factor = 0.01
+			}
+		}
+		policy_religion_temp_3a = { 
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			modifier = {
+				MONTHLY_POPULATION = -0.1
+				research_speed_factor = 0.02
+				drift_defence_factor = -0.1
+			}
+		}
+		policy_media_temp_0 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			modifier = {
+				political_power_gain = 0.2
+				war_support_factor = 0.15
+				drift_defence_factor = 0.35
+				stability_factor = -0.1
+				#+20% CPI cost
+			}
+		}
+		policy_media_temp_1 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			modifier = {
+				political_power_gain = 0.125
+				war_support_factor = 0.1
+				drift_defence_factor = 0.25
+				stability_factor = -0.05
+				#+10% CPI Cost
+			}
+		}
+		policy_media_temp_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			modifier = {
+				political_power_gain = 0.05
+				war_support_factor = 0.05
+				drift_defence_factor = 0.15
+			}
+		}
+		policy_media_temp_3 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			modifier = {
+				drift_defence_factor = -0.30
+				stability_factor = 0.05
+			}
+		}
+
+		policy_media_temp_3a = {
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			modifier = {
+				drift_defence_factor = -0.20
+				production_speed_office_park_factor = 0.15
+				war_support_factor = 0.10
+				stability_factor = -0.10
+			}
+		}
+		policy_women_temp_0 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.15
+				MONTHLY_POPULATION = 0.45
+				conscription_factor = -0.15
+				research_speed_factor = -0.05
+				stability_factor = 0.1
+			}
+		}
+		policy_women_temp_1 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.1
+				MONTHLY_POPULATION = 0.30
+				conscription_factor = -0.10
+				stability_factor = 0.05
+			}
+		}
+		policy_women_temp_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.15
+				conscription_factor = -0.05
+			}
+		}
+		policy_women_temp_3 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			rule = {
+				can_generate_female_aces = yes
+			}
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				MONTHLY_POPULATION = -0.2
+				conscription_factor = 0.10
+			}
+		}
+		policy_women_temp_4 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			rule = {
+				can_generate_female_aces = yes
+			}
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.2
+				MONTHLY_POPULATION = -0.25
+				conscription_factor = 0.15
+				stability_factor = -0.05
+			}
+		}
+		policy_women_temp_4a = {
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			rule = {
+				can_generate_female_aces = yes
+			}
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.25
+				MONTHLY_POPULATION = -0.30
+				conscription_factor = 0.25
+				stability_factor = -0.1
+			}
+		}
+	policy_minorities_temp_0 = { 
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+		modifier = {
+			conscription_factor = -0.15
+			production_speed_state_infrastructure_factor = 0.35
+			production_speed_water_infrastructure_factor = 0.35
+			production_speed_agri_industrial_complex_factor = 0.35
+			war_support_factor = 0.15
+			drift_defence_factor = 0.45
+			#Stability and production penalties in segregationValue that is raised with this idea
+		}
+	}
+	policy_minorities_temp_1 = { 
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+		modifier = {
+			conscription_factor = -0.10
+			production_speed_state_infrastructure_factor = 0.20
+			production_speed_water_infrastructure_factor = 0.20
+			production_speed_agri_industrial_complex_factor = 0.20
+			war_support_factor = 0.1
+			drift_defence_factor = 0.30
+			#Stability and production penalties in segregationValue that is raised with this idea
+		}
+	}
+	policy_minorities_temp_2 = { 
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+		modifier = {
+			conscription_factor = -0.05
+			production_speed_state_infrastructure_factor = 0.05
+			production_speed_water_infrastructure_factor = 0.05
+			production_speed_agri_industrial_complex_factor = 0.05
+			war_support_factor = 0.05
+			#Stability and production penalties in segregationValue that is raised with this idea
+		}
+	}
+	policy_minorities_temp_3 = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+		modifier = {
+			conscription_factor = 0.05
+			research_speed_factor = 0.05
+			production_speed_office_park_factor = 0.10
+			drift_defence_factor = -0.1
+			stability_factor = 0.10
+		}
+	}
+	policy_minorities_temp_3a = { 
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+		modifier = {
+			research_speed_factor = 0.075
+			production_speed_office_park_factor = 0.20
+			war_support_factor = -0.1
+			drift_defence_factor = -0.2
+		}
+	}
+
+	Cut_Interest_Rates = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			production_factory_max_efficiency_factor = 0.075
+			industrial_capacity_factory = 0.1
+			industrial_capacity_dockyard = 0.1
+			production_speed_buildings_factor = -0.2
+		}
+	}
+	weakened_professional_and_bazaari_classes = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			production_speed_buildings_factor = 0.25
+		}
+	}
+	Chehelom_Massacres = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			conscription = -0.10
+			production_speed_buildings_factor = -0.35
+			stability_factor = -0.25
+		}
+	}
+	Chehelom_Protests = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			production_speed_buildings_factor = -0.20
+			stability_factor = -0.05
+		}
+	}
+	intensifying_protests = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			production_speed_buildings_factor = -0.25
+			stability_factor = -0.10
+		}
+	}
+	intensified_protests = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			production_speed_buildings_factor = -0.30
+			stability_factor = -0.125
+			production_factory_max_efficiency_factor = -0.10
+		}
+	}
+	crippling_protests = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			production_speed_buildings_factor = -0.40
+			production_factory_max_efficiency_factor = -0.25
+			stability_factor = -0.15
+		}
+	}
+	Radical_Revolts = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			conscription = -0.20
+			war_support_factor = -0.05
+			stability_factor = -0.05
+		}
+	}
+	Disintegrating_Army = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			conscription = -0.10
+			war_support_factor = -0.15
+		}
+	}
+	crippling_protests_alt = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			production_speed_buildings_factor = -0.30
+			production_factory_max_efficiency_factor = -0.25
+			stability_factor = -0.15
+		}
+	}
+		policy_taxrate_temp_1 = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			
+			modifier = {
+				#15% Income
+				production_factory_max_efficiency_factor = 0.10
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		policy_taxrate_temp_2 = { 
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			modifier = {
+				#25% Income
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = -0.10
+			}
+		}
+		policy_taxrate_temp_3 = { 
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			
+			modifier = {
+				#35% Income
+			}
+		}
+		policy_taxrate_temp_4 = { 
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			
+			modifier = {
+				#45% Income
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		policy_taxrate_temp_5 = { 
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			
+			modifier = {
+				#55% Income
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.10
+				industrial_capacity_dockyard = -0.10
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		corruption_idea0 = { 
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			
+			modifier = {
+				#Nothing
+			}
+		}
+	}
+	country = {
+		port_corruption = {
+			picture = Industrial_Corruption
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				#min_export= 0.15
+				stability_factor = -0.10
+				production_speed_buildings_factor = -0.10
+			}
+		}
+		import_restrictions = {
+			removal_cost = -1
+			picture = GFX_idea_can_wartime_prices_and_trade_board
+			allowed = {
+				always = no
+			}
+			modifier = {
+				#min_export= -0.25
+				production_speed_buildings_factor = -0.05
+			}
+		}
+		IMF_increase_exports = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				#min_export= 0.25
+			}
+		}
+		british_air_advisors = {
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+				
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+		}
+		american_air_advisors = {
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+				
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+		}
+		antiquated_infrastructure = { 
+			removal_cost = -1
+			picture = Antiquated_Infrastructure
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				planning_speed = -0.1
+				army_speed_factor = -0.1
+				production_speed_buildings_factor = -0.2
+			}
+		}
+		SOV_seventh_five_year_plan = { 
+			removal_cost = -1
+			
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_speed_agri_industrial_complex_factor = 0.25
+				production_speed_synthetic_refinery_factor = 0.25
+				production_speed_office_park_factor = 0.25
+				consumer_goods_factor = 0.02
+			}
+		}
+		
+		fight_unemployment = { 
+			removal_cost = -1
+			
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.025
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		Loi_Royer = { 
+			removal_cost = -1
+			
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_speed_industrial_complex_factor = -0.15
+				production_speed_synthetic_refinery_factor = -0.05
+				production_speed_office_park_factor = 0.10 
+			}
+		}
+		black_market1 = { 
+			removal_cost = -1
+			
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_speed_industrial_complex_factor = -0.025
+				production_speed_infrastructure_factor = -0.025
+				production_speed_synthetic_refinery_factor = -0.025
+				production_factory_max_efficiency_factor = -0.025
+			}
+
+
+		}
+		Favor_Quality_Farmland = { 
+			removal_cost = -1
+			
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_speed_agri_industrial_complex_factor = -0.5
+				
+			}
+
+
+		}
+		black_market2 = { 
+			removal_cost = -1
+			
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_speed_industrial_complex_factor = -0.05
+				production_speed_infrastructure_factor = -0.05
+				production_speed_synthetic_refinery_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+		black_market3 = { 
+			removal_cost = -1
+			
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_speed_industrial_complex_factor = -0.075
+				production_speed_infrastructure_factor = -0.075
+				production_speed_synthetic_refinery_factor = -0.075
+				production_factory_max_efficiency_factor = -0.075
+				stability_factor = 0.025
+			}
+		}
+		black_market4 = { 
+			removal_cost = -1
+			
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_infrastructure_factor = -0.1
+				production_speed_synthetic_refinery_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				stability_factor = 0.05
+			}
+		}
+		black_market5 = { 
+			removal_cost = -1
+			
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_speed_industrial_complex_factor = -0.125
+				production_speed_infrastructure_factor = -0.125
+				production_speed_synthetic_refinery_factor = -0.125
+				production_factory_max_efficiency_factor = -0.125
+				stability_factor = 0.075
+				political_power_gain = 0.15
+			}
+		}
+		Khrushchyovka = {
+			allowed = { always = no } 
+			modifier = {
+				political_power_cost = -0.10
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		agri_subsidies = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = 0.01
+				production_speed_agri_industrial_complex_factor = 0.15
+
+				stability_factor = 0.025
+			}
+		}
+		agricultural_recovery = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.15
+				production_speed_agri_industrial_complex_factor = -0.15
+
+				stability_factor = -0.05
+			}
+		}
+		agricultural_recovery_1 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = -0.1
+				production_speed_agri_industrial_complex_factor = -0.1
+				
+				stability_factor = -0.04
+			}
+		}
+	
+		agricultural_dysfunction_0 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_agri_industrial_complex_factor = -0.25
+
+				stability_factor = -0.05
+			}
+		}
+		agricultural_dysfunction_1 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_agri_industrial_complex_factor = -0.20
+				
+				stability_factor = -0.04
+			}
+		}
+		agricultural_dysfunction_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_agri_industrial_complex_factor = -0.15
+				
+				stability_factor = -0.03
+			}
+		}
+		agricultural_dysfunction_3 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_agri_industrial_complex_factor = -0.10
+				
+				stability_factor = -0.02
+			}
+		}
+		agricultural_dysfunction_4 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_agri_industrial_complex_factor = -0.05
+				
+				stability_factor = -0.01
+			}
+		}
+
+		Failing_Health_System_5 = {
+			picture = Antiquated_Health_System
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				MONTHLY_POPULATION = -0.25
+				consumer_goods_factor = 0.05
+			}
+		}
+		Failing_Health_System_4 = {
+			picture = Antiquated_Health_System
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				MONTHLY_POPULATION = -0.2
+				consumer_goods_factor = 0.04
+			}
+		}
+		
+		Failing_Health_System_3 = {
+			picture = Antiquated_Health_System
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				MONTHLY_POPULATION = -0.15
+				consumer_goods_factor = 0.03
+			}
+		}
+		
+		Failing_Health_System_2 = {
+			picture = Antiquated_Health_System
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				MONTHLY_POPULATION = -0.1
+				consumer_goods_factor = 0.02
+			}
+		}
+		
+		Failing_Health_System_1 = {
+			picture = Antiquated_Health_System
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				MONTHLY_POPULATION = -0.05
+				consumer_goods_factor = 0.01
+			}
+		}
+	
+		#Government Legislative Policies### Needs to be moved to hidden
+		Mandatory_National_Serivce = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = -0.25
+				war_support_factor = 0.05
+				conscription = 0.05
+			}
+		}
+		
+		Anti_Racial_Discrimination = {
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = 0.03
+			}
+		}
+		tax_break = {
+			removal_cost = -1
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.05
+			}		
+		}
+		Compulsory_Religous_Attendance = {
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.10
+				drift_defence_factor = 0.15
+				MONTHLY_POPULATION = 0.15
+				research_speed_factor = -0.05
+			}
+		}
+		archaic_legal_system = {
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = -0.10
+				drift_defence_factor = -0.25
+			}
+		}
+		Secret_Courts = {
+			allowed = { always = no } 
+			modifier = {
+				war_support_factor = 0.03
+				drift_defence_factor = 0.2
+			}
+		}
+		
+		Welfare_Fraud_Agency = {
+			allowed = { always = no } 
+			modifier = {
+				political_power_gain = -0.05
+				consumer_goods_factor = -0.01
+			}
+		}
+	
+		####END
+		rural_development_spirit = {
+			removal_cost = -1
+			allowed = { always = no } 
+
+			research_bonus = {
+				organic = 0.10
+				ecoenergy = 0.05
+			}
+			modifier = {
+			}
+		}
+		Opium_Banned = {
+			allowed = { always = no } 
+			modifier = {
+				drift_defence_factor = 0.02
+				stability_factor = 0.05
+				conscription_factor = 0.02
+			}
+		}
+		Agroville_Program = {
+			allowed = { always = no } 
+			modifier = {
+				drift_defence_factor = 0.25
+				stability_factor = -0.15
+				army_core_defence_factor = 0.05
+			}
+		}
+		antiquated_agricultural_sector_0 = {
+		    picture = Antiquated_Agri
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_factory_max_efficiency_factor = -0.15
+				industrial_capacity_factory = -0.30
+				production_speed_buildings_factor = -0.25
+
+				stability_factor = -0.05
+			}
+		}
+		antiquated_agricultural_sector_1 = {
+		    picture = Antiquated_Agri
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_factory_max_efficiency_factor = -0.125
+				industrial_capacity_factory = -0.25
+				production_speed_buildings_factor = -0.20
+				
+				stability_factor = -0.04
+			}
+		}
+		antiquated_agricultural_sector_2 = {
+		    picture = Antiquated_Agri
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_factory_max_efficiency_factor = -0.10
+				industrial_capacity_factory = -0.20
+				production_speed_buildings_factor = -0.15
+				
+				stability_factor = -0.03
+			}
+		}
+		antiquated_agricultural_sector_3 = {
+		    picture = Antiquated_Agri
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_factory_max_efficiency_factor = -0.075
+				industrial_capacity_factory = -0.15
+				production_speed_buildings_factor = -0.10
+				
+				stability_factor = -0.02
+			}
+		}
+		antiquated_agricultural_sector_4 = {
+		    picture = Antiquated_Agri
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = -0.10
+				production_speed_buildings_factor = -0.05
+				
+				stability_factor = -0.01
+			}
+		}
+		papal_influence_3 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = 0.10
+				MONTHLY_POPULATION = 0.25
+				research_speed_factor = -0.075
+			}
+		}
+		papal_influence_2 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = 0.075
+				MONTHLY_POPULATION = 0.15
+				research_speed_factor = -0.05
+			}
+		}
+		papal_influence_1 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = 0.05
+				MONTHLY_POPULATION = 0.05
+				research_speed_factor = -0.025
+			}
+		}
+		Resource_Conservation_Act_idea = { 
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {	#Resource Bonus
+			}
+		}
+		
+		Mass_Transit_Revitilization_Act_idea = { 
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_infrastructure_factor = 0.05
+				production_speed_state_infrastructure_factor = 0.05
+			}
+		}
+		Surface_Transportation_Assistance_Act_idea = { 
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_infrastructure_factor = 0.05
+				production_speed_state_infrastructure_factor = 0.05
+			}
+		}
+		Individuals_with_Disabilities_Act_idea = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = 0.04
+				production_speed_buildings_factor = -0.1
+				MONTHLY_POPULATION = 0.15
+			}
+		}
+		American_Disabilities_Act_idea = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = 0.02
+				production_speed_buildings_factor = -0.05
+				MONTHLY_POPULATION = 0.05
+			}
+		}
+		Emergency_Natural_Gas_Act_idea = { 
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				max_fuel_factor = 0.10
+			}
+		}
+		Community_Reinvestment_Act_idea = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		Regulatory_Flexibility_Act_idea = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		Bayh_Dole_Act_idea = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_office_park_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.025
+			}
+		}
+		Copyright_Act_idea = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_office_park_factor = 0.10
+				research_speed_factor = -0.01
+			}
+		}
+		CERCLA_Act_idea = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_buildings_factor = -0.10
+				political_power_gain = 0.10
+				research_speed_factor = 0.01
+				stability_factor = 0.02
+			}
+		}
+		Federal_Fire_Prevention_Act_idea = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				political_power_gain = 0.10
+				stability_factor = 0.01
+			}
+		}
+		Endangered_Species_Act_idea = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				production_speed_industrial_complex_factor = -0.10
+				political_power_gain = 0.15
+				stability_factor = 0.03
+				research_speed_factor = 0.02
+			}
+		}
+		Comprehensive_Education_and_Training_Act_idea = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_office_park_factor = 0.10
+			}
+		}
+		Law_Manpower_Development_and_Training_Act = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_office_park_factor = 0.10
+			}
+		}
+		Public_Works_Contracts = { 
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				production_speed_state_infrastructure_factor = 0.15
+				production_speed_water_infrastructure_factor = 0.15
+			}
+		}
+		French_Public_Works_Contracts = { 
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				production_speed_state_infrastructure_factor = 0.15
+				production_speed_water_infrastructure_factor = 0.15
+			}
+		}
+		infrastructure_development = { 
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				production_speed_state_infrastructure_factor = 0.15
+				production_speed_water_infrastructure_factor = 0.15
+			}
+		}
+		local_infrastructure_development = { 
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				production_speed_state_infrastructure_factor = 0.15
+			}
+		}
+		public_infrastructure_development = { 
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_state_infrastructure_factor = 0.125
+				production_speed_water_infrastructure_factor = 0.125
+			}
+		}
+		infrastructure_privitization = { 
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_state_infrastructure_factor = -0.1
+				production_speed_water_infrastructure_factor = 0.1
+				stability_factor = -0.02
+			}
+		}
+		river_infrastructure_development = { 
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_water_infrastructure_factor = 0.2
+			}
+		}
+		Przodownik_Pracy = {
+			removal_cost = -1
+			picture = przodownik_pracy
+			allowed = { always = no } 
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		industrial_development = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+		expanded_civil_service = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_state_infrastructure_factor = 0.1
+				production_speed_water_infrastructure_factor = 0.1	
+			}
+		}
+		industrial_subsidies = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_state_infrastructure_factor = 0.1
+				production_speed_water_infrastructure_factor = 0.1	
+			}
+		}
+		loans_for_craftsman = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_industrial_complex_factor = 0.25
+			}
+		}
+		infrastructure_grants = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				production_speed_state_infrastructure_factor = 0.15
+				production_speed_water_infrastructure_factor = 0.15
+			}
+		}
+		Denuclearization = {
+			allowed = {
+				
+				always = no
+			}
+
+			removal_cost = -1
+		
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.25
+				production_speed_nuclear_reactor_factor = -1
+				nuclear_production_factor = -9999
+			}
+		}
+		Industrial_Reconstruction_0 = {
+			allowed = {
+				
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.10
+				mobilization_speed = -0.15
+				political_power_gain = -0.25
+				industrial_capacity_factory = -0.15
+				consumer_goods_factor = 0.1
+				production_factory_max_efficiency_factor = -0.05
+				industry_repair_factor = 0.5
+			}
+		}
+		
+		Industrial_Reconstruction_1 = {
+			allowed = {
+				
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.08
+				mobilization_speed = -0.1
+				political_power_gain = -0.25
+				industrial_capacity_factory = -0.15
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = -0.05
+				industry_repair_factor = 0.45
+			}
+		}
+		
+		Industrial_Reconstruction_2 = {
+			allowed = {
+				
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.06
+				mobilization_speed = -0.1
+				political_power_gain = -0.25
+				industrial_capacity_factory = -0.1
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = -0.05
+				industry_repair_factor = 0.4
+			}
+		}
+		
+		Industrial_Reconstruction_3 = {
+			allowed = {
+				
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.06
+				mobilization_speed = -0.05
+				political_power_gain = -0.2
+				industrial_capacity_factory = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				industry_repair_factor = 0.35
+			}
+		}
+		
+		Industrial_Reconstruction_4 = {
+			allowed = {
+				
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.08
+				war_support_factor = -0.04
+				mobilization_speed = -0.05
+				political_power_gain = -0.1
+				production_factory_max_efficiency_factor = -0.05
+				industry_repair_factor = 0.3
+			}
+		}
+		Industrial_Reconstruction_5 = {
+			allowed = {
+				
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.04
+				war_support_factor = -0.04
+				political_power_gain = -0.05
+				industry_repair_factor = 0.15
+			}
+		}
+		Industrial_Reconstruction_kmt = {
+			allowed = {
+				
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				political_power_gain = -0.05
+				industry_repair_factor = 0.25
+			}
+		}	
+		veteran_affairs_generic = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				experience_loss_factor = -0.1
+			}
+		}
+		vet_aff_and_relief = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				experience_loss_factor = -0.1
+				industry_free_repair_factor = 0.25
+			}
+		}
+	
+		more_mil_staff = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				army_org_factor = 0.02
+			}
+		}
+		even_more_mil_staff = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				army_org_factor = 0.04
+			}
+		}
+		cheap_army = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				consumer_goods_factor = -0.01
+			}
+		}
+		cheap_ass_army = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		creative_education = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				research_speed_factor = 0.02
+				consumer_goods_factor = 0.01
+			}
+		}
+		academic_state = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				research_speed_factor = 0.04
+				consumer_goods_factor = 0.02
+			}
+		}
+		marxist_escuelas = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				research_speed_factor = 0.025
+				consumer_goods_factor = 0.02
+				drift_defence_factor = 0.5
+				conscription_factor = 0.05
+			}
+		}
+		more_escuelas = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				research_speed_factor = 0.02
+				consumer_goods_factor = 0.01
+			}
+		}
+		patriotic_schools = {
+			removal_cost = -1
+			allowed = { always = no } 
+			picture = GFX_Invest_in_Education
+			modifier = {
+				research_speed_factor = 0.02
+				consumer_goods_factor = 0.01
+				stability_factor = 0.05
+			}
+		}
+		military_colleges = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				conscription = 0.01
+				conscription_factor = 0.05
+				war_support_factor = 0.10
+			}
+		}
+	
+		liberalized_communism = {
+			removal_cost = -1
+			allowed = { always = no } 
+			research_bonus = { industry = 0.025 }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		activate_communism = {
+			removal_cost = -1
+			allowed = { always = no } 
+			research_bonus = { industry = 0.05 }
+		}
+		communism_intensifies = {
+			removal_cost = -1
+			allowed = { always = no } 
+			research_bonus = { industry = 0.05 }
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+		activate_capitalism = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		capitalism_intensifies = {
+			removal_cost = -1
+			allowed = { always = no } 
+			picture = GFX_Capitalism
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
+	
+		corporate_subsidies = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				research_speed_factor = 0.01
+				consumer_goods_factor = 0.01
+				political_power_factor = 0.05
+			}
+		}
+		
+		health_subsidies = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				research_speed_factor = 0.01
+			}
+		}
+		socialism_healthcare = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				MONTHLY_POPULATION = 0.15
+				consumer_goods_factor = 0.025
+			}
+		}
+		communism_healthcare = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				MONTHLY_POPULATION = 0.2
+				consumer_goods_factor = 0.03
+			}
+		}
+		medical_science = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				research_speed_factor = 0.01
+			}
+		}
+		medical_apotheosis = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				research_speed_factor = 0.02
+			}
+		}
+		reduce_medical_bills = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				consumer_goods_factor = -0.01
+			}
+		}
+		privatized_healthcare = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+		
+		universal_basic_income = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				consumer_goods_factor = 0.01
+				production_speed_buildings_factor = 0.1
+				MONTHLY_POPULATION = 0.10
+			}
+		}
+		safety_net = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				consumer_goods_factor = 0.01
+				political_power_factor = 0.05
+			}
+		}
+		reformed_welfare_state = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				consumer_goods_factor = 0.02
+				political_power_factor = 0.10
+			}
+		}
+		basic_welfare_state = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				consumer_goods_factor = 0.01
+				political_power_factor = 0.075
+			}
+		}
+
+		welfare_state_plus = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				consumer_goods_factor = 0.03
+				political_power_factor = 0.15
+			}
+		}
+		subsidies_basic = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		subsidy_economy = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		save_money = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				consumer_goods_factor = -0.02
+				stability_factor = -0.05
+			}
+		}
+		save_more_money = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				consumer_goods_factor = -0.04
+				stability_factor = -0.1
+			}
+		}
+		banned_strikes = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				stability_factor = -0.05
+				drift_defence_factor = -0.15
+			}
+		}
+		gen_workers_councils = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = 0.02
+				consumer_goods_factor = 0.02
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		socialist_state_unions = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = 0.01
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		national_syndicalist_unions = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.025
+				drift_defence_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		gen_materialist_1 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				#local_resources_factor = 0.20
+				consumer_goods_factor = 0.02
+			}
+		}
+		gen_materialist_2 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				#local_resources_factor = 0.20
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = 0.04
+			}
+		}
+		gen_balanced_outlook_1 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				#local_resources_factor = 0.1
+			}
+		}
+		gen_balanced_outlook_2 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				#local_resources_factor = 0.2
+			}
+		}
+		gen_environmentalist_1 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+		gen_environmentalist_2 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				consumer_goods_factor = -0.04
+			}
+		}
+		gen_archy_1 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+			}
+		}
+		gen_archy_2 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+				drift_defence_factor = 0.20
+			}
+		}
+		gen_trad_1 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = 0.025
+			}
+		}
+		gen_trad_2 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		gen_equal_1 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				war_support_factor = 0.025
+				conscription_factor = 0.025
+			}
+		}
+		gen_equal_2 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				war_support_factor = 0.05
+				conscription_factor = 0.05
+			}
+		}
+
+		gen_pacifist_1 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = -0.10
+			}
+		}
+		gen_pacifist_2 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = 0.10
+				consumer_goods_factor = -0.02
+				war_support_factor = -0.20
+			}
+		}
+		gen_pro_mil_1 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				war_support_factor = 0.05
+			}
+		}
+		gen_pro_mil_2 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				war_support_factor = 0.05
+				consumer_goods_factor = 0.02
+				conscription = 0.01
+			}
+		}
+		gen_jingoist_1 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = 0.10
+			}
+		}
+		gen_jingoist_2 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = 0.10
+				justify_war_goal_time = -0.1
+			}
+		}
+		gen_nationalist_1 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				#min_export= -0.10
+			}
+		}
+		gen_nationalist_2 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				#min_export= -0.20
+			}
+		}
+		gen_openist_1 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				#min_export= -0.10
+			}
+		}
+		gen_openist_2 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				consumer_goods_factor = 0.02
+				political_power_factor = 0.1
+				production_speed_buildings_factor = 0.08
+				trade_opinion_factor = 0.1
+			}
+		}
+		gen_globalist_1 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				consumer_goods_factor = 0.02
+				political_power_factor = 0.1
+			}
+		}
+		gen_globalist_2 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				consumer_goods_factor = 0.04
+				political_power_factor = 0.2
+				production_speed_buildings_factor = 0.15
+				trade_opinion_factor = 0.2
+			}
+		}
+	}
+}
+	

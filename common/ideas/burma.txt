@@ -1,0 +1,92 @@
+ideas = {
+
+	country = {
+		BRM_Kuomintang_Tensions_3 = {
+
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.1
+				stability_factor = -0.15
+			}
+		}
+		BRM_Kuomintang_Tensions_2 = {
+
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.05
+				stability_factor = -0.1
+			}
+		}
+		BRM_Kuomintang_Tensions_1 = {
+
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.025
+				stability_factor = -0.05
+			}
+		}
+		BRM_internal_conflict_1 = {
+
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.15
+				stability_factor = -0.3
+				war_support_factor = -0.3
+			}
+
+			picture = FRA_national_mobilization_focus
+		}
+		BRM_internal_conflict_2 = {
+
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.1
+				stability_factor = -0.2
+				war_support_factor = -0.2
+			}
+
+			picture = FRA_national_mobilization_focus
+		}
+		BRM_internal_conflict_3 = {
+
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.05
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+
+			picture = FRA_national_mobilization_focus
+		}
+	}
+}

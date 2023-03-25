@@ -1,0 +1,462 @@
+ideas = {
+
+country = {
+		paris_paris_treaty_FIN = {
+			picture = paris_treaty
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+
+			
+			modifier = {
+				war_support_factor = -0.05
+				conscription_factor = -0.25
+			}
+		}
+		heroin_epidemic = {
+			picture = heroin
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+
+			
+			modifier = {
+				stability_factor = -0.01
+			}
+		}
+		kansainhuolto = {
+			picture = kansainhuolto
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+
+			
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+		yya = {
+			picture = yya
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+
+			
+			modifier = {
+				stability_factor = -0.05
+				 political_power_cost = 0.05
+				 war_support_factor = 0.05
+			}
+		}
+		
+		fin_valpo = {
+			picture = generic_spy_intel
+			allowed = {
+				always = no
+				}
+				
+			
+			removal_cost = -1
+			
+			modifier = {
+				foreign_subversive_activites = -0.2
+				resistance_growth = -0.1
+				encryption = 1
+				decryption = 1
+				stability_factor = -0.05
+			}
+		}
+		
+		fin_protect_swedish_rights = {
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = swedish_rights
+			
+			modifier = {
+				stability_factor = 0.01
+			}
+		}
+		idea_FIN_CIA_Influence = {
+		
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.04
+				communism_drift = -0.001
+				resistance_growth_on_our_occupied_states = 0.1
+				decryption = 1
+				encryption = 1
+				enemy_operative_detection_chance_factor = 0.1
+				enemy_operative_capture_chance_factor = 0.1
+				intel_network_gain_factor = 0.1
+			}
+
+			picture = CIA_Influence
+		}
+		
+		tyollistymisohjelma = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+			
+			modifier = {
+				 production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		consumerism = {
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = { 
+				consumer_goods_factor = 0.07
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+
+			picture = generic_goods_red_bonus
+		}
+		
+		k_program = {
+			picture = k_program
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				 consumer_goods_factor = -0.05
+				 production_speed_buildings_factor = 0.05
+				 research_speed_factor = -0.05
+			}
+		}
+		
+		s_program = {
+			picture = s_program
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+			
+			modifier = {
+				 consumer_goods_factor = 0.05
+				 research_speed_factor = 0.05
+				 production_speed_buildings_factor = -0.05
+				 monthly_population = 0.01
+			}
+		}
+		
+		Anti_Radicalism = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = { 
+				fascism_drift = -0.2
+				political_power_gain = -0.02
+				opinion_gain_monthly_same_ideology = 0.1
+			}
+			picture = triumphant_will
+		}
+		Sami_Riots = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				war_support_factor = -0.05
+				stability_factor = -0.05
+			}
+		}
+		Banned_Communist_papers = {
+		
+			picture = anti_soviet_pact
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				communism_drift = -0.05
+			}
+		}
+		 fcoalition1 = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = generic_democratic_drift_bonus
+
+			modifier = {
+				political_power_cost = 0.1
+			}
+		}
+		fcoalition2 = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = generic_democratic_drift_bonus
+
+			modifier = {
+				political_power_cost = -0.1
+			}
+		}
+		pension_tax = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.03
+				consumer_goods_factor = -0.025
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		Expelled_asevelisosialistit = {
+		
+			picture = generic_manpower_bonus
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				political_power_gain = -0.15
+				drift_defence_factor = 0.1
+			}
+		}
+	}
+	
+	# TECHNOLOGY
+	
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		wartsila = {
+			picture = wartsila
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			equipment_bonus = {
+				
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+		}
+	}
+	
+	aircraft_manufacturer = { 
+			
+		designer = yes
+		
+		Valmet_Lentokoneteollisuus = { 
+			picture = Valmet_Lentokoneteollisuus
+			allowed = {
+				original_tag = FIN
+			}
+			
+			research_bonus = {
+				air_equipment = 0.05
+			}
+			
+			traits = { 
+				light_aircraft_manufacturer 
+				CAS_manufacturer 
+			}
+			
+			equipment_bonus = {
+				
+			}
+			
+
+		}
+		
+	}
+
+	materiel_manufacturer = {
+		
+		designer = yes
+		
+		sako = {
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+
+		}
+		
+		Suomen_Autoteollisuus = {
+			picture = Suomen_Autoteollisuus	
+			allowed = {
+				original_tag = FIN
+				date < 1981.01.01
+			}
+			visible = {
+				original_tag = FIN
+				date < 1981.01.01
+			}
+						
+			research_bonus = {
+				motorized_equipment = 0.03
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+		}
+		
+		sisu = {
+			picture = sisu
+			allowed = {
+				original_tag = FIN
+				date > 1981.01.01
+			}
+			visible = {
+				original_tag = FIN
+				date > 1981.01.01
+			}
+						
+			research_bonus = {
+				motorized_equipment = 0.05
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+		}
+		
+	}
+	
+	industrial_concern = {
+	
+	designer = yes
+	
+		Suomen_Kaapelitehdas = {
+			picture = Suomen_Kaapelitehdas
+			allowed = {
+				original_tag = FIN
+				date < 1967.01.01
+			}
+			visible = {
+				original_tag = FIN
+				date < 1967.01.01
+			}
+			
+			research_bonus = {
+				electronics = 0.03
+			}
+			
+			traits = { electronics_concern }
+			
+
+		}
+		
+		Nokia = {
+			picture = Nokia
+			allowed = {
+				original_tag = FIN
+				has_country_flag = nokia
+			}
+			visible = {
+				original_tag = FIN
+				has_country_flag = nokia
+			}
+			
+			research_bonus = {
+				electronics = 0.05
+			}
+			
+			traits = { electronics_concern }
+			
+
+		}
+		
+		KONE = {
+			picture = KONE
+			allowed = {
+				original_tag = FIN
+			}
+			
+			traits = { industrial_concern }
+			
+
+		}
+		
+		neste = {
+			picture = neste
+			allowed = {
+				original_tag = FIN
+			}
+			
+			traits = { refinery_concern }
+			
+
+		}
+		
+		tvh = {
+			picture = tvh
+			allowed = {
+				original_tag = FIN
+				date < 1964.01.01
+			}
+			visible = {
+				original_tag = FIN
+				date < 1964.01.01
+			}
+			
+			traits = { construction_company }
+			
+
+		}
+	}
+	
+	
+}

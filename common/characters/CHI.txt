@@ -1,0 +1,328 @@
+characters={
+	CHI_chiang_kai_shek={
+		name="Chiang Kai-Shek"
+		portraits={
+			civilian={
+				large="gfx/leaders/CHI/Chiang_Kai_Shek.dds"
+			}
+			army={
+				large="gfx/leaders/CHI/Chiang_Kai_Shek.dds"
+			}
+		}
+		field_marshal={
+			traits={ old_guard career_officer politically_connected war_hero }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+		country_leader={
+			ideology=national_conservatism
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	CHI_bai_chongxi={
+		name="Bai Chongxi"
+		portraits={
+			army={
+				large="gfx/leaders/CHI/Bai_Chongxi.dds"
+			}
+		}
+		corps_commander={
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	CHI_hsueh_yueh={
+		name="Hsueh Yueh"
+		portraits={
+			army={
+				large="gfx/leaders/CHI/Xue_Yue.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	CHI_sun_li_jen={
+		name="Sun Li Jen"
+		portraits={
+			army={
+				large="gfx/leaders/CHI/SunLiJen.dds"
+			}
+			civilian={
+				large="gfx/leaders/CHI/SunLiJen.dds"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist }
+			skill=4
+			attack_skill=5
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		country_leader={
+			ideology=conservatism
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	CHI_hu_zongnan={
+		name="Hu Zongnan"
+		portraits={
+			army={
+				large="gfx/leaders/CHI/Hu_Zongnan.dds"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	CHI_gu_zhutong={
+		name="Gu Zhutong"
+		portraits={
+			army={
+				large="gfx/leaders/CHI/Gu_Zhutong.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CHI_xiong_shihui={
+		name="Xiong Shihui"
+		portraits={
+			army={
+				large="gfx/leaders/CHI/Xiong_Shihui.dds"
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	CHI_liu_yuzhang={
+		name="Liu Yuzhang"
+		portraits={
+			army={
+				large="gfx/leaders/CHI/liu_yuzhang.dds"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist inflexible_strategist career_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	CHI_li_zongren={
+		name="Li Zongren"
+		portraits={
+			civilian={
+				large="gfx/leaders/CHI/Li_Zongren.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ZONGREN_DESC"
+			ideology=national_conservatism
+			expire="1.1.1.1"
+			id=-1
+		}
+		field_marshal={
+			traits={ politically_connected war_hero harsh_leader }
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CHI_Chen_Ta_ching={
+		name="Chen Ta ching"
+		portraits={
+			army={
+				large="gfx/leaders/CHI/Chen_Ta_ching.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CHI_Cheng_qian={
+		name="Cheng qian"
+		portraits={
+			army={
+				large="gfx/leaders/CHI/Cheng_Qian.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer politically_connected }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CHI_He_Yingqin={
+		name="He Yingqin"
+		portraits={
+			army={
+				large="gfx/leaders/CHI/He_Yingqin.dds"
+			}
+		}
+		field_marshal={
+			traits={ politically_connected inflexible_strategist }
+			skill=4
+			attack_skill=2
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	CHI_Li_Jishen={
+		name="Li Jishen"
+		portraits={
+			army={
+				large="gfx/leaders/CHI/Li_Jishen.dds"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CHI_Li_Mi={
+		name="Li Mi"
+		portraits={
+			army={
+				large="gfx/leaders/CHI/Li_Mi.dds"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CHI_Liu_Wenhui={
+		name="Liu Wenhui"
+		portraits={
+			army={
+				large="gfx/leaders/CHI/Liu_Wenhui.dds"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CHI_Ma_Hongkui={
+		name="Ma Hongkui"
+		portraits={
+			army={
+				large="gfx/leaders/CHI/Ma_Hongkui.dds"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected desert_fox }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	CHI_Yan_Xishan={
+		name="Yan Xishan"
+		portraits={
+			army={
+				large="gfx/leaders/CHI/Yan_Xishan.dds"
+			}
+		}
+		field_marshal={
+			traits={ politically_connected brilliant_strategist inflexible_strategist }
+			skill=3
+			attack_skill=3
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CHI_Ma_Bufang={
+		name="Ma Bufang"
+		portraits={
+			army={
+				large="gfx/leaders/CHI/Ma_Bufang.dds"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected cavalry_officer desert_fox }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+}

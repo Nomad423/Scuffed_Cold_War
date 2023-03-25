@@ -1,0 +1,55 @@
+sub_units = {
+	sub_hull_large_single = {
+		sprite = sub_hull_large_single
+		map_icon_category = ship
+		priority = 3
+		active = yes
+		type = { submarine }
+		need = { sub_hull_large_single = 1 }
+		
+		max_organisation = 40
+
+		supply_consumption = 0.04
+		
+		critical_parts = { asm_damaged asm_targeting_malfunction armament_damaged torpedo_storage_damaged hazard_fire hazard_nonconventional engine_sub_damaged maritime_malfunction }
+		critical_part_damage_chance_mult = 0.5
+		
+		hit_profile_mult = 1.0
+	}
+	
+	sub_hull_small_single = {
+		sprite = sub_hull_small_single
+		map_icon_category = ship
+		priority = 3
+		active = yes
+		type = { submarine }
+		need = { sub_hull_small_single = 1 }
+		
+		max_organisation = 40
+
+		supply_consumption = 0.02
+		
+		critical_parts = { asm_damaged asm_targeting_malfunction armament_damaged torpedo_storage_damaged hazard_fire hazard_nonconventional engine_sub_damaged maritime_malfunction }
+		critical_part_damage_chance_mult = 0.6
+		
+		hit_profile_mult = 1.0
+	}
+	
+	sub_hull_large_double = {
+		sprite = sub_hull_large_double
+		map_icon_category = ship
+		priority = 3
+		active = yes
+		type = { carrier submarine }
+		need = { sub_hull_large_double = 1 }
+		
+		max_organisation = 40
+
+		supply_consumption = 0.08
+		
+		critical_parts = { asm_damaged asm_targeting_malfunction armament_damaged torpedo_storage_damaged hazard_fire hazard_nonconventional engine_sub_damaged maritime_malfunction }
+		critical_part_damage_chance_mult = 0.4
+		
+		hit_profile_mult = 1.0
+	}
+}

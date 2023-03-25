@@ -1,0 +1,208 @@
+add_namespace = jordan
+add_namespace = Currency
+##############################
+
+news_event = {
+	id = Currency.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Currency.1"}
+	title = "[GetNewspaperHeader]Jordan Adopts the Jordanian Dinar"
+	desc = Currency.1.d
+	picture = GFX_Jordanian_Dinar
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Interesting"
+	}
+}
+
+country_event = {
+	id = jordan.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = jordan.1"}
+	title = "King Abdullah I Assassinated"
+	desc = Jor.1.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Why would they do this?"
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Talal"
+			picture = "Talal_of_Jordan.dds"
+			ideology = monarchist
+		}
+	}
+}
+
+country_event = {
+	id = jordan.2 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = jordan.2"}
+	title = "King Talal Abdicates"
+	desc = Jor.2.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Good riddance!"
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Hussein"
+			picture = "Hussein_of_Jordan_1950.dds"
+			ideology = monarchist
+		}
+	}
+}
+
+country_event = {
+	id = jordan.3 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = jordan.3"}
+	title = "Death of King Hussein"
+	desc = Jor.3.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Rest in peace!"
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Abdullah II"
+			picture = "Abdullah_II.dds"
+			ideology = monarchist
+		}
+	}
+}
+country_event = {
+	id = jordan.4 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = jordan.4"}
+	title = "Talal Reaffirms Control"
+	desc = Jor.4.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "We will wait and see"
+	}
+}
+country_event = {
+	id = jordan.5 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = jordan.5"}
+	title = "Crabs Banned"
+	desc = Jor.5.d
+	picture = GFX_Ban_Crabs
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "The Crabs will pay...."
+	}
+}
+country_event = {
+	id = jordan.6 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = jordan.6"}
+	title = "The Second President of Egypt"
+	desc = Jor.6.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = JOR
+		EGY = {
+			has_country_leader = {
+				name = "Gamal Abdel Nasser"
+				ruling_only = yes
+			}
+		}
+	}
+
+
+	option = {
+		name = "We'll see what his vision for Egypt is"
+	}
+}
+country_event = {
+	id = jordan.7 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = jordan.7"}
+	title = "Tensions in Jordan"
+	desc = Jor.7.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "This will blow over"
+	}
+}
+country_event = {
+	id = jordan.8 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = jordan.8"}
+	title = "Free Officers Coup"
+	desc = Jor.8.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Arrest the conspirators!"
+		complete_national_focus = JOR_Hussein_Consolidates_Power
+	}
+	option = {
+		name = "For Arab Unity!"
+		complete_national_focus = JOR_The_Jordanian_Revolution
+	}
+}
+country_event = {
+	id = jordan.9 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = jordan.9"}
+	title = "Hussein consolidates power"
+	desc = Jor.9.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "A stable Jordan at last"
+	}
+}
+country_event = {
+	id = jordan.10 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = jordan.10"}
+	title = "The Jordanian Revolution"
+	desc = Jor.10.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "A modern Jordan will rise"
+	}
+}
+country_event = {
+	id = jordan.11 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = jordan.11"}
+	title = "The Arab Federation"
+	desc = Jor.11.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "United as brothers"
+	}
+}
+country_event = {
+	id = jordan.12 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = jordan.12"}
+	title = "The Arab Federation"
+	desc = Jor.12.d
+	is_triggered_only = yes
+	major = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Will this counter Nasserism?"
+	}
+}

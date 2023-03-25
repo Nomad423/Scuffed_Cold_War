@@ -1,0 +1,37 @@
+sub_units = {
+	screen_hull_medium = {
+		sprite = screen_hull_medium
+		map_icon_category = ship
+		priority = 3
+		active = yes
+		type = { screen_ship }
+		need = { screen_hull_medium = 1 }
+		
+		max_organisation = 40
+
+		supply_consumption = 0.01
+		
+		critical_parts = { aa_damaged armament_damaged torpedo_storage_damaged hazard_fire hazard_nonconventional engine_damaged maritime_malfunction }
+		critical_part_damage_chance_mult = 0.6
+		
+		hit_profile_mult = 1.0
+	}
+	
+	screen_hull_heavy = {
+		sprite = screen_hull_heavy
+		map_icon_category = ship
+		priority = 3
+		active = yes
+		type = { screen_ship }
+		need = { screen_hull_heavy = 1 }
+		
+		max_organisation = 40
+
+		supply_consumption = 0.02
+		
+		critical_parts = { aa_damaged asm_damaged asm_targeting_malfunction armament_damaged torpedo_storage_damaged hazard_fire hazard_nonconventional engine_damaged maritime_malfunction }
+		critical_part_damage_chance_mult = 0.5
+		
+		hit_profile_mult = 1.0
+	}
+}

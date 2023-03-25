@@ -1,0 +1,550 @@
+add_namespace = eth50
+add_namespace = eth50
+add_namespace = oau
+
+country_event = {
+	id = oau.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = oau.1"}
+	title = "Acceptence into the OAU"
+	desc = oau.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+    immediate = {
+        add_ideas = idea_OAU_member
+        set_country_flag = OAU_member
+    }
+    option = {
+        name = "We must find solidarity with fellow Africans"
+        add_political_power = +30
+	}
+}
+
+country_event = {
+	id = eth50.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = eth50.1"}
+	title = "Ethiopian-European Relations"
+	desc = "eth50.1.d"
+	trigger = {
+		tag = ETH
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Please all, and you will please none"
+		add_political_power = +50
+		hidden_effect = {
+			ENG = {
+				add_opinion_modifier = {
+					target = ETH
+					modifier = medium_increase
+				}
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = ETH
+					modifier = medium_increase
+				}
+			}
+			SPR = {
+				add_opinion_modifier = {
+					target = ETH
+					modifier = medium_increase
+				}
+			}
+			BEL = {
+				add_opinion_modifier = {
+					target = ETH
+					modifier = medium_increase
+				}
+			}
+			HOL = {
+				add_opinion_modifier = {
+					target = ETH
+					modifier = medium_increase
+				}
+			}
+			WGR = {
+				add_opinion_modifier = {
+					target = ETH
+					modifier = medium_increase
+				}
+			}
+			ITA = {
+				add_opinion_modifier = {
+					target = ETH
+					modifier = medium_increase
+				}
+			}
+			YUG = {
+				add_opinion_modifier = {
+					target = ETH
+					modifier = medium_increase
+				}
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = medium_increase
+			}
+			add_opinion_modifier = {
+				target = FRA
+				modifier = medium_increase
+			}
+			add_opinion_modifier = {
+				target = SPR
+				modifier = medium_increase
+			}
+			add_opinion_modifier = {
+				target = BEL
+				modifier = medium_increase
+			}
+			add_opinion_modifier = {
+				target = HOL
+				modifier = medium_increase
+			}
+			add_opinion_modifier = {
+				target = WGR
+				modifier = medium_increase
+			}
+			add_opinion_modifier = {
+				target = ITA
+				modifier = medium_increase
+			}
+			add_opinion_modifier = {
+				target = YUG
+				modifier = medium_increase
+			}
+		}
+	}
+}
+country_event = {
+	id = eth50.2 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = eth50.2"}
+	title = "International Denouncement"
+	desc = "In light of the recent Ethiopian annexation of Hageisa and Djibouti, there is international uproar at this unprovoked act of expansion. Whether the British or French will respond with military force is yet to be seen."
+	trigger = {
+		tag = ETH
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "What we do is our own business"
+		add_political_power = +50
+	}
+}
+country_event = {
+	id = eth50.3 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = eth50.3"}
+	title = "Ethiopian Foreign Policy"
+	desc = eth50.3.d
+	trigger = {
+		tag = ETH
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "We open ourselves to the world"
+		add_political_power = +100
+	}
+}
+country_event = {
+	id = eth50.4 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = eth50.4"}
+	title = "The Ethio-Sudanese Partition of Eritrea"
+	desc = "In response to a British proposal, Ethiopian and British Anglo-Sudanese diplomats have come together to partition the U.N. Mandate of Eritrea"
+	trigger = {
+		tag = ETH
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			transfer_state = 1000
+			add_state_core = 1000
+			if = {
+				limit = {
+					NOT = {
+						country_exists = SUD
+					}
+				}
+				EGY = {
+					transfer_state = 550
+					add_state_core = 550
+					transfer_state = 1304 
+					add_state_core = 1304 
+				}
+				SUD = {
+					add_state_core = 550
+					add_state_core = 1304 					
+				}
+			}
+			else = {
+				SUD = {
+					transfer_state = 550
+					add_state_core = 550
+					transfer_state = 1304 
+					add_state_core = 1304 
+				}
+			}
+		}
+	}
+	option = {
+		name = "This is the practical option"
+		add_political_power = +100
+	}
+}
+country_event = {
+	id = eth50.5 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = eth50.5"}
+	title = "U.N. Disapproval"
+	desc = eth50.5.d
+	trigger = {
+		tag = ETH
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "This was expected"
+	}
+}
+country_event = {
+	id = eth50.6 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = eth50.6"}
+	title = "UN Resolution 390-A(V)"
+	desc = eth50.6.d
+	trigger = {
+		tag = ETH
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Wonderful"
+	}
+}
+country_event = {
+	id = eth50.7 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = eth50.7"}
+	title = "International Support"
+	desc = eth50.7.d
+	trigger = {
+		tag = ETH
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "The truth comes through"
+		hidden_effect = {
+			USA = {
+				add_opinion_modifier = {
+					target = ETH
+					modifier = medium_increase
+				}
+			}
+			YUG = {
+				add_opinion_modifier = {
+					target = ETH
+					modifier = medium_increase
+				}
+			}
+			RAJ = {
+				add_opinion_modifier = {
+					target = ETH
+					modifier = medium_increase
+				}
+			}
+			CHI = {
+				add_opinion_modifier = {
+					target = ETH
+					modifier = medium_increase
+				}
+			}
+			GHA = {
+				add_opinion_modifier = {
+					target = ETH
+					modifier = medium_increase
+				}
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = ETH
+					modifier = medium_increase
+				}
+			}
+			ITA = {
+				add_opinion_modifier = {
+					target = ETH
+					modifier = medium_increase
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = eth50.8 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = eth50.8"}
+	title = "The Federal Act"
+	desc = eth50.8.d
+	trigger = {
+		tag = ETH
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_cosmetic_tag = ETH_ERI
+		set_autonomy = {
+			target = ERI
+			autonomous_state = autonomy_dominion
+			freedom_level = 0.1
+		}
+		hidden_effect = {
+			ERI = {
+				transfer_state = 550
+				transfer_state = 1000
+				transfer_state = 1304
+				set_popularities = {
+					democratic = 0
+					communism = 0
+					fascism = 0
+					nationalist = 0
+					monarchism = 0
+					neutrality = 100
+					islamism = 0
+					radical_shiaism = 0
+					Social_Democratic = 0
+					Social_Liberalism = 0
+					Salafism = 0
+					Liberal_Conservatism = 0
+					conservative = 0
+					Christian_Democratic = 0
+					socialist = 0
+					centrist = 0
+					liberal = 0
+					trotskyism = 0
+					maoism = 0
+
+				}
+				set_politics = {
+					ruling_party = neutrality
+					last_election = "1949.1.1"
+					election_frequency = 48
+					elections_allowed = no
+				}
+			}
+		}
+			550 = {
+				add_core_of = ETH
+			}
+			1000 = {
+				add_core_of = ETH
+			}
+			1304 = {
+				add_core_of = ETH
+			}
+
+	}
+	option = {
+		name = "Our new brothers"
+	}
+}
+country_event = {
+	id = eth50.9 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = eth50.9"}
+	title = "Resignation of Tedla Bairu"
+	desc = eth50.9.d
+	trigger = {
+		tag = ETH
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		ERI = {
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Asfaha Woldemikael"
+				picture = "Asfaha_Woldemikael.dds"
+				ideology = reactionary
+			}
+		}
+	}
+	option = {
+		name = "He had his uses"
+		add_political_power = +100
+		add_stability = +0.02
+	}
+}
+country_event = {
+	id = eth50.10 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = eth50.10"}
+	title = "Ethiopia in the Korean War"
+	desc = eth50.10.d
+	trigger = {
+		tag = ETH
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_rule = { can_send_volunteers = yes }
+	}
+	option = {
+		name = "We will do our part"
+		add_war_support = +0.15
+	}
+}
+country_event = {
+	id = eth50.11 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = eth50.11"}
+	title = "Ethiopia Requests Reparations"
+	desc = eth50.11.d
+	trigger = {
+		tag = ETH
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "We admit our guilt"
+			ETH = {
+				country_event = eth50.12
+			}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = "We don't acknowledge this"
+		add_stability = -0.1
+		add_political_power = -300
+	}
+}
+country_event = {
+	id = eth50.12 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = eth50.12"}
+	title = "Italy Accepts"
+	desc = eth50.12.d
+	trigger = {
+		tag = ETH
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "We see they have changed"
+		add_offsite_building = { type = industrial_complex level = 3 }
+	}
+
+}
+country_event = {
+	id = eth50.13 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = eth50.13"}
+	title = "Creation of the Chamber of Deputies"
+	desc = "This week officially the Chamber of Deputies in the Ethiopian Parliament has been organized. The chamber of deputies is composed of individuals elected by census suffrage. Its role is to discuss laws and, most importantly, to vote taxes."
+	trigger = {
+		tag = ETH
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "Interesting Development"
+		add_political_power = +50
+	}
+
+}
+country_event = {
+	id = eth50.14 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = eth50.14"}
+	title = "Separations of Powers"
+	desc = "Officially, Ethiopia has written into its new constitution the separation of powers between the branches of Parliament and the Monarchy. In reality however, it appears this legislation has only strengthened the Ethiopian Crown."
+	trigger = {
+		tag = ETH
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "A Welcomed Change"
+		add_political_power = +50
+	}
+
+}
+country_event = {
+	id = eth50.15 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = eth50.15"}
+	title = "Famine in Tigray!"
+	desc = eth50.15.d
+	trigger = {
+		tag = ETH
+	}
+	immediate = {
+		1099 = {
+			add_manpower = -50000
+		}
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "These things happen"
+		add_timed_idea = {
+			idea = famine
+			days = 428
+		}
+	}
+	option = {
+		name = "We are prepared to help fellow Ethiopians"
+		trigger = {
+			has_country_flag = has_prepared_famine_relief
+		}
+		custom_effect_tooltip = eth50.tt.2
+		add_timed_idea = {
+			idea = famine
+			days = 428
+		}
+	}
+
+}
+country_event = {
+	id = eth50.16 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = eth50.16"}
+	title = "Shipment of Tankettes"
+	desc = eth50.16.d
+	trigger = {
+		tag = ETH
+	}
+	immediate = {
+		add_equipment_to_stockpile = {
+			type = lt_equipment_1
+			amount = 1000
+			producer = SWE
+		}
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "We were wondering when these would arrive"
+	}
+
+}
+country_event = {
+	id = eth50.17 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = eth50.17"}
+	title = "U.S.-Ethiopian Mutual Defense Assistance Agreement"
+	desc = eth50.17.d
+	trigger = {
+		tag = ETH
+	}
+	immediate = {
+		army_experience = 50
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = 1000
+			producer = USA
+		}
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "Thanks to our friends in Washington!"
+	}
+
+}

@@ -1,0 +1,2014 @@
+authoriatiran_gfx_display_latam = {
+	faction_monthly_update = yes
+	set_variable = { ROOT.Public = stability }
+	multiply_variable = { ROOT.Public = 100 }
+	add_to_variable = { ROOT.Public = party_popularity@ruling_party }
+	divide_variable = { ROOT.Public = 2 }
+	if = {
+		limit = {
+			has_country_flag = latam_authoritarian
+		}
+		latam_authoritarian_ideas_update = yes
+	}
+	
+	if = {
+		limit = {
+			check_variable = { ROOT.Navy < 0 }
+		}
+		set_variable = { ROOT.Navy = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { ROOT.Cartel < 0 }
+		}
+		set_variable = { ROOT.Cartel = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { ROOT.Public < 0 }
+		}
+		set_variable = { ROOT.Public = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { ROOT.PolReform < 0 }
+		}
+		set_variable = { ROOT.PolReform = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { ROOT.CatholicChurch < 0 }
+		}
+		set_variable = { ROOT.CatholicChurch = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { ROOT.LandowningElite < 0 }
+		}
+		set_variable = { ROOT.LandowningElite = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { ROOT.MediaSupport < 0 }
+		}
+		set_variable = { ROOT.MediaSupport = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { ROOT.ForiegnInterests < 0 }
+		}
+		set_variable = { ROOT.ForiegnInterests = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { ROOT.Bureaucracy < 0 }
+		}
+		set_variable = { ROOT.Bureaucracy = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { ROOT.IntelCommunity < 0 }
+		}
+		set_variable = { ROOT.IntelCommunity = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { ROOT.AirForce < 0 }
+		}
+		set_variable = { ROOT.AirForce = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { ROOT.Army < 0 }
+		}
+		set_variable = { ROOT.Army = 0 }
+	}
+	set_variable = {
+		ROOT.ArmyGFX = ROOT.Army
+	}
+	divide_variable = { ROOT.ArmyGFX = 100 }
+	multiply_variable = { ROOT.ArmyGFX = 230 }
+	
+	set_variable = {
+		ROOT.AirForceGFX = ROOT.AirForce
+	}
+	divide_variable = { ROOT.AirForceGFX = 100 }
+	multiply_variable = { ROOT.AirForceGFX = 230 }
+	
+	set_variable = {
+		ROOT.IntelCommunityGFX = ROOT.IntelCommunity
+	}
+	divide_variable = { ROOT.IntelCommunityGFX = 100 }
+	multiply_variable = { ROOT.IntelCommunityGFX = 230 }
+	
+	set_variable = {
+		ROOT.BureaucracyGFX = ROOT.Bureaucracy
+	}
+	divide_variable = { ROOT.BureaucracyGFX = 100 }
+	multiply_variable = { ROOT.BureaucracyGFX = 230 }
+	
+	set_variable = {
+		ROOT.ForiegnInterestsGFX = ROOT.ForiegnInterests
+	}
+	divide_variable = { ROOT.ForiegnInterestsGFX = 100 }
+	multiply_variable = { ROOT.ForiegnInterestsGFX = 230 }
+	
+	set_variable = {
+		ROOT.MediaSupportGFX = ROOT.MediaSupport
+	}
+	divide_variable = { ROOT.MediaSupportGFX = 100 }
+	multiply_variable = { ROOT.MediaSupportGFX = 230 }
+	
+	set_variable = {
+		ROOT.LandowningEliteGFX = ROOT.LandowningElite
+	}
+	divide_variable = { ROOT.LandowningEliteGFX = 100 }
+	multiply_variable = { ROOT.LandowningEliteGFX = 230 }
+	
+	set_variable = {
+		ROOT.CatholicChurchGFX = ROOT.CatholicChurch
+	}
+	divide_variable = { ROOT.CatholicChurchGFX = 100 }
+	multiply_variable = { ROOT.CatholicChurchGFX = 230 }
+	
+	set_variable = {
+		ROOT.PolReformGFX = ROOT.PolReform
+	}
+	divide_variable = { ROOT.PolReformGFX = 100 }
+	multiply_variable = { ROOT.PolReformGFX = 230 }
+	
+	set_variable = {
+		ROOT.NavyGFX = ROOT.Navy
+	}
+	divide_variable = { ROOT.NavyGFX = 100 }
+	multiply_variable = { ROOT.NavyGFX = 230 }
+	
+	set_variable = {
+		ROOT.CartelGFX = ROOT.Cartel
+	}
+	divide_variable = { ROOT.CartelGFX = 100 }
+	multiply_variable = { ROOT.CartelGFX = 230 }
+	
+	set_variable = {
+		ROOT.PublicGFX = ROOT.Public
+	}
+	divide_variable = { ROOT.PublicGFX = 100 }
+	multiply_variable = { ROOT.PublicGFX = 230 }
+}
+latam_authoritarian_ideas_update = {
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.Army < 30 }
+			NOT = { has_idea = army_negative }
+		}
+		add_ideas = army_negative
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.Army > 29 }
+			has_idea = army_negative 
+		}
+		remove_ideas = army_negative
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.Army > 70 }
+			NOT = { has_idea = army_positive }
+		}
+		add_ideas = army_positive
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.Army < 71 }
+			has_idea = army_positive 
+		}
+		remove_ideas = army_positive
+	}
+
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.AirForce < 30 }
+			NOT = { has_idea = airforce_negative }
+		}
+		add_ideas = airforce_negative
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.AirForce > 29 }
+			has_idea = airforce_negative 
+		}
+		remove_ideas = airforce_negative
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.AirForce > 70 }
+			NOT = { has_idea = airforce_positive }
+		}
+		add_ideas = airforce_positive
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.AirForce < 71 }
+			has_idea = airforce_positive 
+		}
+		remove_ideas = airforce_positive
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.IntelCommunity < 30 }
+			NOT = { has_idea = intelcom_negative }
+		}
+		add_ideas = intelcom_negative
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.IntelCommunity > 29 }
+			has_idea = intelcom_negative 
+		}
+		remove_ideas = intelcom_negative
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.IntelCommunity > 70 }
+			NOT = { has_idea = intelcom_positive }
+		}
+		add_ideas = intelcom_positive
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.IntelCommunity < 71 }
+			has_idea = intelcom_positive 
+		}
+		remove_ideas = intelcom_positive
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.Bureaucracy < 30 }
+			NOT = { has_idea = bureaucrats_negative }
+		}
+		add_ideas = bureaucrats_negative
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.Bureaucracy > 29 }
+			has_idea = bureaucrats_negative 
+		}
+		remove_ideas = bureaucrats_negative
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.Bureaucracy > 70 }
+			NOT = { has_idea = bureaucrats_positive }
+		}
+		add_ideas = bureaucrats_positive
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.Bureaucracy < 71 }
+			has_idea = bureaucrats_positive 
+		}
+		remove_ideas = bureaucrats_positive
+	}
+
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.ForiegnInterests < 30 }
+			NOT = { has_idea = foreign_negative }
+		}
+		add_ideas = foreign_negative
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.ForiegnInterests > 29 }
+			has_idea = foreign_negative 
+		}
+		remove_ideas = foreign_negative
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.ForiegnInterests > 70 }
+			NOT = { has_idea = foreign_positive }
+		}
+		add_ideas = foreign_positive
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.ForiegnInterests < 71 }
+			has_idea = foreign_positive 
+		}
+		remove_ideas = foreign_positive
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.MediaSupport < 30 }
+			NOT = { has_idea = media_negative }
+		}
+		add_ideas = media_negative
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.MediaSupport > 29 }
+			has_idea = media_negative 
+		}
+		remove_ideas = media_negative
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.MediaSupport > 70 }
+			NOT = { has_idea = media_positive }
+		}
+		add_ideas = media_positive
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.MediaSupport < 71 }
+			has_idea = media_positive 
+		}
+		remove_ideas = media_positive
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.LandowningElite < 30 }
+			NOT = { has_idea = aristocrats_negative }
+		}
+		add_ideas = aristocrats_negative
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.LandowningElite > 29 }
+			has_idea = aristocrats_negative 
+		}
+		remove_ideas = aristocrats_negative
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.LandowningElite > 70 }
+			NOT = { has_idea = aristocrats_positive }
+		}
+		add_ideas = aristocrats_positive
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.LandowningElite < 71 }
+			has_idea = aristocrats_positive 
+		}
+		remove_ideas = aristocrats_positive
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.CatholicChurch < 30 }
+			NOT = { has_idea = church_negative }
+		}
+		add_ideas = church_negative
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.CatholicChurch > 29 }
+			has_idea = church_negative 
+		}
+		remove_ideas = church_negative
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.CatholicChurch > 70 }
+			NOT = { has_idea = church_positive }
+		}
+		add_ideas = church_positive
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.CatholicChurch < 71 }
+			has_idea = church_positive 
+		}
+		remove_ideas = church_positive
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.PolReform < 30 }
+			NOT = { has_idea = intellectuals_negative }
+		}
+		add_ideas = intellectuals_negative
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.PolReform > 29 }
+			has_idea = intellectuals_negative 
+		}
+		remove_ideas = intellectuals_negative
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.PolReform > 70 }
+			NOT = { has_idea = intellectuals_positive }
+		}
+		add_ideas = intellectuals_positive
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.PolReform < 71 }
+			has_idea = intellectuals_positive 
+		}
+		remove_ideas = intellectuals_positive
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.Navy < 30 }
+			NOT = { has_idea = navy_negative }
+		}
+		add_ideas = navy_negative
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.Navy > 29 }
+			has_idea = navy_negative 
+		}
+		remove_ideas = navy_negative
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.Navy > 70 }
+			NOT = { has_idea = navy_positive }
+		}
+		add_ideas = navy_positive
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.Navy < 71 }
+			has_idea = navy_positive 
+		}
+		remove_ideas = navy_positive
+	}
+
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.Cartel < 30 }
+			NOT = { has_idea = criminals_negative }
+		}
+		add_ideas = criminals_negative
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.Cartel > 29 }
+			has_idea = criminals_negative 
+		}
+		remove_ideas = criminals_negative
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.Cartel > 70 }
+			NOT = { has_idea = criminals_positive }
+		}
+		add_ideas = criminals_positive
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.Cartel < 71 }
+			has_idea = criminals_positive 
+		}
+		remove_ideas = criminals_positive
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.Public < 30 }
+			NOT = { has_idea = public_negative }
+		}
+		add_ideas = public_negative
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.Public > 29 }
+			has_idea = public_negative 
+		}
+		remove_ideas = public_negative
+	}
+
+	if = { 
+		limit = {
+			check_variable = { ROOT.Public > 70 }
+			NOT = { has_idea = public_positive }
+		}
+		add_ideas = public_positive
+	}
+	if = { 
+		limit = {
+			check_variable = { ROOT.Public < 71 }
+			has_idea = public_positive 
+		}
+		remove_ideas = public_positive
+	}
+}
+faction_monthly_update = {
+	set_variable = { ROOT.Army = 50 }
+	if = {
+		limit = {
+			has_idea = policy_services_temp_0
+		}
+		add_to_variable = { ROOT.Army = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_1
+		}
+		add_to_variable = { ROOT.Army = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_2
+		}
+		add_to_variable = { ROOT.Army = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_3
+		}
+		add_to_variable = { ROOT.Army = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_0
+		}
+		add_to_variable = { ROOT.Army = -40 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_1
+		}
+		add_to_variable = { ROOT.Army = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_2
+		}
+		add_to_variable = { ROOT.Army = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_3
+		}
+		add_to_variable = { ROOT.Army = 25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_4
+		}
+		add_to_variable = { ROOT.Army = 30 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_5
+		}
+		add_to_variable = { ROOT.Army = 50 }
+	}
+	set_variable = { ROOT.AirForce = 50 }
+	if = {
+		limit = {
+			has_idea = policy_services_temp_0
+		}
+		add_to_variable = { ROOT.AirForce = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_1
+		}
+		add_to_variable = { ROOT.AirForce = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_2
+		}
+		add_to_variable = { ROOT.AirForce = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_3
+		}
+		add_to_variable = { ROOT.AirForce = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_0
+		}
+		add_to_variable = { ROOT.AirForce = -40 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_1
+		}
+		add_to_variable = { ROOT.AirForce = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_2
+		}
+		add_to_variable = { ROOT.AirForce = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_3
+		}
+		add_to_variable = { ROOT.AirForce = 25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_4
+		}
+		add_to_variable = { ROOT.AirForce = 30 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_5
+		}
+		add_to_variable = { ROOT.AirForce = 50 }
+	}
+	set_variable = { ROOT.IntelCommunity = 50 }
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_0
+		}
+		add_to_variable = { ROOT.IntelCommunity = 15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_1
+		}
+		add_to_variable = { ROOT.IntelCommunity = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_2
+		}
+		add_to_variable = { ROOT.IntelCommunity = 5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_3
+		}
+		add_to_variable = { ROOT.IntelCommunity = -5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_3a
+		}
+		add_to_variable = { ROOT.IntelCommunity = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_media_temp_0
+		}
+		add_to_variable = { ROOT.IntelCommunity = 25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_media_temp_1
+		}
+		add_to_variable = { ROOT.IntelCommunity = 15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_media_temp_2
+		}
+		add_to_variable = { ROOT.IntelCommunity = 5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_media_temp_3
+		}
+		add_to_variable = { ROOT.IntelCommunity = -10 }
+	}				
+	if = {
+		limit = {
+			has_idea = policy_media_temp_3a
+		}
+		add_to_variable = { ROOT.IntelCommunity = -10 }
+	}	
+	if = {
+		limit = {
+			has_idea = policy_military_temp_0
+		}
+		add_to_variable = { ROOT.IntelCommunity = -25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_1
+		}
+		add_to_variable = { ROOT.IntelCommunity = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_2
+		}
+		add_to_variable = { ROOT.IntelCommunity = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_3
+		}
+		add_to_variable = { ROOT.IntelCommunity = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_4
+		}
+		add_to_variable = { ROOT.IntelCommunity = 15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_5
+		}
+		add_to_variable = { ROOT.IntelCommunity = 25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_0
+		}
+		add_to_variable = { ROOT.IntelCommunity = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_1
+		}
+		add_to_variable = { ROOT.IntelCommunity = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_2
+		}
+		add_to_variable = { ROOT.IntelCommunity = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_3
+		}
+		add_to_variable = { ROOT.IntelCommunity = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_0
+		}
+		add_to_variable = { ROOT.IntelCommunity = -30 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_1
+		}
+		add_to_variable = { ROOT.IntelCommunity = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_2
+		}
+		add_to_variable = { ROOT.IntelCommunity = -5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_3
+		}
+		add_to_variable = { ROOT.IntelCommunity = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_4
+		}
+		add_to_variable = { ROOT.IntelCommunity = 25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_5
+		}
+		add_to_variable = { ROOT.IntelCommunity = 40 }
+	}
+	set_variable = { ROOT.Bureaucracy = 50 }
+	if = {
+		limit = {
+			has_idea = policy_services_temp_0
+		}
+		add_to_variable = { ROOT.Bureaucracy = -40 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_1
+		}
+		add_to_variable = { ROOT.Bureaucracy = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_2
+		}
+		add_to_variable = { ROOT.Bureaucracy = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_3
+		}
+		add_to_variable = { ROOT.Bureaucracy = 40 }
+	}
+
+	if = {
+		limit = {
+			has_idea = policy_education_temp_0
+		}
+		add_to_variable = { ROOT.Bureaucracy = -25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_education_temp_1
+		}
+		add_to_variable = { ROOT.Bureaucracy = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_education_temp_2
+		}
+		add_to_variable = { ROOT.Bureaucracy = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_education_temp_3
+		}
+		add_to_variable = { ROOT.Bureaucracy = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_education_temp_4
+		}
+		add_to_variable = { ROOT.Bureaucracy = 25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_0
+		}
+		add_to_variable = { ROOT.Bureaucracy = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_1
+		}
+		add_to_variable = { ROOT.Bureaucracy = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_2
+		}
+		add_to_variable = { ROOT.Bureaucracy = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_3
+		}
+		add_to_variable = { ROOT.Bureaucracy = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_4
+		}
+		add_to_variable = { ROOT.Bureaucracy = 25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_5
+		}
+		add_to_variable = { ROOT.Bureaucracy = 30 }
+	}
+	set_variable = { ROOT.ForiegnInterests = 50 }
+	if = {
+		limit = {
+			has_idea = policy_media_temp_0
+		}
+		add_to_variable = { ROOT.ForiegnInterests = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_media_temp_1
+		}
+		add_to_variable = { ROOT.ForiegnInterests = 5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_media_temp_2
+		}
+		add_to_variable = { ROOT.ForiegnInterests = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_media_temp_3
+		}
+		add_to_variable = { ROOT.ForiegnInterests = -20 }
+	}				
+	if = {
+		limit = {
+			has_idea = policy_media_temp_3a
+		}
+		add_to_variable = { ROOT.ForiegnInterests = 10 }
+	}	
+	if = {
+		limit = {
+			has_idea = policy_welfare_temp_0
+		}
+		add_to_variable = { ROOT.ForiegnInterests = 25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_welfare_temp_1
+		}
+		add_to_variable = { ROOT.ForiegnInterests = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_welfare_temp_2
+		}
+		add_to_variable = { ROOT.ForiegnInterests = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_welfare_temp_3
+		}
+		add_to_variable = { ROOT.ForiegnInterests = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_welfare_temp_4
+		}
+		add_to_variable = { ROOT.ForiegnInterests = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_welfare_temp_5
+		}
+		add_to_variable = { ROOT.ForiegnInterests = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_0
+		}
+		add_to_variable = { ROOT.ForiegnInterests = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_1
+		}
+		add_to_variable = { ROOT.ForiegnInterests = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_2
+		}
+		add_to_variable = { ROOT.ForiegnInterests = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_3
+		}
+		add_to_variable = { ROOT.ForiegnInterests = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_4
+		}
+		add_to_variable = { ROOT.ForiegnInterests = 25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_5
+		}
+		add_to_variable = { ROOT.ForiegnInterests = 30 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_taxrate_temp_1
+		}
+		add_to_variable = { ROOT.ForiegnInterests = 30 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_taxrate_temp_2
+		}
+		add_to_variable = { ROOT.ForiegnInterests = 5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_taxrate_temp_3
+		}
+		add_to_variable = { ROOT.ForiegnInterests = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_taxrate_temp_4
+		}
+		add_to_variable = { ROOT.ForiegnInterests = -40 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_taxrate_temp_5
+		}
+		add_to_variable = { ROOT.ForiegnInterests = -50 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_0
+		}
+		add_to_variable = { ROOT.ForiegnInterests = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_1
+		}
+		add_to_variable = { ROOT.ForiegnInterests = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_2
+		}
+		add_to_variable = { ROOT.ForiegnInterests = 5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_3
+		}
+		add_to_variable = { ROOT.ForiegnInterests = 0 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_3a
+		}
+		add_to_variable = { ROOT.ForiegnInterests = -20 }
+	}
+
+	set_variable = { ROOT.MediaSupport = 50 }
+	
+	if = {
+		limit = {
+			has_idea = policy_media_temp_0
+		}
+		add_to_variable = { ROOT.MediaSupport = -40 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_media_temp_1
+		}
+		add_to_variable = { ROOT.MediaSupport = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_media_temp_2
+		}
+		add_to_variable = { ROOT.MediaSupport = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_media_temp_3
+		}
+		add_to_variable = { ROOT.MediaSupport = 25 }
+	}				
+	if = {
+		limit = {
+			has_idea = policy_media_temp_3a
+		}
+		add_to_variable = { ROOT.MediaSupport = 15 }
+	}	
+	if = {
+		limit = {
+			has_idea = policy_voting_temp_0
+		}
+		add_to_variable = { ROOT.MediaSupport = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_voting_temp_1
+		}
+		add_to_variable = { ROOT.MediaSupport = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_voting_temp_2
+		}
+		add_to_variable = { ROOT.MediaSupport = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_voting_temp_3
+		}
+		add_to_variable = { ROOT.MediaSupport = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_education_temp_0
+		}
+		add_to_variable = { ROOT.MediaSupport = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_education_temp_1
+		}
+		add_to_variable = { ROOT.MediaSupport = -5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_education_temp_2
+		}
+		add_to_variable = { ROOT.MediaSupport = 5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_education_temp_3
+		}
+		add_to_variable = { ROOT.MediaSupport = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_education_temp_4
+		}
+		add_to_variable = { ROOT.MediaSupport = 15 }
+	}
+
+	set_variable = { ROOT.LandowningElite = 50 }
+	if = {
+		limit = {
+			has_idea = policy_women_temp_0
+		}
+		add_to_variable = { ROOT.LandowningElite = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_women_temp_1
+		}
+		add_to_variable = { ROOT.LandowningElite = 15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_women_temp_2
+		}
+		add_to_variable = { ROOT.LandowningElite = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_women_temp_3
+		}
+		add_to_variable = { ROOT.LandowningElite = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_women_temp_4
+		}
+		add_to_variable = { ROOT.LandowningElite = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_women_temp_4a
+		}
+		add_to_variable = { ROOT.LandowningElite = -30 }
+	}		
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_0
+		}
+		add_to_variable = { ROOT.LandowningElite = 30 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_1
+		}
+		add_to_variable = { ROOT.LandowningElite = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_2
+		}
+		add_to_variable = { ROOT.LandowningElite = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_3
+		}
+		add_to_variable = { ROOT.LandowningElite = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_3a
+		}
+		add_to_variable = { ROOT.LandowningElite = -25 }
+	}
+	
+	if = {
+		limit = {
+			has_idea = policy_media_temp_0
+		}
+		add_to_variable = { ROOT.LandowningElite = 15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_media_temp_1
+		}
+		add_to_variable = { ROOT.LandowningElite = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_media_temp_2
+		}
+		add_to_variable = { ROOT.LandowningElite = -5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_media_temp_3
+		}
+		add_to_variable = { ROOT.LandowningElite = -10 }
+	}				
+	if = {
+		limit = {
+			has_idea = policy_media_temp_3a
+		}
+		add_to_variable = { ROOT.LandowningElite = 15 }
+	}	
+
+	if = {
+		limit = {
+			has_idea = policy_voting_temp_0
+		}
+		add_to_variable = { ROOT.LandowningElite = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_voting_temp_1
+		}
+		add_to_variable = { ROOT.LandowningElite = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_voting_temp_2
+		}
+		add_to_variable = { ROOT.LandowningElite = 5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_voting_temp_3
+		}
+		add_to_variable = { ROOT.LandowningElite = -5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_0
+		}
+		add_to_variable = { ROOT.LandowningElite = -25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_1
+		}
+		add_to_variable = { ROOT.LandowningElite = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_2
+		}
+		add_to_variable = { ROOT.LandowningElite = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_3
+		}
+		add_to_variable = { ROOT.LandowningElite = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_4
+		}
+		add_to_variable = { ROOT.LandowningElite = 15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_5
+		}
+		add_to_variable = { ROOT.LandowningElite = 25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_welfare_temp_0
+		}
+		add_to_variable = { ROOT.LandowningElite = 25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_welfare_temp_1
+		}
+		add_to_variable = { ROOT.LandowningElite = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_welfare_temp_2
+		}
+		add_to_variable = { ROOT.LandowningElite = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_welfare_temp_3
+		}
+		add_to_variable = { ROOT.LandowningElite = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_welfare_temp_4
+		}
+		add_to_variable = { ROOT.LandowningElite = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_welfare_temp_5
+		}
+		add_to_variable = { ROOT.LandowningElite = -20 }
+	}
+		
+
+	if = {
+		limit = {
+			has_idea = policy_education_temp_0
+		}
+		add_to_variable = { ROOT.LandowningElite = 15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_education_temp_1
+		}
+		add_to_variable = { ROOT.LandowningElite = 5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_education_temp_2
+		}
+		add_to_variable = { ROOT.LandowningElite = -5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_education_temp_3
+		}
+		add_to_variable = { ROOT.LandowningElite = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_education_temp_4
+		}
+		add_to_variable = { ROOT.LandowningElite = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_religion_temp_0
+		}
+		add_to_variable = { ROOT.LandowningElite = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_religion_temp_1
+		}
+		add_to_variable = { ROOT.LandowningElite = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_religion_temp_2
+		}
+		add_to_variable = { ROOT.LandowningElite = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_religion_temp_3
+		}
+		add_to_variable = { ROOT.LandowningElite = -5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_religion_temp_3a
+		}
+		add_to_variable = { ROOT.LandowningElite = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_religion_temp_0a
+		}
+		add_to_variable = { ROOT.LandowningElite = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_taxrate_temp_1
+		}
+		add_to_variable = { ROOT.LandowningElite = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_taxrate_temp_2
+		}
+		add_to_variable = { ROOT.LandowningElite = -5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_taxrate_temp_3
+		}
+		add_to_variable = { ROOT.LandowningElite = -25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_taxrate_temp_4
+		}
+		add_to_variable = { ROOT.LandowningElite = -40 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_taxrate_temp_5
+		}
+		add_to_variable = { ROOT.LandowningElite = -50 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_saga_temp_0
+		}
+		add_to_variable = { ROOT.LandowningElite = 15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_saga_temp_1
+		}
+		add_to_variable = { ROOT.LandowningElite = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_saga_temp_2
+		}
+		add_to_variable = { ROOT.LandowningElite = 5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_saga_temp_3
+		}
+		add_to_variable = { ROOT.LandowningElite = -5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_saga_temp_4
+		}
+		add_to_variable = { ROOT.LandowningElite = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_saga_temp_4a
+		}
+		add_to_variable = { ROOT.LandowningElite = -15 }
+	}
+	set_variable = { ROOT.CatholicChurch = 50 }
+	if = {
+		limit = {
+			has_idea = policy_women_temp_0
+		}
+		add_to_variable = { ROOT.CatholicChurch = 25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_women_temp_1
+		}
+		add_to_variable = { ROOT.CatholicChurch = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_women_temp_2
+		}
+		add_to_variable = { ROOT.CatholicChurch = 15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_women_temp_3
+		}
+		add_to_variable = { ROOT.CatholicChurch = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_women_temp_4
+		}
+		add_to_variable = { ROOT.CatholicChurch = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_women_temp_4a
+		}
+		add_to_variable = { ROOT.CatholicChurch = -35 }
+	}		
+	if = {
+		limit = {
+			has_idea = policy_religion_temp_0
+		}
+		add_to_variable = { ROOT.CatholicChurch = 40 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_religion_temp_1
+		}
+		add_to_variable = { ROOT.CatholicChurch = 30 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_religion_temp_2
+		}
+		add_to_variable = { ROOT.CatholicChurch = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_religion_temp_3
+		}
+		add_to_variable = { ROOT.CatholicChurch = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_religion_temp_3a
+		}
+		add_to_variable = { ROOT.CatholicChurch = -25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_religion_temp_0a
+		}
+		add_to_variable = { ROOT.CatholicChurch = -40 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_taxrate_temp_3
+		}
+		add_to_variable = { ROOT.CatholicChurch = -5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_taxrate_temp_4
+		}
+		add_to_variable = { ROOT.CatholicChurch = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_taxrate_temp_5
+		}
+		add_to_variable = { ROOT.CatholicChurch = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_saga_temp_1
+		}
+		add_to_variable = { ROOT.CatholicChurch = 25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_saga_temp_0
+		}
+		add_to_variable = { ROOT.CatholicChurch = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_saga_temp_2
+		}
+		add_to_variable = { ROOT.CatholicChurch = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_saga_temp_3
+		}
+		add_to_variable = { ROOT.CatholicChurch = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_saga_temp_4
+		}
+		add_to_variable = { ROOT.CatholicChurch = -25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_saga_temp_4a
+		}
+		add_to_variable = { ROOT.CatholicChurch = -30 }
+	}	
+	set_variable = { ROOT.PolReform = 50 }
+	if = {
+		limit = {
+			has_idea = policy_women_temp_0
+		}
+		add_to_variable = { ROOT.PolReform = -25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_women_temp_1
+		}
+		add_to_variable = { ROOT.PolReform = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_women_temp_2
+		}
+		add_to_variable = { ROOT.PolReform = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_women_temp_3
+		}
+		add_to_variable = { ROOT.PolReform = 15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_women_temp_4
+		}
+		add_to_variable = { ROOT.PolReform = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_women_temp_4a
+		}
+		add_to_variable = { ROOT.PolReform = 20 }
+	}		
+
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_0
+		}
+		add_to_variable = { ROOT.PolReform = -40 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_1
+		}
+		add_to_variable = { ROOT.PolReform = -30 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_2
+		}
+		add_to_variable = { ROOT.PolReform = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_3
+		}
+		add_to_variable = { ROOT.PolReform = 15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_minorities_temp_3a
+		}
+		add_to_variable = { ROOT.PolReform = 15 }
+	}
+
+	if = {
+		limit = {
+			has_idea = policy_saga_temp_1
+		}
+		add_to_variable = { ROOT.PolReform = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_saga_temp_0
+		}
+		add_to_variable = { ROOT.PolReform = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_saga_temp_2
+		}
+		add_to_variable = { ROOT.PolReform = -5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_saga_temp_3
+		}
+		add_to_variable = { ROOT.PolReform = 5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_saga_temp_4
+		}
+		add_to_variable = { ROOT.PolReform = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_saga_temp_4a
+		}
+		add_to_variable = { ROOT.PolReform = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_voting_temp_0
+		}
+		add_to_variable = { ROOT.PolReform = -30 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_voting_temp_1
+		}
+		add_to_variable = { ROOT.PolReform = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_voting_temp_2
+		}
+		add_to_variable = { ROOT.PolReform = 15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_voting_temp_3
+		}
+		add_to_variable = { ROOT.PolReform = 30 }
+	}
+					
+					
+	if = {
+		limit = {
+			has_idea = policy_media_temp_0
+		}
+		add_to_variable = { ROOT.PolReform = -30 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_media_temp_1
+		}
+		add_to_variable = { ROOT.PolReform = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_media_temp_2
+		}
+		add_to_variable = { ROOT.PolReform = 5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_media_temp_3
+		}
+		add_to_variable = { ROOT.PolReform = 15 }
+	}				
+	if = {
+		limit = {
+			has_idea = policy_media_temp_3a
+		}
+		add_to_variable = { ROOT.PolReform = 10 }
+	}					
+					
+
+	if = {
+		limit = {
+			has_idea = policy_education_temp_0
+		}
+		add_to_variable = { ROOT.PolReform = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_education_temp_1
+		}
+		add_to_variable = { ROOT.PolReform = -5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_education_temp_2
+		}
+		add_to_variable = { ROOT.PolReform = 5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_education_temp_3
+		}
+		add_to_variable = { ROOT.PolReform = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_education_temp_4
+		}
+		add_to_variable = { ROOT.PolReform = 15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_0
+		}
+		add_to_variable = { ROOT.PolReform = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_1
+		}
+		add_to_variable = { ROOT.PolReform = -5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_2
+		}
+		add_to_variable = { ROOT.PolReform = 5 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_3
+		}
+		add_to_variable = { ROOT.PolReform = 10 }
+	}
+
+	if = {
+		limit = {
+			has_idea = policy_religion_temp_0
+		}
+		add_to_variable = { ROOT.PolReform = -40 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_religion_temp_1
+		}
+		add_to_variable = { ROOT.PolReform = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_religion_temp_2
+		}
+		add_to_variable = { ROOT.PolReform = 15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_religion_temp_3
+		}
+		add_to_variable = { ROOT.PolReform = 25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_religion_temp_3a
+		}
+		add_to_variable = { ROOT.PolReform = 25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_religion_temp_0a
+		}
+		add_to_variable = { ROOT.PolReform = -40 }
+	}
+
+	set_variable = { ROOT.Navy = 50 }
+	
+	if = {
+		limit = {
+			has_idea = policy_military_temp_0
+		}
+		add_to_variable = { ROOT.Navy = -40 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_1
+		}
+		add_to_variable = { ROOT.Navy = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_2
+		}
+		add_to_variable = { ROOT.Navy = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_3
+		}
+		add_to_variable = { ROOT.Navy = 25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_4
+		}
+		add_to_variable = { ROOT.Navy = 30 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_military_temp_5
+		}
+		add_to_variable = { ROOT.Navy = 50 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_0
+		}
+		add_to_variable = { ROOT.Navy = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_1
+		}
+		add_to_variable = { ROOT.Navy = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_2
+		}
+		add_to_variable = { ROOT.Navy = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_3
+		}
+		add_to_variable = { ROOT.Navy = 20 }
+	}
+
+	set_variable = { ROOT.Cartel = 50 }
+
+	if = {
+		limit = {
+			has_idea = policy_services_temp_0
+		}
+		add_to_variable = { ROOT.Cartel = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_1
+		}
+		add_to_variable = { ROOT.Cartel = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_2
+		}
+		add_to_variable = { ROOT.Cartel = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_services_temp_3
+		}
+		add_to_variable = { ROOT.Cartel = -20 }
+	}
+
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_0
+		}
+		add_to_variable = { ROOT.Cartel = 25 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_1
+		}
+		add_to_variable = { ROOT.Cartel = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_2
+		}
+		add_to_variable = { ROOT.Cartel = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_3
+		}
+		add_to_variable = { ROOT.Cartel = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_4
+		}
+		add_to_variable = { ROOT.Cartel = -30 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_cpi_temp_5
+		}
+		add_to_variable = { ROOT.Cartel = -40 }
+	}
+
+	if = {
+		limit = {
+			has_idea = policy_taxrate_temp_1
+		}
+		add_to_variable = { ROOT.Cartel = 10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_taxrate_temp_2
+		}
+		add_to_variable = { ROOT.Cartel = -10 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_taxrate_temp_3
+		}
+		add_to_variable = { ROOT.Cartel = -15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_taxrate_temp_4
+		}
+		add_to_variable = { ROOT.Cartel = -20 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_taxrate_temp_5
+		}
+		add_to_variable = { ROOT.Cartel = -25 }
+	}
+}

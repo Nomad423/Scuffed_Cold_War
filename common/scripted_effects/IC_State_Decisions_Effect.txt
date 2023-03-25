@@ -1,0 +1,554 @@
+ic_election_map_effect = {
+	save_global_event_target_as = USA_SEN_MAP_TARGET
+	set_variable = {
+		d_pvi_state = d_pvi
+	}
+		set_variable = {
+		r_pvi_state = r_pvi
+	}   
+	multiply_variable = {
+		r_pvi_state = 100
+	}   
+	multiply_variable = {
+		d_pvi_state = 100
+	}         
+}
+
+sd_complete_effect = {
+	# this doesn't seem to be used and the if has no effects (commenting to clear vsc warning) - Harain
+	# if = {
+	# 	limit = {
+	# 		check_variable = { v = 3 }
+	# 	}
+	# }
+	owner = {
+		give_resource_rights = { receiver = ROOT state = PREV }
+	}
+	set_variable = { exploiter_id = ROOT.id }
+	add_to_variable = { ROOT.foreignPowerProjection = -10 }
+	
+	clr_state_flag = resource_exploit_cooldown
+	set_state_flag = { flag = resource_exploit_cooldown days = 365 value = 1 }
+	
+}
+
+Upgrade_Preindustrial_State_effect = { #4B per
+	if = { limit = { has_state_category = pop1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop1 }
+	}
+	else_if = { limit = { has_state_category = pop2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop2 }
+	}
+	else_if = { limit = { has_state_category = pop3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop3 }
+	}
+	else_if = { limit = { has_state_category = pop4 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop4 }
+	}
+
+	else_if = { limit = { has_state_category = pop5 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop5 }
+	}
+	else_if = { limit = { has_state_category = pop7 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop7 }
+	}
+	else_if = { limit = { has_state_category = pop10 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop10 }
+	}
+	else_if = { limit = { has_state_category = pop15 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop15 }
+	}
+	else_if = { limit = { has_state_category = pop20 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop20 }
+	}
+}
+
+Upgrade_Undeveloped_State_effect = { #10B per
+	if = { limit = { has_state_category = pop1dev1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop1dev1 }
+	}
+	else_if = { limit = { has_state_category = pop2dev1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop2dev1 }
+	}
+	else_if = { limit = { has_state_category = pop3dev1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop3dev1 }
+	}
+	else_if = { limit = { has_state_category = pop4dev1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop4dev1 }
+	}
+
+	else_if = { limit = { has_state_category = pop5dev1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop5dev1 }
+	}
+	else_if = { limit = { has_state_category = pop7dev1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop7dev1 }
+	}
+	else_if = { limit = { has_state_category = pop10dev1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop10dev1 }
+	}
+	else_if = { limit = { has_state_category = pop15dev1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop15dev1 }
+	}
+	else_if = { limit = { has_state_category = pop20dev1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop20dev1 }
+	}
+}
+
+Upgrade_Developed_State_effect = { #25B per
+	if = { limit = { has_state_category = pop1dev2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop1dev2 }
+	}
+	else_if = { limit = { has_state_category = pop2dev2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop2dev2 }
+	}
+	else_if = { limit = { has_state_category = pop3dev2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop3dev2 }
+	}
+	else_if = { limit = { has_state_category = pop4dev2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop4dev2 }
+	}
+
+	else_if = { limit = { has_state_category = pop5dev2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop5dev2 }
+	}
+	else_if = { limit = { has_state_category = pop7dev2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop7dev2 }
+	}
+	else_if = { limit = { has_state_category = pop10dev2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop10dev2 }
+	}
+	else_if = { limit = { has_state_category = pop15dev2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop15dev2 }
+	}
+	else_if = { limit = { has_state_category = pop20dev2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop20dev2 }
+	}
+}
+
+Upgrade_Modern_State_effect = { #65B per
+	if = { limit = { has_state_category = pop1dev3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop1dev3 }
+	}
+	else_if = { limit = { has_state_category = pop2dev3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop2dev3 }
+	}
+	else_if = { limit = { has_state_category = pop3dev3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop3dev3 }
+	}
+	else_if = { limit = { has_state_category = pop4dev3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop4dev3 }
+	}
+
+	else_if = { limit = { has_state_category = pop5dev3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop5dev3 }
+	}
+	else_if = { limit = { has_state_category = pop7dev3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop7dev3 }
+	}
+	else_if = { limit = { has_state_category = pop10dev3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop10dev3 }
+	}
+	else_if = { limit = { has_state_category = pop15dev3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop15dev3 }
+	}
+	else_if = { limit = { has_state_category = pop20dev3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.currentMoney = global.UPC_pop20dev3 }
+	}
+}
+
+Upgrade_State_effect = {
+	clr_state_flag = upgrade_underway
+	clear_variable = upgrade_progress
+	if = {
+		limit = {
+			OR = {
+				has_state_category = pop1
+				has_state_category = pop2
+				has_state_category = pop3
+				has_state_category = pop4
+				has_state_category = pop5
+				has_state_category = pop7
+				has_state_category = pop10
+				has_state_category = pop15
+				has_state_category = pop20
+			}
+		}
+		Upgrade_State_effect_0 = yes
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_state_category = pop1dev1
+				has_state_category = pop2dev1
+				has_state_category = pop3dev1
+				has_state_category = pop4dev1
+				has_state_category = pop5dev1
+				has_state_category = pop7dev1
+				has_state_category = pop10dev1
+				has_state_category = pop15dev1
+				has_state_category = pop20dev1
+			}
+		}
+		Upgrade_State_effect_1 = yes
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_state_category = pop1dev2
+				has_state_category = pop2dev2
+				has_state_category = pop3dev2
+				has_state_category = pop4dev2
+				has_state_category = pop5dev2
+				has_state_category = pop7dev2
+				has_state_category = pop10dev2
+				has_state_category = pop15dev2
+				has_state_category = pop20dev2
+			}
+		}
+		Upgrade_State_effect_2 = yes
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_state_category = pop1dev3
+				has_state_category = pop2dev3
+				has_state_category = pop3dev3
+				has_state_category = pop4dev3
+				has_state_category = pop5dev3
+				has_state_category = pop7dev3
+				has_state_category = pop10dev3
+				has_state_category = pop15dev3
+				has_state_category = pop20dev3
+			}
+		}
+		Upgrade_State_effect_3 = yes
+	}
+}
+
+Upgrade_State_effect_0 = {
+	if = { limit = { has_state_category = pop1 } set_state_category = pop1dev1 }
+	else_if = { limit = { has_state_category = pop2 } set_state_category = pop2dev1 }
+	else_if = { limit = { has_state_category = pop3 } set_state_category = pop3dev1 }
+	else_if = { limit = { has_state_category = pop4 } set_state_category = pop4dev1 }
+	else_if = { limit = { has_state_category = pop5 } set_state_category = pop5dev1 }
+	else_if = { limit = { has_state_category = pop7 } set_state_category = pop7dev1 }
+	else_if = { limit = { has_state_category = pop10 } set_state_category = pop10dev1 }
+	else_if = { limit = { has_state_category = pop15 } set_state_category = pop15dev1 }
+	else_if = { limit = { has_state_category = pop20 } set_state_category = pop20dev1 }
+}
+
+Upgrade_State_effect_1 = {
+	if = { limit = { has_state_category = pop1dev1 } set_state_category = pop1dev2 }
+	else_if = { limit = { has_state_category = pop2dev1 } set_state_category = pop2dev2 }
+	else_if = { limit = { has_state_category = pop3dev1 } set_state_category = pop3dev2 }
+	else_if = { limit = { has_state_category = pop4dev1 } set_state_category = pop4dev2 }
+	else_if = { limit = { has_state_category = pop5dev1 } set_state_category = pop5dev2 }
+	else_if = { limit = { has_state_category = pop7dev1 } set_state_category = pop7dev2 }
+	else_if = { limit = { has_state_category = pop10dev1 } set_state_category = pop10dev2 }
+	else_if = { limit = { has_state_category = pop15dev1 } set_state_category = pop15dev2 }
+	else_if = { limit = { has_state_category = pop20dev1 } set_state_category = pop20dev2 }
+}
+
+Upgrade_State_effect_2 = {
+	if = { limit = { has_state_category = pop1dev2 } set_state_category = pop1dev3 }
+	else_if = { limit = { has_state_category = pop2dev2 } set_state_category = pop2dev3 }
+	else_if = { limit = { has_state_category = pop3dev2 } set_state_category = pop3dev3 }
+	else_if = { limit = { has_state_category = pop4dev2 } set_state_category = pop4dev3 }
+	else_if = { limit = { has_state_category = pop5dev2 } set_state_category = pop5dev3 }
+	else_if = { limit = { has_state_category = pop7dev2 } set_state_category = pop7dev3 }
+	else_if = { limit = { has_state_category = pop10dev2 } set_state_category = pop10dev3 }
+	else_if = { limit = { has_state_category = pop15dev2 } set_state_category = pop15dev3 }
+	else_if = { limit = { has_state_category = pop20dev2 } set_state_category = pop20dev3 }
+}
+
+Upgrade_State_effect_3 = { #65B per
+	if = { limit = { has_state_category = pop1dev3 } set_state_category = pop1dev4 }
+	else_if = { limit = { has_state_category = pop2dev3 } set_state_category = pop2dev4 }
+	else_if = { limit = { has_state_category = pop3dev3 } set_state_category = pop3dev4 }
+	else_if = { limit = { has_state_category = pop4dev3 } set_state_category = pop4dev4 }
+	else_if = { limit = { has_state_category = pop5dev3 } set_state_category = pop5dev4 }
+	else_if = { limit = { has_state_category = pop7dev3 } set_state_category = pop7dev4 }
+	else_if = { limit = { has_state_category = pop10dev3 } set_state_category = pop10dev4 }
+	else_if = { limit = { has_state_category = pop15dev3 } set_state_category = pop15dev4 }
+	else_if = { limit = { has_state_category = pop20dev3 } set_state_category = pop20dev4 }
+}
+
+Upgrade_Preindustrial_State_effect_budgeted = { #4B per
+	ROOT = { set_country_flag = state_upgrade_verification }
+	if = { limit = { has_state_category = pop1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.industrialization_budget = global.UPC_pop1 }
+		#log = "[This.GetName] cost [?global.UPC_pop1] (budget left: [?ROOT.industrialization_budget]) - Upgrade Preindustrial budgeted"
+	}
+	else_if = { limit = { has_state_category = pop2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.industrialization_budget = global.UPC_pop2 }
+		#log = "[This.GetName] cost [?global.UPC_pop2] (budget left: [?ROOT.industrialization_budget]) - Upgrade Preindustrial budgeted"
+	}
+	else_if = { limit = { has_state_category = pop3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.industrialization_budget = global.UPC_pop3 }
+		#log = "[This.GetName] cost [?global.UPC_pop3] (budget left: [?ROOT.industrialization_budget]) - Upgrade Preindustrial budgeted"
+	}
+	else_if = { limit = { has_state_category = pop4 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.industrialization_budget = global.UPC_pop4 }
+		#log = "[This.GetName] cost [?global.UPC_pop4] (budget left: [?ROOT.industrialization_budget]) - Upgrade Preindustrial budgeted"
+	}
+	else_if = { limit = { has_state_category = pop5 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.industrialization_budget = global.UPC_pop5 }
+		#log = "[This.GetName] cost [?global.UPC_pop5] (budget left: [?ROOT.industrialization_budget]) - Upgrade Preindustrial budgeted"
+	}
+	else_if = { limit = { has_state_category = pop7 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.industrialization_budget = global.UPC_pop7 }
+		#log = "[This.GetName] cost [?global.UPC_pop7] (budget left: [?ROOT.industrialization_budget]) - Upgrade Preindustrial budgeted"
+	}
+	else_if = { limit = { has_state_category = pop10 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.industrialization_budget = global.UPC_pop10 }
+		#log = "[This.GetName] cost [?global.UPC_pop10] (budget left: [?ROOT.industrialization_budget]) - Upgrade Preindustrial budgeted"
+	}
+	else_if = { limit = { has_state_category = pop15 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.industrialization_budget = global.UPC_pop15 }
+		#log = "[This.GetName] cost [?global.UPC_pop15] (budget left: [?ROOT.industrialization_budget]) - Upgrade Preindustrial budgeted"
+	}
+	else_if = { limit = { has_state_category = pop20 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.industrialization_budget = global.UPC_pop20 }
+		#log = "[This.GetName] cost [?global.UPC_pop20] (budget left: [?ROOT.industrialization_budget]) - Upgrade Preindustrial budgeted"
+	}
+}
+
+Upgrade_Undeveloped_State_effect_budgeted = { #10B per
+	ROOT = { set_country_flag = state_upgrade_verification }
+	if = { limit = { has_state_category = pop1dev1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.development_budget = global.UPC_pop1dev1 }
+	}
+	else_if = { limit = { has_state_category = pop2dev1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.development_budget = global.UPC_pop2dev1 }
+	}
+	else_if = { limit = { has_state_category = pop3dev1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.development_budget = global.UPC_pop3dev1 }
+	}
+	else_if = { limit = { has_state_category = pop4dev1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.development_budget = global.UPC_pop4dev1 }
+	}
+
+	else_if = { limit = { has_state_category = pop5dev1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.development_budget = global.UPC_pop5dev1 }
+	}
+	else_if = { limit = { has_state_category = pop7dev1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.development_budget = global.UPC_pop7dev1 }
+	}
+	else_if = { limit = { has_state_category = pop10dev1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.development_budget = global.UPC_pop10dev1 }
+	}
+	else_if = { limit = { has_state_category = pop15dev1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.development_budget = global.UPC_pop15dev1 }
+	}
+	else_if = { limit = { has_state_category = pop20dev1 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.development_budget = global.UPC_pop20dev1 }
+	}
+}
+
+Upgrade_Developed_State_effect_budgeted = { #25B per
+	ROOT = { set_country_flag = state_upgrade_verification }
+	if = { limit = { has_state_category = pop1dev2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.modernization_budget = global.UPC_pop1dev2 }
+	}
+	else_if = { limit = { has_state_category = pop2dev2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.modernization_budget = global.UPC_pop2dev2 }
+	}
+	else_if = { limit = { has_state_category = pop3dev2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.modernization_budget = global.UPC_pop3dev2 }
+	}
+	else_if = { limit = { has_state_category = pop4dev2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.modernization_budget = global.UPC_pop4dev2 }
+	}
+
+	else_if = { limit = { has_state_category = pop5dev2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.modernization_budget = global.UPC_pop5dev2 }
+	}
+	else_if = { limit = { has_state_category = pop7dev2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.modernization_budget = global.UPC_pop7dev2 }
+	}
+	else_if = { limit = { has_state_category = pop10dev2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.modernization_budget = global.UPC_pop10dev2 }
+	}
+	else_if = { limit = { has_state_category = pop15dev2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.modernization_budget = global.UPC_pop15dev2 }
+	}
+	else_if = { limit = { has_state_category = pop20dev2 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.modernization_budget = global.UPC_pop20dev2 }
+	}
+}
+
+Upgrade_Modern_State_effect_budgeted = { #65B per
+	ROOT = { set_country_flag = state_upgrade_verification }
+	if = { limit = { has_state_category = pop1dev3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.automation_budget = global.UPC_pop1dev3 }
+	}
+	else_if = { limit = { has_state_category = pop2dev3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.automation_budget = global.UPC_pop2dev3 }
+	}
+	else_if = { limit = { has_state_category = pop3dev3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.automation_budget = global.UPC_pop3dev3 }
+	}
+	else_if = { limit = { has_state_category = pop4dev3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.automation_budget = global.UPC_pop4dev3 }
+	}
+
+	else_if = { limit = { has_state_category = pop5dev3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.automation_budget = global.UPC_pop5dev3 }
+	}
+	else_if = { limit = { has_state_category = pop7dev3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.automation_budget = global.UPC_pop7dev3 }
+	}
+	else_if = { limit = { has_state_category = pop10dev3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.automation_budget = global.UPC_pop10dev3 }
+	}
+	else_if = { limit = { has_state_category = pop15dev3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.automation_budget = global.UPC_pop15dev3 }
+	}
+	else_if = { limit = { has_state_category = pop20dev3 }
+		set_state_flag = upgrade_underway
+		set_variable = { upgrade_progress = 2 }
+		subtract_from_variable = { ROOT.automation_budget = global.UPC_pop20dev3 }
+	}
+}

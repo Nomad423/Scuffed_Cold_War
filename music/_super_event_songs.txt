@@ -1,0 +1,719 @@
+
+music_station = "base_music"
+music = {
+	song = "Silence"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_First_Mafia_War"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_Winter_of_1954"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_President_Trump"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_President_McGovern_1984"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_President_Robertson"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_President_Jesse_Jackson"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_President_Ted_Kennedy"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_President_Rumsfeld"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_Early_President_Clinton"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_President_Brooke"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_President_Bradley"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_President_Mondale"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_President_Dukakis"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_President_Inoyue"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_President_Glenn"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_President_Bush_Sr"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_President_Hart"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_President_Anderson_Independent"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_President_Anderson_GOP"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_President_Gingrich"
+	chance = { modifier = { factor = 0 } }
+}
+
+music = {
+	song = "Super_Event_Bangladesh_Liberation_War"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_Pakistan_Victory_1971"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_Cultural_Revolution"
+	chance = { modifier = { factor = 0 } }
+}
+
+music = {
+	song = "Super_Event_Smiling_Buddha"
+	chance = { modifier = { factor = 0 } }
+}
+
+music = {
+	song = "Super_Event_Sino_indian_War_India_Victory"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_Sino_indian_War_Chinese_Victory"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_Pakistani_Victory_1965"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_Indian_Victory_1965"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_Chinese_Anarchy"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_Project_National_Glory"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Goodbye_Britannia"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "rise_o_voices"
+	chance = { modifier = { factor = 0 } }
+}
+music = {
+	song = "Super_Event_CMC_WW3"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Asian_Liberation_War"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+
+
+music = {
+	song = "Super_Event_President_Ford"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Shanghai_Defence"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Early_President_Reagan"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Early_President_Nixon"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_President_Rockefeller"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_President_Agnew"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_President_Halleck"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_President_Muskie"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+
+music = {
+	song = "Super_Event_President_Warren"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_President_Martin"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_President_Stassen"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_President_Dewey"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_President_Harriman"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Korean_War_Nuclear"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Soviet_Turkish_War"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+
+music = {
+	song = "Super_Event_German_Reunification_DDR"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_President_Wallace"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_President_Russell"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_chernobyl"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Death_of_Stalin"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Egyptian_Revolution"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Farouk_Triumphant"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_President_JFK"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_American_Moon_Landing"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Woodstock"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Sputnik"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Soviet_Moon_Landing"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Nixon_Resignation"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+
+music = {
+	song = "Super_Event_Hungarian_Revolution_Crushed"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Hungarian_Revolution_Successful"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Mao_Funeral"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+
+music = {
+	song = "Super_Event_President_MacArthur"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+
+music = {
+	song = "Super_Event_Korean_War"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Korean_War_KPA_Victory"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+
+music = {
+	song = "Super_Event_JFK_Assasination"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Tsar_Bomba"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Castle_Bravo"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Biden_Victory"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Rhodesians_Never_Die"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Stevenson_52"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_USA"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Angola_e_Nossa"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Holiday_in_Cambodia"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Samson_Option"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Vietnam_Withdrawal"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Congo_Crisis"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Soviet_Afghan_War"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Vietnam_War"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Sino_Soviet_War"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Cuban_Revolution"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Angolan_Civil_War"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Simba_Rebellion"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Berlin_Wall"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Hashemite_Twilight"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Iraq_July_14th_Revolution"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Arabian_Revolution"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Vietnam_War_Victory"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Nixon_Presidency"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_LBJ_Presidency"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Eisenhower_Presidency"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+
+music = {
+	song = "Super_Event_Goldwater_Presidency"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Reagan_Presidency"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_President_Jerry_Brown"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_McGovern_Presidency"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+
+music = {
+	song = "Super_Event_President_RFK"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Kefauver_Elected"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Carter_Presidency"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Super_Event_Humphrey_Presidency"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "Event_Operation_watchtower"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}

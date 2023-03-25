@@ -1,0 +1,748 @@
+# Shoutout to SimpleFlips for all they have contributed to this mod and HOI4 modding! #
+
+lightcarriers = {
+	category = naval
+	
+	blocked_for = {
+	}
+	available_for = {
+	}
+	roles = {
+		naval_carrier_light
+	}
+	
+	priority = {
+		factor = 350
+		modifier = {
+			num_of_naval_factories < 10
+			factor = 0
+		}
+	}
+	
+	lightcarriers_0 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = carrier_hull_light_1
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = carrier_hull_light_2
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 17
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = carrier_hull_light_0
+			modules = {
+				mid_1_custom_slot = carrier_deck
+				rear_1_custom_slot = carrier_deck
+				
+			}
+		}
+
+		allowed_modules = {
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_heavyasm
+					ship_armament_asm
+					ship_subkiller
+					ship_AA_gun
+					capital_nuclear_engine
+					capital_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	lightcarriers_1 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = carrier_hull_light_2
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = carrier_hull_light_3
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 17
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = carrier_hull_light_1
+			modules = {
+				mid_1_custom_slot = carrier_deck
+				rear_1_custom_slot = carrier_deck
+			}
+		}
+
+		allowed_modules = {
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_heavyasm
+					ship_armament_asm
+					ship_subkiller
+					ship_AA_gun
+					capital_nuclear_engine
+					capital_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	lightcarriers_2 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = carrier_hull_light_3
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = carrier_hull_light_4
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 17
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = carrier_hull_light_2
+			modules = {
+				mid_1_custom_slot = carrier_deck
+				rear_1_custom_slot = carrier_deck
+			}
+		}
+
+		allowed_modules = {
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_heavyasm
+					ship_armament_asm
+					ship_subkiller
+					ship_AA_gun
+					capital_nuclear_engine
+					capital_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	lightcarriers_3 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = carrier_hull_light_4
+				factor = 0.5
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 17
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = carrier_hull_light_3
+			modules = {
+				mid_1_custom_slot = carrier_deck
+				rear_1_custom_slot = carrier_deck
+			}
+		}
+
+		allowed_modules = {
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_heavyasm
+					ship_armament_asm
+					ship_subkiller
+					ship_AA_gun
+					capital_nuclear_engine
+					capital_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	lightcarriers_4 = {
+	
+
+		priority = {
+			factor = 250
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 17
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = carrier_hull_light_4
+			modules = {
+				mid_1_custom_slot = carrier_deck
+				rear_1_custom_slot = carrier_deck
+			}
+		}
+
+		allowed_modules = {
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_heavyasm
+					ship_armament_asm
+					ship_subkiller
+					ship_AA_gun
+					capital_nuclear_engine
+					capital_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+}
+carriers = {
+	category = naval
+	
+	blocked_for = {
+	}
+	available_for = {
+	}
+	roles = {
+		naval_carrier_medium
+	}
+	
+	priority = {
+		factor = 350
+		modifier = {
+			num_of_naval_factories < 20
+			factor = 0
+		}
+	}
+	
+	carriers_ww = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = carrier_hull_0
+				factor = 0.5
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 16
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = carrier_hull_ww
+			modules = {
+				mid_1_custom_slot = carrier_deck
+				mid_2_custom_slot = carrier_deck
+				rear_1_custom_slot = carrier_deck
+			}
+		}
+
+		allowed_modules = {
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_heavyasm
+					ship_armament_asm
+					ship_subkiller
+					ship_AA_gun
+					capital_nuclear_engine
+					capital_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	
+	carriers_0 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = carrier_hull_1
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = carrier_hull_2
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 16
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = carrier_hull_0
+			modules = {
+				front_1_custom_slot = ship_armament_medium_0
+				mid_1_custom_slot = carrier_deck
+				mid_2_custom_slot = carrier_deck
+				rear_1_custom_slot = carrier_deck
+			}
+		}
+
+		allowed_modules = {
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_heavyasm
+					ship_armament_asm
+					ship_subkiller
+					ship_AA_gun
+					capital_nuclear_engine
+					capital_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	carriers_1 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = carrier_hull_2
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = carrier_hull_3
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 16
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = carrier_hull_1
+			modules = {
+				mid_1_custom_slot = carrier_deck
+				mid_2_custom_slot = carrier_deck
+				rear_1_custom_slot = carrier_deck
+			}
+		}
+
+		allowed_modules = {
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_heavyasm
+					ship_armament_asm
+					ship_subkiller
+					ship_AA_gun
+					capital_nuclear_engine
+					capital_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	carriers_2 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = carrier_hull_3
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = carrier_hull_4
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 16
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = carrier_hull_2
+			modules = {
+				mid_1_custom_slot = carrier_deck
+				mid_2_custom_slot = carrier_deck
+				rear_1_custom_slot = carrier_deck
+			}
+		}
+
+		allowed_modules = {
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_heavyasm
+					ship_armament_asm
+					ship_subkiller
+					ship_AA_gun
+					capital_nuclear_engine
+					capital_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	carriers_3 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = carrier_hull_4
+				factor = 0.5
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 16
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = carrier_hull_3
+			modules = {
+				mid_1_custom_slot = carrier_deck
+				mid_2_custom_slot = carrier_deck
+				rear_1_custom_slot = carrier_deck
+			}
+		}
+
+		allowed_modules = {
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_heavyasm
+					ship_armament_asm
+					ship_subkiller
+					ship_AA_gun
+					capital_nuclear_engine
+					capital_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	carriers_4 = {
+	
+
+		priority = {
+			factor = 250
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 16
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = carrier_hull_4
+			modules = {
+				mid_1_custom_slot = carrier_deck
+				mid_2_custom_slot = carrier_deck
+				rear_1_custom_slot = carrier_deck
+			}
+		}
+
+		allowed_modules = {
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_heavyasm
+					ship_armament_asm
+					ship_subkiller
+					ship_AA_gun
+					capital_nuclear_engine
+					capital_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+}
+supercarriers = {
+	category = naval
+	
+	blocked_for = {
+	}
+	available_for = {
+	}
+	roles = {
+		naval_carrier_super
+	}
+	
+	priority = {
+		factor = 350
+		modifier = {
+			num_of_naval_factories < 35
+			factor = 0
+		}
+	}
+	
+	supercarriers_1 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = carrier_hull_super_2
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = carrier_hull_super_3
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 21
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = carrier_hull_super_1
+			modules = {
+				mid_1_custom_slot = carrier_deck
+				mid_2_custom_slot = carrier_deck
+				rear_1_custom_slot = carrier_deck
+				rear_2_custom_slot = carrier_deck
+				rear_3_custom_slot = carrier_deck
+			}
+		}
+
+		allowed_modules = {
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_heavyasm
+					ship_armament_asm
+					ship_subkiller
+					ship_AA_gun
+					superheavy_nuclear_engine
+					superheavy_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	supercarriers_2 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = carrier_hull_super_3
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = carrier_hull_super_4
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 21
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = carrier_hull_super_2
+			modules = {
+				mid_1_custom_slot = carrier_deck
+				mid_2_custom_slot = carrier_deck
+				rear_1_custom_slot = carrier_deck
+				rear_2_custom_slot = carrier_deck
+				rear_3_custom_slot = carrier_deck
+			}
+		}
+
+		allowed_modules = {
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_heavyasm
+					ship_armament_asm
+					ship_subkiller
+					ship_AA_gun
+					superheavy_nuclear_engine
+					superheavy_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	supercarriers_3 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = carrier_hull_super_4
+				factor = 0.5
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 21
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = carrier_hull_super_3
+			modules = {
+				mid_1_custom_slot = carrier_deck
+				mid_2_custom_slot = carrier_deck
+				rear_1_custom_slot = carrier_deck
+				rear_2_custom_slot = carrier_deck
+				rear_3_custom_slot = carrier_deck
+			}
+		}
+
+		allowed_modules = {
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_heavyasm
+					ship_armament_asm
+					ship_subkiller
+					ship_AA_gun
+					superheavy_nuclear_engine
+					superheavy_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	supercarriers_4 = {
+	
+
+		priority = {
+			factor = 250
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 21
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = carrier_hull_super_4
+			modules = {
+				mid_1_custom_slot = carrier_deck
+				mid_2_custom_slot = carrier_deck
+				rear_1_custom_slot = carrier_deck
+				rear_2_custom_slot = carrier_deck
+				rear_3_custom_slot = carrier_deck
+			}
+		}
+
+		allowed_modules = {
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_heavyasm
+					ship_armament_asm
+					ship_subkiller
+					ship_AA_gun
+					superheavy_nuclear_engine
+					superheavy_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+}

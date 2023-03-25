@@ -1,0 +1,59 @@
+parliament_decisions = {
+#	communism_seats_parliament2 
+#	socialist_seats_parliament2 
+#	Social_Democratic_seats_parliament2 
+#	democratic_seats_parliament2 
+#	Social_Liberalism_seats_parliament2 
+#	Liberal_Conservatism_seats_parliament2 
+#	conservative_seats_parliament2 
+#	islamism_seats_parliament2 
+#	monarchism_seats_parliament2 
+#	neutrality_seats_parliament2 
+#	nationalism_seats_parliament2 
+#	fascism_seats_parliament2 
+#	Christian_Democratic_seats_parliament2 
+#	centrist_seats_parliament2 
+#	liberal_seats_parliament2 
+#	trotskyism_seats_parliament2 
+#	maoism_seats_parliament2 
+#	radical_shiaism_seats_parliament2 
+#	Salafism_seats_parliament2 
+
+   Anti_Racial_Discrimination_Legislation = {
+
+		icon = generic_political_discourse
+
+		available = {			
+			check_variable = { legislation_support > 0.49 }
+			check_variable = { legislation_support_upper > 0.49 }
+
+		}
+		activation = {
+			has_country_flag = legislation_anti_racial_discrimination_vote
+		}
+		days_mission_timeout = 24
+
+
+
+		
+
+		fire_only_once = no
+		
+		complete_effect = {
+			set_variable = { legislation_support = 0 }
+			add_ideas = Anti_Racial_Discrimination
+			clr_country_flag = legislation_anti_racial_discrimination_vote
+			clr_country_flag = vote_in_progress
+		}
+		timeout_effect = { 
+			clr_country_flag = legislation_anti_racial_discrimination_vote
+			clr_country_flag = vote_in_progress
+			set_variable = { legislation_support = 0 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	
+}

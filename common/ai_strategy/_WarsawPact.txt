@@ -1,0 +1,41 @@
+seek_USSR_alliance = {
+	allowed = { OR = {
+		tag = MON 
+		tag = ROM
+		tag = HUN
+		tag = DDR
+		tag = CZE
+		tag = POL
+		}
+	}
+	enable = {		
+		ROOT = { is_in_faction_with = SOV }
+	}
+	
+	abort = { OR = {
+		has_government = conservative
+		has_government = fascism
+		has_government = nationalist
+		has_government = monarchism
+		has_government = centrist
+		has_government = islamism
+		has_government = socialist
+		has_government = neutrality
+		has_government = radical_shiaism
+		has_government = democratic
+		has_government = liberal
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "SOV"			
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SOV"			
+		value = 400
+	}
+}
+

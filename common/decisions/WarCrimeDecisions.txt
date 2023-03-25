@@ -1,0 +1,199 @@
+War_Crime_decisions = {
+
+	declare_nuclear_power = {
+
+		icon = tac_nuke
+
+		visible = { 
+			check_variable = { ROOT.num_of_nukes > 0 }
+
+			NOT = {
+				has_idea = defcon_system_5
+				has_idea = defcon_system_4
+				has_idea = defcon_system_3
+				has_idea = defcon_system_2
+				has_idea = defcon_system_1
+			}
+		}
+
+		available = {
+			check_variable = { ROOT.num_of_nukes > 60 }			
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+		
+		fixed_random_seed = no
+		
+		cost = 2000
+		
+		complete_effect = {
+			
+			add_ideas = defcon_system_5
+		}
+	}
+
+	napalm_attack = {
+		icon = napalm_attack
+		visible = { check_variable = { ROOT.distance_check = 1 } }
+		available = {
+			has_tech = NBC_research
+			NOT = { has_idea = wmd_disbandment }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		
+		fixed_random_seed = no
+		
+		cost = 0
+		
+		complete_effect = {
+			clr_country_flag = napalm_selected
+			clr_country_flag = mustard_gas_selected
+			clr_country_flag = white_phosphorus_selected
+			clr_country_flag = agent_orange_selected
+			clr_country_flag = sarin_selected
+			clr_country_flag = vx_selected
+			set_country_flag = napalm_selected
+		}
+	}
+
+	mustard_gas_attack = {
+		icon = mustard_gas_attack
+		visible = { check_variable = { ROOT.distance_check = 1 } }
+
+		available = {
+			has_tech = NBC_research
+			NOT = { has_idea = wmd_disbandment }
+	
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		
+		fixed_random_seed = no
+		
+		cost = 0
+		complete_effect = {
+			clr_country_flag = napalm_selected
+			clr_country_flag = mustard_gas_selected
+			clr_country_flag = white_phosphorus_selected
+			clr_country_flag = agent_orange_selected
+			clr_country_flag = sarin_selected
+			clr_country_flag = vx_selected
+			set_country_flag = mustard_gas_selected
+		}		
+	}
+
+	white_phosphorus_attack = {
+		icon = white_phosphorus_attack
+		visible = { check_variable = { ROOT.distance_check = 1 } }
+		available = {
+			has_tech = NBC_research
+			NOT = { has_idea = wmd_disbandment }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		
+		fixed_random_seed = no
+		
+		cost = 0
+		complete_effect = {
+			clr_country_flag = napalm_selected
+			clr_country_flag = mustard_gas_selected
+			clr_country_flag = white_phosphorus_selected
+			clr_country_flag = agent_orange_selected
+			clr_country_flag = sarin_selected
+			clr_country_flag = vx_selected
+			set_country_flag = white_phosphorus_selected
+		}			
+	}
+
+	agent_orange_attack = {
+		icon = agent_orange_attack
+		visible = { check_variable = { ROOT.distance_check = 1 } }
+		available = {
+			has_tech = nbc_chemical_weapon_3
+			NOT = { has_idea = wmd_disbandment }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		
+		fixed_random_seed = no
+		
+		cost = 0
+		complete_effect = {
+			clr_country_flag = napalm_selected
+			clr_country_flag = mustard_gas_selected
+			clr_country_flag = white_phosphorus_selected
+			clr_country_flag = agent_orange_selected
+			clr_country_flag = sarin_selected
+			clr_country_flag = vx_selected
+			set_country_flag = agent_orange_selected
+		}		
+
+	}
+
+	sarin_attack = {
+		icon = sarin_attack
+		visible = { check_variable = { ROOT.distance_check = 1 } }
+
+		available = {
+			has_tech = nbc_nerve_weapon_0
+			NOT = { has_idea = wmd_disbandment }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		
+		fixed_random_seed = no
+		
+		cost = 0
+		complete_effect = {
+			clr_country_flag = napalm_selected
+			clr_country_flag = mustard_gas_selected
+			clr_country_flag = white_phosphorus_selected
+			clr_country_flag = agent_orange_selected
+			clr_country_flag = sarin_selected
+			clr_country_flag = vx_selected
+			set_country_flag = sarin_selected
+		}			
+	}
+
+	vx_attack = {
+		icon = vx_attack
+		visible = { check_variable = { ROOT.distance_check = 1 } }
+		available = {
+			has_tech = nbc_nerve_weapon_1
+			NOT = { has_idea = wmd_disbandment }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		
+		fixed_random_seed = no
+		
+		cost = 0
+		complete_effect = {
+			clr_country_flag = napalm_selected
+			clr_country_flag = mustard_gas_selected
+			clr_country_flag = white_phosphorus_selected
+			clr_country_flag = agent_orange_selected
+			clr_country_flag = sarin_selected
+			clr_country_flag = vx_selected
+			set_country_flag = vx_selected
+		}				
+	}
+}

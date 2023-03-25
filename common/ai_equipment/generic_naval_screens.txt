@@ -1,0 +1,960 @@
+# Shoutout to SimpleFlips for all they have contributed to this mod and HOI4 modding! #
+
+frigates = {
+	category = naval
+	
+	blocked_for = {
+	}
+	available_for = {
+	}
+	roles = {
+		naval_screen_light
+	}
+	
+	priority = {
+		factor = 500
+	}
+	
+	frigates_ww = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = screen_hull_medium_0
+				factor = 0.5
+			}
+			modifier = {
+				
+				factor = 0
+			}
+		}
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 6
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = screen_hull_medium_ww
+			modules = {
+				front_1_custom_slot = { any_of = { VLS_module ship_armament_asm ship_armament_medium ship_armament_light } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				rear_1_custom_slot = ship_subkiller
+			}
+		}
+
+		allowed_modules = {
+					ship_armament_heavyasm
+					ship_SAM_long_range
+					VLS_module
+					ship_armament_asm
+					ship_SAM_mid_range
+					ship_subkiller
+					ship_armament_heavy
+					ship_armament_medium
+					ship_armament_light
+					ship_AA_gun
+					screen_engine_light
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	
+	frigates_0 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = screen_hull_medium_1
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = screen_hull_medium_2
+				factor = 0
+			}
+		}
+		
+		enable = {
+			always = yes
+		}
+
+		role_icon_index = 6
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = screen_hull_medium_0
+			modules = {
+				front_1_custom_slot = { any_of = { VLS_module ship_armament_asm ship_armament_medium ship_armament_light } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				rear_1_custom_slot = ship_subkiller
+			}
+		}
+
+		allowed_modules = {
+					ship_armament_heavyasm
+					ship_SAM_long_range
+					VLS_module
+					ship_armament_asm
+					ship_SAM_mid_range
+					ship_subkiller
+					ship_armament_heavy
+					ship_armament_medium
+					ship_armament_light
+					ship_AA_gun
+					screen_engine_light
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	frigates_1 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = screen_hull_medium_2
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = screen_hull_medium_3
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 6
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = screen_hull_medium_1
+			modules = {
+				front_1_custom_slot = { any_of = { VLS_module ship_armament_asm ship_armament_medium ship_armament_light } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				rear_1_custom_slot = ship_subkiller
+			}
+		}
+
+		allowed_modules = {
+					ship_armament_heavyasm
+					ship_SAM_long_range
+					VLS_module
+					ship_armament_asm
+					ship_SAM_mid_range
+					ship_subkiller
+					ship_armament_heavy
+					ship_armament_medium
+					ship_armament_light
+					ship_AA_gun
+					screen_engine_light
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	frigates_2 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = screen_hull_medium_3
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = screen_hull_medium_4
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 6
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = screen_hull_medium_2
+			modules = {
+				front_1_custom_slot = { any_of = { VLS_module ship_armament_asm ship_armament_medium ship_armament_light } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				rear_1_custom_slot = ship_subkiller
+
+			}
+		}
+
+		allowed_modules = {
+					ship_armament_heavyasm
+					ship_SAM_long_range
+					VLS_module
+					ship_armament_asm
+					ship_SAM_mid_range
+					ship_subkiller
+					ship_armament_heavy
+					ship_armament_medium
+					ship_armament_light
+					ship_AA_gun
+					screen_engine_light
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	frigates_3 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = screen_hull_medium_4
+				factor = 0.5
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 6
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = screen_hull_medium_3	#1985
+			modules = {
+				front_1_custom_slot = { any_of = { VLS_module ship_armament_asm ship_armament_medium ship_armament_light } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				rear_1_custom_slot = ship_subkiller
+			}
+			
+		}
+
+		allowed_modules = {
+					ship_armament_heavyasm
+					ship_SAM_long_range
+					VLS_module
+					ship_armament_asm
+					ship_SAM_mid_range
+					ship_subkiller
+					ship_armament_heavy
+					ship_armament_medium
+					ship_armament_light
+					ship_AA_gun
+					screen_engine_light
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	frigates_4 = {
+	
+
+		priority = {
+			factor = 250
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 6
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = screen_hull_medium_4
+			modules = {
+				front_1_custom_slot = { any_of = { VLS_module ship_armament_asm ship_armament_medium ship_armament_light } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				rear_1_custom_slot = ship_subkiller
+			}
+		}
+
+		allowed_modules = {
+					ship_armament_heavyasm
+					ship_SAM_long_range
+					VLS_module
+					ship_armament_asm
+					ship_SAM_mid_range
+					ship_subkiller
+					ship_armament_heavy
+					ship_armament_medium
+					ship_armament_light
+					ship_AA_gun
+					screen_engine_light
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+}
+destroyers = {
+	category = naval
+	
+	blocked_for = {
+	}
+	available_for = {
+	}
+	roles = {
+		naval_screen_medium
+	}
+	
+	priority = {
+		factor = 500
+		modifier = {
+			num_of_naval_factories < 10
+			factor = 0.5
+		}
+		modifier = {
+			submarine_threat_high = yes
+			factor = 2
+		}
+	}
+	
+	destroyers_ww = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = screen_hull_heavy_0
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 1
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = screen_hull_heavy_ww
+			modules = {
+				front_1_custom_slot = { any_of = { VLS_module ship_armament_asm ship_armament_medium ship_armament_light } }
+				front_2_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_subkiller ship_screen_aviation } }
+			}
+		}
+
+		allowed_modules = {
+					ship_armament_heavyasm
+					ship_SAM_long_range
+					VLS_module
+					ship_armament_asm
+					ship_SAM_mid_range
+					ship_subkiller
+					ship_armament_heavy
+					ship_armament_medium
+					ship_armament_light
+					ship_AA_gun
+					screen_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	
+	destroyers_0 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = screen_hull_heavy_1
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = screen_hull_heavy_2
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 1
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = screen_hull_heavy_0
+			modules = {
+				front_1_custom_slot = { any_of = { VLS_module ship_armament_asm ship_armament_medium ship_armament_light } }
+				front_2_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_subkiller ship_screen_aviation } }
+			}
+		}
+
+		allowed_modules = {
+					ship_armament_heavyasm
+					ship_SAM_long_range
+					VLS_module
+					ship_armament_asm
+					ship_SAM_mid_range
+					ship_subkiller
+					ship_armament_heavy
+					ship_armament_medium
+					ship_armament_light
+					ship_AA_gun
+					screen_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	destroyers_1 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = screen_hull_heavy_2
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = screen_hull_heavy_3
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 1
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = screen_hull_heavy_1
+			modules = {
+				front_1_custom_slot = { any_of = { VLS_module ship_armament_asm ship_armament_medium ship_armament_light } }
+				front_2_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_subkiller ship_screen_aviation } }
+
+			}
+		}
+
+		allowed_modules = {
+					ship_armament_heavyasm
+					ship_SAM_long_range
+					VLS_module
+					ship_armament_asm
+					ship_SAM_mid_range
+					ship_subkiller
+					ship_armament_heavy
+					ship_armament_medium
+					ship_armament_light
+					ship_AA_gun
+					screen_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	destroyers_2 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = screen_hull_heavy_3
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = screen_hull_heavy_4
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 1
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = screen_hull_heavy_2
+			modules = {
+				front_1_custom_slot = { any_of = { VLS_module ship_armament_asm ship_armament_medium ship_armament_light } }
+				front_2_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_subkiller ship_screen_aviation } }
+			}
+		}
+
+		allowed_modules = {
+					ship_armament_heavyasm
+					ship_SAM_long_range
+					VLS_module
+					ship_armament_asm
+					ship_SAM_mid_range
+					ship_subkiller
+					ship_armament_heavy
+					ship_armament_medium
+					ship_armament_light
+					ship_AA_gun
+					screen_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	destroyers_3 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = screen_hull_heavy_4
+				factor = 0.5
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 1
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = screen_hull_heavy_3
+			modules = {
+				front_1_custom_slot = { any_of = { VLS_module ship_armament_asm ship_armament_medium ship_armament_light } }
+				front_2_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_subkiller ship_screen_aviation } }
+			}
+		}
+
+		allowed_modules = {
+					ship_armament_heavyasm
+					ship_SAM_long_range
+					VLS_module
+					ship_armament_asm
+					ship_SAM_mid_range
+					ship_subkiller
+					ship_armament_heavy
+					ship_armament_medium
+					ship_armament_light
+					ship_AA_gun
+					screen_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	destroyers_4 = {
+	
+
+		priority = {
+			factor = 250
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 1
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = screen_hull_heavy_4
+			modules = {
+				front_1_custom_slot = { any_of = { VLS_module ship_armament_asm ship_armament_medium ship_armament_light } }
+				front_2_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_subkiller ship_screen_aviation } }
+			}
+		}
+
+		allowed_modules = {
+					ship_armament_heavyasm
+					ship_SAM_long_range
+					VLS_module
+					ship_armament_asm
+					ship_SAM_mid_range
+					ship_subkiller
+					ship_armament_heavy
+					ship_armament_medium
+					ship_armament_light
+					ship_AA_gun
+					screen_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+}
+cruisers = {
+	category = naval
+	
+	blocked_for = {
+	}
+	available_for = {
+	}
+	roles = {
+		naval_screen_heavy
+	}
+	
+	priority = {
+		factor = 500
+		modifier = {
+			num_of_naval_factories < 10
+			factor = 0
+		}
+	}
+	
+	cruisers_ww = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = battle_hull_light_0
+				factor = 0
+			}
+		}
+		
+		enable = {
+			always = yes
+		}
+
+		role_icon_index = 8
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = battle_hull_light_ww
+			modules = {
+				front_1_custom_slot = { any_of = { VLS_module ship_armament_asm ship_armament_medium ship_armament_light } }
+				front_2_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				mid_2_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_subkiller ship_screen_aviation } }
+			}
+		}
+
+		allowed_modules = {
+					ship_armament_heavyasm
+					ship_SAM_long_range
+					VLS_module
+					ship_armament_asm
+					ship_SAM_mid_range
+					ship_subkiller
+					ship_armament_heavy
+					ship_armament_medium
+					ship_armament_light
+					ship_AA_gun
+					screen_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	
+	cruisers_0 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = battle_hull_light_1
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = battle_hull_light_2
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 8
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = battle_hull_light_0
+			modules = {
+				front_1_custom_slot = { any_of = { VLS_module ship_armament_asm ship_armament_medium ship_armament_light } }
+				front_2_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				mid_2_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_subkiller ship_screen_aviation } }
+
+			}
+		}
+
+		allowed_modules = {
+					ship_armament_heavyasm
+					ship_SAM_long_range
+					VLS_module
+					ship_armament_asm
+					ship_SAM_mid_range
+					ship_subkiller
+					ship_armament_heavy
+					ship_armament_medium
+					ship_armament_light
+					ship_AA_gun
+					screen_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	cruisers_1 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = battle_hull_light_2
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = battle_hull_light_3
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 8
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = battle_hull_light_1
+			modules = {
+				front_1_custom_slot = { any_of = { VLS_module ship_armament_asm ship_armament_medium ship_armament_light } }
+				front_2_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				mid_2_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_subkiller ship_screen_aviation } }
+			}
+		}
+
+		allowed_modules = {
+					ship_armament_heavyasm
+					ship_SAM_long_range
+					VLS_module
+					ship_armament_asm
+					ship_SAM_mid_range
+					ship_subkiller
+					ship_armament_heavy
+					ship_armament_medium
+					ship_armament_light
+					ship_AA_gun
+					screen_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	cruisers_2 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = battle_hull_light_3
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = battle_hull_light_4
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 8
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = battle_hull_light_2
+			modules = {
+				front_1_custom_slot = { any_of = { VLS_module ship_armament_asm ship_armament_medium ship_armament_light } }
+				front_2_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				mid_2_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_subkiller ship_screen_aviation } }
+			}
+		}
+
+		allowed_modules = {
+					ship_armament_heavyasm
+					ship_SAM_long_range
+					VLS_module
+					ship_armament_asm
+					ship_SAM_mid_range
+					ship_subkiller
+					ship_armament_heavy
+					ship_armament_medium
+					ship_armament_light
+					ship_AA_gun
+					screen_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	cruisers_3 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = battle_hull_light_4
+				factor = 0.5
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 8
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = battle_hull_light_3
+			modules = {
+				front_1_custom_slot = { any_of = { VLS_module ship_armament_asm ship_armament_medium ship_armament_light } }
+				front_2_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				mid_2_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_subkiller ship_screen_aviation } }
+			}
+		}
+
+		allowed_modules = {
+					ship_armament_heavyasm
+					ship_SAM_long_range
+					VLS_module
+					ship_armament_asm
+					ship_SAM_mid_range
+					ship_subkiller
+					ship_armament_heavy
+					ship_armament_medium
+					ship_armament_light
+					ship_AA_gun
+					screen_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+	cruisers_4 = {
+	
+
+		priority = {
+			factor = 250
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 8
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = battle_hull_light_4
+			modules = {
+				front_1_custom_slot = { any_of = { VLS_module ship_armament_asm ship_armament_medium ship_armament_light } }
+				front_2_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				mid_2_custom_slot = { any_of = { VLS_module ship_SAM_mid_range ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_subkiller ship_screen_aviation } }
+			}
+		}
+
+		allowed_modules = {
+					ship_armament_heavyasm
+					ship_SAM_long_range
+					VLS_module
+					ship_armament_asm
+					ship_SAM_mid_range
+					ship_subkiller
+					ship_armament_heavy
+					ship_armament_medium
+					ship_armament_light
+					ship_AA_gun
+					screen_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+		}
+	}
+}

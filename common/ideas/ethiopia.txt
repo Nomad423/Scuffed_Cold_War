@@ -1,0 +1,228 @@
+ideas = {
+ 
+	country = {
+		eth_plan_bonus = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			modifier = {
+				army_org_factor = 0.05
+			}
+		}
+
+		eth_reformed_high_command = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = german_advisors
+
+			modifier = {
+				army_org = 5
+			}
+		}
+
+		eth_consc_bonus = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription = 0.010
+			}
+		}
+		eth_peoples_army = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+
+			modifier = {
+				conscription = 0.015
+				stability_factor = 0.05
+			}
+		}
+		eth_elected_officers = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		eth_rampant_slavery_0 = {
+			picture = slavery
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				MONTHLY_POPULATION = -0.05
+				stability_factor = -0.10
+				research_speed_factor = -0.01
+				#local_resources_factor = +0.10
+			}
+		}
+		idea_ETH_reformist_negus = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				research_speed_factor = 0.025
+			}
+		}
+		eth_prevalent_slavery_1 = {
+			picture = slavery
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				MONTHLY_POPULATION = -0.04
+				stability_factor = -0.08
+				#local_resources_factor = +0.08
+			}
+		}
+		illiteracy_1 = {
+			picture = illiteracy
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.08
+				drift_defence_factor = 0.25
+			}
+		}
+		illiteracy_2 = {
+			picture = illiteracy
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.06
+				drift_defence_factor = 0.15
+			}
+		}
+		illiteracy_3 = {
+			picture = illiteracy
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.03
+				drift_defence_factor = 0.05
+			}
+		}
+		idea_ETH_consumerism = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+		anti_air_defenses = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_anti_air_building_factor = 0.5
+			}
+		}
+		ethiopian_ship_repair = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				repair_speed_factor = 0.4 
+			}
+		}
+		idea_ETH_haile_selassie_under_house_arrest = {
+		picture = Haile_Selassie_imprisoned
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+				opinion_gain_monthly_factor = -0.15 
+			}
+		}
+		idea_eth60_concede_to_the_nobility = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = +1000
+				##political_advisor_cost_factor = +0.25
+				trade_laws_cost_factor = +0.25
+				economy_cost_factor = +0.25
+			}
+		}
+		idea_eth60_west_german_advisors = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			research_bonus = { air_doctrine = 0.08 }
+		}
+		idea_eth60_usa_advisors = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			research_bonus = { air_doctrine = 0.08 }
+		}
+	}
+}

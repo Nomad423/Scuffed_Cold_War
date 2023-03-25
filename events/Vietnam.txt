@@ -1,0 +1,232 @@
+ #############################
+# Vietnam events
+#############################
+
+add_namespace = vie
+add_namespace = join_vietnam_war
+add_namespace = vie_peace
+add_namespace = vietnam_exp
+add_namespace = vin_ref
+add_namespace = NLF_Flavor
+
+country_event = {
+	id = NLF_Flavor.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = NLF_Flavor.1"}
+	title = "Southern Communists take Arms"
+	desc = NLF_Flavor.1.d
+	picture = GFX_NLF_1
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = "Damn It All"
+		hidden_effect = {
+			set_global_flag = Vietnam_War
+			set_variable = { VIN.nlf_funding = 5 }
+			set_variable = { SOV.nlf_funding = 20 }
+			set_variable = { PRC.nlf_funding = 5 }
+			
+			set_variable = { NLF.global_nlf_funding = 30 }
+		
+			set_variable = { USA.vie_funding = 20 }
+			
+			set_variable = { VIE.global_vie_funding = 20 }
+			NLF = { 
+				transfer_state = 1286
+				add_ideas = The_Vietnam_War_NLF
+				if = {
+					limit = { NOT = { has_war_with = VIE } }
+					declare_war_on = { target = VIE type = annex_everything }
+				}
+				set_province_controller = 1400
+				load_oob = NLF_1960
+			}
+			VIN = { add_ideas = The_Vietnam_War_VIN }
+			add_ideas = The_Vietnam_War_VIE
+			286 = { set_state_flag = NLF_Crushed }
+			every_owned_state = {
+				limit = {
+					is_capital = no
+				}
+				start_resistance = yes
+				add_resistance = 30
+			}
+		}
+	}
+}
+
+news_event = {
+	id = vie.1500 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = vie.1500"}
+	title = "[GetNewspaperHeader]French Victory in Indochina"
+	desc = vie.1500.d
+	picture = GFX_vie_1500
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A Major Victory for France"
+	}
+}
+news_event = {
+	id = NLF_Flavor.10 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = NLF_Flavor.10"}
+	title = "[GetNewspaperHeader]The National Liberation Front"
+	desc = NLF_Flavor.2.d
+	picture = GFX_NLF_2
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Interesting"
+	}
+}
+
+country_event = {
+	id = vietnam_exp.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = vietnam_exp.1"}
+	title = "Vietnam Demands Southern China"
+	desc = "Vietnam Demands Southern China"
+
+	is_triggered_only = yes
+
+	# Join
+	option = {
+		name = "Accept"
+		VIN = {
+			transfer_state = 599
+			transfer_state = 594
+			transfer_state = 593
+			transfer_state = 592
+			transfer_state = 591
+		}
+	  ai_chance = {
+			factor = 50
+		}
+	}
+
+	# Nope
+	option = {
+		name = "Reject the Demands"
+	  ai_chance = {
+		  factor = 50
+		}
+	}
+}
+country_event = {
+  id = vin_ref.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = vin_ref.1"}
+	title = "North Vietnam Requests Unification"
+	desc = "North Vietnam Requests Unification"
+
+	is_triggered_only = yes
+
+	# Join
+	option = {
+		name = "End the War"
+		VIN = { change_tag_from = VIE }
+		VIN = { annex_country = { target = VIE } }
+		set_global_flag = vietnam_war_over
+	  ai_chance = {
+			factor = 75
+		}
+	}
+
+	# Nope
+	option = {
+		name = "Continue the War"
+	  ai_chance = {
+		  factor = 25
+		}
+	}
+}
+country_event = {
+  id = vie_peace.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = vie_peace.1"}
+	title = "South Vietnam Requests Peace"
+	desc = "South Vietnam Requests Peace"
+
+	is_triggered_only = yes
+
+	# Join
+	option = {
+		name = "End the War"
+		white_peace = VIN
+		set_global_flag = vietnam_war_over
+	  ai_chance = {
+			factor = 75
+		}
+	}
+
+	# Nope
+	option = {
+		name = "Continue the War"
+	  ai_chance = {
+		  factor = 25
+		}
+	}
+}
+country_event = {
+  id = join_vietnam_war.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = join_vietnam_war.1"}
+	title = "Enter the Vietnam War?"
+	desc = "Enter the Vietnam War?"
+
+	is_triggered_only = yes
+
+	# Join
+	option = {
+		name = "Enter the War"
+		add_to_war = { targeted_alliance = VIE enemy = VIN }
+	  ai_chance = {
+			factor = 85
+		}
+	}
+
+	# Nope
+	option = {
+		name = "Do not enter the war"
+	  ai_chance = {
+		  factor = 15
+		}
+	}
+}
+# 17th North / South DMZ failsafe event
+country_event = {
+	id = vie.6 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = vie.6"}
+	hidden = yes
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = { }
+
+}
+# FRA win against VIN
+country_event = {
+	id = vie.7 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = vie.7"}
+	hidden = yes
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		FRA = {
+			white_peace = VIN
+			annex_country = { target = VIN transfer_troops = no }
+		}
+	}
+
+}

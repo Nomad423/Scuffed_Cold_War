@@ -1,0 +1,97 @@
+stop_making_horsies = {
+	enable = {
+		num_of_factories > 20
+		date > 1938.1.1
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = cavalry
+		value = -100 # -100% cav
+	}		
+}
+
+############
+### LAND ###
+############
+
+############
+### AERO ###
+############
+
+ai_air_versatile = {
+	enable = {
+		AND = {
+			has_tech = air_doctrine_versatile
+			num_of_military_factories > 16
+		}
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 15
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = 10
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = -5
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = interceptor
+		value = -10
+	}
+}
+
+ai_air_systemic = {
+	enable = {
+		AND = {
+			has_tech = air_doctrine_systemic
+			num_of_military_factories > 25
+		}
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = 25
+	}
+}
+
+ai_air_integral = {
+	enable = {
+		AND = {
+			has_tech = air_doctrine_integral
+			num_of_military_factories > 25
+		}
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = interceptor
+		value = 15
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = -5
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = -10
+	}
+}
+
+############
+### NAVY ###
+############

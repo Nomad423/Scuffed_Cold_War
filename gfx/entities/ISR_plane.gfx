@@ -1,0 +1,136 @@
+objectTypes = {
+
+#old_fighter#
+	
+	pdxmesh = {
+		name = "ISR_MirageIIIC_mesh"
+		file = "gfx/models/units/planes/mirageiiic.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	meshsettings = {
+			texture_diffuse = "mirageIIIisrael_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ISR_MystereIV_mesh"
+		file = "gfx/models/units/planes/mystereiv.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	meshsettings = {
+			texture_diffuse = "MystereIVISR_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ISR_F4E_mesh"
+		file = "gfx/models/units/planes/F4E.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	meshsettings = {
+			texture_diffuse = "F4EISR_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ISR_F15A_mesh"
+		file = "gfx/models/units/planes/F15A.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+		meshsettings = {
+			texture_diffuse = "F15AISR_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ISR_F15C_mesh"
+		file = "gfx/models/units/planes/F15C.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+		meshsettings = {
+			texture_diffuse = "F15CISR_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ISR_F15E_mesh"
+		file = "gfx/models/units/planes/F15E.mesh"
+		animation = { id = "idle" type = "bomber_default_idle_animation" }
+		meshsettings = {
+			texture_diffuse = "F15EISR_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ISR_F16A_mesh"
+		file = "gfx/models/units/planes/F16A.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+		meshsettings = {
+			texture_diffuse = "F16AISR_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ISR_F16C_mesh"
+		file = "gfx/models/units/planes/F16C.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+		meshsettings = {
+			texture_diffuse = "F16CISR_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ISR_Vautour_mesh"
+		file = "gfx/models/units/planes/vautourii.mesh"
+		animation = { id = "idle" type = "bomber_default_idle_animation" }
+		meshsettings = {
+			texture_diffuse = "VautourIIISR_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ISR_VautourN_mesh"
+		file = "gfx/models/units/planes/vautourii.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+		meshsettings = {
+			texture_diffuse = "VautourIIISR_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ISR_Meteormk4_mesh"
+		file = "gfx/models/units/planes/Meteormk4.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+		meshsettings = {
+			texture_diffuse = "Meteormk4ISR_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ISR_Spitfire_mesh"
+		file = "gfx/models/units/planes/Spitfiremkix.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+		meshsettings = {
+			texture_diffuse = "SpitfiremkixISR_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ISR_P51_mesh"
+		file = "gfx/models/units/planes/USA_F51.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+		meshsettings = {
+			texture_diffuse = "P-51DISR_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ISR_beaufighter_mesh"
+		file = "gfx/models/units/planes/beaufighter.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+		meshsettings = {
+			texture_diffuse = "beaufighterISR_diffuse.dds"
+		}
+	}
+	
+	pdxmesh = {
+		name = "ISR_mosquito_fighter_mesh"
+		file = "gfx/models/units/planes/Mosquito.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+		meshsettings = {
+			texture_diffuse = "MosquitoISR_diffuse.dds"
+		}
+	}
+	
+	pdxmesh = {
+		name = "ISR_mosquito_mesh"
+		file = "gfx/models/units/planes/Mosquito.mesh"
+		animation = { id = "idle" type = "bomber_default_idle_animation" }
+		meshsettings = {
+			texture_diffuse = "MosquitoISR_diffuse.dds"
+		}
+	}
+	
+}

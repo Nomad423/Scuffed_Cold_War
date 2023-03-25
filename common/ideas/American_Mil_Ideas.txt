@@ -1,0 +1,672 @@
+ideas = {
+
+	country = {
+		Vozdushno_desantnye_voyska = {		
+			allowed = {
+				always = no
+			}			
+			#picture = 
+			
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		Vozdushno_desantnye_voyska_1 = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				transport_plane_equipment = {
+					build_cost_ic = -0.25 instant = yes
+				}
+			}
+		}	
+
+		
+		Vozdushno_desantnye_voyska_2 = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				utility_helicopter_equipment = {
+					build_cost_ic = -0.25 instant = yes
+				}
+			}
+		}	
+
+		
+		VDV_Expansion = {		
+				allowed = {
+				always = no
+			}		
+			#picture = 
+			
+			removal_cost = -1
+			
+			modifier = {
+				special_forces_cap = 0.25	
+			}
+		}
+		BMP_Cost_Reduction = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				mechanized_heavy_equipment = {
+					build_cost_ic = -0.35 instant = yes
+				}
+			}
+		}	
+		BMP_Bonus = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				mechanized_heavy_equipment = {
+					build_cost_ic = -0.35
+					soft_attack = 0.10
+					hard_attack = 0.25
+					instant = yes
+				}
+			}
+		}	
+		VDV_BMP = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				airborne = {
+					hard_attack = 0.25
+				}
+			}
+		}
+		SOV_ZSU_23_4_Afghanski = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				spaag_equipment = {
+					hard_attack = 0.25
+					soft_attack = 0.25
+				}
+			}
+		}	
+		SOV_Thermobaric_ATGM_Warheads = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				atgm_equipment = {
+					soft_attack = 0.25
+				}
+				atgm_carrier_equipment = {
+					soft_attack = 0.25
+				}
+			}
+		}
+
+		SOV_Weapon_Exports = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				mechanized_heavy_equipment = {
+					build_cost_ic = -0.35 instant = yes
+				}
+				mbt_equipment = {
+					build_cost_ic = -0.35 instant = yes
+				}
+			}
+		}	      
+		SOV_Recon_Helicoptor_Bonus = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				scout_helicopter_equipment = {
+					build_cost_ic = -0.25 instant = yes
+				}
+			}
+		}	
+		SF_Cap_Bonus = {		
+			allowed = {
+				always = no
+			}	
+			#picture = 
+			
+			removal_cost = -1
+			
+			modifier = {
+				special_forces_cap = 0.10	
+			}
+		}
+		AK_74_Service_Rifle_Adoption = {		
+			allowed = {
+				always = no
+			}			
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}	
+		MiG_15_Mass_Adoption = {		
+			allowed = {
+				always = no
+			}			
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}	
+		Submarine_Expansion = {		
+			allowed = {
+				always = no
+			}			
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				sub_hull_large_single = {
+					build_cost_ic = -0.1 instant = yes
+				}	
+				sub_hull_small_single = {
+					build_cost_ic = -0.1 instant = yes
+				}	
+				sub_hull_large_double = {
+					build_cost_ic = -0.1 instant = yes
+				}	
+			}
+		}			
+
+		AK_47_Mass_Adoption = {		
+			allowed = {
+				always = no
+			}			
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.25 instant = yes
+				}	
+			}
+		}	
+
+		Increase_T54_Production = {		
+			allowed = {
+				always = no
+			}			
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				mbt_equipment = {
+					build_cost_ic = -0.20 instant = yes
+				}	
+			}
+		}
+		Continue_High_Speed_Bomber_Development = {		
+			allowed = {
+				always = no
+			}			
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				mach3stratbomber_equipment = {
+					build_cost_ic = -0.10 instant = yes
+				}	
+			}
+		}
+		Adopt_VFAX_Program = {		
+			allowed = {
+				always = no
+			}			
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				jet_light_equipment = {
+					build_cost_ic = -0.20 instant = yes
+				}	
+			}
+		}
+		
+		ATGM_Gun_Investments = {		
+			allowed = {
+				always = no
+			}			
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				mbt_equipment = {
+					build_cost_ic = -0.20 instant = yes
+				}	
+				lt_equipment = {
+					build_cost_ic = -0.20 instant = yes
+				}	
+			}
+		}
+		Increase_Centurion_Production = {		
+			allowed = {
+				always = no
+			}			
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				mbt_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}	
+			}
+		}		
+		
+	
+	
+		M113_Armored_Cavalry_Conversion = { 
+			removal_cost = -1
+			allowed = {
+				always = no
+			}			
+			#picture = generic_communism_drift_bonus
+
+			
+			modifier = {
+				recon_factor = 0.1
+			}
+
+		}		
+		Strategic_Bomber_Command_Restructure = {		
+			allowed = {
+				always = no
+			}			
+			#picture = 
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 20	
+			}
+		}
+		Silo_Expansion = {		
+						allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_rocket_site_factor = 0.20
+			}
+		}		
+		
+		X_M803 = {		
+						allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				mbt_equipment = {
+					build_cost_ic = -0.2 instant = yes
+				}	
+			}
+		}
+		Mass_Adoption_of_the_M16 = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.25 instant = yes
+				}	
+			}
+		}
+		Mobile_Airfield_Investments = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				carrier_hull_super = {
+					build_cost_ic = -0.10 instant = yes
+				}	
+			}
+		}		
+		Heavy_Napalm_Integration = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				CAS_equipment = {
+					air_ground_attack = 0.10 instant = yes
+				}
+				cv_CAS_equipment = {
+					air_ground_attack = 0.10 instant = yes
+				}
+			}
+		}	
+		Wild_Weasels = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				CAS_equipment = {
+					air_defence = 0.10 instant = yes
+				}
+				cv_CAS_equipment = {
+					air_defence = 0.10 instant = yes
+				}
+				naval_uav_equipment = {
+					air_defence = 0.10 instant = yes
+				}
+				cas_uav_equipment = {
+					air_defence = 0.10 instant = yes
+				}
+			}
+		}	
+		Carrier_Strike_Group_Formations = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				cv_CAS_equipment = {
+					naval_strike_attack = 0.10 instant = yes
+				}
+			}
+		}		
+		Viking_S_3_Tankers = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				cv_fighter_equipment = {
+					air_range = 0.25 instant = yes
+				}
+				cv_CAS_equipment = {
+					air_range = 0.25 instant = yes
+				}
+		}	
+        }		
+		Stratofortress_Focus = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				strat_bomber_equipment = {
+					build_cost_ic = -0.25 instant = yes
+				}
+			}
+		}	
+		Super_Sabre_Mass_Production = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.25 instant = yes
+				}
+			}
+		}	
+		
+		B_52_Enhancement = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				strat_bomber_equipment = {
+					air_agility = 0.20 instant = yes
+				}
+			}
+		}	
+		Big_Four_B_52_Enhancement = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				strat_bomber_equipment = {
+					air_agility = 0.20 instant = yes
+				}
+			}
+		}	
+		The_Big_Stick = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				cruisemissile_equipment = {
+					air_range = 10 instant = yes
+				}
+			}
+		}	
+		IRBM_Focus = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				irbm_equipment = {
+					build_cost_ic = -0.25 instant = yes
+				}
+			}
+		}	
+		M56_Discount = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				medium_tank_destroyer_equipment = {
+					build_cost_ic = -0.25 instant = yes
+				}
+			}
+		}
+		Jets_For_The_Fleet = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				cv_fighter_equipment = {
+					build_cost_ic = -0.25 instant = yes
+				}
+			}
+		}	
+		
+		
+		#cruisemissile_equipment
+		#air_range = 0.1
+		Salt_Water_Nuclear_Engine_Investments = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				carrier_hull_super = {
+					naval_speed = 0.2
+					sub_detection = 0.2
+					instant = yes
+				}	
+			}
+		}		
+		
+		Polaris_SLBM_Deployment = {
+			#picture = 
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+				slbm_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}	
+			}		
+		}
+		Mass_M113_Deployment = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				mechanized_equipment = {
+					build_cost_ic = -0.20 instant = yes
+				}	
+			}
+		}
+		
+		Ford_Machinery_M113_Mass_Production = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				mechanized_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}	
+			}
+		}	
+		Close_the_Missle_Gap = {		
+			allowed = {
+				always = no
+			}
+			#picture = 
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				icbm_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}	
+			}
+		}
+		Reduce_F104_Accident_Rates = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				air_accidents_factor = -0.15
+			}
+		}		
+	}
+}

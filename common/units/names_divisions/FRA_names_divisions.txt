@@ -1,0 +1,912 @@
+﻿# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical division names that did not have a number. Regardless if such names happened in history or not
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names. 
+#           Numbers must start from 1 and up. 
+#           Numbers can't repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either: 
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip
+#                                      where you choose the historical division name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
+#                                      the current game version.
+FRA_INF_01 = 
+{
+	name = "Infantry Division"
+
+	for_countries = { FRA }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { FRA_INF_01 }
+
+	fallback_name = "%de Division d'Infanterie"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		2 = { "%de Division d'Infanterie" }
+		4 = { "%de Division d'Infanterie" }
+		6 = { "%de Division d'Infanterie" }
+		7 = { "%de Division d'Infanterie" }
+		10 = { "%de Division d'Infanterie" }
+		11 = { "%de Division d'Infanterie" }
+		13 = { "%de Division d'Infanterie" }
+		14 = { "%de Division d'Infanterie" }
+		16 = { "%de Division d'Infanterie" }
+		18 = { "%de Division d'Infanterie" }
+		19 = { "%de Division d'Infanterie" }
+		20 = { "%de Division d'Infanterie" }
+		21 = { "%de Division d'Infanterie" }
+		22 = { "%de Division d'Infanterie" }
+		23 = { "%de Division d'Infanterie" }
+		24 = { "%de Division d'Infanterie" }
+		26 = { "%de Division d'Infanterie" }
+		36 = { "%de Division d'Infanterie" }
+		42 = { "%de Division d'Infanterie" }
+		43 = { "%de Division d'Infanterie" }
+		32 = { "%de Division d'Infanterie" }
+		35 = { "%de Division d'Infanterie" }
+		41 = { "%de Division d'Infanterie" }
+		45 = { "%de Division d'Infanterie" }
+		47 = { "%de Division d'Infanterie" }
+		51 = { "%de Division d'Infanterie" }
+		52 = { "%de Division d'Infanterie" }
+		53 = { "%de Division d'Infanterie" }
+		54 = { "%de Division d'Infanterie" }
+		55 = { "%de Division d'Infanterie" }
+		56 = { "%de Division d'Infanterie" }
+		57 = { "%de Division d'Infanterie" }
+		58 = { "%de Division d'Infanterie" }
+		60 = { "%de Division d'Infanterie" }
+		61 = { "%de Division d'Infanterie" }
+		62 = { "%de Division d'Infanterie" }
+		63 = { "%de Division d'Infanterie" }
+		66 = { "%de Division d'Infanterie" }
+		67 = { "%de Division d'Infanterie" }
+		70 = { "%de Division d'Infanterie" }
+		71 = { "%de Division d'Infanterie" }
+		81 = { "%de Div. d'Infanterie d'Afrique" }
+		83 = { "%de Div. d'Infanterie d'Afrique" }
+		85 = { "%de Div. d'Infanterie d'Afrique" }
+		82 = { "%de Div. d'Infanterie d'Afrique" }
+		84 = { "%de Div. d'Infanterie d'Afrique" }
+		86 = { "%de Div. d'Infanterie d'Afrique" }
+		87 = { "%de Div. d'Infanterie d'Afrique" }
+		88 = { "%de Div. d'Infanterie d'Afrique" }
+		180 = { "%de Div. d'Infanterie d'Afrique" }
+		181 = { "%de Div. d'Infanterie d'Afrique" }
+		182 = { "%de Div. d'Infanterie d'Afrique" }
+		183 = { "%de Div. d'Infanterie d'Afrique" }
+		191 = { "%de Div. d'Infanterie d'Afrique" }
+		192 = { "%de Div. d'Infanterie d'Afrique" }
+		8 = { "%de Division d'Infanterie" }
+		44 = { "%de Division d'Infanterie" }
+		68 = { "%de Division d'Infanterie" }
+		303 = { "3e Div. Légère d'Infanterie" }
+		301 = { "1ère Division Légère de Chasseurs" }
+		302 = { "2e Division Légère de Chasseurs" }
+		59 = { "%de Div. Légère d'Infanterie" }		# post-invasion divisions, raised quickly and haphazardly
+		40 = { "%de Division d'Infanterie" }
+		17 = { "%de Div. Légère d'Infanterie" }
+		353 = { "53e Div. Légère d'Infanterie" }
+		235 = { "%de Div. Légère d'Infanterie" }
+		236 = { "%de Div. Légère d'Infanterie" }
+		237 = { "%de Div. Légère d'Infanterie" }
+		238 = { "%de Div. Légère d'Infanterie" }
+		239 = { "%de Div. Légère d'Infanterie" }
+		240 = { "%de Div. Légère d'Infanterie" }
+		241 = { "%de Div. Légère d'Infanterie" }
+		33 = { "%de Division d'Infanterie" }			# fictional divisions start here
+		34 = { "%de Division d'Infanterie" }
+		37 = { "%de Division d'Infanterie" }
+		38 = { "%de Division d'Infanterie" }
+		39 = { "%de Division d'Infanterie" }
+		46 = { "%de Division d'Infanterie" }
+		48 = { "%de Division d'Infanterie" }
+		49 = { "%de Division d'Infanterie" }
+		50 = { "%de Division d'Infanterie" }
+		69 = { "%de Division d'Infanterie" }
+		72 = { "%de Division d'Infanterie" }	
+		73 = { "%de Division d'Infanterie" }
+		74 = { "%de Division d'Infanterie" }
+		75 = { "%de Division d'Infanterie" }
+		76 = { "%de Division d'Infanterie" }
+		77 = { "%de Division d'Infanterie" }
+		78 = { "%de Division d'Infanterie" }
+		79 = { "%de Division d'Infanterie" }
+		80 = { "%de Division d'Infanterie" }
+		89 = { "%de Div. d'Infanterie d'Afrique" }
+		90 = { "%de Div. d'Infanterie d'Afrique" }
+		91 = { "%de Division d'Infanterie" }
+		92 = { "%de Division d'Infanterie" }
+		93 = { "%de Division d'Infanterie" }
+		94 = { "%de Division d'Infanterie" }
+		95 = { "%de Division d'Infanterie" }
+		96 = { "%de Division d'Infanterie" }
+		97 = { "%de Division d'Infanterie" }
+		98 = { "%de Division d'Infanterie" }
+		99 = { "%de Division d'Infanterie" }
+		100 = { "%de Division d'Infanterie" }
+		151 = { "%de Division d'Infanterie" }
+		152 = { "%de Division d'Infanterie" }
+		153 = { "%de Division d'Infanterie" }
+		154 = { "%de Division d'Infanterie" }
+		155 = { "%de Division d'Infanterie" }
+		156 = { "%de Division d'Infanterie" }
+		157 = { "%de Division d'Infanterie" }
+		158 = { "%de Division d'Infanterie" }
+		159 = { "%de Division d'Infanterie" }
+		160 = { "%de Division d'Infanterie" }
+		161 = { "%de Division d'Infanterie" }
+		162 = { "%de Division d'Infanterie" }
+		163 = { "%de Division d'Infanterie" }
+		164 = { "%de Division d'Infanterie" }
+		165 = { "%de Division d'Infanterie" }
+		166 = { "%de Division d'Infanterie" }
+		167 = { "%de Division d'Infanterie" }
+		168 = { "%de Division d'Infanterie" }
+		169 = { "%de Division d'Infanterie" }
+		170 = { "%de Division d'Infanterie" }
+		171 = { "%de Division d'Infanterie" }
+		172 = { "%de Division d'Infanterie" }
+		173 = { "%de Division d'Infanterie" }
+		174 = { "%de Division d'Infanterie" }
+		175 = { "%de Division d'Infanterie" }
+		176 = { "%de Division d'Infanterie" }
+		177 = { "%de Division d'Infanterie" }
+		178 = { "%de Division d'Infanterie" }
+		179 = { "%de Division d'Infanterie" }
+		184 = { "%de Div. d'Infanterie d'Afrique" }
+		185 = { "%de Div. d'Infanterie d'Afrique" }
+		186 = { "%de Div. d'Infanterie d'Afrique" }
+		187 = { "%de Div. d'Infanterie d'Afrique" }
+		188 = { "%de Div. d'Infanterie d'Afrique" }
+		189 = { "%de Div. d'Infanterie d'Afrique" }
+		190 = { "%de Div. d'Infanterie d'Afrique" }
+		193 = { "%de Div. d'Infanterie d'Afrique" }
+		194 = { "%de Div. d'Infanterie d'Afrique" }
+		195 = { "%de Div. d'Infanterie d'Afrique" }
+		196 = { "%de Div. d'Infanterie d'Afrique" }
+		197 = { "%de Div. d'Infanterie d'Afrique" }
+		198 = { "%de Div. d'Infanterie d'Afrique" }
+		199 = { "%de Div. d'Infanterie d'Afrique" }
+		200 = { "%de Div. d'Infanterie d'Afrique" }
+	}
+}
+
+FRA_CAV_01 = 
+{
+	name = "Cavalry Division"
+
+	for_countries = { FRA }
+
+	can_use = { always = yes }
+
+	division_types = { "armored_infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { FRA_INF_01 }
+
+	fallback_name = "%de Division de Cavalerie"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dre Division de Cavalerie" }
+		2 = { "%de Division de Cavalerie" }
+		3 = { "%de Division de Cavalerie" }
+		4 = { "%de Division de Cavalerie" }
+		5 = { "%de Division de Cavalerie" }
+		6 = { "%de Division de Cavalerie" }
+		7 = { "%de Division de Cavalerie" }
+		8 = { "%de Division de Cavalerie" }
+		9 = { "%de Division de Cavalerie" }
+		10 = { "%de Division de Cavalerie" }
+		11 = { "%de Division de Cavalerie" }
+		12 = { "%de Division de Cavalerie" }
+		13 = { "%de Division de Cavalerie" }
+		14 = { "%de Division de Cavalerie" }
+		15 = { "%de Division de Cavalerie" }
+		16 = { "%de Division de Cavalerie" }
+		17 = { "%de Division de Cavalerie" }
+		18 = { "%de Division de Cavalerie" }
+		19 = { "%de Division de Cavalerie" }
+		20 = { "%de Division de Cavalerie" }
+	}
+}
+
+FRA_MOT_01 = 
+{
+	name = "Motorized Division"
+
+	for_countries = { FRA }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized_infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { FRA_INF_01 }
+
+	fallback_name = "%de Div. d'Infanterie Motorisée"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dre Div. d'Infanterie Motorisée" }
+		3 = { "%de Div. d'Infanterie Motorisée" }
+		5 = { "%de Div. d'Infanterie Motorisée" }
+		9 = { "%de Div. d'Infanterie Motorisée" }
+		12 = { "%de Div. d'Infanterie Motorisée" }
+		15 = { "%de Div. d'Infanterie Motorisée" }
+		25 = { "%de Div. d'Infanterie Motorisée" }
+		91 = { "%de Div. d'Infanterie Motorisée" }		# fictional divisions start here
+		92 = { "%de Div. d'Infanterie Motorisée" }
+		93 = { "%de Div. d'Infanterie Motorisée" }
+		94 = { "%de Div. d'Infanterie Motorisée" }
+		95 = { "%de Div. d'Infanterie Motorisée" }
+		96 = { "%de Div. d'Infanterie Motorisée" }
+		97 = { "%de Div. d'Infanterie Motorisée" }
+		98 = { "%de Div. d'Infanterie Motorisée" }
+		99 = { "%de Div. d'Infanterie Motorisée" }
+		100 = { "%de Div. d'Infanterie Motorisée" }
+		121 = { "%de Div. d'Infanterie Motorisée" }
+		122 = { "%de Div. d'Infanterie Motorisée" }
+		123 = { "%de Div. d'Infanterie Motorisée" }
+		124 = { "%de Div. d'Infanterie Motorisée" }
+		125 = { "%de Div. d'Infanterie Motorisée" }
+		126 = { "%de Div. d'Infanterie Motorisée" }
+		127 = { "%de Div. d'Infanterie Motorisée" }
+		128 = { "%de Div. d'Infanterie Motorisée" }
+		129 = { "%de Div. d'Infanterie Motorisée" }
+		130 = { "%de Div. d'Infanterie Motorisée" }
+		131 = { "%de Div. d'Infanterie Motorisée" }
+		132 = { "%de Div. d'Infanterie Motorisée" }
+		133 = { "%de Div. d'Infanterie Motorisée" }
+		134 = { "%de Div. d'Infanterie Motorisée" }
+		135 = { "%de Div. d'Infanterie Motorisée" }
+		136 = { "%de Div. d'Infanterie Motorisée" }
+		137 = { "%de Div. d'Infanterie Motorisée" }
+		138 = { "%de Div. d'Infanterie Motorisée" }
+		139 = { "%de Div. d'Infanterie Motorisée" }
+		140 = { "%de Div. d'Infanterie Motorisée" }
+	}
+}
+
+FRA_MEC_01 = 
+{
+	name = "Light Mechanized Division"
+
+	for_countries = { FRA }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "mechanized_infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { FRA_INF_01 }
+
+	fallback_name = "%de Division Légère Mécanique"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dre Division Légère Mécanique" }
+		2 = { "%de Division Légère Mécanique" }
+		3 = { "%de Division Légère Mécanique" }
+		4 = { "%de Division Légère Mécanique" }
+		7 = { "%de Division Légère Mécanique" }
+		5 = { "%de Division Légère Mécanique" }		# fictional divisions start here
+		6 = { "%de Division Légère Mécanique" }
+		8 = { "%de Division Légère Mécanique" }
+		9 = { "%de Division Légère Mécanique" }
+		10 = { "%de Division Légère Mécanique" }
+		11 = { "%de Division Légère Mécanique" }
+		12 = { "%de Division Légère Mécanique" }
+		13 = { "%de Division Légère Mécanique" }
+		14 = { "%de Division Légère Mécanique" }
+		15 = { "%de Division Légère Mécanique" }
+		16 = { "%de Division Légère Mécanique" }
+		17 = { "%de Division Légère Mécanique" }
+		18 = { "%de Division Légère Mécanique" }
+		19 = { "%de Division Légère Mécanique" }
+		20 = { "%de Division Légère Mécanique" }
+		21 = { "%de Division Légère Mécanique" }
+		22 = { "%de Division Légère Mécanique" }
+		23 = { "%de Division Légère Mécanique" }
+		24 = { "%de Division Légère Mécanique" }
+		25 = { "%de Division Légère Mécanique" }
+		26 = { "%de Division Légère Mécanique" }
+		27 = { "%de Division Légère Mécanique" }
+		28 = { "%de Division Légère Mécanique" }
+		29 = { "%de Division Légère Mécanique" }
+		30 = { "%de Division Légère Mécanique" }
+	}
+}
+
+FRA_DLC_01 = 
+{
+	name = "Light Cavalry Division"
+
+	for_countries = { FRA }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized_infantry" "armored_infantry" "mechanized_infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { FRA_INF_01 }
+
+	fallback_name = "%de Div. Légère de Cavalerie"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dre Div. Légère de Cavalerie" }
+		2 = { "%de Div. Légère de Cavalerie" }
+		3 = { "%de Div. Légère de Cavalerie" }
+		4 = { "%de Div. Légère de Cavalerie" }
+		5 = { "%de Div. Légère de Cavalerie" }
+		6 = { "%de Div. Légère de Cavalerie" }	# fictional divisions start here
+		7 = { "%de Div. Légère de Cavalerie" }
+		8 = { "%de Div. Légère de Cavalerie" }
+		9 = { "%de Div. Légère de Cavalerie" }
+		10 = { "%de Div. Légère de Cavalerie" }
+		11 = { "%de Div. Légère de Cavalerie" }
+		12 = { "%de Div. Légère de Cavalerie" }
+		13 = { "%de Div. Légère de Cavalerie" }
+		14 = { "%de Div. Légère de Cavalerie" }
+		15 = { "%de Div. Légère de Cavalerie" }
+		16 = { "%de Div. Légère de Cavalerie" }
+		17 = { "%de Div. Légère de Cavalerie" }
+		18 = { "%de Div. Légère de Cavalerie" }
+		19 = { "%de Div. Légère de Cavalerie" }
+		20 = { "%de Div. Légère de Cavalerie" }
+		21 = { "%de Div. Légère de Cavalerie" }
+		22 = { "%de Div. Légère de Cavalerie" }
+		23 = { "%de Div. Légère de Cavalerie" }
+		24 = { "%de Div. Légère de Cavalerie" }
+		25 = { "%de Div. Légère de Cavalerie" }
+		26 = { "%de Div. Légère de Cavalerie" }
+		27 = { "%de Div. Légère de Cavalerie" }
+		28 = { "%de Div. Légère de Cavalerie" }
+		29 = { "%de Div. Légère de Cavalerie" }
+		30 = { "%de Div. Légère de Cavalerie" }
+	}
+}
+
+FRA_ARM_01 = 
+{
+	name = "Armored Division"
+
+	for_countries = { FRA }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "medium_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { FRA_INF_01 }
+
+	fallback_name = "%de Division Cuirassée"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dre Division Cuirassée" }
+		2 = { "%de Division Cuirassée" }
+		3 = { "%de Division Cuirassée" }
+		41 = { "%de Division Cuirassée" }
+		42 = { "%de Division Cuirassée" }
+		43 = { "%de Division Cuirassée" }
+		4 = { "%de Division Cuirassée" }
+		5 = { "%de Division Cuirassée" }
+		6 = { "%de Division Cuirassée" }
+		7 = { "%de Division Cuirassée" }
+		8 = { "%de Division Cuirassée" }
+		9 = { "%de Division Cuirassée" }
+		10 = { "%de Division Cuirassée" }
+		11 = { "%de Division Cuirassée" }
+		12 = { "%de Division Cuirassée" }
+		13 = { "%de Division Cuirassée" }
+		14 = { "%de Division Cuirassée" }
+		15 = { "%de Division Cuirassée" }
+		16 = { "%de Division Cuirassée" }
+		17 = { "%de Division Cuirassée" }
+		18 = { "%de Division Cuirassée" }
+		19 = { "%de Division Cuirassée" }
+		20 = { "%de Division Cuirassée" }
+		21 = { "%de Division Cuirassée" }
+		22 = { "%de Division Cuirassée" }
+		23 = { "%de Division Cuirassée" }
+		24 = { "%de Division Cuirassée" }
+		25 = { "%de Division Cuirassée" }
+		26 = { "%de Division Cuirassée" }
+		27 = { "%de Division Cuirassée" }
+		28 = { "%de Division Cuirassée" }
+		29 = { "%de Division Cuirassée" }
+		30 = { "%de Division Cuirassée" }
+		31 = { "%de Division Cuirassée" }
+		32 = { "%de Division Cuirassée" }
+		33 = { "%de Division Cuirassée" }
+		34 = { "%de Division Cuirassée" }
+		35 = { "%de Division Cuirassée" }
+		36 = { "%de Division Cuirassée" }
+		37 = { "%de Division Cuirassée" }
+		38 = { "%de Division Cuirassée" }
+		39 = { "%de Division Cuirassée" }
+		40 = { "%de Division Cuirassée" }
+	}
+}
+
+FRA_ARM_02 = 
+{
+	name = "Tank Brigade"
+
+	for_countries = { FRA }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "medium_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { FRA_INF_01 }
+
+	fallback_name = "%de Brigade Cuirassée"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dre Brigade Cuirassée" }
+		2 = { "%de Brigade Cuirassée" }
+		3 = { "%de Brigade Cuirassée" }
+		41 = { "%de Brigade Cuirassée" }
+		42 = { "%de Brigade Cuirassée" }
+		43 = { "%de Brigade Cuirassée" }
+		4 = { "%de Brigade Cuirassée" }
+		5 = { "%de Brigade Cuirassée" }
+		6 = { "%de Brigade Cuirassée" }
+		7 = { "%de Brigade Cuirassée" }
+		8 = { "%de Brigade Cuirassée" }
+		9 = { "%de Brigade Cuirassée" }
+		10 = { "%de Brigade Cuirassée" }
+		11 = { "%de Brigade Cuirassée" }
+		12 = { "%de Brigade Cuirassée" }
+		13 = { "%de Brigade Cuirassée" }
+		14 = { "%de Brigade Cuirassée" }
+		15 = { "%de Brigade Cuirassée" }
+		16 = { "%de Brigade Cuirassée" }
+		17 = { "%de Brigade Cuirassée" }
+		18 = { "%de Brigade Cuirassée" }
+		19 = { "%de Brigade Cuirassée" }
+		20 = { "%de Brigade Cuirassée" }
+		21 = { "%de Brigade Cuirassée" }
+		22 = { "%de Brigade Cuirassée" }
+		23 = { "%de Brigade Cuirassée" }
+		24 = { "%de Brigade Cuirassée" }
+		25 = { "%de Brigade Cuirassée" }
+		26 = { "%de Brigade Cuirassée" }
+		27 = { "%de Brigade Cuirassée" }
+		28 = { "%de Brigade Cuirassée" }
+		29 = { "%de Brigade Cuirassée" }
+		30 = { "%de Brigade Cuirassée" }
+		31 = { "%de Brigade Cuirassée" }
+		32 = { "%de Brigade Cuirassée" }
+		33 = { "%de Brigade Cuirassée" }
+		34 = { "%de Brigade Cuirassée" }
+		35 = { "%de Brigade Cuirassée" }
+		36 = { "%de Brigade Cuirassée" }
+		37 = { "%de Brigade Cuirassée" }
+		38 = { "%de Brigade Cuirassée" }
+		39 = { "%de Brigade Cuirassée" }
+		40 = { "%de Brigade Cuirassée" }
+	}
+}
+
+FRA_ARM_03 = 
+{
+	name = "Armored Division (late)"
+
+	for_countries = { FRA }
+
+	can_use = { always = yes }
+
+	division_types = { "medium_armor" "medium_armor" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { FRA_ARM_01 }
+
+	fallback_name = "%de division blindée"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dre division blindée 'Saint-Louis'" }
+		5 = { "%de division blindée 'France d'abord'" }
+		7 = { "%de division blindée 'Force et Audace'" }
+		10 = { "%de division blindée" }
+		11 = { "%de division blindée" }
+		12 = { "%de division blindée" }
+		13 = { "%de division blindée" }
+		14 = { "%de division blindée" }
+		15 = { "%de division blindée" }
+		16 = { "%de division blindée" }
+		17 = { "%de division blindée" }
+		18 = { "%de division blindée" }
+		19 = { "%de division blindée" }
+		20 = { "%de division blindée" }
+		21 = { "%de division blindée" }
+		22 = { "%de division blindée" }
+		23 = { "%de division blindée" }
+		24 = { "%de division blindée" }
+		25 = { "%de division blindée" }
+		26 = { "%de division blindée" }
+		27 = { "%de division blindée" }
+		28 = { "%de division blindée" }
+		29 = { "%de division blindée" }
+		30 = { "%de division blindée" }
+		31 = { "%de division blindée" }
+		32 = { "%de division blindée" }
+		33 = { "%de division blindée" }
+		34 = { "%de division blindée" }
+		35 = { "%de division blindée" }
+		36 = { "%de division blindée" }
+		37 = { "%de division blindée" }
+		38 = { "%de division blindée" }
+		39 = { "%de division blindée" }
+		40 = { "%de division blindée" }
+	}
+}
+
+FRA_PAR_01 = 
+{
+	name = "Paratrooper Division"
+
+	for_countries = { FRA }
+
+	can_use = { always = yes }
+
+	division_types = { "airborne" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { FRA_INF_01 }
+
+	fallback_name = "%de Division Parachutiste"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		10 = { "%de Division Parachutiste" }
+		25 = { "%de Division Parachutiste" }
+		24 = { "%de Division Aéroportée" }
+		801 = { "Division Légère d'Intervention" }
+		11 = { "%de Division Parachutiste" }
+		1 = { "%dère Division Parachutiste" }
+		2 = { "%de Division Parachutiste" }
+		3 = { "%de Division Parachutiste" }
+		4 = { "%de Division Parachutiste" }
+		5 = { "%de Division Parachutiste" }
+		6 = { "%de Division Parachutiste" }
+		7 = { "%de Division Parachutiste" }
+		8 = { "%de Division Parachutiste" }
+		9 = { "%de Division Parachutiste" }
+	}
+}
+
+FRA_MAR_01 = 
+{
+	name = "Marine Division"
+
+	for_countries = { FRA }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { FRA_INF_01 }
+
+	fallback_name = "%de Div. d'Infanterie de Marine"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dère Div. d'Infanterie de Marine" }
+		2 = { "%de Div. d'Infanterie de Marine" }
+		3 = { "%de Div. d'Infanterie de Marine" }
+		4 = { "%de Div. d'Infanterie de Marine" }
+		5 = { "%de Div. d'Infanterie de Marine" }
+		6 = { "%de Div. d'Infanterie de Marine" }
+		7 = { "%de Div. d'Infanterie de Marine" }
+		8 = { "%de Div. d'Infanterie de Marine" }
+		9 = { "%de Div. d'Infanterie de Marine" }
+		10 = { "%de Div. d'Infanterie de Marine" }
+		11 = { "%de Div. d'Infanterie de Marine" }
+		12 = { "%de Div. d'Infanterie de Marine" }
+		13 = { "%de Div. d'Infanterie de Marine" }
+		14 = { "%de Div. d'Infanterie de Marine" }
+		15 = { "%de Div. d'Infanterie de Marine" }
+		16 = { "%de Div. d'Infanterie de Marine" }
+		17 = { "%de Div. d'Infanterie de Marine" }
+		18 = { "%de Div. d'Infanterie de Marine" }
+		19 = { "%de Div. d'Infanterie de Marine" }
+		20 = { "%de Div. d'Infanterie de Marine" }
+	}
+}
+
+FRA_MNT_01 = 
+{
+	name = "Mountain Division"
+
+	for_countries = { FRA }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { FRA_INF_01 }
+
+	fallback_name = "%de Division d'Infanterie Alpine"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		27 = { "%de Division d'Infanterie Alpine" }
+		29 = { "%de Division d'Infanterie Alpine" }
+		30 = { "%de Division d'Infanterie Alpine" }
+		31 = { "%de Division d'Infanterie Alpine" }
+		28 = { "%de Division d'Infanterie Alpine" }
+		64 = { "%de Division d'Infanterie Alpine" }
+		65 = { "%de Division d'Infanterie Alpine" }
+		91 = { "%de Division d'Infanterie Alpine" }		# fictional divisions start here
+		92 = { "%de Division d'Infanterie Alpine" }
+		93 = { "%de Division d'Infanterie Alpine" }
+		94 = { "%de Division d'Infanterie Alpine" }
+		95 = { "%de Division d'Infanterie Alpine" }
+		96 = { "%de Division d'Infanterie Alpine" }
+		97 = { "%de Division d'Infanterie Alpine" }
+		98 = { "%de Division d'Infanterie Alpine" }
+		99 = { "%de Division d'Infanterie Alpine" }
+		100 = { "%de Division d'Infanterie Alpine" }
+		121 = { "%de Division d'Infanterie Alpine" }
+		122 = { "%de Division d'Infanterie Alpine" }
+		123 = { "%de Division d'Infanterie Alpine" }
+		124 = { "%de Division d'Infanterie Alpine" }
+		125 = { "%de Division d'Infanterie Alpine" }
+		126 = { "%de Division d'Infanterie Alpine" }
+		127 = { "%de Division d'Infanterie Alpine" }
+		128 = { "%de Division d'Infanterie Alpine" }
+		129 = { "%de Division d'Infanterie Alpine" }
+		130 = { "%de Division d'Infanterie Alpine" }
+		131 = { "%de Division d'Infanterie Alpine" }
+		132 = { "%de Division d'Infanterie Alpine" }
+		133 = { "%de Division d'Infanterie Alpine" }
+		134 = { "%de Division d'Infanterie Alpine" }
+		135 = { "%de Division d'Infanterie Alpine" }
+		136 = { "%de Division d'Infanterie Alpine" }
+		137 = { "%de Division d'Infanterie Alpine" }
+		138 = { "%de Division d'Infanterie Alpine" }
+		139 = { "%de Division d'Infanterie Alpine" }
+		140 = { "%de Division d'Infanterie Alpine" }
+	}
+}
+
+FRA_GAR_01 = 
+{
+	name = "Garrison Division"
+
+	for_countries = { FRA }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { FRA_INF_01 }
+
+	fallback_name = "%de Division de Forteresse"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		101 = { "%dère Div. d'Inf. de Forteresse" }
+		102 = { "%de Div. d'Inf. de Forteresse" }
+		103 = { "%de Div. d'Inf. de Forteresse" }
+		104 = { "%de Div. d'Inf. de Forteresse" }
+		105 = { "%de Div. d'Inf. de Forteresse" }
+		106 = { "%de Div. d'Inf. de Forteresse" }
+		107 = { "%de Div. d'Inf. de Forteresse" }
+		108 = { "%de Div. d'Inf. de Forteresse" }
+		109 = { "%de Div. d'Inf. de Forteresse" }
+		110 = { "%de Div. d'Inf. de Forteresse" }
+		111 = { "%de Div. d'Inf. de Forteresse" }
+		112 = { "%de Div. d'Inf. de Forteresse" }
+		113 = { "%de Div. d'Inf. de Forteresse" }
+		114 = { "%de Div. d'Inf. de Forteresse" }
+		115 = { "%de Div. d'Inf. de Forteresse" }
+		116 = { "%de Div. d'Inf. de Forteresse" }
+		117 = { "%de Div. d'Inf. de Forteresse" }
+		118 = { "%de Div. d'Inf. de Forteresse" }
+		119 = { "%de Div. d'Inf. de Forteresse" }
+		120 = { "%de Div. d'Inf. de Forteresse" }
+		141 = { "%de Div. d'Inf. de Forteresse" }
+		142 = { "%de Div. d'Inf. de Forteresse" }
+		143 = { "%de Div. d'Inf. de Forteresse" }
+		144 = { "%de Div. d'Inf. de Forteresse" }
+		145 = { "%de Div. d'Inf. de Forteresse" }
+		146 = { "%de Div. d'Inf. de Forteresse" }
+		147 = { "%de Div. d'Inf. de Forteresse" }
+		148 = { "%de Div. d'Inf. de Forteresse" }
+		149 = { "%de Div. d'Inf. de Forteresse" }
+		150 = { "%de Div. d'Inf. de Forteresse" }
+		201 = { "%de Div. d'Inf. de Forteresse" }
+		202 = { "%de Div. d'Inf. de Forteresse" }
+		203 = { "%de Div. d'Inf. de Forteresse" }
+		204 = { "%de Div. d'Inf. de Forteresse" }
+		205 = { "%de Div. d'Inf. de Forteresse" }
+		206 = { "%de Div. d'Inf. de Forteresse" }
+		207 = { "%de Div. d'Inf. de Forteresse" }
+		208 = { "%de Div. d'Inf. de Forteresse" }
+		209 = { "%de Div. d'Inf. de Forteresse" }
+		210 = { "%de Div. d'Inf. de Forteresse" }
+		211 = { "%de Div. d'Inf. de Forteresse" }
+		212 = { "%de Div. d'Inf. de Forteresse" }
+		213 = { "%de Div. d'Inf. de Forteresse" }
+		214 = { "%de Div. d'Inf. de Forteresse" }
+		215 = { "%de Div. d'Inf. de Forteresse" }
+		216 = { "%de Div. d'Inf. de Forteresse" }
+		217 = { "%de Div. d'Inf. de Forteresse" }
+		218 = { "%de Div. d'Inf. de Forteresse" }
+		219 = { "%de Div. d'Inf. de Forteresse" }
+		220 = { "%de Div. d'Inf. de Forteresse" }
+		221 = { "%de Div. d'Inf. de Forteresse" }
+		222 = { "%de Div. d'Inf. de Forteresse" }
+		223 = { "%de Div. d'Inf. de Forteresse" }
+		224 = { "%de Div. d'Inf. de Forteresse" }
+		225 = { "%de Div. d'Inf. de Forteresse" }
+		226 = { "%de Div. d'Inf. de Forteresse" }
+		227 = { "%de Div. d'Inf. de Forteresse" }
+		228 = { "%de Div. d'Inf. de Forteresse" }
+		229 = { "%de Div. d'Inf. de Forteresse" }
+		230 = { "%de Div. d'Inf. de Forteresse" }
+		231 = { "%de Div. d'Inf. de Forteresse" }
+		232 = { "%de Div. d'Inf. de Forteresse" }
+		233 = { "%de Div. d'Inf. de Forteresse" }
+		234 = { "%de Div. d'Inf. de Forteresse" }
+	}
+}
+
+FRA_COL_01 = 
+{
+	name = "Colonial Division"
+
+	for_countries = { FRA }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { FRA_INF_01 }
+
+	fallback_name = "%de d'Infanterie Coloniale"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		41 = { "1er Div. d'Inf. Nord-Africaine" }
+		42 = { "2e Div. d'Inf. Nord-Africaine" }
+		43 = { "3e Div. d'Inf. Nord-Africaine" }
+		44 = { "4e Div. d'Inf. Nord-Africaine" }
+		1 = { "%dère Div. d'Infanterie Coloniale" }
+		2 = { "%de Div. d'Infanterie Coloniale" }
+		3 = { "%de Div. d'Infanterie Coloniale" }
+		4 = { "%de Div. d'Infanterie Coloniale" }
+		91 = { "Division de Tonkin" }
+		92 = { "Division de Cochinchine-Cambodge" }
+		93 = { "Division de Tunisie" }
+		94 = { "Division de Sousse" }
+		95 = { "Division de Casablanca" }
+		96 = { "Division de Fès" }
+		97 = { "Division de Marrakech" }
+		98 = { "Division de Meknès" }
+		45 = { "5e Div. d'Inf. Nord-Africaine" }
+		5 = { "%de Div. d'Infanterie Coloniale" }
+		6 = { "%de Div. d'Infanterie Coloniale" }
+		7 = { "%de Div. d'Infanterie Coloniale" }
+		61 = { "1ère Division Marocaine" }
+		62 = { "2e Division Marocaine" }
+		63 = { "3e Division Marocaine" }
+		46 = { "6e Div. d'Inf. Nord-Africaine" }
+		47 = { "7e Div. d'Inf. Nord-Africaine" }
+		8 = { "%de Div. d'Infanterie Coloniale" }
+		9 = { "%de Div. d'Infanterie Coloniale" }			# post-invasion divisions start here, raised haphazardly
+		101 = { "1ère Div. Légère d'Inf. Nord-Africaine" }
+		102 = { "2e Div. Légère d'Inf. Coloniale" }
+		108 = { "8e Div. Légère d'Inf. Coloniale" }
+		10 = { "%de Div. d'Infanterie Coloniale" }		# fictional divisions start here
+		64 = { "4e Division Marocaine" }
+		65 = { "5e Division Marocaine" }
+		11 = { "%de Div. d'Infanterie Coloniale" }
+		12 = { "%de Div. d'Infanterie Coloniale" }
+		48 = { "8e Div. d'Inf. Nord-Africaine" }
+		49 = { "9e Div. d'Inf. Nord-Africaine" }
+		50 = { "10e Div. d'Inf. Nord-Africaine" }
+		81 = { "1ère Div. d'Infanterie Algérienne" }
+		82 = { "2e Div. d'Infanterie Algérienne" }
+		83 = { "3e Div. d'Infanterie Algérienne" }
+		84 = { "4e Div. d'Infanterie Algérienne" }
+		66 = { "6e Division Marocaine" }
+		99 = { "Division de Levant" }
+		13 = { "%de Div. d'Infanterie Coloniale" }
+		14 = { "%de Div. d'Infanterie Coloniale" }
+		15 = { "%de Div. d'Infanterie Coloniale" }
+		16 = { "%de Div. d'Infanterie Coloniale" }
+		51 = { "11e Div. d'Inf. Nord-Africaine" }
+		52 = { "12e Div. d'Inf. Nord-Africaine" }
+		53 = { "13e Div. d'Inf. Nord-Africaine" }
+		85 = { "5e Div. d'Infanterie Algérienne" }
+		86 = { "6e Div. d'Infanterie Algérienne" }
+		87 = { "7e Div. d'Infanterie Algérienne" }
+		17 = { "%de Div. d'Infanterie Coloniale" }
+		18 = { "%de Div. d'Infanterie Coloniale" }
+		19 = { "%de Div. d'Infanterie Coloniale" }
+		20 = { "%de Div. d'Infanterie Coloniale" }
+		67 = { "7e Division Marocaine" }
+		68 = { "8e Division Marocaine" }
+		54 = { "14e Div. d'Inf. Nord-Africaine" }
+		55 = { "15e Div. d'Inf. Nord-Africaine" }
+		21 = { "%de Div. d'Infanterie Coloniale" }
+		22 = { "%de Div. d'Infanterie Coloniale" }
+		23 = { "%de Div. d'Infanterie Coloniale" }
+		24 = { "%de Div. d'Infanterie Coloniale" }
+		56 = { "16e Div. d'Inf. Nord-Africaine" }
+		57 = { "17e Div. d'Inf. Nord-Africaine" }
+		25 = { "%de Div. d'Infanterie Coloniale" }
+		26 = { "%de Div. d'Infanterie Coloniale" }
+		27 = { "%de Div. d'Infanterie Coloniale" }
+		69 = { "9e Division Marocaine" }
+		70 = { "10e Division Marocaine" }
+		28 = { "%de Div. d'Infanterie Coloniale" }
+		29 = { "%de Div. d'Infanterie Coloniale" }
+		30 = { "%de Div. d'Infanterie Coloniale" }
+	}
+}

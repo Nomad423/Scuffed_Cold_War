@@ -1,0 +1,562 @@
+####
+music = {
+	name = "Super_Event_President_Trump"
+	file = "Super_Event_President_Trump.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Winter_of_1954"
+	file = "Super_Event_Winter_of_1954.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_First_Mafia_War"
+	file = "Super_Event_First_Mafia_War.ogg"
+	volume = 0.95
+}
+music = {
+	name = "Super_Event_President_McGovern_1984"
+	file = "Super_Event_President_McGovern_1984.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Robertson"
+	file = "Super_Event_President_Robertson.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Jesse_Jackson"
+	file = "Super_Event_President_Jesse_Jackson.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Ted_Kennedy"
+	file = "Super_Event_President_Ted_Kennedy.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Rumsfeld"
+	file = "Super_Event_President_Rumsfeld.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Early_President_Clinton"
+	file = "Super_Event_Early_President_Clinton.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Brooke"
+	file = "Super_Event_President_Brooke.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Bradley"
+	file = "Super_Event_President_Bradley.ogg"
+	volume = 0.95
+}
+music = {
+	name = "Super_Event_President_Mondale"
+	file = "Super_Event_President_Mondale.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Dukakis"
+	file = "Super_Event_President_Dukakis.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Inoyue"
+	file = "Super_Event_President_Inoyue.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Glenn"
+	file = "Super_Event_President_Glenn.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Bush_Sr"
+	file = "Super_Event_President_Bush_Sr.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Hart"
+	file = "Super_Event_President_Hart.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Anderson_Independent"
+	file = "Super_Event_President_Anderson_Independent.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Anderson_GOP"
+	file = "Super_Event_President_Anderson_GOP.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Gingrich"
+	file = "Super_Event_President_Gingrich.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Bangladesh_Liberation_War"
+	file = "Super_Event_Bangladesh_Liberation_War.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Pakistan_Victory_1971"
+	file = "Super_Event_Pakistan_Victory_1971.ogg"
+	volume = 0.75
+}
+
+music = {
+	name = "Super_Event_Cultural_Revolution"
+	file = "Super_Event_Cultural_Revolution.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Silence"
+	file = "Blank.ogg"
+	volume = 0.00
+}
+music = {
+	name = "rise_o_voices"
+	file = "rise_o_voices.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Goodbye_Britannia"
+	file = "Goodbye_Britannia.ogg"
+	volume = 0.65
+}
+####
+music = {
+	name = "Super_Event_Smiling_Buddha"
+	file = "Super_Event_Smiling_Buddha.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Sino_indian_War_India_Victory"
+	file = "Super_Event_Sino_indian_War_India_Victory.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Sino_indian_War_Chinese_Victory"
+	file = "Super_Event_Sino_indian_War_Chinese_Victory.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Pakistani_Victory_1965"
+	file = "Super_Event_Pakistani_Victory_1965.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Indian_Victory_1965"
+	file = "Super_Event_Indian_Victory_1965.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Chinese_Anarchy"
+	file = "Super_Event_Chinese_Anarchy.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Asian_Liberation_War"
+	file = "Super_Event_Asian_Liberation_War.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Project_National_Glory"
+	file = "Super_Event_Project_National_Glory.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_CMC_WW3"
+	file = "Super_Event_CMC_WW3.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Biden_Victory"
+	file = "Super_Event_Biden_Victory.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Shanghai_Defence"
+	file = "Super_Event_Shanghai_Defence.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Soviet_Turkish_War"
+	file = "Super_Event_Soviet_Turkish_War.ogg"
+	volume = 0.65
+}
+
+
+music = {
+	name = "Super_Event_Angola_e_Nossa"
+	file = "Super_Event_Angola_e_Nossa.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Sputnik"
+	file = "Super_Event_Sputnik.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_chernobyl"
+	file = "Super_Event_chernobyl.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Vietnam_War_Victory"
+	file = "Super_Event_Vietnam_War_Victory.ogg"
+	volume = 0.65
+}
+
+
+music = {
+	name = "Super_Event_Soviet_Moon_Landing"
+	file = "Super_Event_Soviet_Moon_Landing.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Nixon_Resignation"
+	file = "Super_Event_Nixon_Resignation.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_JFK_Assasination"
+	file = "Super_Event_JFK_Assasination.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_German_Reunification_DDR"
+	file = "Super_Event_German_Reunification_DDR.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Death_of_Stalin"
+	file = "Super_Event_Death_of_Stalin.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_American_Moon_Landing"
+	file = "Super_Event_American_Moon_Landing.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_JFK"
+	file = "Super_Event_President_JFK.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Warren"
+	file = "Super_Event_President_Warren.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Martin"
+	file = "Super_Event_President_Martin.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Stassen"
+	file = "Super_Event_President_Stassen.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Dewey"
+	file = "Super_Event_President_Dewey.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Harriman"
+	file = "Super_Event_President_Harriman.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Early_President_Reagan"
+	file = "Super_Event_Early_President_Reagan.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Ford"
+	file = "Super_Event_President_Ford.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Mao_Funeral"
+	file = "Mao_Funeral.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Early_President_Nixon"
+	file = "Super_Event_Early_President_Nixon.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Rockefeller"
+	file = "Super_Event_President_Rockefeller.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Agnew"
+	file = "Super_Event_President_Agnew.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Halleck"
+	file = "Super_Event_President_Halleck.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Muskie"
+	file = "Super_Event_President_Muskie.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Woodstock"
+	file = "Super_Event_Woodstock.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Egyptian_Revolution"
+	file = "Egyptian_Revolution.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Farouk_Triumphant"
+	file = "Super_Event_Farouk_Triumphant.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Wallace"
+	file = "Super_Event_President_Wallace.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Russell"
+	file = "Super_Event_President_Russell.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_MacArthur"
+	file = "Super_Event_President_MacArthur.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Hungarian_Revolution_Crushed"
+	file = "Super_Event_Hungarian_Revolution_Crushed.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Hungarian_Revolution_Successful"
+	file = "Super_Event_Hungarian_Revolution_Successful.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Humphrey_Presidency"
+	file = "Super_Event_Humphrey_Presidency.ogg"
+	volume = 0.65
+}
+
+
+
+music = {
+	name = "Super_Event_Tsar_Bomba"
+	file = "Super_Event_Tsar_Bomba.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Castle_Bravo"
+	file = "Super_Event_Castle_Bravo.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Korean_War_KPA_Victory"
+	file = "Super_Event_Korean_War_KPA_Victory.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Korean_War"
+	file = "Super_Event_Korean_War.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Korean_War_Nuclear"
+	file = "Korean_War_Nuclear.ogg"
+	volume = 0.65
+}
+
+
+
+music = {
+	name = "Super_Event_Rhodesians_Never_Die"
+	file = "Super_Event_Rhodesians_Never_Die.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Stevenson_52"
+	file = "Super_Event_Stevenson_52.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_USA"
+	file = "Super_Event_USA.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Holiday_in_Cambodia"
+	file = "Super_Event_Holiday_in_Cambodia.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Samson_Option"
+	file = "Super_Event_Samson_Option.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Vietnam_Withdrawal"
+	file = "Super_Event_Vietnam_Withdrawal.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Congo_Crisis"
+	file = "Super_Event_Congo_Crisis.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Soviet_Afghan_War"
+	file = "Super_Event_Soviet_Afghan_War.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Vietnam_War"
+	file = "Super_Event_Vietnam_War.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Sino_Soviet_War"
+	file = "Super_Event_Sino_Soviet_War.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Cuban_Revolution"
+	file = "Super_Event_Cuban_Revolution.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Angolan_Civil_War"
+	file = "Super_Event_Angolan_Civil_War.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Simba_Rebellion"
+	file = "Super_Event_Simba_Rebellion.ogg"
+	volume = 0.65
+}
+
+
+music = {
+	name = "Super_Event_Iraq_July_14th_Revolution"
+	file = "Super_Event_Iraq_July_14th_Revolution.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Hashemite_Twilight"
+	file = "Super_Event_Hashemite_Twilight.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Berlin_Wall"
+	file = "Super_Event_Berlin_Wall.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Arabian_Revolution"
+	file = "Super_Event_Arabian_Revolution.ogg"
+	volume = 0.65
+}
+#New Presidential Ones 12/21/20
+music = {
+	name = "Super_Event_Nixon_Presidency"
+	file = "Super_Event_Nixon_Presidency.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_LBJ_Presidency"
+	file = "Super_Event_LBJ_Presidency.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Eisenhower_Presidency"
+	file = "Super_Event_Eisenhower_Presidency.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Super_Event_Goldwater_Presidency"
+	file = "Super_Event_Goldwater_Presidency.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Reagan_Presidency"
+	file = "Super_Event_Reagan_Presidency.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_Jerry_Brown"
+	file = "Super_Event_President_Jerry_Brown.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_McGovern_Presidency"
+	file = "Super_Event_McGovern_Presidency.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_President_RFK"
+	file = "Super_Event_President_RFK.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Carter_Presidency"
+	file = "Super_Event_Carter_Presidency.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Super_Event_Kefauver_Elected"
+	file = "Super_Event_Kefauver_Elected.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Event_Operation_watchtower"
+	file = "Event_Operation_watchtower.ogg"
+	volume = 0.65
+}
+
+
+

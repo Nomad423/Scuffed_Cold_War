@@ -1,0 +1,13 @@
+opinion_modifiers = {
+
+	UN_under_sanctions = { 
+		value = -200 
+	}
+	UN_under_sanctions_trade = {
+		value = -200
+		trade = yes
+	}
+	UN_invited_observers = {
+		value = 5
+	}
+}

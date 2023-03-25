@@ -1,0 +1,175 @@
+﻿
+generic_militia = {
+	name = "National Militia"
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+
+	fallback_name = "National Militia Organization"
+}
+generic_militia_independent = {
+	name = "Regional Militia"
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+
+	fallback_name = "Regional Militia Organization"
+}
+
+generic_infantry = {
+	name = "Infantry"
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+
+	fallback_name = "Infantry Division"
+}
+
+generic_infantry_independent = {
+	name = "Infantry Brigade"
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+
+	fallback_name = "Infantry Brigade"
+}
+
+generic_motorized = {
+	name = "Motor Corps"
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+
+	fallback_name = "Motorized Infantry Division"
+}
+
+generic_motorized_independant = {
+	name = "Independant Motor Corps"
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+
+	fallback_name = "Motorized Infantry Brigade"
+}
+
+generic_mechanized = {
+	name = "Mech Corps"
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+
+	fallback_name = "Mechanized Infantry Division"
+}
+
+generic_mechanized_independant = {
+	name = "Independant Mech Corps"
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+
+	fallback_name = "Mechanized Infantry Brigade"
+}
+
+generic_lt_armor = {
+	name = "Light Armor"
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" }
+
+
+	fallback_name = "Light Armor Brigade"
+}
+
+generic_armor_medium = {
+	name = "Medium Armor"
+
+	can_use = { always = yes }
+
+	division_types = { "medium_armor" }
+
+
+	fallback_name = "Armor Division"
+}
+
+generic_armor_heavy = {
+	name = "Heavy Armor"
+
+	can_use = { always = yes }
+
+	division_types = { "heavy_armor" }
+
+
+	fallback_name = "Shock Armor Division"
+}
+
+generic_marine = {
+	name = "Marines"
+
+	can_use = { always = yes }
+
+	division_types = { "marine" }
+
+
+	fallback_name = "Marine Unit"
+}
+
+generic_airborne = {
+	name = "Airborne"
+
+	can_use = { always = yes }
+
+	division_types = { "airborne" }
+
+
+	fallback_name = "Airborne Unit"
+}
+
+generic_mountaineer = {
+	name = "Mountaineer"
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+
+	fallback_name = "Mountaineer Unit"
+}
+
+generic_garrison = {
+	name = "Security"
+
+	can_use = { always = yes }
+
+	division_types = { "military_police" }
+
+
+	fallback_name = "Security Unit"
+}
+
+un_peacekeepers_names = {
+	name = "UN Peacekeepers"
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+
+	fallback_name = "Peacekeepers"
+}

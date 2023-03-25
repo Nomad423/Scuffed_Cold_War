@@ -1,0 +1,106 @@
+add_namespace = egi
+
+country_event = {
+	id = egi.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = egi.1"}
+	title = "Atanasio Ndongo Miyone stages coup d'etat"
+	desc = "Atanasio Ndongo Miyone, the pan-africanist poet and writer has staged a coup against President Nguema following his passing of decree 415, granting all direct powers of Government and Institutions to Nguema"
+
+	trigger = {
+		tag = EQG
+	}
+
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #ahistoric
+		name = "The Coup is Successful"
+
+		set_politics = {
+			ruling_party = nationalist
+			elections_allowed = no
+		}
+		add_popularity = { ideology = nationalist popularity = 0.4 }
+		complete_national_focus = EQG_president_atanasio_ndongo_miyone
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { #historic
+		name = "The Coup Failed"
+
+
+		ai_chance = {
+			factor = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 100
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = egi.2 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = egi.2"}
+	title = "The First Equatoguinean General Election"
+	desc = "This marks the first ever general election in the newly independent Equatorial Guinea, who will the people choose?"
+
+	trigger = {
+		tag = EQG
+	}
+
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #non historic
+		name = "Bonifacio Ondo Edu, the prime minister from the transitional government"
+		set_politics = {
+			ruling_party = conservative
+			elections_allowed = yes
+		}
+		add_popularity = { ideology = conservative popularity = 0.2 }
+		complete_national_focus = EQG_president_bonifacio_ondo_edu
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { #historic
+		name = "Francisco Macias Nguema, the mayor of Mongomo"
+
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		add_popularity = { ideology = fascism
+							popularity = 0.4 }
+		complete_national_focus = EQG_president_francisco_macias_nguema
+
+		ai_chance = {
+			factor = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 100
+			}
+		}
+
+	}
+
+	option = { #non historic
+		name = "Atanasio Ndongo Miyone, the Pan-Africanist Poet"
+
+		set_politics = {
+			ruling_party = nationalist
+			elections_allowed = no
+		}
+		add_popularity = { ideology = nationalist popularity = 0.3 }
+		complete_national_focus = EQG_president_atanasio_ndongo_miyone
+
+		ai_chance = {
+				factor = 10
+			}
+		}
+	}

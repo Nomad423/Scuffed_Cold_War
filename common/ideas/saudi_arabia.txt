@@ -1,0 +1,238 @@
+ideas = {
+
+	country = {
+
+	SAU_industrial_training_centers = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_fortification_focus
+			
+			modifier = {
+				training_time_army_factor = -0.1
+				conscription = 0.01
+			}
+		}
+
+		SAU_jewish_uprising = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+			
+			picture = anti_soviet_pact
+
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.05
+				political_power_gain = -0.2
+			}
+		}
+			
+		SAU_saudi_oil_company = {
+			allowed = {
+				original_tag = SAU
+				always = no
+			}
+			allowed_civil_war = {  }
+			
+			picture = SOV_scientist_defect
+			removal_cost = -1
+			
+			modifier = {
+				conscription = -0.01
+				conscription_factor = -0.10
+				stability_factor = 0.1
+				political_power_cost = 0.2
+				fascism_drift = 0.05
+			}
+		}
+
+		SAU_saudi_propaganda = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {  }
+			
+			picture = SOV_scientist_defect
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.1
+			}
+		}
+
+	SAU_restore_old_traditions = {
+
+	allowed = {
+	  original_tag = IRQ
+	  always = no
+	}
+
+	allowed_civil_war = {
+	  
+	}
+
+	removal_cost = -1
+
+	picture = generic_pp_unity_bonus
+
+	modifier = {
+	stability_factor = 0.05
+	drift_defence_factor = 0.1
+	}
+  }
+
+		SAU_industrialize_our_deserts = {
+			picture = generic_production_bonus
+			removal_cost = -1
+			
+			allowed = { always = no }
+			allowed_civil_war = {  }
+
+			modifier = {
+				global_building_slots_factor = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		SAU_turn_fascist = {
+			picture = generic_fascism_drift_bonus
+			removal_cost = -1
+				
+			allowed = { always = no }
+			allowed_civil_war = { has_government = fascism }
+
+
+			modifier = {
+				fascism_drift = 0.1
+				fascism_acceptance = 85
+			}
+		}
+
+		SAU_foreign_workers = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+		
+			picture = generic_volunteer_expedition_bonus
+		
+			modifier = { 
+				MONTHLY_POPULATION = 0.05
+			}
+		}
+
+		SAU_spread_islamic_teachings = {
+			picture = generic_fascism_drift_bonus
+			removal_cost = -1
+				
+			allowed = { always = no }
+			allowed_civil_war = { has_government = fascism }
+
+
+			modifier = {
+				fascism_drift = 0.15
+				fascism_acceptance = 85
+			}
+		}
+
+		SAU_center_of_the_world = {
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = SAU
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				trade_opinion_factor = 0.1
+			}
+		}
+
+		SAU_awoken_generation = {
+			picture = generic_victors_of_ww1
+			removal_cost = -1
+			
+			allowed = { always = no }
+			allowed_civil_war = {  }
+		
+			modifier = {
+				conscription = 0.015
+			}
+		}
+
+		SAU_increased_trade = {
+		picture = idea_SAU_production_eff
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		SAU_desert_nomads = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			picture = Desert_Nomads
+			
+			modifier = {
+				army_org_factor = -0.1
+				cavalry_attack_factor = 0.15
+			}
+		}
+
+		SAU_birthplace_of_islam = {
+			picture = Birthplace_of_Islam
+			removal_cost = -1
+			
+			allowed = { always = no }
+			allowed_civil_war = {  }
+	
+			modifier = {
+				stability_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+	}
+			
+}

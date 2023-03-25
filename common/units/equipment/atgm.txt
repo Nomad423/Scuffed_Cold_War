@@ -1,0 +1,158 @@
+equipments = {
+
+	atgm_equipment = {
+		year = 1955
+
+		is_archetype = yes
+		picture = archetype_anti_tank_equipment		
+		type = { 
+			anti_tank
+			infantry #adding infantry type
+		}
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		#Misc Abilities
+		reliability = 0.955
+
+		#Defensive Abilities
+		hardness = 0.01
+		armor_value = 0
+
+		#Offensive Abilities
+		hard_attack = 15
+		ap_attack = 61
+
+		#Space taken in convoy
+		lend_lease_cost = 3
+				
+		build_cost_ic = 10
+		resources = {
+ 			electricity = 2
+			aluminium = 2
+			steel = 1
+		}
+	}
+
+	atgm_equipment_0 = {
+		year = 1955
+
+		archetype = atgm_equipment
+		priority = 90
+		visual_level = 0
+	}
+	
+	atgm_equipment_1 = {
+		year = 1965
+
+		archetype = atgm_equipment
+		parent = atgm_equipment_0
+		priority = 90
+		visual_level = 1
+		
+		#Defensive Abilities
+		
+
+		#Offensive Abilities
+		hard_attack = 18
+		ap_attack = 70
+		
+		build_cost_ic = 13
+		resources = {
+ 			electricity = 2
+			aluminium = 2
+			steel = 1
+		}
+	}
+	
+	atgm_equipment_2 = {
+		year = 1975
+
+		archetype = atgm_equipment
+		parent = atgm_equipment_1
+		priority = 90
+		visual_level = 2
+		
+		
+
+		#Offensive Abilities
+		hard_attack = 21
+		ap_attack = 84
+		
+		build_cost_ic = 16
+		resources = {
+ 			electricity = 2
+			aluminium = 2
+			steel = 1
+		}
+	}
+	
+	atgm_equipment_3 = {
+		year = 1985
+
+		archetype = atgm_equipment
+		parent = atgm_equipment_2
+		priority = 90
+		visual_level = 2
+		
+		
+
+		#Offensive Abilities
+		hard_attack = 29
+		ap_attack = 95
+		
+		build_cost_ic = 19
+		resources = {
+ 			electricity = 2
+			aluminium = 2
+			steel = 1
+		}
+	}
+	
+	atgm_equipment_4 = {
+		year = 1995
+
+		archetype = atgm_equipment
+		parent = atgm_equipment_3
+		priority = 90
+		visual_level = 2
+		
+		
+
+		#Offensive Abilities
+		hard_attack = 34
+		ap_attack = 110
+		
+		build_cost_ic = 23
+		resources = {
+ 			electricity = 2
+			aluminium = 2
+			steel = 1
+		}
+	}
+	
+	atgm_equipment_5 = {
+		year = 2005
+
+		archetype = atgm_equipment
+		parent = atgm_equipment_4
+		priority = 90
+		visual_level = 2
+		
+		
+
+		#Offensive Abilities
+		hard_attack = 39
+		ap_attack = 120
+		
+		build_cost_ic = 28
+		resources = {
+ 			electricity = 2
+			aluminium = 2
+			tungsten = 1
+			steel = 1
+		}
+	}
+	
+}

@@ -1,0 +1,301 @@
+wmd_nuclear_range_calculation = {
+	set_variable = { ICBM_Distance = 0 }
+	set_variable = { IRBM_Distance = 0 }
+	set_variable = { SRBM_Distance = 0 }
+	set_variable = { SLBM_Distance = 0 }
+	set_variable = { Strat_Distance = 0 }
+	#icbm range
+	if = { limit = { has_tech = icbm5 } set_variable = { ICBM_Distance = 22000 } }
+	else_if = { limit = { has_tech = icbm4 } set_variable = { ICBM_Distance = 20000 } }
+	else_if = { limit = { has_tech = icbm3 } set_variable = { ICBM_Distance = 18000 } }
+	else_if = { limit = { has_tech = icbm2 } set_variable = { ICBM_Distance = 16000 } }
+	else_if = { limit = { has_tech = icbm1 } set_variable = { ICBM_Distance = 14000 } }
+	else = { set_variable = { ICBM_Distance = 0 } }
+	#irbm range
+	if = { limit = { has_tech = irbm8 } set_variable = { IRBM_Distance = 8000 } }
+	else_if = { limit = { has_tech = irbm7 } set_variable = { IRBM_Distance = 7000 } }
+	else_if = { limit = { has_tech = irbm6 } set_variable = { IRBM_Distance = 6000 } }
+	else_if = { limit = { has_tech = irbm5 } set_variable = { IRBM_Distance = 5000 } }
+	else_if = { limit = { has_tech = irbm4 } set_variable = { IRBM_Distance = 4000 } }
+	else_if = { limit = { has_tech = irbm3 } set_variable = { IRBM_Distance = 3000 } }
+	else_if = { limit = { has_tech = irbm2 } set_variable = { IRBM_Distance = 2000 } }
+	else_if = { limit = { has_tech = irbm1 } set_variable = { IRBM_Distance = 1000 } }
+	else = { set_variable = { IRBM_Distance = 0 } }
+	#srbm range
+	if = { limit = { has_tech = srbm9 } set_variable = { SRBM_Distance = 650 } }
+	else_if = { limit = { has_tech = srbm8 } set_variable = { SRBM_Distance = 600 } }
+	else_if = { limit = { has_tech = srbm7 } set_variable = { SRBM_Distance = 550 } }
+	else_if = { limit = { has_tech = srbm6 } set_variable = { SRBM_Distance = 500 } }
+	else_if = { limit = { has_tech = srbm5 } set_variable = { SRBM_Distance = 450 } }
+	else_if = { limit = { has_tech = srbm4 } set_variable = { SRBM_Distance = 400 } }
+	else_if = { limit = { has_tech = srbm3 } set_variable = { SRBM_Distance = 350 } }
+	else_if = { limit = { has_tech = srbm2 } set_variable = { SRBM_Distance = 325 } }
+	else_if = { limit = { has_tech = srbm1 } set_variable = { SRBM_Distance = 300 } }
+	else = { set_variable = { SRBM_Distance = 0 } }
+	#slbm range
+	if = { limit = { has_tech = slbm7 } set_variable = { SLBM_Distance = 9000 } }
+	else_if = { limit = { has_tech = slbm6 } set_variable = { SLBM_Distance = 8300 } }
+	else_if = { limit = { has_tech = slbm5 } set_variable = { SLBM_Distance = 7000 } }
+	else_if = { limit = { has_tech = slbm4 } set_variable = { SLBM_Distance = 2500 } }
+	else_if = { limit = { has_tech = slbm3 } set_variable = { SLBM_Distance = 1400 } }
+	else_if = { limit = { has_tech = slbm2 } set_variable = { SLBM_Distance = 1200 } }
+	else_if = { limit = { has_tech = slbm1 } set_variable = { SLBM_Distance = 1000 } }
+	else = { set_variable = { SLBM_Distance = 0 } }
+	#strat bomber range
+	# if = { limit = { has_tech = stealth_strategic_bomber2 } set_variable = { Strat_Distance = 12000 } }
+	# else_if = { limit = { has_tech = stealth_strategic_bomber1 } set_variable = { Strat_Distance = 11000 } }
+	# else_if = { limit = { has_tech = jet_strategic_bomber5 } set_variable = { Strat_Distance = 10000 } }
+	# else_if = { limit = { has_tech = jet_strategic_bomber4 } set_variable = { Strat_Distance = 9000 } }
+	# else_if = { limit = { has_tech = jet_strategic_bomber3 } set_variable = { Strat_Distance = 8000 } }
+	# else_if = { limit = { has_tech = jet_strategic_bomber2 } set_variable = { Strat_Distance = 7000 } }
+	# else_if = { limit = { has_tech = jet_strategic_bomber1 } set_variable = { Strat_Distance = 6000 } }
+	# else_if = { limit = { has_tech = strategic_bomber3 } set_variable = { Strat_Distance = 5000 } }
+	# else = { set_variable = { Strat_Distance = 0 } }
+
+	set_variable = { WMD_Strike_Distance = 0 }
+	if = { limit = { check_variable = { ICBM_Distance > WMD_Strike_Distance } } set_variable = { WMD_Strike_Distance = ICBM_Distance } }
+	if = { limit = { check_variable = { IRBM_Distance > WMD_Strike_Distance } } set_variable = { WMD_Strike_Distance = IRBM_Distance } }
+	if = { limit = { check_variable = { SRBM_Distance > WMD_Strike_Distance } } set_variable = { WMD_Strike_Distance = SRBM_Distance } }
+	if = { limit = { check_variable = { SLBM_Distance > WMD_Strike_Distance } } set_variable = { WMD_Strike_Distance = SLBM_Distance } }
+	if = { limit = { check_variable = { Strat_Distance > WMD_Strike_Distance } } set_variable = { WMD_Strike_Distance = Strat_Distance } }
+
+	# in case of a custom strike where you want to make sure the strike goes through
+	# regardless of real tech range
+	if = {
+		limit = {
+			OR = {
+				check_variable = { strike_level_usa_cubamc_selected = 1 }
+				check_variable = { strike_level_sov_cubamc_selected = 1 }
+			}
+		}
+		set_variable = { WMD_Strike_Distance = 22000 }
+	}
+}
+
+wmd_nuclear_warhead_cost = {
+	set_variable = { missile_cost = warhead_cost }
+	if = { limit = { has_tech = atomic_weapons_delivery_V } divide_variable = { warhead_cost = 8 } }
+	else_if = { limit = { has_tech = atomic_weapons_delivery_IV } divide_variable = { warhead_cost = 8 } }
+	else_if = { limit = { has_tech = atomic_weapons_delivery_III } divide_variable = { warhead_cost = 8 } }
+	else_if = { limit = { has_tech = atomic_weapons_delivery_II } divide_variable = { warhead_cost = 8 } }
+	else_if = { limit = { has_tech = atomic_weapons_delivery_Ia } divide_variable = { warhead_cost = 8 } }
+	else_if = { limit = { has_tech = atomic_weapons_delivery_I } divide_variable = { warhead_cost = 4 } }
+	round_variable = warhead_cost
+	if = { 
+		limit = { 
+			check_variable = { missile_cost > 0 }
+			check_variable = { warhead_cost = 0 }
+		}
+		set_variable = { warhead_cost = 1 }
+	}
+}
+
+# STRIKES states selection
+wmd_distance_calculator = {
+	clear_array = ROOT.WMD_target_states_array
+	set_variable = { ROOT.warhead_cost = 0 }
+	wmd_nuclear_range_calculation = yes
+
+	if = { limit = { check_variable = { strike_level_sov_cubamc_selected = 1 } }
+		log = "[ROOT.GetTag]: sov_cubamc / Strike Distance = [?ROOT.WMD_Strike_Distance]"
+	}
+	else_if = { limit = { check_variable = { strike_level_usa_cubamc_selected = 1 } }
+		log = "[ROOT.GetTag]: usa_cubamc / Strike Distance = [?ROOT.WMD_Strike_Distance]"
+	}
+	else = {
+		log = "[ROOT.GetTag]: generic TIER STRIKE / Strike Distance = [?ROOT.WMD_Strike_Distance]"
+	}
+	#log = "[ROOT.GetTag]: sov_cubamc:[?strike_level_sov_cubamc_selected] / usa_cubamc:[?strike_level_usa_cubamc_selected] / tier1:[?strike_level_tier1_selected] / tier2:[?strike_level_tier2_selected] / tier3:[?strike_level_tier3_selected]"
+	every_state = {
+		limit = {
+			# Is owned by an enemy country
+			any_country = {
+				controls_state = PREV
+				OR = {
+					# Cuba Missile Crisis - SOV Strike on USA
+					AND = {
+						ROOT = { check_variable = { strike_level_sov_cubamc_selected = 1 } }
+						OR = {
+							tag = TUR
+							#has_idea = SEATO_member
+							#has_idea = CENTO_member
+							has_idea = nato_member
+							is_in_faction_with = USA
+						}
+					}
+					# Cuba Missile Crisis - USA Strike on SOV
+					AND = {
+						ROOT = { check_variable = { strike_level_usa_cubamc_selected = 1 } }
+						OR = {
+							tag = SOV
+							tag = CUB
+							is_in_faction_with = SOV
+						}
+					}
+					# Generic Strike
+					AND = {
+						has_war_with = ROOT
+						check_variable = { THIS.checkmark = 1 }
+					}
+				}
+			}
+			# and is in range of an allied airbase
+			OR = {
+				#in range of one of our airbases
+				ROOT = {
+					any_owned_state = {
+						air_base > 0
+						check_variable = { THIS.distance_to@PREV.PREV < ROOT.WMD_Strike_Distance}	#MAP_SCALE_PIXEL_TO_KM = 7.114
+					}
+				}
+				#in range of one of our subject's airbases
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						air_base > 0
+						check_variable = { THIS.distance_to@PREV.PREV < ROOT.WMD_Strike_Distance}	#MAP_SCALE_PIXEL_TO_KM = 7.114
+					}
+				}
+				#in range of one of our allies' airbases
+				any_country = {
+					is_in_faction_with = ROOT
+					any_owned_state = {
+						air_base > 0
+						check_variable = { THIS.distance_to@PREV.PREV < ROOT.WMD_Strike_Distance}	#MAP_SCALE_PIXEL_TO_KM = 7.114
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					is_in_array = {
+						array = ROOT.WMD_target_states_array
+						value = THIS.id
+					}
+				}
+				OR = {
+					# all strike levels
+					is_capital = yes
+					# strike level 2
+					AND = {
+						check_variable = { ROOT.strike_level_tier2_selected = 1 }
+						OR = {
+							state_population_k > 5000
+							nuclear_reactor > 0
+							controller = {
+								divisions_in_state = {
+									size > 6
+									state = PREV
+								}
+							}
+						}
+					}
+					# strike level 3 / both cubamc
+					AND = {
+						OR = {
+							check_variable = { ROOT.strike_level_tier3_selected = 1 }
+							check_variable = { ROOT.strike_level_sov_cubamc_selected = 1 }
+							check_variable = { ROOT.strike_level_usa_cubamc_selected = 1 }
+						}
+						OR = {
+							state_population_k > 1000
+							controller = {
+								divisions_in_state = {
+									size > 2
+									state = PREV
+								}
+							}
+							nuclear_reactor > 0
+						}
+					}
+				}
+			}
+			#log = "  adding state to targets list: [THIS.Owner.GetTag]-[THIS.GetName]"
+			add_to_array = { ROOT.WMD_target_states_array = THIS.id }
+			add_to_variable = { ROOT.warhead_cost = 1 }
+			set_variable = { state_pop_total = state_population_k } # pop in thousands
+
+			if = { limit = { check_variable = { state_pop_total > 1000 } } # more than 1 mill pop
+				divide_variable = { state_pop_total = 1000 } # pop in millions
+				round_variable = state_pop_total
+				add_to_variable = { ROOT.warhead_cost = state_pop_total }
+			}
+		}
+	}
+	#log = "Target States: [?ROOT.WMD_target_states_array^num]"
+	wmd_nuclear_warhead_cost = yes
+	add_to_variable = { ROOT.refresh_wmd_menu = 1 }
+}
+
+slbm_mid_east_calc = {
+	clear_array = SLBMTargetList
+	every_state = {
+		limit = {
+			#Is owned by an enemy country
+			any_country = {
+				controls_state = PREV
+				has_war_with = ROOT
+			}
+			is_on_continent = middle_east
+		}
+		if = {
+			limit = {
+				NOT = {
+					is_in_array = {
+						array = ROOT.SLBMTargetList
+						value = THIS.id
+					}
+				}
+			}
+			add_to_array = { ROOT.SLBMTargetList = THIS.id }
+		}
+	}
+}
+
+distance_calculator_chemical_stateview = {
+	clear_array = WarCrimeTargetListChemical
+	every_state = {
+		limit = {
+			#Is owned by an enemy country
+			any_country = {
+				controls_state = PREV
+				has_war_with = ROOT
+			}
+			OR = {
+				ROOT = {
+					any_owned_state = {
+						air_base > 0
+						check_variable = { THIS.distance_to@PREV.PREV < 200 }	#MAP_SCALE_PIXEL_TO_KM = 7.114
+					}
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						air_base > 0
+						check_variable = { THIS.distance_to@PREV.PREV < 200 }	#MAP_SCALE_PIXEL_TO_KM = 7.114
+					}
+				}
+				any_country = {
+					is_in_faction_with = ROOT
+					any_owned_state = {
+						air_base > 0
+						check_variable = { THIS.distance_to@PREV.PREV < 200 }	#MAP_SCALE_PIXEL_TO_KM = 7.114
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					is_in_array = {
+						array = ROOT.WarCrimeTargetListChemical
+						value = THIS.id
+					}
+				}
+			}
+			add_to_array = { ROOT.WarCrimeTargetListChemical = THIS.id }
+		}
+	}
+}

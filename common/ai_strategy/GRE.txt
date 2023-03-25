@@ -1,0 +1,36 @@
+annex_commigreece = {
+	allowed = {
+		tag = GRE
+	}		
+	enable = {	
+		tag = GRE
+		country_exists = PDG
+	}
+	
+	abort = {
+		NOT = { country_exists = PDG }
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "PDG"			
+		value = 1000000
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "PDG"			
+		value = 4000
+	}
+}
+Greece_avoid_korea_war = {
+	allowed = { tag = GRE }
+	enable = {		
+		tag = GRE
+	}
+	
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "KOR"			
+		value = -10000
+	}
+}

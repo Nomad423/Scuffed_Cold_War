@@ -1,0 +1,481 @@
+﻿##### POLAND NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+POL_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { POL }
+
+	type = ship
+	ship_types = { screen_hull_medium screen_hull_heavy } # screen_hull_light
+
+	prefix = "ORP "
+	fallback_name = "Niszczyciel %d"
+
+	unique = {
+		"Grom" "Blyskawica" "Piorun" "Orkan" "Kujawiak" "Slazak" "Pomorzanin" "Krakowiak" "Góral" "Mazur" "Kaszub" "Kurp" 
+		"Burza" "Wicher" "Garland" "Ouragan" "Warszawa" "Lwów" "Wilno" "Poznan" "Kraków" "Wisla" "Gdynia" "Gdansk"
+		"Kraków" "Zadwórze" "Plowce" "Odsiecz Wiedenska" "Psków" "Raszyn" "Przemysl" "Chocim" "Kircholm" "Fuengirola"
+	} # Błyskawica Ślązak
+}
+
+### LIGHT CRUISER NAMES###
+POL_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { POL }
+
+	type = ship
+	ship_types = { battle_hull_light }
+	
+	prefix = "ORP "
+	fallback_name = "Lekki Krazownik %d" # Krążownik
+
+	unique = {
+		"Dragon" "Conrad" "Baltyk" "Król Wladyslaw IV" "Lwów" "Wilno" "Poznan" "Kraków" "Wisla" "Gdynia" "Gdansk" "Warszawa"
+		"Kraków" "Zadwórze" "Plowce" "Odsiecz Wiedenska" "Psków" "Raszyn" "Przemysl" "Chocim" "Kircholm" "Fuengirola"
+	} # Bałtyk
+}
+
+### HEAVY CRUISER NAMES###
+POL_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { POL }
+
+	type = ship
+	ship_types = { battle_hull_medium }
+	
+	prefix = "ORP "
+	fallback_name = "Ciezki Krazownik %d" # Ciężki Krążownik
+
+	unique = {
+		"Dragon" "Conrad" "Baltyk" "Król Wladyslaw IV" "Lwów" "Wilno" "Poznan" "Kraków" "Wisla" "Gdynia" "Gdansk" "Warszawa"
+		"Kraków" "Zadwórze" "Plowce" "Odsiecz Wiedenska" "Psków" "Raszyn" "Przemysl" "Chocim" "Kircholm" "Fuengirola"
+	} # Bałtyk
+}
+
+
+### BATTLESHIP NAMES ###
+POL_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { POL }
+
+	type = ship
+	ship_types = { battle_hull_heavy }
+	
+	prefix = "ORP "
+	fallback_name = "Pancernik %d"
+	
+	unique = {
+		"Józef Pilsudski" "Król Wladyslaw IV" "Stefan Batory" "Jan Sobieski" "Kazimierz Wielki" "Boleslaw Chrobry" "Jan Kazimierz" "Stanislaw Koniecpolski" 
+		"Stanislaw Zólkiewski" "Jan Zamoyski" "Stanislaw Lanckoronski" "Stefan Czarniecki" "Jan Karol Chodkiewicz" 
+	}
+}
+
+### BATTLECRUISER NAMES ###
+POL_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { POL }
+
+	type = ship
+	ship_types = { battle_hull_medium }
+	
+	prefix = "ORP "
+	fallback_name = "Krazownik %d" # Krążownik
+	
+	unique = {
+		"Józef Pilsudski" "Król Wladyslaw IV" "Stefan Batory" "Jan Sobieski" "Kazimierz Wielki" "Boleslaw Chrobry" "Jan Kazimierz" "Stanislaw Koniecpolski" 
+		"Stanislaw Zólkiewski" "Jan Zamoyski" "Stanislaw Lanckoronski" "Stefan Czarniecki" "Jan Karol Chodkiewicz" 
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+POL_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { POL }
+
+	type = ship
+	ship_types = { carrier_hull carrier_hull_light }
+	
+	prefix = "ORP "
+	fallback_name = "Lotniskowiec %d"
+	
+	unique = {
+		"Józef Pilsudski" "Król Wladyslaw IV" "Stefan Batory" "Jan Sobieski" "Kazimierz Wielki" "Boleslaw Chrobry" "Jan Kazimierz" "Stanislaw Koniecpolski" 
+		"Stanislaw Zólkiewski" "Jan Zamoyski" "Stanislaw Lanckoronski" "Stefan Czarniecki" "Jan Karol Chodkiewicz" 
+	}
+}
+
+### SUBMARINES ###
+POL_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { POL }
+
+	type = ship
+	ship_types = { sub_hull_small_single sub_hull_large_single sub_hull_large_double }
+	
+	prefix = "ORP "
+	fallback_name = "Okret Podwodny %d" # Okręt
+	
+	unique = {
+		"Orzel" "Sep" "Sokól" "Dzik" "Jastrzab" "Rys" "Wilk" "Zbik" "Kondor" "Bielik" 
+		"Kaszub" "Mazur" "Krakowiak" "Slazak" "Kujawiak" "Kurp" "Kujawiak" "Kujawiak" "Kujawiak" 
+	} # Orzeł Sęp Jastrząb Ślązak
+}
+
+### KINGS ###
+POL_THEME_KINGS = {
+	name = NAME_THEME_KINGS
+
+	for_countries = { POL }
+
+	
+
+	type = ship
+	ship_types = { battle_hull_heavy battle_cruiser carrier_hull carrier_hull_light }
+	
+	prefix = "ORP "
+
+	unique = {
+		"Stefan Batory"
+		"Jan III Sobieski"
+		"Kazimierz Wielki"
+		"Boleslaw Chrobry" # Bolesław
+		"Zygmunt III Waza"
+		"Wladyslaw IV Waza" # Władysław
+		"Wladyslaw Jagiello" # Władysław Jagiełło
+		"Zygmunt I Stary"
+		"Wladyslaw Lokietek" # Władysław Łokietek
+		"Kazimierz Jagielonczyk" # Jagielończyk
+		"Zygmunt II August"
+		"Boleslaw Smialy" # Bolesław Śmiały
+	}
+}
+
+### HISTORICAL FIGURES ###
+POL_THEME_HISTORICAL_FIGURES = {
+	name = NAME_THEME_HISTORICAL_FIGURES
+
+	for_countries = { POL }
+
+	
+
+	type = ship
+	ship_types = { battle_hull_heavy battle_cruiser carrier_hull carrier_hull_light }
+	
+	prefix = "ORP "
+
+	unique = {
+		"Józef Pilsudzki" # Piłsudzki
+		"Tadeusz Kosciuszko" # Kościuszko
+		"Józef Poniatowski"
+		"Stanislaw Zólkiewski" # Stanisław Żółkiewski
+		"Jan Zamoyski"
+		"Stefan Czarniecki"
+		"Jan Karol Chodkiewicz"
+		"Stanislaw Lanckoronski" # Stanisław Lanckoroński
+		"Jan Henryk Dabrowski" # Dąbrowski
+		"Mateusz Sierpinek"
+		"Arend Dickmann"
+		"Kazimierz Pulaski" # Pułaski
+		"Jan Heweliusz"
+		"Mikolaj Kopernik" # Mikołaj
+		"Jan Kochanowski"
+		"Mikolaj Rej" # Mikołaj
+		"Józef Bem"
+		"Józef Haller"
+		"Stanislaw Szeptycki" # Stanisław
+		"Wladyslaw Sikorski" # Władysław
+		"Kazimierz Sosnkowski"
+		"Wladyslaw Anders" # Władysław
+		"Stanislaw Sosabowski" # Stanisław
+	}
+}
+
+### WEATHER ###
+POL_THEME_WEATHER = {
+	name = NAME_THEME_WEATHER
+
+	for_countries = { POL }
+
+	type = ship
+	
+	prefix = "ORP "
+
+	unique = {
+		"Burza"
+		"Blyskawica" # Błyskawica
+		"Sztorm"
+		"Grad"
+		"Wicher"
+		"Piorun"
+		"Tornado"
+		"Zorza"
+		"Huragan"
+		"Grom"
+		"Zamiec" # Zamieć
+		"Halny"
+		"Orkan"
+		"Szkwal" # Szkwał
+	}
+}
+
+### RIVERS ###
+POL_THEME_RIVERS = {
+	name = NAME_THEME_RIVERS
+
+	for_countries = { POL }
+
+	type = ship
+	
+	prefix = "ORP "
+
+	unique = {
+		"Wisla" # Wisła
+		"Bug"
+		"Narew"
+		"Warta"
+		"San"
+		"Notec" # Noteć
+		"Wieprz"
+		"Dniestr"
+		"Prypec" # Prypeć
+		"Lida"
+		"Pilica"
+		"Wilia"
+	}
+}
+
+### ANIMALS ###
+POL_THEME_ANIMALS = {
+	name = NAME_THEME_ANIMALS
+
+	for_countries = { POL }
+
+	type = ship
+	
+	prefix = "ORP "
+
+	unique = {
+		"Wilk"
+		"Orzel" # Orzeł
+		"Rekin"
+		"Gryf"
+		"Rys" # Ryś
+		"Szczupak"
+		"Czapla"
+		"Albatros"
+		"Mewa"
+		"Rybitwa"
+		"Kormoran"
+		"Zbik" # Żbik
+		"Sep" # Sęp
+		"Czajka"
+		"Jaskólka" # Jaskółka
+		"Zuraw" # Żuraw
+		"Sokól" # Sokół
+		"Bielik"
+		"Tygrys"
+		"Lew"
+		"Pantera"
+		"Niedzwiedz" # Niedźwiedź
+		"Dzik"
+		"Jastrzab" # Jastrząb
+	}
+}
+
+### REGIONS ###
+POL_THEME_REGIONS = {
+	name = NAME_THEME_REGIONS
+
+	for_countries = { POL }
+
+	type = ship
+	
+	prefix = "ORP "
+
+	unique = {
+		"Mazowsze"
+		"Kujawy"
+		"Malopolska" # Małopolska
+		"Wielkopolska"
+		"Slask" # Śląsk
+		"Pomorze"
+		"Podlasie"
+		"Polesie"
+		"Swietokrzyskie" # Świętokrzyskie
+		"Wilenszczyzna" # Wileńszczyzna
+		"Podhale"
+		"Podkapracie"
+	}
+}
+
+### CITIES ###
+POL_THEME_CITIES = {
+	name = NAME_THEME_CITIES
+
+	for_countries = { POL }
+
+	type = ship
+	
+	prefix = "ORP "
+
+	unique = {
+		"Mazowsze"
+		"Kujawy"
+		"Malopolska" # Małopolska
+		"Wielkopolska"
+		"Slask" # Śląsk
+		"Pomorze"
+		"Podlasie"
+		"Polesie"
+		"Swietokrzyskie" # Świętokrzyskie
+		"Wilenszczyzna" # Wileńszczyzna
+		"Podhale"
+	}
+}
+
+### BATTLES ###
+POL_THEME_BATTLES = {
+	name = NAME_THEME_BATTLES
+
+	for_countries = { POL }
+
+	type = ship
+	
+	prefix = "ORP "
+
+	unique = {
+		"Grunwald"
+		"Orsza"
+		"Smolensk" # Smoleńsk
+		"Kircholm"
+		"Wieden" # Wiedeń
+		"Chocim"
+		"Raszyn"
+		"Oliwa"
+		"Cedynia"
+		"Plowce" # Płowce
+		"Komarów"
+	}
+}
+
+### SLAVIC_MYTHOLOGY ###
+POL_THEME_SLAVIC_MYTHOLOGY = {
+	name = NAME_THEME_SLAVIC_MYTHOLOGY
+
+	for_countries = { POL }
+
+	type = ship
+	
+	prefix = "ORP "
+
+	unique = {
+		"Strzyga"
+		"Aitwar"
+		"Baba"
+		"Bannik"
+		"Bazyliszek"
+		"Belt" # Bełt
+		"Bezkost"
+		"Bieda"
+		"Bies"
+		"Bledny Ognik" # Błędny
+		"Blotnik" # Błotnik
+		"Bobak"
+		"Buka"
+		"Bogunka"
+		"Borowy"
+		"Leszy"
+		"Brzegina"
+		"Buc"
+		"Bzionek"
+		"Chochlik"
+		"Chowaniec"
+		"Cicha"
+		"Cmentarna Baba"
+		"Czart"
+		"Boruta"
+		"Fugas"
+		"Hejdasz"
+		"Iskrzycki"
+		"Rokita"
+		"Dobrochoczy"
+		"Dola"
+		"Domowik"
+		"Dworowy"
+		"Dziad"
+		"Dziewiatko" # Dziewiątko
+		"Dziwozona" # Dziwożona
+		"Fajerman"
+		"Gnieciuch"
+		"Gryf"
+		"Gumiennik"
+		"Homen"
+		"Jaroszek"
+		"Jedza" # Jędza
+		"Julki"
+		"Kania"
+		"Klabaternik"
+		"Klobuk" # Kłobuk
+		"Kocmoluch" # Kocmołuch
+		"Krasnoludek"
+		"Król Wezów" # Wężów
+		"Latawiec"
+		"Licho"
+		"Lapiduch" # Łapiduch
+		"Newka"
+		"Mamuna"
+		"Maruda"
+		"Matoha"
+		"Miernik"
+		"Mlekowy Zmij" # Żmij
+		"Morowa Dziewica"
+		"Mróz"
+		"Mrucek"
+		"Nocnica"
+		"Ognisty Kon" # Koń
+		"Paskudnik"
+		"Pieniezny Chlopczyk" # Pieniężny Chłopczyk
+		"Plonek"
+		"Planetnik" # Płanetnik
+		"Plonnik" # Płonnik
+		"Poludnica" # Południca
+		"Poroniec"
+		"Przyloznik" # Przyłożnik
+		"Rodzanica"
+		"Rusalka" # Rusałka
+		"Rybi Król"
+		"Skarbnik"
+		"Skula" # Skuła
+		"Smeda" # Smęda
+		"Smok"
+		"Spaleniec"
+		"Kreciek" # Kręciek
+		"Stradcze" # Stradczę
+		"Stukacz"
+		"Syrena"
+		"Szalinc" # Szalińc
+		"Szarlej"
+		"Szatopierz" # Szątopierz
+		"Smierc" # Śmierć
+		"Swietle" # Świetle
+		"Tesknica" # Tęsknica
+		"Trusia"
+		"Utopiec"
+		"Wapierz" # Wąpierz
+		"Wielkolud"
+		"Wieszczy"
+		"Wietrzyca"
+		"Wilkolak" # Wilkołak
+		"Wila" # Wiła
+		"Wisielec"
+		"Wodnik"
+		"Zmora"
+		"Zmij" # Żmij
+	}
+}

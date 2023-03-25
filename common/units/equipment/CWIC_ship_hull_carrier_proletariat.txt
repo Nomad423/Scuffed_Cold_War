@@ -1,0 +1,371 @@
+equipments = {
+
+	carrier_ww = {
+		year = 1940
+
+		archetype = carrier_hull
+		priority = 2000
+		visual_level = 1
+		
+		naval_speed = 18
+		naval_range = 2200
+		max_strength = 600
+		reliability = 0.8
+		manpower = 850
+		carrier_size = 30
+		
+		lg_attack = 0
+		lg_armor_piercing = 0
+		hg_attack = 0
+		hg_armor_piercing = 0
+		torpedo_attack = 0
+		sub_attack = 0
+		armor_value = 4
+		anti_air_attack = 1
+		
+		fuel_consumption = 16
+		surface_visibility = 23
+		surface_detection = 33
+		sub_detection = 12
+		
+		build_cost_ic = 4000
+		resources = {
+			steel = 4
+			aluminium = 2
+		}
+	}
+	carrier_0 = {
+		year = 1950
+
+		archetype = carrier_hull
+		priority = 2000
+		visual_level = 1
+		parent = carrier_ww
+
+		naval_speed = 20
+		naval_range = 2640
+		max_strength = 720
+		reliability = 0.72
+		manpower = 850
+		carrier_size = 30
+		
+		lg_attack = 0
+		lg_armor_piercing = 0
+		hg_attack = 0
+		hg_armor_piercing = 0
+		torpedo_attack = 0
+		sub_attack = 0
+		armor_value = 8
+		anti_air_attack = 5
+		
+		fuel_consumption = 18.4
+		surface_visibility = 26
+		surface_detection = 37.5
+		sub_detection = 14
+		
+		build_cost_ic = 7000
+		resources = {
+			steel = 4
+			aluminium = 2
+		}
+	}
+
+	carrier_1 = {
+		year = 1960
+
+		archetype = carrier_hull
+		priority = 2000
+		visual_level = 1
+		parent = carrier_0
+
+		naval_speed = 22
+		naval_range = 3120
+		max_strength = 840
+		reliability = 0.765
+		manpower = 1060
+		carrier_size = 40
+		
+		lg_attack = 0
+		lg_armor_piercing = 0
+		hg_attack = 0
+		hg_armor_piercing = 0
+		torpedo_attack = 0
+		sub_attack = 0
+		armor_value = 12
+		anti_air_attack = 9
+		
+		fuel_consumption = 20.8
+		surface_visibility = 29
+		surface_detection = 42
+		sub_detection = 16
+		
+		build_cost_ic = 10000
+		resources = {
+			steel = 4
+			aluminium = 2
+		}
+	}
+
+	carrier_2 = {
+		year = 1970
+
+		archetype = carrier_hull
+		priority = 2000
+		visual_level = 1
+		parent = carrier_1
+
+		naval_speed = 24
+		naval_range = 3640
+		max_strength = 960
+		reliability = 0.81
+		manpower = 1150
+		carrier_size = 50
+		
+		lg_attack = 0
+		lg_armor_piercing = 0
+		hg_attack = 0
+		hg_armor_piercing = 0
+		torpedo_attack = 0
+		sub_attack = 0
+		armor_value = 16
+		anti_air_attack = 13
+		
+		fuel_consumption = 23.2
+		surface_visibility = 31
+		surface_detection = 46.5
+		sub_detection = 18
+		
+		build_cost_ic = 16000
+		resources = {
+			steel = 4
+			aluminium = 2
+			tungsten = 1
+		}
+	}
+
+	carrier_3 = {
+		year = 1980
+
+		archetype = carrier_hull
+		priority = 2000
+		visual_level = 1
+		parent = carrier_2
+
+		naval_speed = 26
+		naval_range = 3900
+		max_strength = 1000
+		reliability = 0.86
+		manpower = 1200
+		carrier_size = 55
+		
+		lg_attack = 0
+		lg_armor_piercing = 0
+		hg_attack = 0
+		hg_armor_piercing = 0
+		torpedo_attack = 0
+		sub_attack = 0
+		armor_value = 20
+		anti_air_attack = 17
+		
+		fuel_consumption = 25.6
+		surface_visibility = 32.5
+		surface_detection = 51
+		sub_detection = 20
+		
+		build_cost_ic = 19000
+		resources = {
+			steel = 4
+			aluminium = 2
+			tungsten = 1
+		}
+	}
+	
+	carrier_4 = {
+		year = 1990
+
+		archetype = carrier_hull
+		priority = 2000
+		visual_level = 1
+		parent = carrier_3
+
+		naval_speed = 28
+		naval_range = 4200
+		max_strength = 1080
+		reliability = 1.045
+		manpower = 1250
+		carrier_size = 60
+		
+		lg_attack = 0
+		lg_armor_piercing = 0
+		hg_attack = 0
+		hg_armor_piercing = 0
+		torpedo_attack = 0
+		sub_attack = 0
+		armor_value = 24
+		anti_air_attack = 21
+		
+		fuel_consumption = 0
+		surface_visibility = 29
+		surface_detection = 55.5
+		sub_detection = 22
+		
+		build_cost_ic = 21000
+		resources = {
+			steel = 4
+			aluminium = 2
+			tungsten = 1
+			chromium = 1
+		}
+	}
+	
+	carrier_5 = {
+		year = 2000
+
+		archetype = carrier_hull
+		priority = 2000
+		visual_level = 1
+		parent = carrier_4
+
+		naval_speed = 30
+		naval_range = 4800
+		max_strength = 1200
+		reliability = 1.1
+		manpower = 1270
+		carrier_size = 70
+		
+		lg_attack = 0
+		lg_armor_piercing = 0
+		hg_attack = 0
+		hg_armor_piercing = 0
+		torpedo_attack = 0
+		sub_attack = 0
+		armor_value = 28
+		anti_air_attack = 25
+		
+		fuel_consumption = 0
+		surface_visibility = 27
+		surface_detection = 60
+		sub_detection = 24
+		
+		build_cost_ic = 24000
+		resources = {
+			steel = 4
+			aluminium = 3
+			tungsten = 1
+			chromium = 1
+		}
+	}
+	
+	supercarrier_0 = {
+		year = 1970
+
+		archetype = carrier_hull_super
+		priority = 2000
+		visual_level = 1
+
+		naval_speed = 24
+		naval_range = 4680
+		max_strength = 1800
+		reliability = 0.765
+		manpower = 2120
+		carrier_size = 80
+		
+		lg_attack = 0
+		lg_armor_piercing = 0
+		hg_attack = 0
+		hg_armor_piercing = 0
+		torpedo_attack = 0
+		sub_attack = 0
+		armor_value = 20
+		anti_air_attack = 13
+		
+		fuel_consumption = 36
+		surface_visibility = 50
+		surface_detection = 30
+		sub_detection = 18
+		
+		build_cost_ic = 26000
+		resources = {
+			steel = 6
+			aluminium = 2
+			tungsten = 1
+		}
+	}
+
+	supercarrier_1 = {
+		year = 1980
+
+		archetype = carrier_hull_super
+		priority = 2000
+		visual_level = 1
+		parent = supercarrier_0
+
+		naval_speed = 28
+		naval_range = 6160
+		max_strength = 2160
+		reliability = 0.99
+		manpower = 2110
+		carrier_size = 100
+		
+		lg_attack = 0
+		lg_armor_piercing = 0
+		hg_attack = 0
+		hg_armor_piercing = 0
+		torpedo_attack = 0
+		sub_attack = 0
+		armor_value = 24
+		anti_air_attack = 16
+		
+		fuel_consumption = 0
+		surface_visibility = 55
+		surface_detection = 30
+		sub_detection = 18
+		
+		build_cost_ic = 32000
+		resources = {
+			steel = 6
+			aluminium = 2
+			tungsten = 1
+			chromium = 1
+		}
+	}
+
+	supercarrier_2 = {
+		year = 2000
+
+		archetype = carrier_hull_super
+		priority = 2000
+		visual_level = 1
+		parent = supercarrier_1
+
+		naval_speed = 32
+		naval_range = 7350
+		max_strength = 3240
+		reliability = 1.045
+		manpower = 2570
+		carrier_size = 140
+		
+		lg_attack = 0
+		lg_armor_piercing = 0
+		hg_attack = 0
+		hg_armor_piercing = 0
+		torpedo_attack = 0
+		sub_attack = 0
+		armor_value = 28
+		anti_air_attack = 19
+		
+		fuel_consumption = 0
+		surface_visibility = 55
+		surface_detection = 30
+		sub_detection = 18
+		
+		build_cost_ic = 38000
+		resources = {
+			steel = 5
+			aluminium = 2
+			tungsten = 2
+			chromium = 1
+		}
+	}
+	
+}

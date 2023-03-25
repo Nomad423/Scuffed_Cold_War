@@ -1,0 +1,38 @@
+FRA_misc_category = {
+	icon = GFX_fr_category
+
+	picture = GFX_FR_Parliament
+
+	allowed = {
+		original_tag = FRA
+	}
+	priority = 100
+}
+
+FRA_Algerian_War_category = {
+	icon = generic
+
+	picture = GFX_decision_chi_political_support
+
+	allowed = {
+		OR = {
+			original_tag = FRA
+			original_tag = ALG
+		}
+	}
+}
+
+FRA_Indochina_War_category = {
+	icon = GFX_Indochina_Decision
+
+	picture = GFX_vietnam_Desc_Pic
+
+	allowed = {
+		OR = {
+			original_tag = FRA
+			original_tag = VIN
+			original_tag = VIE
+		}
+	}
+	priority = 85
+}

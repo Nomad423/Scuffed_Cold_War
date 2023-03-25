@@ -1,0 +1,235 @@
+influence_desicions = {
+	increase_domestic_influence = {
+		icon = generic_independence
+		cost = 100
+		days_remove = 5
+		days_re_enable = 0
+		available = {
+			has_variable = influence_array^0
+			any_of = {
+				array = influence_array_val
+				check_variable = { influence_array_val^i > 0 }
+			}			
+		}
+		visible = {
+			always = yes
+		}
+		complete_effect = {
+			set_temp_variable = { influence_gain = 50 }
+			multiply_variable = { influence_gain = decryptTotal }
+			add_to_variable = { domestic_influence_amount = influence_gain }
+			recalculate_influence = yes
+		}
+	}
+
+	join_the_naval_treaty = {
+
+		icon = MTG_naval_treaty_adherent 
+
+		available = {
+			has_navy_size = {
+				size > 25 
+			}
+
+			has_global_flag = pacific_treaty
+
+			NOT = {
+				has_idea = pacific_naval_treaty_adherent 
+			}
+		}
+		visible = {
+			has_navy_size = {
+				size > 25 
+			}
+			has_global_flag = pacific_treaty
+			NOT = {
+				has_idea = pacific_naval_treaty_adherent 
+			}
+		}
+
+		cost = 100 
+
+		complete_effect = {
+			country_event = SOV_Beria_Struggle.104
+		}
+
+
+	}
+	leave_the_naval_treaty = {
+
+		icon = MTG_naval_treaty_adherent
+
+		visible = {
+			has_country_flag = pacific_naval_treaty_adherent
+		}
+		available = {
+			has_country_flag = pacific_naval_treaty_adherent
+		}
+
+		cost = 100 
+
+		complete_effect = {
+			remove_ideas = pacific_naval_treaty_adherent 
+
+			clr_country_flag = pacific_naval_treaty_adherent
+
+			add_threat = 1
+
+			country_event = SOV_Beria_Struggle.107
+		}
+	}
+
+	target_influencer_0 = {
+		icon = generic_independence
+		cost = 200
+		days_remove = 5
+		days_re_enable = 0
+		visible = {
+			has_variable = influence_array^0
+			check_variable = { influence_array_val^0 > 0 }
+		}
+		
+		complete_effect = {
+			set_variable = { subtractInf = 50 }
+			multiply_variable = { subtractInf = encryptTotal }
+			subtract_from_variable = { influence_array_val^0 = subtractInf }
+			clamp_variable = {
+				var = influence_array_val^0
+				min = 0
+				max = influence_total
+			}
+			recalculate_influence = yes
+		}
+	}
+
+	target_influencer_1 = {
+		icon = generic_independence
+		cost = 200
+		days_remove = 5
+		days_re_enable = 0
+		visible = {
+			has_variable = influence_array^1
+			check_variable = { influence_array_val^1 > 0 }
+		}
+		complete_effect = {
+			set_variable = { subtractInf = 50 }
+			multiply_variable = { subtractInf = encryptTotal }
+			subtract_from_variable = { influence_array_val^1 = subtractInf }
+			clamp_variable = {
+				var = influence_array_val^1
+				min = 0
+				max = influence_total
+			}
+			recalculate_influence = yes
+		}
+	}
+
+	target_influencer_2 = {
+		icon = generic_independence
+		cost = 200
+		days_remove = 5
+		days_re_enable = 0
+		visible = {
+			has_variable = influence_array^2
+			check_variable = { influence_array_val^2 > 0 }
+		}
+		complete_effect = {
+			set_variable = { subtractInf = 50 }
+			multiply_variable = { subtractInf = encryptTotal }
+			subtract_from_variable = { influence_array_val^2 = subtractInf }
+			clamp_variable = {
+				var = influence_array_val^2
+				min = 0
+				max = influence_total
+			}
+			recalculate_influence = yes
+		}
+	}
+	target_influencer_3 = {
+		icon = generic_independence
+		cost = 200
+		days_remove = 5
+		days_re_enable = 0
+		visible = {
+			has_variable = influence_array^3
+			check_variable = { influence_array_val^3 > 0 }
+		}
+		complete_effect = {
+			set_variable = { subtractInf = 50 }
+			multiply_variable = { subtractInf = encryptTotal }
+			subtract_from_variable = { influence_array_val^3 = subtractInf }
+			clamp_variable = {
+				var = influence_array_val^2
+				min = 0
+				max = influence_total
+			}
+			recalculate_influence = yes
+		}
+	}
+
+	target_influencer_4 = {
+		icon = generic_independence
+		cost = 200
+		days_remove = 5
+		days_re_enable = 0
+		visible = {
+			has_variable = influence_array^4
+			check_variable = { influence_array_val^4 > 0 }
+		}
+		complete_effect = {
+			set_variable = { subtractInf = 50 }
+			multiply_variable = { subtractInf = encryptTotal }
+			subtract_from_variable = { influence_array_val^4 = subtractInf }
+			clamp_variable = {
+				var = influence_array_val^4
+				min = 0
+				max = influence_total
+			}
+			recalculate_influence = yes
+		}
+	}
+
+	target_influencer_5 = {
+		icon = generic_independence
+		cost = 200
+		days_remove = 5
+		days_re_enable = 0
+		visible = {
+			has_variable = influence_array^5
+			check_variable = { influence_array_val^5 > 0 }
+		}
+		complete_effect = {
+			set_variable = { subtractInf = 50 }
+			multiply_variable = { subtractInf = encryptTotal }
+			subtract_from_variable = { influence_array_val^5 = subtractInf }
+			clamp_variable = {
+				var = influence_array_val^5
+				min = 0
+				max = influence_total
+			}
+			recalculate_influence = yes
+		}
+	}
+
+	target_influencer_6 = {
+		icon = generic_independence
+		cost = 200
+		days_remove = 5
+		days_re_enable = 0
+		visible = {
+			has_variable = influence_array^6
+			check_variable = { influence_array_val^6 > 0 }
+		}
+		complete_effect = {
+			set_variable = { subtractInf = 50 }
+			multiply_variable = { subtractInf = encryptTotal }
+			subtract_from_variable = { influence_array_val^6 = subtractInf }
+			clamp_variable = {
+				var = influence_array_val^6
+				min = 0
+				max = influence_total
+			}
+			recalculate_influence = yes
+		}
+	}
+}

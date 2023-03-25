@@ -1,0 +1,551 @@
+add_namespace = LBA
+add_namespace = libya_news
+
+country_event = {
+	id = LBA.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.1"}
+	title = "U.N. Adopts Resolution on Libyan Independence"
+	desc = "After international outrage discussing the neo-imperalist Bevin-Sforza Plan the U.N. has passed a resolution mandating the uniting of a new independent Libyan Kingdom under Idris."
+
+	trigger = {
+		tag = LBA
+	}
+	immediate = {
+
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+
+		name = "There is a brighter future for the Libyan Berbers and Arabs"
+
+	}
+}
+
+country_event = {
+	id = LBA.2 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.2"}
+	title = "Declaration of the Independent United Kingdom of Libya"
+	desc = "King Idris hereby declares the independent United Kingdom of Libya, uniting the three regions of Cyrenaica, Tripolitania, and Fezzan."
+
+	trigger = {
+		tag = LBA
+	}
+
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		transfer_state = 775
+		transfer_state = 662
+		transfer_state = 448
+		transfer_state = 661
+		set_state_controller = 775
+		set_state_controller = 662
+		set_state_controller = 448
+		set_state_controller = 661
+		FRA = {
+			remove_state_core = 775
+		}
+		ENG = {
+			remove_state_core = 662
+			remove_state_core = 448
+			remove_state_core = 661
+		}
+		drop_cosmetic_tag = yes
+	}
+	option = {
+
+		name = "There is a brighter future for the Libyan Berbers and Arabs"
+
+	}
+}
+
+country_event = {
+	id = LBA.3 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.3"}
+	title = "Our Future Administration"
+	desc = "Before we form a United Libyan Kingdom we need to decide if we will have a federal system with Tripolitania and Fezzan as two seperate states or a Unitary state under a single administration."
+
+	trigger = {
+		tag = LBA
+	}
+
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "A unitary state"
+		complete_national_focus = LBA_adopt_unitary_administration
+		ai_chance = {
+			factor = 10
+		}
+
+
+	}
+	option = {
+		name = "A Federal System"
+
+		complete_national_focus = LBA_adopt_federal_administration
+		set_cosmetic_tag = LBA_UK
+		ai_chance = {
+			factor = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 2
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = LBA.4 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.4"}
+	title = "Question of Executive Power"
+	desc = "There are questions, given the modern world, regarding whether we should continue our status quo of complete monarchial control, or adopt a parlimentary monarchial system."
+
+	trigger = {
+		tag = LBA
+	}
+
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "A Parlimentary Monarchy"
+		complete_national_focus = LBA_form_parlimentary_monarchy
+		ai_chance = {
+			factor = 0
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				is_historical_focus_on = no
+				factor = 1
+			}
+		}
+	}
+	option = {
+		name = "Continue Status Quo"
+
+		complete_national_focus = LBA_monarchial_status_quo
+
+		ai_chance = {
+			factor = 100
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				is_historical_focus_on = no
+				factor = 1
+			}
+		}
+
+	}
+}
+news_event = {
+	id = libya_news.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = libya_news.1"}
+	title = "[GetNewspaperHeader]Worldwide Protests Against the Bevin-Sforza Plan"
+	desc = libya_news.1.d
+	picture = GFX_Bevin_Sforza
+	major = yes
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "France and Britain have gone a bridge too far"
+	}
+}
+country_event = {
+	id = LBA.5 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.5"}
+	title = "The New Prime Minister"
+	desc = LBA.5.d
+
+	trigger = {
+		tag = LBA
+	}
+
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "May Fekini serve us well"
+
+
+	}
+}
+country_event = {
+	id = LBA.6 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.6"}
+	title = "Abolishment of the Federal System"
+	desc = "Idris and his cabinet have come to disagree with the federal organization of the United Kingdom of Libya as states between Fezzan, Cyrenaica, and Tripolitania. The government will adopt a unitary government, indivisible."
+	trigger = {
+		tag = LBA
+	}
+	immediate = {
+		drop_cosmetic_tag = yes
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Idris with more power is only to our benefit"
+		add_political_power = +50
+
+	}
+}
+country_event = {
+	id = LBA.7 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.7"}
+	title = "Removal of American Military Bases"
+	desc = "Fracturing relations between his majesty, King Idris, have devolved into the administration forcing off foreign powers from maintaining military bases in our country."
+	trigger = {
+		tag = LBA
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Americans have no business in Libya"
+		diplomatic_relation = {
+			country = USA
+			relation = military_access
+			active = no
+		}
+	}
+}
+country_event = {
+	id = LBA.8 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.8"}
+	title = "Removal of British Military Bases"
+	desc = "Fracturing relations between his majesty, King Idris, have devolved into the administration forcing off foreign powers from maintaining military bases in our country."
+	trigger = {
+		tag = LBA
+	}
+
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Brits have no business in Libya"
+		diplomatic_relation = {
+			country = ENG
+			relation = military_access
+			active = no
+		}
+	}
+}
+country_event = {
+	id = LBA.9 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.9"}
+	title = "Revision of the 1951 Constitution"
+	desc = LBA.9.d
+	trigger = {
+		tag = LBA
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Revaluation over Concession"
+		add_political_power = +50
+	}
+}
+country_event = {
+	id = LBA.10 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.10"}
+	title = "The Continuing Influx of Egyptian Teachers"
+	desc = "LBA.10.d"
+	trigger = {
+		tag = LBA
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "This may have unforseen consequences"
+		add_stability = -0.1
+		add_popularity = {
+			ideology = nationalist
+			popularity = +0.2
+		}
+	}
+}
+country_event = {
+	id = LBA.11 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.11"}
+	title = "The Radicalization of the Youth"
+	desc = "LBA.11.d"
+	trigger = {
+		tag = LBA
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "The youth are always rebellious, they will become more moderate and loyal with age."
+		add_stability = -0.1
+	}
+}
+country_event = {
+	id = LBA.12 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.12"}
+	title = "Idris withdrawals from Public Life"
+	desc = "For whatever reason, his majesty, King Idris I has been seen less and less in the public and political sphere. Without his lead many decisions in the Kingdom may be neglected."
+	trigger = {
+		tag = LBA
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "What does this mean for Libya?"
+		add_stability = -0.1
+		add_political_power = -20
+	}
+}
+country_event = {
+	id = LBA.13 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.13"}
+	title = "The New Regency"
+	desc = "LBA.13.d"
+	trigger = {
+		tag = LBA
+	}
+	immediate = {
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Ahmed Al-Senussi"
+			picture = "Hasan_as_Senussi.dds"
+			ideology = monarchist
+			traits = {
+			inexperienced_monarch
+			}
+		}
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Ahmed? A Regency? We need Idris!"
+
+	}
+}
+country_event = {
+	id = LBA.14 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.14"}
+	title = "The Libyan Revolution"
+	desc = "LBA.14.d"
+	trigger = {
+		tag = LBA
+	}
+	immediate = {
+		set_politics = {
+			ruling_party = nationalist
+			last_election = "1969.1.1"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		retire_character = LBA_hasan_assenussi
+		set_country_flag = libyan_revolution
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "New ideas for an ancient people"
+
+	}
+}
+country_event = {
+	id = LBA.15 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.15"}
+	title = "The forming of a new union"
+	desc = "LBA.15.d"
+	trigger = {
+		tag = LBA
+	}
+	immediate = {
+
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "We shall always strive towards Arab Unity"
+
+	}
+}
+country_event = {
+	id = LBA.16 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.16"}
+	title = "Libyan Foreign Policy"
+	desc = "LBA.16.d"
+	trigger = {
+		tag = LBA
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "The world we live in today is far too interconnected"
+
+	}
+}
+country_event = {
+	id = LBA.17 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.17"}
+	title = "Libya gives aid to Egypt and Syria in their effort against Israel"
+	desc = "Libya has sent volunteers and equipment in the Egyptian and Syrian united war effort against Israel"
+	trigger = {
+		tag = EGY
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "We can always depend on fellow Arabs"
+			add_manpower = 5000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = +1000
+				producer = LBA
+			}
+	}
+}
+country_event = {
+	id = LBA.18 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.18"}
+	title = "Ban on Labor Unions"
+	desc = "Unexpectedly, the council members of the RCC have passed legislation banning labor unions."
+	trigger = {
+		tag = LBA
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "This was not what the workers expected"
+		add_stability = -0.2
+	}
+}
+country_event = {
+	id = LBA.19 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.19"}
+	title = "Implementation of Sharia Law"
+	desc = "Hardliners in the RCC are making changes not wanted by the revolutionary officers, now they are legislating Sharia Law as they are aligned with Imams"
+	trigger = {
+		tag = LBA
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "This is not change"
+		add_stability = -0.2
+	}
+}
+country_event = {
+	id = LBA.20 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.20"}
+	title = "al-Qaddafi Resigns in Protest!"
+	desc = "LBA.20.d"
+	trigger = {
+		tag = LBA
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "We need to let Muammar al-Qaddafi take the reins of the RCC"
+		complete_national_focus = LBA_60s_qaddafi_asserts_control
+		retire_character = LBA_ahmed_alsenussi
+		retire_character = LBA_abdul_rahim_aqili
+		retire_character = LBA_ahmed_alfadil
+		retire_character = LBA_mohiuddin_almasoudi
+		retire_character = LBA_miftah_triki
+		retire_character = LBA_said_alatyoush
+		ai_chance = {
+			factor = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+	}
+	option = {
+		name = "Senussi loyalists, now's our chance!"
+		complete_national_focus = LBA_60s_ahmed_al_senussi_counter_coups
+		create_country_leader = {
+			name = "Ahmed Al-Senussi"
+			picture = "Ahmed_al_Senussi.dds"
+			ideology = oligarchism
+			traits = {
+				inexperienced_monarch
+				Corrupt
+			}
+		}
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "1969.1.1"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		retire_character = LBA_Muammar_Gaddafi
+		retire_character = LBA_Khalifa_Haftar
+		retire_character = LBA_Abu_Bakr_Yunis_Jabr
+		retire_character = LBA_Abdul_Fatah_Younis
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = {
+	id = LBA.21 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = LBA.21"}
+	title = "The Popular Revolution"
+	desc = "Now is a new beginning for the Libyan Arab Republic. Every aspect of our lives will change going forward and its hard to see what the future holds, whatever the case may be, we are with Muammar al-Qaddafi"
+	trigger = {
+		tag = LBA
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Glory to the revolution! Allahu Akbar!"
+
+	}
+}

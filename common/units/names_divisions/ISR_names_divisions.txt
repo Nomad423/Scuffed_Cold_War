@@ -1,0 +1,203 @@
+﻿# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical division names that did not have a number. Regardless if such names happened in history or not
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names. 
+#           Numbers must start from 1 and up. 
+#           Numbers can't repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either: 
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip
+#                                      where you choose the historical division name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
+#                                      the current game version.
+
+ISR_INF_01 = 
+{
+	name = "Infantry Brigades"
+
+	for_countries = { ISR }
+
+	can_use = {	always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ISR_GAR_01 }
+
+	fallback_name = "%dth Infantry Brigade"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dst 'Golani' Brigade" }
+		2 = { "%dnd 'Carmeli' Brigade" }
+		3 = { "%drd 'Alexandroni' Brigade" }
+		4 = { "%dth 'Kiryati' Brigade" }
+		5 = { "%dth 'Sharon' Brigade" }
+		6 = { "%dth 'Etzioni' Brigade" }
+		9 = { "%dth 'Oded' Brigade" }
+		11 = { "%dth 'Yiftah' Brigade" }
+		12 = { "%dth 'Negev' Brigade" }
+		16 = { "%dth 'Jerusalem' Brigade" }
+		228 = { "%dth 'Alon' Brigade" }
+		933 = { "%drd 'Givati' Brigade" }
+		84 = { "%dth 'Nahal' Brigade" }
+		900 = { "%dth 'Kfir II' Brigade" }
+		5692 = { "%dth 'Ha-Ari' Brigade" }
+		261 = { "%dth 'Haim Leskov' Brigade" }
+		270 = { "%dth 'Arava' (R)Brigade" }
+		300 = { "%dth 'Bar'am' (T)Brigade" }
+		406 = { "%dth 'Yoav' (T)Brigade" }
+		417 = { "%dth 'Emek ha-Yarden' (T)Brigade" }
+		474 = { "%dth 'Golan' (T)Brigade" }
+		769 = { "%dth 'Hiram' (T)Brigade" }
+		1001 = { "'Gefen' Brigade" } 
+		1002 = { "'Katif' Brigade" } 
+		1003 = { "'Menashe' (T)Brigade" }
+		1004 = { "'Ephraim' (T)Brigade" }
+		1005 = { "'Samaria' (T)Brigade" }
+		1006 = { "'Binyamin' (T)Brigade" }
+		1007 = { "'Judea' (T)Brigade" }
+		1008 = { "'Yehuda' (T)Brigade" }
+
+	}
+}
+
+ISR_ARM_01 = 
+{
+	name = "Armored Brigades"
+
+	for_countries = { ISR }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "medium_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ISR_INF_01 }
+
+	fallback_name = "%dth Armored Brigade"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		7 = { "%dth 'Saar Me-Golan' Armored Brigade" }
+		8 = { "%dth 'Ha-Zaken' Armored Brigade" }
+		10 = { "%dth 'Harel' Armored Brigade" }
+		188 = { "%dth 'Barak' Armored Brigade" }
+		14 = { "%dth 'Machatz' Armored Brigade" }
+		37 = { "%dth 'Ram' Armored Brigade" }
+		401 = { "%dst 'Ikvot Ha-Barzel' Armored Brigade" }
+		460 = { "%dth 'Bnei Or' (T)Armored Brigade" }
+		205 = { "%dth 'Egrof Ha-Barzel' (R)Armored Brigade" }
+		263 = { "%drd 'Merkavot Ha-Esh' (R)Armored Brigade" }
+		679 = { "%dth 'Ikvot Ha-Plada' (R)Armored Brigade" }
+		847 = { "%dth 'Merkavot Ha-Barzel' (R)Armored Brigade" }
+		211 = { "%dth 'Yishai' (R)Armored Brigade" }
+		500 = { "%dth 'Kfir' Armored Brigade" }
+		550 = { "'Ezion Gaver' Armored Brigade" }
+		27 = { "%dth 'Egrof ve Romach' (R)Armored Brigade" }
+		130 = { "%dth 'Ha Bazka' (R)Armored Brigade" }
+		421 = { "%dth 'Ha Tsliha' (R)Armored Brigade" }
+		600 = { "%dth 'Netivei Ha-Esh' (R)Armored Brigade" }
+		889 = { "%dth 'Adirim' (R)Armored Brigade" }
+		217 = { "%dth 'Ha-Sus Ha-Doer' (R)Armored Brigade" }
+		189 = { "%dth 'Kohav Ha-Esh' (R)Armored Brigade" }
+		274 = { "%dth 'Yerushalaim' (R)Armored Brigade" }
+		278 = { "%dth 'Karnei-Raem' (R)Armored Brigade" }
+		320 = { "%dth (R)Armored Brigade" }
+		330 = { "%dth 'Oranim' (R)Armored Brigade" }
+		395 = { "%dth 'Kala' (R)Armored Brigade" }
+		399 = { "%dth 'Tsvaiim' (R)Armored Brigade" }
+		640 = { "%dth 'Hetz' (R)Armored Brigade" }
+		656 = { "%dth 'Bnei-reshef' (R)Armored Brigade" }
+		896 = { "%dth 'Kohavei Ha-Esh' (R)Armored Brigade" }
+		820 = { "%dth 'Lavi' (R)Armored Brigade" }
+		943 = { "%dth 'Ha-Sahar' (R)Armored Brigade" }
+		265 = { "%dth (R)Armored Brigade" }
+
+	}
+}
+
+ISR_MAR_01 = 
+{
+	name = "Marine Divisions"
+
+	for_countries = { ISR }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ISR_INF_01 }
+
+	fallback_name = "%dth Israeli Marine Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dst Israeli Marine Division" }
+		2 = { "%dnd Israeli Marine Division" }
+		3 = { "%drd Israeli Marine Division" }
+		4 = { "%dth Israeli Marine Division" }
+		5 = { "%dth Israeli Marine Division" }
+		6 = { "%dth Israeli Marine Division" }
+		7 = { "%dth Israeli Marine Division" }
+		8 = { "%dth Israeli Marine Division" }
+		9 = { "%dth Israeli Marine Division" }
+		10 = { "%dth Israeli Marine Division" }
+
+	}
+}
+
+ISR_PAR_01 = 
+{
+	name = "Paratrooper Brigades"
+
+	for_countries = { ISR }
+
+	can_use = { always = yes }
+
+	division_types = { "airborne" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ISR_INF_01 }
+
+	fallback_name = "%dth Paratrooper Brigade"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		35 = { "%dth 'HaTzanhanim' Brigade" }
+		55 = { "%dth 'Hod Ha-Hanit' (R)Brigade" }
+		226 = { "%dth 'Ha-Nesher Ha-Shahor' (R)Brigade" }
+		551 = { "%dst 'Hetzei Ha-Esh' (R)Brigade" }
+		646 = { "%dth 'Shualei Marom' (R)Brigade" }
+
+	}
+}

@@ -1,0 +1,16 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "ROM_pant_mesh"
+		file = "gfx/models/units/tanks/ROM_pant.mesh"
+
+		animation = { id = "idle"			type = "GER_medium_armor_2_idle_animation" }
+		animation = { id = "move"			type = "GER_medium_armor_2_moving_animation" }
+		animation = { id = "attack"			type = "GER_medium_armor_2_attack_animation" }
+
+	}
+}
+	
+	
+	
+

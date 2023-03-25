@@ -1,0 +1,55 @@
+sov_kaganovich_decisions = {
+	icon = generic_propaganda
+
+	allowed = {
+		original_tag = SOV
+	}
+
+	visible = {
+		has_country_leader = {
+			name = "Lazar Kaganovich"
+			ruling_only = yes
+		}
+	}
+
+	priority = {
+		base = 10
+		modifier = {
+			add = 10
+		}
+	}
+}
+#The_Eastern_Bloc = {
+#	icon = generic_propaganda
+#
+#	allowed = {
+#		original_tag = SOV
+#	}
+#	visible = {
+#		always = yes
+#	}
+#	priority = {
+#		base = 10
+#		modifier = {
+#			add = 10
+#		}
+#	}
+#}
+#SOV_The_Malayan_Emergency_Category = {
+#	icon = generic_propaganda
+#
+#	allowed = {
+#		original_tag = SOV
+#	}
+#	visible = {
+#		MLA = {
+#			has_completed_focus = MLA_Anti_British_War
+#		}
+#	}
+#	priority = {
+#		base = 10
+#		modifier = {
+#			add = 10
+#		}
+#	}
+#}

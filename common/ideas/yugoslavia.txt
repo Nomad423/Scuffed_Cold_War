@@ -1,0 +1,475 @@
+ideas = {
+
+	country = {
+			
+		Energoprojekt = {
+			
+			picture = Energoprojekt
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_water_infrastructure_factor = 0.05
+			}
+		}
+		
+		YUG_idea_federal_executive_council = {
+			
+			picture = YUG_federal_defense_council
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				##political_advisor_cost_factor = -0.25
+			}
+		}
+		
+		YUG_idea_federal_peoples_assembly = {
+			
+			picture = YUG_federal_defense_council
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.2
+			}
+		}
+
+		Francafrique = {
+
+			picture = generic_goods_red_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}		
+		rampant_spending = {
+
+			picture = generic_goods_red_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.25
+			}
+		}		
+		YUG_idea_american_aid = {
+
+			picture = generic_goods_red_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		YUG_idea_one_nation_one_army = {
+			
+			picture = YUG_yugoslavian_general_staff
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_planning = 0.10
+				defence = 0.10
+				army_org_Factor = 0.05
+			}
+		}
+		
+		YUG_idea_more_self_management = {
+
+			picture = generic_local_self_management
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+		
+		YUG_idea_civilian_expantion = {
+
+			picture = generic_production_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		YUG_Tito_is_dead = {
+			
+			picture = generic_agrarian_society
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+
+		YUG_corruption_scandals = {
+			
+			picture = Government_Corruption
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = 0.1
+				political_power_factor = 0.25
+			}
+		}
+
+		YUG_arrested_ministers = {
+			
+			picture = YUG_yugoslavian_general_staff
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = 0.05
+				political_power_factor = -0.25
+			}
+		}
+		YUG_export_focus2 = {
+		
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			picture = free_trade
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.02
+				production_factory_efficiency_gain_factor = 0.05
+			}
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+		YUG_goli_otok = {
+			allowed = {
+				always = no
+				}
+				removal_cost = -1
+				
+				modifier = {
+					stability_factor = -0.05
+					communism_drift = -0.002
+				}
+			}
+	
+		YUG_pp = {
+			allowed = {
+				always = no
+				}
+				removal_cost = -1
+				
+				modifier = {
+					communism_drift = 0.02
+					}
+				}
+		organised_cominf = {
+		picture = Yugoslavian_Constiutionalism
+			allowed = {
+				always = no
+				}
+				removal_cost = -1
+				
+				modifier = {
+					communism_drift = 0.01
+					}
+		}
+		YUG_constitution = {
+			picture = Yugoslavian_Constiutionalism
+			allowed = {
+				always = no
+				}
+				removal_cost = -1
+				
+				modifier = {
+					stability_factor = 0.05
+				}
+			}
+		YUG_anti_soviet = {
+			allowed = {
+				always = no
+				}
+				
+			picture = tito_stalin_split
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_planning = 0.1
+				defence = 0.1
+				conscription = 0.02
+			}
+		}
+		YUG_ora = {
+			picture = YUG_ora
+			allowed = {
+				always = no
+				}
+			
+			removal_cost = -1
+			
+			modifier = {
+				 production_speed_buildings_factor = 0.05
+			}
+		}
+		UDBA = {
+			picture = generic_spy_intel
+			allowed = {
+				always = no
+				}
+				
+			
+			removal_cost = -1
+			
+			modifier = {
+				foreign_subversive_activites = -0.1
+				resistance_growth = -0.1
+				encryption = 1
+				decryption = 1
+			}
+		}
+		UDBA2 = {
+			picture = generic_spy_intel
+			allowed = {
+				always = no
+				}
+				
+			
+			removal_cost = -1
+			
+			modifier = {
+				foreign_subversive_activites = -0.2
+				resistance_growth = -0.15
+				encryption = 2
+				decryption = 2
+			}
+		}
+		yugo_kgb = {
+			picture = generic_spy_intel
+			allowed = {
+				always = no
+				}
+				
+			
+			removal_cost = -1
+			
+			modifier = {
+				foreign_subversive_activites = -0.2
+				resistance_growth = -0.1
+				encryption = 1
+				decryption = 1
+				stability_factor = -0.05
+			}
+		}
+	}
+	tank_manufacturer = {
+		
+		designer = yes
+		
+		tam = {
+			picture = tam
+			allowed = {
+				original_tag = YUG
+			}
+			research_bonus = {
+				motorized_equipment = 0.05
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+
+		}
+		DjuroDjakovic = {
+			picture = Djakovic
+			allowed = {
+				original_tag = YUG
+			}
+			research_bonus = {
+				motorized_equipment = 0.05
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+
+		}		
+	}
+	industrial_concern = {
+		
+		IMK = {
+			picture = IMK
+			allowed = {
+				original_tag = YUG
+			}
+			research_bonus = {
+				industry = 0.10
+			}
+			
+			traits = { industrial_concern }
+			
+			modifier = {
+			}
+		}
+		
+		Iskra = {
+			picture = Iskra
+			allowed = {
+				original_tag = YUG
+			}
+			research_bonus = {
+				electronics = 0.10
+			}
+			traits = { electronics_concern }
+			modifier = {
+			}
+		}
+	}
+	materiel_manufacturer = {
+		
+		designer = yes
+		
+		zastava = {
+			picture = zastava
+			allowed = {
+				original_tag = YUG
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { small_arms_specialist }
+			
+
+		}
+		partizan = {
+			picture = partizan
+			allowed = {
+				original_tag = YUG
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { small_arms_specialist }
+			
+
+		}		
+	}
+	aircraft_manufacturer = {
+		
+		designer = yes
+		
+		Ikarus = {
+			picture = Ikarus
+			allowed = {
+				original_tag = YUG
+			}
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+		Utva = {
+			picture = Utva
+			allowed = {
+				original_tag = YUG
+			}
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}		
+	}
+}

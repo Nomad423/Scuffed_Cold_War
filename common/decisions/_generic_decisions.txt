@@ -1,0 +1,3205 @@
+variables_calculation_category = {
+	UN_Intervention_Coalition = {
+		allowed = {
+		
+		}
+		available = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		fixed_random_seed = no
+		selectable_mission = no
+		days_mission_timeout = 730
+		fire_only_once = no
+		activation = {
+			always = no
+
+		}
+		timeout_effect = {
+			clr_country_flag = UN_Coalition_Target
+			clr_global_flag = UN_Coalition_War
+			every_enemy_country = {
+				white_peace = ROOT
+			}
+			news_event = UN_RESOLUTION.32
+		}
+
+	}
+	Send_Troops_to_Vietnam = {
+
+		icon = generic_civil_support
+
+        allowed = {
+            tag = PAK
+        }
+
+		available = {			
+			VIE = {
+                has_volunteers_amount_from = {
+                    tag = PAK
+                    count > 1
+                }                
+            }
+		}
+
+		days_mission_timeout = 90
+
+		activation = {
+			always = no
+		}
+
+		cancel_trigger = {
+			
+		}
+		is_good = no
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+            USA = {
+                country_event = Dem_Ayub65.5
+            }
+		}
+        timeout_effect = {
+            USA = {
+                country_event = Dem_Ayub65.4
+            }
+        }
+	}
+	Modernization = {
+
+		icon = generic_decision
+		allowed = {
+			tag = MLA
+		}
+		available = {
+			always = no
+		}
+
+		activation = {
+			always = no
+		}
+
+		#is_good = yes
+
+		selectable_mission = no
+		days_mission_timeout = 1825
+
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = yes
+		
+		
+		fixed_random_seed = no
+		
+		
+		timeout_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						MLA.grossdomesticproduct > SIA.grossdomesticproduct
+					}
+					check_variable = {
+						MLA.grossdomesticproduct > VIE.grossdomesticproduct
+					}
+
+					check_variable = {
+						MLA.grossdomesticproduct > PHI.grossdomesticproduct
+					}
+					check_variable = {
+						MLA.grossdomesticproduct > BRM.grossdomesticproduct
+					}
+
+					check_variable = {
+						MLA.grossdomesticproduct > CAM.grossdomesticproduct
+					}
+					check_variable = {
+						MLA.grossdomesticproduct > CAM.grossdomesticproduct
+					}
+				}
+				country_event = MLA.21
+				news_event = MLA.10
+				add_country_leader_trait = modern_socialist
+				VIE = {
+					add_stability = -0.10
+					add_popularity = {
+						ideology = communism
+						popularity = 0.2
+					}
+				}
+				SIA = {
+					add_stability = -0.10
+					add_popularity = {
+						ideology = communism
+						popularity = 0.2
+					}
+				}
+				INO = {
+					add_stability = -0.10
+					add_popularity = {
+						ideology = communism
+						popularity = 0.2
+					}
+				}
+				BRM = {
+					add_stability = -0.10
+					add_popularity = {
+						ideology = communism
+						popularity = 0.2
+					}
+				}
+			}
+			else = {
+				country_event = MLA.23
+				news_event = MLA.22
+				add_stability = -0.5
+				remove_ideas = prc_great_leap_forward
+				remove_ideas = DDR_idea_first_five_year_plan
+				remove_ideas = agrarian_collectivization_process_1
+				remove_ideas = agrarian_collectivization_process_2
+				remove_ideas = agrarian_collectivization_process_3
+				remove_ideas = agrarian_collectivization_process_4
+				remove_ideas = agrarian_collectivization_process_5
+				add_country_leader_trait = Terrifying_Paranoiac
+				add_ideas = Industrial_Reconstruction_0
+				add_ideas = antiquated_infrastructure
+				add_ideas = Resistance_Level_Regional_Civil_War
+				add_ideas = Drought_4
+				add_ideas = famine5
+			}
+			
+		}
+	}
+	
+	Uberholen_ohne_Einzuholen = {
+
+		icon = generic_decision
+		allowed = {
+			tag = DDR
+		}
+		available = {
+			always = no
+		}
+
+		activation = {
+			always = no
+		}
+
+		#is_good = yes
+
+		selectable_mission = no
+		days_mission_timeout = 1825
+
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = yes
+		
+		
+		fixed_random_seed = no
+		
+		
+		timeout_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						DDR.grossdomesticproduct > WGR.grossdomesticproduct
+					}
+				}
+				country_event = Uberholen_ohne_Einzuholen.2
+				news_event = Uberholen_ohne_Einzuholen.4
+				WGR = {
+					add_stability = -0.10
+					add_popularity = {
+						ideology = communism
+						popularity = 0.075
+					}
+				}
+			}
+			else = {
+				country_event = Uberholen_ohne_Einzuholen.3
+				add_stability = -0.075
+			}
+			
+		}
+	}
+	Overtake_the_West = {
+
+		icon = generic_decision
+		allowed = {
+			tag = ADR
+		}
+		available = {
+			always = no
+		}
+
+		activation = {
+			always = no
+		}
+
+		#is_good = yes
+
+		selectable_mission = no
+		days_mission_timeout = 1825
+
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = yes
+		
+		
+		fixed_random_seed = no
+		
+		
+		timeout_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						ADR.grossdomesticproduct > AUS.grossdomesticproduct
+					}
+				}
+				news_event = ADR.12
+				AUS = {
+					add_stability = -0.15
+					add_popularity = {
+						ideology = communism
+						popularity = 0.15
+					}
+				}
+			}
+			else = {
+				add_stability = -0.15
+			}
+			
+		}
+	}
+	UN_WAR_END = {
+
+		icon = generic_decision
+		allowed = {
+			tag = UNS
+		}
+		available = {
+			has_war = no
+			is_in_faction = yes 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = no	
+		complete_effect = {
+			set_faction_leader = yes
+			dismantle_faction = yes
+		}	
+	}
+	UN_Vote_Cleanuo = {
+
+		icon = generic_decision
+		visible = {
+			tag = UNS
+		}
+		available = {
+			always = no
+		}
+
+		activation = {
+			always = no
+		}
+
+		#is_good = yes
+
+		selectable_mission = yes
+		days_mission_timeout = 15
+
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		
+		
+		fixed_random_seed = no
+		
+		cost = 0
+		
+		timeout_effect = {
+			set_variable = { un_veto_count = 0 }
+			set_variable = { un_yes_count = 0 }
+			set_variable = { un_no_count = 0 }
+			set_variable = { un_abstain_count = 0 }
+			set_variable = { UNS.un_state_target_owner = 0 }
+			set_variable = { UNS.un_action_set = 0 }
+			set_variable = { UNS.un_nation_target = 0 }
+			set_variable = { UNS.un_nation_proposal = 0 }
+
+			set_variable = { root.un_state_target_owner = 0 }
+			set_variable = { root.un_action_set = 0 }
+			set_variable = { root.un_nation_target = 0 }			
+			set_variable = { UNS.coalition_tag = 0 }
+
+			clear_array = UNS.un_vote_abstain_list
+			clear_array = UNS.un_vote_no_list
+			clear_array = UNS.un_vote_veto_list
+			clear_array = UNS.un_vote_yes_list
+
+			clear_array = un_vote_abstain_list
+			clear_array = un_vote_no_list
+			clear_array = un_vote_veto_list
+			clear_array = un_vote_yes_list
+
+			clr_country_flag = Current_UN_Vote
+			clr_country_flag = UN_Vote_Cleanup
+			clr_country_flag = UN_YES_ONGOING
+			clr_country_flag = UN_VETO_ONGOING
+			clr_country_flag = UN_ABSTAIN_ONGOING
+			clr_country_flag = UN_NO_ONGOING
+		}
+	}
+	UN_Vote = {
+
+		icon = generic_decision
+		visible = {
+			tag = UNS
+		}
+		available = {
+			always = no
+		}
+
+		activation = {
+			always = no
+		}
+
+		#is_good = yes
+
+		selectable_mission = yes
+		days_mission_timeout = 10
+
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		
+		
+		fixed_random_seed = no
+		
+		cost = 0
+		
+		timeout_effect = {
+
+
+			if = {
+				limit = {
+					check_variable = { un_veto_count < 1 }
+					check_variable = { un_yes_count > un_no_count }
+				}
+				add_to_array = { UNS.un_nation_proposal_historical = UNS.un_nation_proposal }
+				add_to_array = { UNS.un_state_target_owner_historical = UNS.un_state_target_owner }
+				add_to_array = { UNS.un_action_set_historical = UNS.un_action_set }
+				add_to_array = { UNS.un_nation_target_historical = UNS.un_nation_target }
+				if = {
+					limit = {
+						check_variable = { UNS.un_action_set = 0 }
+					}
+					news_event = UN_RESOLUTION.0
+					var:UNS.un_nation_target = {
+						country_event = UN_RESOLUTION.1
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { UNS.un_action_set = 1 }
+					}
+					news_event = UN_RESOLUTION.2
+					var:UNS.un_nation_target = {
+						country_event = UN_RESOLUTION.3
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { UNS.un_action_set = 2 }
+					}
+					news_event = UN_RESOLUTION.4
+					var:UNS.un_nation_target = {
+						add_timed_idea = {
+							idea = influence_increase_cost
+							days = 3650
+						}
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { UNS.un_action_set = 3 }
+					}
+					var:UNS.un_nation_target = {
+						add_timed_idea = {
+							idea = UN_national_asset_freeze
+							days = 3650
+						}
+					}
+					news_event = UN_RESOLUTION.5
+				}
+				if = {
+					limit = {
+						check_variable = { UNS.un_action_set = 4 }
+					}
+					var:UNS.un_nation_target = {
+						add_timed_idea = {
+							idea = UN_officials_sanctioned
+							days = 3650
+						}
+					}
+					news_event = UN_RESOLUTION.6
+				}
+				if = {
+					limit = {
+						check_variable = { UNS.un_action_set = 5 }
+					}
+					var:UNS.un_nation_target = {
+						add_ideas = UN_Trade_Sanctions
+					}
+					news_event = UN_RESOLUTION.7
+				}
+				if = {
+					limit = {
+						check_variable = { UNS.un_action_set = 6 }
+					}
+					var:UNS.un_nation_target = {
+						add_ideas = UN_Weapon_Trade_Ban
+					}
+					news_event = UN_RESOLUTION.8
+				}
+				if = {
+					limit = {
+						check_variable = { UNS.un_action_set = 7 }
+					}
+					news_event = UN_RESOLUTION.9
+					var:UNS.un_nation_target = {
+						country_event = UN_RESOLUTION.10
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { UNS.un_action_set = 8 }
+					}
+					news_event = UN_RESOLUTION.11
+					var:UNS.un_nation_target = {
+						country_event = UN_RESOLUTION.12
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { UNS.un_action_set = 9 }
+					}
+					#State One
+					news_event = UN_RESOLUTION.13
+					var:UNS.un_state_target = {
+						owner = {
+							country_event = UN_RESOLUTION.14
+						}
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { UNS.un_action_set = 10 }
+					}
+					news_event = UN_RESOLUTION.15
+					var:UNS.un_nation_target = {
+						set_country_flag = UN_Peacekeepers_Enabled
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { UNS.un_action_set = 11 }
+					}
+					news_event = UN_RESOLUTION.16
+					var:UNS.un_nation_target = {
+						every_enemy_country = {
+							country_event = UN_RESOLUTION.17
+							#Peace Agreement 	UN_RESOLUTION.18
+							#Rejection 			UN_RESOLUTION.19
+						}
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { UNS.un_action_set = 12 }
+					}
+					news_event = UN_RESOLUTION.20
+					UNS = {
+						create_faction = "The United Nations"
+						add_to_faction = var:UNS.coalition_tag
+					}
+					#UNS.un_nation_target = {
+					#	#create_unit		#Automatic Peacekeepers
+					#}
+				}
+				if = {
+					limit = {
+						check_variable = { UNS.un_action_set = 13 }
+					}
+					news_event = UN_RESOLUTION.21
+					UNS = {
+						create_faction = "The United Nations"
+						add_to_faction = var:UNS.coalition_tag
+					}
+					every_country = {
+						limit = {
+							NOT = {
+								has_war_with = var:UNS.coalition_tag
+							}
+						}
+						country_event = UN_RESOLUTION.22
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { UNS.un_action_set = 14 }
+					}
+					var:UNS.un_nation_target = {
+						remove_ideas = UN_Trade_Sanctions
+					}
+					news_event = UN_RESOLUTION.23
+				}
+				if = {
+					limit = {
+						check_variable = { UNS.un_action_set = 15 }
+					}
+					var:UNS.un_nation_target = {
+						remove_ideas = UN_Weapon_Trade_Ban
+					}
+					news_event = UN_RESOLUTION.24
+				}
+				if = {
+					limit = {
+						check_variable = { UNS.un_action_set = 16 }
+					}
+					news_event = UN_RESOLUTION.25
+					every_country = {
+						limit = {
+							any_owned_state = {
+								is_core_of = var:UNS.un_nation_target
+							}
+						}
+						country_event = UN_RESOLUTION.26
+						#UN_RESOLUTION.27		Rejection
+						#UN_RESOLUTION.28		Acceptance
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { UNS.un_action_set = 17 }
+					}
+					var:UNS.un_nation_target = {
+						add_ideas = un_member
+					}
+					news_event = UN_RESOLUTION.50
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { un_veto_count < 1 }
+					check_variable = { un_yes_count < un_no_count }
+				}
+				news_event = UN_RESOLUTION.29
+			}
+			if = {
+				limit = {
+					check_variable = { un_veto_count > 0 }
+				}
+				news_event = UN_RESOLUTION.30
+			}
+			
+			set_country_flag = UN_Vote_Cleanup
+		}
+	}		
+
+	state_calculation = {
+
+		icon = generic_decision
+		visible = {
+			is_ai = no
+			has_tech = NBC_research
+		}
+		available = {
+			
+		}
+
+		#is_good = yes
+
+		selectable_mission = no
+
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+		
+		fixed_random_seed = no
+		
+		cost = 0
+		
+		complete_effect = {
+			clear_array = WarCrimeTargetListChemical
+			distance_calculator_chemical_stateview = yes
+			set_variable = { ROOT.distance_check = 1 }
+		}
+		remove_effect = {
+			set_variable = { ROOT.distance_check = 0 }
+		}
+
+	}
+	
+	ic_pulse_one = {
+		
+		available = {
+			has_country_flag = ic_pulse_one_flag
+			is_ai = yes
+		}
+
+		visible = {
+			has_country_flag = ic_pulse_one_flag
+			is_ai = yes
+		}
+
+		#is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 1
+		days_remove = 30
+	
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetTag]: ic_pulse (VTC)"
+			clr_country_flag = ic_pulse_one_flag
+			random_country = {
+				limit = { tag = VTC }
+				set_country_flag = ic_pulse_one_flag
+				ROOT = { ic_pulse = yes }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetTag]: ic_pulse"
+			#EUROPEAN UNION#
+			set_variable = { global.federation_european_union_entrance = 0 }
+			set_variable = { global.federation_european_union_count = 0 }
+			every_country = {
+				#EUROPEAN UNION#
+				clr_country_flag = federation_member #Reset federation member status, will be readded if found
+				clr_country_flag = common_market_member #Reset common market member status, will be readded if found
+				ic_pulse = yes
+			}
+			mercenary_calc_global = yes
+		}
+		
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	ic_trade = {
+		allowed = {
+			tag = UNS
+		}
+		available = {
+			always = no
+		}
+		activation = {
+
+		}
+		selectable_mission = yes
+		days_mission_timeout = 30
+		
+		timeout_effect = {
+			export_script_for_pool = yes
+			standard_deviation_for_industrial_base = yes
+			every_country = {
+				if = {
+					limit = {
+						OR = {
+							check_variable = {
+								trade_automation = 2
+							}
+							is_ai = yes
+						}
+					}
+					country_event = trade.1
+					#trade_check = yes
+				}
+			}
+			activate_mission = ic_trade
+			#export_script_for_pool = yes
+		}
+	}
+	ic_Financial = {
+		allowed = {
+		}
+		visible = {
+		}
+		available = {
+			always = no
+		}
+		activation = {
+		}
+		#is_good = yes
+
+		selectable_mission = yes
+		days_mission_timeout = 30
+		
+		timeout_effect = {
+			hidden_effect = {
+				country_event = trade.2
+				country_event = trade.3
+				country_event = trade.4
+				country_event = trade.5
+				country_event = trade.6
+				country_event = trade.7
+
+				log = "[GetDateText]: [Root.GetTag]: ic_Financial pulse"
+				#log = "[GetDateText]: [Root.GetTag]: gdp calc effect"
+				gdp_calculation = yes
+
+				#log = "[GetDateText]: [Root.GetTag]: income effect"
+				income_effect = yes
+				set_variable = { steel_resource_bonus = 0 }
+				set_variable = { oil_resource_bonus = 0 }
+				set_variable = { aluminium_resource_bonus = 0 }
+				set_variable = { nuclear_resource_bonus = 0 }
+				set_variable = { rare_earth_bonus = 0 }
+				#Resource Concessions Setup
+				set_variable = { tungstenConcessionsGains = 0 }
+				set_variable = { tungstenConcession = 0 }
+
+				#log = "[GetDateText]: [Root.GetTag]: resource bonus effect"
+				resource_bonus_script = yes
+				#log = "[GetDateText]: [Root.GetTag]: industrial pulse effect"
+				industrial_pulse = yes
+
+				if = {
+					limit = {
+						check_variable = { quarterly_report = 4 }
+						is_ai = no
+					}
+					resize_array = {
+						array = income_array
+						value = IncomeCheck
+						size = 25
+					}
+					remove_from_array = { array = income_array index = 0 }
+					resize_array = {
+						array = food_array
+						value = FoodBalanceTotal
+						size = 25
+					}
+					remove_from_array = { array = food_array index = 0 }
+					food_production_graph = yes
+					income_graph = yes
+					set_variable = { quarterly_report = 0 }
+				}
+				else = {
+					add_to_variable = { quarterly_report = 1 }
+				}
+				
+				activate_mission = ic_Financial
+
+				#log = "[GetDateText]: [Root.GetTag]: chemical weapon effect and removal calc"
+				every_owned_state = {
+					limit = {
+						has_state_flag = napalm_attacked
+					}
+					add_to_variable = { napalm_total = -1 }
+					if = {
+						limit = {
+							check_variable = { napalm_total < 1 }
+						}
+						clr_state_flag = napalm_attacked
+						set_variable = { napalm_total = 0 }
+						remove_province_modifier = {
+							static_modifiers = { napalm }
+							province = {
+								all_provinces = yes 
+							}
+						}
+					}
+				}
+				every_owned_state = {
+					limit = {
+						has_state_flag = agent_orange_attacked
+					}
+					add_to_variable = { agent_orange_total = -1 }
+					if = {
+						limit = {
+							check_variable = { napalm_total < 1 }
+						}
+						clr_state_flag = agent_orange_attacked
+						set_variable = { agent_orange_total = 0 }
+						remove_province_modifier = {
+							static_modifiers = { agent_orange2 }
+							province = {
+								all_provinces = yes 
+							}
+						}
+					}
+				}
+				every_owned_state = {
+					limit = {
+						has_state_flag = mustard_gas_attacked
+					}
+					add_to_variable = { mustard_gas_total = -1 }
+					if = {
+						limit = {
+							check_variable = { mustard_gas_total < 1 }
+						}
+						clr_state_flag = mustard_gas_attacked
+						set_variable = { mustard_gas_total = 0 }
+						remove_province_modifier = {
+							static_modifiers = { mustard_gas }
+							province = {
+								all_provinces = yes 
+							}
+						}
+					}
+				}
+				every_owned_state = {
+					limit = {
+						has_state_flag = white_phosphorus_attacked
+					}
+					add_to_variable = { white_phosphorus_total = -1 }
+					if = {
+						limit = {
+							check_variable = { white_phosphorus_total < 1 }
+						}
+						clr_state_flag = white_phosphorus_attacked
+						set_variable = { white_phosphorus_total = 0 }
+						remove_province_modifier = {
+							static_modifiers = { white_phosphorus }
+							province = {
+								all_provinces = yes 
+							}
+						}
+					}
+				}
+				every_owned_state = {
+					limit = {
+						has_state_flag = sarin_attacked
+					}
+					add_to_variable = { sarin_total = -1 }
+					if = {
+						limit = {
+							check_variable = { sarin_total < 1 }
+						}
+						clr_state_flag = sarin_attacked
+						set_variable = { sarin_total = 0 }
+						remove_province_modifier = {
+							static_modifiers = { sarin }
+							province = {
+								all_provinces = yes 
+							}
+						}
+					}
+				}
+				every_owned_state = {
+					limit = {
+						has_state_flag = vx_attacked
+					}
+					add_to_variable = { vx_total = -1 }
+					if = {
+						limit = {
+							check_variable = { vx_total < 1 }
+						}
+						clr_state_flag = vx_attacked
+						set_variable = { vx_total = 0 }
+						remove_province_modifier = {
+							static_modifiers = { vx VM EA_3990 GV A_234 }
+							province = {
+								all_provinces = yes 
+							}
+						}
+					}
+				}
+				#log = "[GetDateText]: [Root.GetTag]: emergency_policy_replanning scripted effect"
+				#emergency_policy_replanning = yes
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				log = "[GetDateText]: [Root.GetTag]: income effect every_country scripted effect"
+				every_country = {
+					income_effect = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}	
+
+	ic_Financial_Start = {
+		allowed = {
+		}
+		visible = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		activation = {
+		}
+
+		fire_only_once = yes
+		selectable_mission = yes
+		days_mission_timeout = 1
+		
+		timeout_effect = {
+			hidden_effect = {
+				log = "[GetDateText]: [Root.GetTag]: industrial pulse effect"
+				industrial_pulse = yes
+				monthly_power_projection_gain = yes
+				# for_loop_effect = {
+					# start = 0
+					# end = 25
+					# value = i
+					# set_variable = { new_income = random }
+					# multiply_variable = { new_income = 80 }
+					# add_to_variable = { new_income = 10 }
+					# round_variable = new_income
+					# set_variable = { new_food = random }
+					# multiply_variable = { new_food = 80 }
+					# add_to_variable = { new_food = 10 }
+					# round_variable = new_food
+					# resize_array = {
+						# array = income_array
+						# value = new_income
+						# size = 25
+					# }
+					# remove_from_array = { array = income_array index = 0 }
+					# resize_array = {
+						# array = food_array
+						# value = new_food
+						# size = 25
+					# }
+					# remove_from_array = { array = food_array index = 0 }
+				# }
+				# set_variable = { quarterly_report = 4 }
+				# income_graph = yes
+				# food_production_graph = yes
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}	
+	
+	transfer_crimea = {
+
+		icon = generic_industry
+
+		available = {
+			has_civil_war = no
+			UKR = { exists = yes is_subject_of = ROOT has_civil_war = no }
+			has_full_control_of_state = 137
+			original_tag = SOV
+		}
+		visible = {
+			UKR = { exists = yes is_subject_of = ROOT }
+			owns_state = 137
+			original_tag = SOV
+		}
+
+		fire_only_once = yes
+
+
+		cost = 0
+
+		complete_effect = {
+			add_political_power = 50
+			UKR = { transfer_state = 137 }
+			137 = { add_core_of = UKR }
+			581 = { add_core_of = UKR }
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 100
+				date > 1954.2.18
+			}
+		}
+	}
+
+	usa_leave_nato = {
+
+		icon = generic_industry
+
+		available = {
+				original_tag = USA
+				has_global_flag = president_taft
+		}
+		visible = {
+				original_tag = USA
+				has_global_flag = president_taft
+
+		}
+
+		fire_only_once = yes
+
+
+		cost = 100
+
+		complete_effect = {
+			country_event = nato.9
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	usa_rejoin_nato_1 = {
+
+		icon = generic_industry
+
+		visible = {
+				original_tag = USA
+				has_global_flag = nato_disbanded
+				NOT = { has_global_flag = edc_formed }
+				NOT = { has_global_flag = president_taft }
+		}
+
+		fire_only_once = yes
+
+
+		cost = 100
+
+		complete_effect = {
+			country_event = nato.14
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	usa_rejoin_nato_2 = {
+
+		icon = generic_industry
+
+		visible = {
+				original_tag = USA
+				has_global_flag = nato_disbanded
+				has_global_flag = edc_formed
+				NOT = { has_global_flag = president_taft }
+		}
+
+		fire_only_once = yes
+
+
+		cost = 100
+
+		complete_effect = {
+			country_event = nato.16
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	usa_rejoin_nato_3 = {
+
+		icon = generic_industry
+
+		visible = {
+				original_tag = USA
+				has_global_flag = nato_disbanded
+				has_global_flag = english_nato
+				NOT = { has_global_flag = president_taft }
+		}
+
+		fire_only_once = yes
+
+
+		cost = 100
+
+		complete_effect = {
+			country_event = nato.18
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Break_the_Stalemate = {
+		visible = {
+			original_tag = USA
+			KOR = { has_war_with = KPA }
+
+		}
+		available = {
+			has_completed_focus = USA_50s_Implement_MacArthurs_Proposal
+		}
+		fire_only_once = yes
+
+		cost = 0
+		complete_effect = {
+			news_event = Operation_Firebird.1
+			korean_war_nuclear_super_event = yes
+			launch_nuke = { 
+				state = 608
+			}
+			launch_nuke = { 
+				state = 609
+			}
+			launch_nuke = { 
+				state = 745
+			}
+			launch_nuke = { 
+				state = 746
+			}
+			launch_nuke = { 
+				state = 747
+			}
+			launch_nuke = { 
+				state = 748
+			}
+			launch_nuke = { 
+				state = 1205
+			}
+			launch_nuke = { 
+				state = 527
+			}
+			launch_nuke = { 
+				state = 748
+			}
+			launch_nuke = { 
+				state = 716
+				province = 6860
+			}
+			launch_nuke = { 
+				state = 716
+				province = 6981
+			}
+			launch_nuke = { 
+				state = 328
+				province = 9848
+			}
+				
+			launch_nuke = { 
+				state = 1326
+				province = 3949
+			}
+			launch_nuke = { 
+				state = 1326
+				province = 9803
+			}
+			launch_nuke = { 
+				state = 1326
+				province = 800
+			}
+			launch_nuke = { 
+				state = 1326
+				province = 11781
+			}
+			launch_nuke = { 
+				state = 1326
+				province = 861
+			}
+			launch_nuke = { 
+				state = 1326
+				province = 11823
+			}
+			launch_nuke = { 
+				state = 1325
+				province = 3929
+			}
+			launch_nuke = { 
+				state = 1325
+				province = 944
+			}
+			launch_nuke = { 
+				state = 1325
+				province = 9897
+			}
+			launch_nuke = { 
+				state = 1325
+				province = 3944
+			}
+			CHI = {
+				create_faction = "Anti-Communist Salvation Front"
+				add_to_faction = KOR
+				add_to_faction = USA
+				declare_war_on = {
+					target = PRC
+					type = annex_everything
+				}
+			}
+			USA = {
+				declare_war_on = {
+					target = PRC
+					type = annex_everything
+				}				
+			}
+			load_oob = KMT_FIREBIRD
+
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				set_variable = { show_korea = 1 }
+
+			}
+
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+   
+	
+   	
+	rename_coptic = {
+
+		icon = generic_industry
+
+		available = {
+			has_full_control_of_state = 447
+			original_tag = COP
+		}
+		visible = {
+			original_tag = COP
+		}
+
+		fire_only_once = yes
+
+
+		cost = 0
+
+		complete_effect = {
+			447 = {
+				set_state_name = "Alexandria"
+			}
+			set_province_name = {
+				id = 4076
+				name = "Alexandria"
+			}
+			set_province_name = {
+				id = 7091
+				name = "Dishairi"
+			}
+			set_province_name = {
+				id = 7164
+				name = "Tantatho"
+			}
+			set_province_name = {
+				id = 11964
+				name = "Tamiat"
+			}
+			set_province_name = {
+				id = 10005
+				name = "Mansoura"
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+
+
+propaganda_efforts = {
+	Propose_a_Neutral_Reunified_Germany = {
+
+		icon = generic_propaganda
+
+		available = {
+			date > 1952.3.1
+			original_tag = SOV
+		}
+		visible = {
+			has_country_leader = {
+				name = "Joseph Stalin"
+				ruling_only = yes
+			}
+			original_tag = SOV
+		}
+
+		fire_only_once = yes
+
+
+		cost = 0
+
+		complete_effect = {
+			country_event = StalinNotes.1
+		}
+		
+		ai_will_do = {
+			factor = 1
+
+		}
+	}
+
+}
+
+operations = {
+#	soviet_intervention = {
+#
+#		icon = generic_prepare_civil_war
+#
+#		visible = {
+#				tag = SOV
+#				KPA = { has_war_with = KOR }
+#				NOT = { has_war_with = KOR }
+#				
+#				OR = {
+#					NOT = { 745 = { is_controlled_by = KPA } }
+#					NOT = { 746 = { is_controlled_by = KPA } }
+#					NOT = { 747 = { is_controlled_by = KPA } }
+#					NOT = { 748 = { is_controlled_by = KPA } }
+#					NOT = { 749 = { is_controlled_by = KPA } }
+#					date > 1950.9.31
+#				}
+#		}
+#
+#		
+#		complete_effect = {
+#			country_event = korea.33
+#		}
+#
+#		cost = 0
+#
+#		fire_only_once = yes
+#		selectable_mission = no
+#
+#		days_remove = 1
+#
+#
+#
+#		ai_will_do = {
+#			factor = 0
+#		}
+#	}
+	PAK_Afghan_Relations_Border_War = {
+		allowed = {
+			tag = PAK
+		}
+		visible = {
+			tag = PAK
+			has_country_flag = AFG_Border_War_Unlocked
+		}
+		available = {
+			tag = PAK
+			country_exists = AFG
+			has_border_war = no
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 445
+					num_provinces = 3
+					on_win = PAK_Afghan_Relations.150
+					on_lose = PAK_Afghan_Relations.151
+					on_cancel = Indochina_War.4
+				}
+							
+				defender = {
+					state = 1209
+					num_provinces = 3
+					on_win = Indochina_War.4
+					on_lose = Indochina_War.4
+					on_cancel = Indochina_War.4
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	Liberate_Hainan = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			tag = PRC
+			NOT = {
+				owns_state = 591
+			}
+		}
+		visible = {
+			original_tag = PRC
+			has_global_flag = ROC_taiwan
+			NOT = {
+				owns_state = 591
+			}
+		}
+
+		
+		complete_effect = {
+			activate_mission = Battle_of_Hainan
+			set_province_controller = 1038
+			load_oob = PRC_Hainan_oob
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+		selectable_mission = no
+
+		days_remove = 1
+
+
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	The_Chinese_Civil_war = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			major_countries = yes
+		}
+		available = {
+			always = no
+		}
+		fire_only_once = yes
+		days_mission_timeout = 740
+		cancel_trigger = {
+			OR = {
+				has_global_flag = chinese_civil_war_over
+				PRC = {
+					NOT = {
+						has_war_with = CHI
+					}
+				}
+			}
+			
+		}
+		timeout_effect = {
+			if = {
+				limit = {
+					tag = PRC
+				}
+				if = {
+					limit = {
+						PRC = {
+							surrender_progress > 0.79
+						}
+					}
+					PRC_Lose_CCW = yes
+				}
+				else_if = {
+					limit = {
+						PRC = {
+							has_global_flag = roc_rebound_shanghai
+							surrender_progress > 0.59
+						}
+					}
+					PRC_Lose_CCW = yes
+				}
+				else = {
+					ROC_lose_CCW = yes
+				}
+			}
+			else = {
+				effect_tooltip = {
+					if = {
+						limit = {
+							PRC = {
+								surrender_progress > 0.79
+							}
+						}
+						PRC_Lose_CCW = yes
+					}
+					else_if = {
+						limit = {
+							PRC = {
+								has_global_flag = roc_rebound_shanghai
+								surrender_progress > 0.59
+							}
+						}
+						PRC_Lose_CCW = yes
+					}
+					else = {
+						ROC_lose_CCW = yes
+					}
+				}
+			}
+		}
+	}
+	THIRD_BALKAN_WAR_TIMER = {
+		icon = generic_prepare_civil_war
+		allowed = {
+            tag = TUR
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		fire_only_once = yes
+		days_mission_timeout = 95
+
+		timeout_effect = {
+            news_event = THIRD_BALKAN_WAR.75
+			
+		}
+	}
+
+    DOM_Invasion_of_Cuba = {
+		icon = generic_prepare_civil_war
+		allowed = {
+            OR = {
+                tag = CUB
+                tag = DOM
+            }
+		}
+		available = {
+			always = no
+		}
+		fire_only_once = yes
+		days_mission_timeout = 730
+		cancel_trigger = {
+			OR = {
+                CUB = {
+                    NOT = {
+                        has_war_with = DOM
+                    }
+                }
+            }
+			
+		}
+		timeout_effect = {
+            if = {
+                limit = {
+                    tag = DOM
+                }
+                news_event = DOM_Cuba.34
+                white_peace = CUB
+            }
+		}
+	}
+	
+	Invasion_of_Nepal = {
+		icon = generic_prepare_civil_war
+		allowed = {
+            OR = {
+                tag = RAJ
+                tag = NEP
+            }
+		}
+		available = {
+			always = no
+		}
+		fire_only_once = yes
+		days_mission_timeout = 243
+		cancel_trigger = {
+			OR = {
+                NOT = {
+                    country_exists = NEP
+                }
+                RAJ = {
+                    NOT = {
+                        has_war_with = NEP
+                    }
+                }
+            }
+			
+		}
+		timeout_effect = {
+            if = {
+                limit = {
+                    tag = RAJ
+                }
+                news_event = INDIA_COM_NEP.7
+                white_peace = NEP
+                white_peace = ENG
+                white_peace = USA
+            }
+		}
+	}
+	
+    Invasion_of_Sri_Lanka = {
+		icon = generic_prepare_civil_war
+		allowed = {
+            OR = {
+                tag = RAJ
+                tag = NEP
+            }
+		}
+		available = {
+			always = no
+		}
+		fire_only_once = yes
+		days_mission_timeout = 243
+		cancel_trigger = {
+			OR = {
+                NOT = {
+                    country_exists = SRL
+                }
+                RAJ = {
+                    NOT = {
+                        has_war_with = SRL
+                    }
+                }
+            }
+			
+		}
+		timeout_effect = {
+            if = {
+                limit = {
+                    tag = RAJ
+                }
+                news_event = CPI_71.8
+                white_peace = SRL
+                white_peace = ENG
+                white_peace = USA
+            }
+		}
+	}
+	Invasion_of_Yugoslavia = {
+		icon = generic_prepare_civil_war
+		allowed = {
+            OR = {
+                tag = SOV
+                tag = YUG
+            }
+		}
+		available = {
+			always = no
+		}
+		fire_only_once = yes
+		days_mission_timeout = 243
+		cancel_trigger = {
+			OR = {
+                NOT = {
+                    country_exists = YUG
+                }
+                SOV = {
+                    NOT = {
+                        has_war_with = YUG
+                    }
+                }
+            }
+			
+		}
+		timeout_effect = {
+            if = {
+                limit = {
+                    tag = SOV
+                }
+                news_event = YUG_SOV_WAR.2
+                white_peace = YUG
+                every_country = {
+                    limit = {
+                        is_in_faction_with = SOV
+                    }
+                    white_peace = YUG
+                }
+            }
+		}
+	}
+	Invasion_of_Turkey = {
+		icon = generic_prepare_civil_war
+		allowed = {
+            OR = {
+                tag = SOV
+                tag = TUR
+            }
+		}
+		available = {
+			always = no
+		}
+		fire_only_once = yes
+		days_mission_timeout = 243
+		cancel_trigger = {
+			OR = {
+                NOT = {
+                    country_exists = TUR
+                }
+                SOV = {
+                    NOT = {
+                        has_war_with = TUR
+                    }
+                }
+            }
+			
+		}
+		timeout_effect = {
+            if = {
+                limit = {
+                    tag = SOV
+                }
+                news_event = TUR_SOV_WAR.2
+                white_peace = YUG
+                every_country = {
+                    limit = {
+                        is_in_faction_with = SOV
+                    }
+                    white_peace = TUR
+                }
+            }
+		}
+	}
+	Intervention_into_Syria = {
+
+		icon = generic_prepare_civil_war
+
+
+		available = {
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			if = {
+				limit = {
+					EGY = {
+						owns_state = 554
+					}
+				}
+				NOT = {
+					has_war_with = EGY
+				}
+			}
+			else_if = {
+				limit = {
+					LEB = {
+						owns_state = 554
+					}
+				}
+				NOT = {
+					has_war_with = LEB
+				}
+			}
+			else = {
+				NOT = {
+					has_war_with = SYR
+				}
+			}
+		}
+		cost = 0
+
+		fire_only_once = yes
+		selectable_mission = yes
+
+		days_mission_timeout = 180
+
+
+		timeout_effect = {
+			custom_effect_tooltip = IRQ_INTERVEITON_TT
+			white_peace = SYR
+			white_peace = LEB
+			white_peace = EGY
+			news_event = CIA_SYRIA.58
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Intervention_into_Syria_TUR = {
+
+		icon = generic_prepare_civil_war
+
+
+		available = {
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			if = {
+				limit = {
+					EGY = {
+						owns_state = 554
+					}
+				}
+				NOT = {
+					has_war_with = EGY
+				}
+			}
+			else_if = {
+				limit = {
+					LEB = {
+						owns_state = 554
+					}
+				}
+				NOT = {
+					has_war_with = LEB
+				}
+			}
+			else = {
+				NOT = {
+					has_war_with = SYR
+				}
+			}
+		}
+		cost = 0
+
+		fire_only_once = yes
+		selectable_mission = yes
+
+		days_mission_timeout = 180
+
+
+		timeout_effect = {
+			custom_effect_tooltip = SYR_IRAQI_INTERVENTION_TT
+			if = {
+				limit = {
+					controls_state = 894
+					controls_state = 677
+					controls_state = 810
+					controls_state = 777
+					controls_state = 680
+				}
+				news_event = CIA_SYRIA.60
+				894 = {
+					add_core_of = TUR
+				}
+				677 = {
+					add_core_of = TUR
+				}
+				810 = {
+					add_core_of = TUR
+				}
+				777 = {
+					add_core_of = TUR
+				}
+				680 = {
+					add_core_of = TUR
+				}
+				transfer_state = 894
+				transfer_state = 677
+				transfer_state = 810
+				transfer_state = 777
+				transfer_state = 680
+			}
+			else_if = {
+				limit = {
+					OR = {
+						SYR = {
+							controls_state = 905
+						}
+						LEB = {
+							controls_state = 905
+						}
+						EGY = {
+							controls_state = 905
+						}
+					}
+				}
+				news_event = CIA_SYRIA.61
+				if = {
+					limit = {
+						EGY = {
+							controls_state = 905
+						}
+					}
+					EGY = {
+						transfer_state = 905
+					}
+				}
+				else_if = {
+					limit = {
+						LEB = {
+							controls_state = 905
+						}
+					}
+					LEB = {
+						transfer_state = 905
+					}
+				}
+				else = {
+				SYR = {
+					transfer_state = 905
+				}
+				}
+				white_peace = SYR
+				white_peace = LEB
+				white_peace = EGY
+			}
+			else = {
+				white_peace = SYR
+				white_peace = LEB
+				white_peace = EGY
+			}
+			
+			news_event = CIA_SYRIA.58
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	The_Shanghai_Campaign = {
+
+		icon = generic_prepare_civil_war
+		allowed = {
+			tag = CHI
+		}
+
+		available = {
+			613 = { is_fully_controlled_by = PRC  } 
+		}
+		activation = {
+			always = no
+		}
+		cost = 0
+
+		fire_only_once = yes
+		selectable_mission = yes
+
+		days_mission_timeout = 50
+
+		complete_effect = {
+			news_event = Shanghai_Campaign.1
+		}
+
+		timeout_effect = {
+			if = {
+				limit = {
+					613 = { is_fully_controlled_by = PRC  } 
+				}
+				news_event = Shanghai_Campaign.1
+			}
+			else = {
+				news_event = Shanghai_Campaign.2 
+				set_global_flag = roc_rebound_shanghai
+				if = {
+					limit = {
+						CHI = {
+							is_ai = no
+						}
+					}
+					PRC = {
+						add_days_mission_timeout = {
+							mission = The_Chinese_Civil_war
+							days = 1095
+						}						
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	UN_CEASEFIRE_RAJ_1962 = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			tag = PRC
+		}
+
+		available = {
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		cost = 0
+
+		fire_only_once = yes
+		selectable_mission = yes
+
+		days_mission_timeout = 30
+		cancel_trigger = {
+			NOT = {
+				PRC = {
+					has_war_with = RAJ
+				}
+			}
+		}
+		complete_effect = {
+			
+		}
+		timeout_effect = {
+            effect_tooltip = {
+                sino_indian_war_ending_effect = yes
+            }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	UN_CEASEFIRE_PRC_1962 = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			tag = PRC
+		}
+
+		available = {
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		cost = 0
+
+		fire_only_once = yes
+		selectable_mission = yes
+
+		days_mission_timeout = 30
+		cancel_trigger = {
+			NOT = {
+				PRC = {
+					has_war_with = RAJ
+				}
+			}
+		}
+		complete_effect = {
+			
+		}
+		timeout_effect = {
+            sino_indian_war_ending_effect = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	PRC_NEFA_Offensive = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			tag = PRC
+		}
+
+		available = {
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		cost = 0
+
+		fire_only_once = yes
+		selectable_mission = yes
+
+		days_mission_timeout = 50
+		cancel_trigger = {
+			NOT = {
+				PRC = {
+					has_war_with = RAJ
+				}
+			}
+		}
+		complete_effect = {
+			
+		}
+		timeout_effect = {
+            if = {
+                limit = {
+                    RAJ = {
+                        controls_state = 434
+                    }
+                }
+                RAJ = {
+                    country_event = SINO_INDIAN_WAR.20
+                }
+            }
+            if = {
+                limit = {
+                    PRC = {
+                        controls_state = 434
+                    }
+                }
+                PRC = {
+                    country_event = SINO_INDIAN_WAR.24
+                }
+            }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	The_Invasion_of_Tibet = {
+
+		icon = generic_prepare_civil_war
+		allowed = {
+			tag = PRC
+		}
+
+		available = {
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		cost = 0
+
+		fire_only_once = yes
+		selectable_mission = yes
+
+		days_mission_timeout = 365
+		cancel_trigger = {
+			NOT = {
+				has_war_with = TIB
+			}
+		}
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+
+			if = {
+				limit = {
+					TIB = {
+						surrender_progress > 0.70
+					}
+				}
+				TIB = {
+					country_event = PRC_Tibet.6
+					set_country_flag = Lhasa_Uprising_Precursor
+				}
+			}
+			else_if = {
+				limit = {
+					has_global_flag = Tibet_Indian_Intervention
+					OR = {
+						TIB = {
+							owns_state = 1557
+							owns_state = 604
+						}
+						RAJ = {
+							owns_state = 1557
+							owns_state = 604
+						}
+					}
+				}
+				TIB = {
+					transfer_state = 1557
+					transfer_state = 604
+					1557 = {
+						add_core_of = TIB
+					}
+					604 = {
+						add_core_of = TIB
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_global_flag = Tibet_Indian_Intervention
+				}
+				news_event = PRC_TIBETAN.4
+				set_global_flag = India_Defeats_PRC_Tibet
+			}
+			else = {
+				news_event = PRC_TIBETAN.2
+			}
+			white_peace = TIB
+			white_peace = RAJ
+			white_peace = KAS
+			RAJ = {
+				dismantle_faction = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	The_Lhasa_Uprising = {
+
+		icon = generic_prepare_civil_war
+		allowed = {
+			tag = PRC
+		}
+
+		available = {
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		cost = 0
+
+		fire_only_once = yes
+		selectable_mission = yes
+
+		days_mission_timeout = 180
+		cancel_trigger = {
+			NOT = {
+				has_war_with = TIB
+			}
+		}
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+			if = {
+				limit = {
+					TIB = {
+						surrender_progress > 0.70
+					}
+				}
+				news_event = PRC_TIBETAN.7
+				annex_country = { target = TIB transfer_troops = no }	
+			}
+			else = {
+				news_event = PRC_TIBETAN.5
+				white_peace = PRC
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Retreat_to_Manchuria = {
+		icon = generic_prepare_civil_war
+		visible = {
+			tag = PRC
+			NOT = { has_global_flag = chinese_civil_war_over }
+		}
+		allowed = {
+			tag = PRC
+		}
+		available = {
+			always = no
+		}
+		activation = {
+			tag = PRC
+			has_war_with = CHI
+			CHI = {
+				has_global_flag = roc_rebound_shanghai
+			}
+			NOT = { has_global_flag = chinese_civil_war_over }
+			CHI = {
+				controls_state = 606
+				controls_state = 613
+				controls_state = 598
+				controls_state = 596
+				controls_state = 597
+				controls_state = 614
+				controls_state = 620
+				controls_state = 607
+				controls_state = 615
+				controls_state = 622		
+			}
+		}
+		cost = 0
+
+		fire_only_once = yes
+		selectable_mission = yes
+
+		days_mission_timeout = 50
+
+		#complete_effect = {
+		#	news_event = Shanghai_Campaign.1
+		#}
+
+		timeout_effect = {
+			if = {
+				limit = {
+					CHI = {
+						controls_state = 606
+						controls_state = 613
+						controls_state = 598
+						controls_state = 596
+						controls_state = 597
+						controls_state = 614
+						controls_state = 620
+						controls_state = 607
+						controls_state = 615
+						controls_state = 622		
+					}
+				}
+				PRC_Lose_CCW = yes
+			}
+			else = {
+				
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+
+	Battle_of_Hainan = {
+
+		icon = generic_prepare_civil_war
+
+
+		available = {
+			591 = { is_fully_controlled_by = PRC  } 
+		}
+		activation = {
+			always = no
+		}
+		cost = 0
+
+		fire_only_once = yes
+		selectable_mission = yes
+
+		days_mission_timeout = 50
+
+		complete_effect = {
+			transfer_state = 591
+			#news_event = PRC_Hainan.1
+			white_peace = CHI
+			CHI = {
+				complete_national_focus = CHI_Fall_of_Hainan
+			}
+		}
+
+		timeout_effect = {
+			if = {
+				limit = {
+					591 = { is_fully_controlled_by = PRC  } 
+				}
+				transfer_state = 591
+				#news_event = PRC_Hainan.1
+				white_peace = CHI
+				CHI = {
+					complete_national_focus = CHI_Fall_of_Hainan
+				}
+			}
+			else = {
+				CHI = {
+					complete_national_focus = CHI_Victory_in_Hainan
+				}
+				#news_event = ROC_Hainan.1
+			}
+			white_peace = CHI
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	Hangang_Bridge_Bombing = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			tag = KOR
+			has_idea = korean_war
+		}
+		visible = {
+			tag = KOR
+			has_idea = korean_war	
+			750 = {
+				is_controlled_by = KPA
+			}
+		}
+
+		
+		complete_effect = {
+			#news_event = korean_war.101
+			add_stability = 0.05
+			add_war_support = 0.05
+			750 = {
+				damage_building = {
+					type = infrastructure
+					damage = 10
+				}
+			}
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+		selectable_mission = no
+
+		days_remove = 1
+
+
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	liquidate_the_bodo_league = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			tag = KOR
+			has_idea = korean_war
+		}
+		visible = {
+			tag = KOR
+			has_idea = korean_war		}
+
+		
+		complete_effect = {
+			#news_event = korean_war.100
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = -0.15
+			}
+			every_owned_state = {
+				add_manpower = -15000
+			}
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+		selectable_mission = no
+
+		days_remove = 1
+
+
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	blow_suez_canal = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		available = {
+			has_full_control_of_state = 743
+				any_country = {
+					has_war_with = ROOT
+					OR = {
+						controls_state = 452
+						controls_state = 447
+						controls_state = 446
+						controls_state = 456
+						controls_state = 457
+						controls_state = 453
+						controls_state = 454
+						controls_state = 455
+						controls_state = 805
+					}
+				}
+		}
+	
+		visible = {
+			has_war = yes
+			NOT = { has_global_flag = SUEZ_CANAL_BLOCKED }
+			any_state = {
+				is_controlled_by = ROOT
+				OR = {
+					region = 28
+					region = 128
+				}
+			}
+		}
+	
+		fire_only_once = no
+	
+		days_remove = 30
+	
+		cost = 75
+	
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							owns_state = 446
+							owns_state = 453
+						}
+					}
+					random_country = {
+						limit = {
+							owns_state = 446
+							owns_state = 453
+						}
+						country_event = { id = generic.12 days = 1 }
+					}
+				}
+			}
+		}
+	
+		remove_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_full_control_of_state = 743
+					}
+				}
+				set_country_flag = blew_up_suez
+				set_global_flag = SUEZ_CANAL_BLOCKED
+				country_event = { id = wtt_news.40 hours = 6 }
+			}
+			effect_tooltip = {
+				if = {
+					limit = {
+						ENG = {
+							owns_state = 446
+							owns_state = 453
+						}
+					}
+					add_war_support = -0.05
+					add_stability = -0.05
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				any_country = {
+					is_in_faction_with = ROOT
+					NOT = {
+						OR = {
+							has_full_control_of_state = 457
+							has_full_control_of_state = 456
+						}
+						has_full_control_of_state = 551
+					}
+					OR = {
+						divisions_in_state = { state = 550 size > 0 }
+						divisions_in_state = { state = 268 size > 0 }
+						divisions_in_state = { state = 269 size > 0 }
+						divisions_in_state = { state = 559 size > 0 }
+					}
+				}
+			}
+			modifier = {
+				factor = 200
+				OR = {
+					has_full_control_of_state = 118
+					any_other_country = {
+						is_in_faction_with = ROOT
+						has_full_control_of_state = 118
+					}
+				}
+				has_war = yes
+				NOT = { tag = ENG }
+			}
+		}
+	}
+
+	blow_panama_canal = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		available = {
+			OR = {
+				has_full_control_of_state = 685
+				AND = {
+					has_full_control_of_state = 304
+					any_country = {
+						has_war_with = ROOT
+						owns_state = 685
+					}
+				}
+			}
+		}
+	
+		visible = {
+			has_war = yes
+			NOT = { has_global_flag = PANAMA_CANAL_BLOCKED }
+			any_state = {
+				is_controlled_by = ROOT
+				OR = {
+					region = 34
+					region = 124
+				}
+			}
+		}
+	
+		fire_only_once = no
+	
+		days_remove = 30
+	
+		cost = 75
+	
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							owns_state = 685
+						}
+					}
+					random_country = {
+						limit = {
+							owns_state = 685
+						}
+						country_event = { id = generic.13 days = 1 }
+					}
+				}
+			}
+		}
+	
+		remove_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_full_control_of_state = 685
+						has_full_control_of_state = 304
+					}
+				}
+				set_country_flag = blew_up_panama
+				set_global_flag = PANAMA_CANAL_BLOCKED
+				country_event = { id = wtt_news.41 hours = 6 }
+			}
+			effect_tooltip = {
+				if = {
+					limit = {
+						USA = { owns_state = 685 }
+					}
+					add_war_support = -0.05
+					add_stability = -0.05
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+special_projects = {
+
+	rebuild_suez_canal = {
+
+		icon = GFX_decision_generic_special_project
+
+		available = {
+			has_full_control_of_state = 743
+			num_of_civilian_factories > 50
+		}
+	
+		visible = {
+			has_full_control_of_state = 743
+			has_global_flag = SUEZ_CANAL_BLOCKED
+		}
+	
+		fire_only_once = no
+	
+		days_remove = 365
+	
+		cost = 250
+	
+		modifier = {
+			civilian_factory_use = 50
+		}
+	
+		remove_effect = {
+			if = {
+				limit = {
+					has_full_control_of_state = 743
+				}
+				set_country_flag = rebuilt_suez
+				clr_global_flag = SUEZ_CANAL_BLOCKED
+				country_event = { id = wtt_news.42 hours = 6 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_navy_size = { size < 100 }
+			}
+			modifier = {
+				factor = 200
+				NOT = {
+					OR = {
+						has_full_control_of_state = 118
+						any_other_country = {
+							is_in_faction_with = ROOT
+							has_full_control_of_state = 118
+						}
+					}
+				}
+				OR = {
+					ITA = { surrender_progress < 0.1 }
+					NOT = { tag = ENG }
+				}
+				has_full_control_of_state = 447
+				has_full_control_of_state = 454
+				has_full_control_of_state = 452
+				has_full_control_of_state = 456
+				has_full_control_of_state = 457
+				NOT = { has_country_flag = blew_up_suez }
+			}
+		}
+	}
+
+	rebuild_panama_canal = {
+
+		icon = GFX_decision_generic_special_project
+
+		available = {
+			has_full_control_of_state = 685
+			NOT = {
+				any_country = {
+					has_war_with = ROOT
+					controls_state = 304
+				}
+			}
+			num_of_civilian_factories > 80
+		}
+	
+		visible = {
+			has_full_control_of_state = 685
+			has_global_flag = PANAMA_CANAL_BLOCKED
+		}
+	
+		fire_only_once = no
+	
+		days_remove = 550
+	
+		cost = 400
+	
+		modifier = {
+			civilian_factory_use = 80
+		}
+	
+		remove_effect = {
+			if = {
+				limit = {
+					has_full_control_of_state = 685
+					NOT = {
+						any_country = {
+							has_war_with = ROOT
+							controls_state = 304
+						}
+					}
+				}
+				set_country_flag = rebuilt_panama
+				clr_global_flag = PANAMA_CANAL_BLOCKED
+				country_event = { id = wtt_news.43 hours = 6 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_navy_size = { size < 100 }
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = blew_up_panama
+			}
+		}
+	}
+}
+
+war_measures = {
+
+	
+	#negotiate_peace_with_israel_egy_2 = {
+
+	#		icon = generic_industry
+
+	#		available = {
+	#				surrender_progress > 0.25
+	#				has_civil_war = no
+	#
+	#		}
+	#		visible = {
+	#				tag = EGY
+	#				has_war_with = ISR
+	#				
+	#		}
+
+	#		fire_only_once = yes
+
+
+	#		cost = 100
+
+	#		complete_effect = {
+	#			country_event = egypte.8
+
+	#		}
+	#		ai_will_do = {
+	#			factor = 1
+	#		}
+	#	}
+
+	emergency_factory_conversion_defensive = {
+
+		icon = generic_industry
+
+		available = {
+			num_of_civilian_factories > 5 #Change this if amount of factories change
+		}
+
+		visible = {
+			has_defensive_war = yes
+			has_offensive_war = no			
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 90
+
+		cost = 100
+
+		complete_effect = {
+			replace_civ_with_arms_factories = yes
+			add_war_support = -0.05
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	emergency_factory_conversion_offensive = {
+
+		icon = generic_industry
+
+		available = {
+			num_of_civilian_factories > 5 #Change this if amount of factories change
+		}
+
+		visible = {
+			has_offensive_war = yes
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 90
+
+		cost = 100
+
+		complete_effect = {
+			replace_civ_with_arms_factories = yes
+			add_war_support = -0.05
+			add_stability = -0.03
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	desperate_defense = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			OR = {
+				surrender_progress > 0.5
+				if = {
+					limit = {
+						tag = CHI
+					}
+					strength_ratio = {
+						tag = PRC
+						ratio < 0.6
+					}
+				}
+			}
+		}
+
+		visible = {
+			surrender_progress > 0
+		}
+
+		fire_only_once = no
+
+		days_remove = 45
+		days_re_enable = 360
+
+		cost = 25
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				surrender_progress > 0.6
+				factor = 10
+			}
+		}
+
+		modifier = {
+			defence = 0.2
+			dig_in_speed_factor = 0.5
+		}
+
+		complete_effect = {
+
+		}
+	}
+
+
+
+
+	women_in_the_workforce = {
+
+		icon = generic_industry
+
+		allowed = {
+		}
+
+		available = {
+			has_war = yes
+			has_idea = tot_economic_mobilisation
+			OR = {
+				AND = {
+					has_government = democratic
+					has_war_support > 0.79
+				}
+				AND = {
+					has_government = communism
+					has_war_support > 0.79
+				}
+				AND = {
+					has_government = fascism
+					OR = {
+						has_war_support > 0.89
+						surrender_progress > 0
+					}
+				}
+				AND = {
+					has_government = neutrality
+					has_war_support > 0.84
+					has_stability > 0.7
+				}
+			}
+		}
+		visible = {
+			has_war = yes
+		}
+		cost = 100
+		days_remove = -1
+		remove_trigger = {
+			has_war = no
+		}
+		modifier = {
+			conscription = 0.01
+			stability_factor = -0.05
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					tag = CAN
+				}
+				country_event = { id = canada_vanilla.1 hours = 6 } # Ronnie the Bren Gun Girl
+			}
+		}
+   }
+
+	war_bonds = {
+		icon = generic_industry
+
+		allowed = {
+		}
+
+		available = {
+			has_war = yes
+			OR = {
+				AND = {
+					has_government = democratic
+					has_war_support > 0.79
+				}
+				AND = {
+					has_government = communism
+					has_war_support > 0.79
+				}
+				AND = {
+					has_government = fascism
+					OR = {
+						has_war_support > 0.89
+						surrender_progress > 0
+					}
+				}
+				AND = {
+					has_government = neutrality
+					has_war_support > 0.84
+					has_stability > 0.7
+				}
+			}
+		}
+		visible = {
+			has_war = yes
+		}
+
+		fire_only_once = no
+
+		days_remove = 180
+
+		cost = GER_war_bonds_var?50
+
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_political_power < 150
+				factor = 0 #use as pp dump
+			}
+		}
+
+		remove_effect = {
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						var = GER_war_bonds_var
+						value = 50
+						compare = less_than
+					}
+				}
+				set_variable = {
+					var = GER_war_bonds_var
+					value = 50
+				}
+			}
+			add_to_variable = {
+				var = GER_war_bonds_var
+				value = 25
+			}
+		}
+	}
+}
+
+ foreign_politics = {
+	start_suez_debug = {
+		icon = generic_industry
+		allowed = {
+		}
+
+		available = {
+			is_debug = yes
+			is_ai = no
+		}
+		visible = {
+			is_debug = yes
+			is_ai = no
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			EGY = {
+				country_event = suez.2
+				BAH = { country_event = Suez_Crisis_Gulf.50 }
+				QAT = { country_event = QAT_Suez_Crisis.1 }
+			}
+		}
+   }
+
+   can_build_railway_test = {
+		icon = generic_industry
+		allowed = {
+		}
+
+		available = {
+			is_debug = yes
+			can_build_railway = {
+				start_province = 9671 ##use start_state instead if you want to check between states instead of provinces
+				target_province = 9814 ##ditto, target_state
+			}
+		}
+		visible = {
+			is_debug = yes
+			is_ai = no
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		}
+   }
+   form_indochina_faction = {
+		icon = generic_industry
+		allowed = {
+		}
+
+		available = {
+			is_debug = yes
+		}
+		visible = {
+			is_debug = yes
+			is_ai = no
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+				country_event = CPSU20.1
+				hidden_effect = {
+					load_focus_tree = SOV_Kaganovich
+					complete_national_focus = SOV_Kaganovichs_Union
+					create_country_leader = {
+						name = "Lazar Kaganovich"
+						picture = "Lazar_Kaganovich.dds"
+						desc = ""
+						ideology = marxism_leninism
+					}
+				}
+		}
+   }
+
+   has_railway_test = {
+		icon = generic_industry
+		allowed = {
+		}
+
+		available = {
+			is_debug = yes
+			has_railway_connection = {
+				start_province = 9671
+				target_province = 9814
+			}
+		}
+		visible = {
+			is_debug = yes
+			is_ai = no
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		}
+   }
+}
+
+economy_decisions = {
+
+}
+
+

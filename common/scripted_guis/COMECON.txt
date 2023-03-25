@@ -1,0 +1,86 @@
+scripted_gui = {
+	comecon_menu = {
+		context_type = player_context
+		
+		window_name = "COMECON_Redux_Window"
+        dirty = comecon_redux_variable
+
+		visible = {
+			check_variable = { comecon_main_show > 0 }
+		}
+		triggers = {
+			COMECON_Screen_Main_Line_1_visible = {
+                check_variable = { comecon_main_show = 1 }
+            }
+			COMECON_Screen_Main_Line_2_visible = {
+                check_variable = { comecon_main_show = 1 }
+            }
+			COMECON_Screen_Main_Line_3_visible = {
+                check_variable = { comecon_main_show = 1 }
+            }
+			COMECON_Screen_Main_Line_4_visible = {
+                check_variable = { comecon_main_show = 1 }
+            }
+			COMECON_Screen_Main_Line_5_visible = {
+                check_variable = { comecon_main_show = 1 }
+            }
+			COMECON_Screen_Main_Line_6_visible = {
+                check_variable = { comecon_main_show = 1 }
+            }
+			COMECON_Screen_Main_Line_7_visible = {
+                check_variable = { comecon_main_show = 1 }
+            }
+			COMECON_Screen_Main_Line_8_visible = {
+                check_variable = { comecon_main_show = 1 }
+            }
+			COMECON_Screen_Main_Line_9_visible = {
+                check_variable = { comecon_main_show = 1 }
+            }
+			COMECON_Screen_Main_Line_10_visible = {
+                check_variable = { comecon_main_show = 1 }
+            }
+            COMECON_Emblem_visible = {
+                check_variable = { comecon_main_show = 1 }
+            }
+			COMECON_Base_Map_visible = {
+                check_variable = { comecon_main_show = 1 }
+            }
+        }
+		triggers = {
+			COMECON_SIDEBAR_visible = {
+                check_variable = { comecon_main_show = 2 }
+            }
+			Bulgaria_Emblem_visible = {
+                check_variable = { comecon_main_show = 2 }
+				#check_variable = { comecon_selected_tag = BUL }
+            }
+			Bulgaria_Selected_Icon_visible = {
+                check_variable = { comecon_main_show = 2 }
+				#check_variable = { comecon_selected_tag = BUL }
+            }
+        }
+
+		
+	}
+	comecon_nation_target_list_menu_view = {
+       context_type = player_context
+        window_name = "comecon_nation_target_list_menu_main"
+		parent_window_name = COMECON_Redux_Window
+		visible = {
+			check_variable = { comecon_main_show = 1 }
+		}
+        dynamic_lists = {
+            comecon_nation_target_list_menu_grid = {
+                array = SOV.COMECON_MEMBERSHIP
+                change_scope = yes
+				entry_container = comecon_nation_target_list_entry
+            }
+        }
+		effects = {
+			comecon_nation_target_list_entry_button_click = { 
+				set_variable = { SOV.comecon_main_show = 2 }
+			}
+		}
+	}
+}
+

@@ -1,0 +1,87 @@
+ideas = {
+	country = {
+	   idea_Chaim_Weizmann = {
+
+			allowed = {
+				original_tag = ISR
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				
+			}
+
+			picture = Chaim_Weizmann
+
+			traits = { popular_figurehead }
+		}
+		
+		idea_YitzhakBenZvi = {
+
+			allowed = {
+				original_tag = ISR
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				
+			}
+
+			picture = YitzhakBenZvi
+
+			traits = { popular_figurehead }
+		}
+		
+		idea_Mordechai_Nurock = {
+
+			allowed = {
+				original_tag = ISR
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				
+			}
+
+			picture = Mordechai_Nurock
+
+			traits = { popular_figurehead }
+		}		
+
+		President_Einstein = {
+
+		picture = einstein
+
+			allowed = {
+				original_tag = ISR
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				
+			}
+
+			traits = { popular_figurehead }
+		}			
+		
+		egged_bus = {
+			
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+			army_speed_factor = 0.1
+
+			}
+
+			picture = generic_manpower_bonus
+		}
+	}
+}

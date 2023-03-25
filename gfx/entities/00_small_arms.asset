@@ -1,0 +1,1474 @@
+# !!!! Do not set scale! scale set on small_arms.gfx !!!!
+
+	# AKM
+	entity = {
+		name = "SOV_infantry_weapon_akm_entity"
+		pdxmesh = "infantry_weapon_akm_mesh"
+		scale = 1.0
+		
+		get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	state = { name = "attack"	animation = "attack" 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = AKM_rifle_attack } } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = AKM_rifle_attack } } 
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = AKM_rifle_attack } } 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes light = "mg_muzzle_flash" } 
+	event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+	entity = {
+		name = "SOV_infantry_weapon_akm_right_entity"
+		pdxmesh = "infantry_weapon_akm_mesh"
+		scale = 1.0
+	}	
+
+
+
+	entity = {
+		name = "SOV_infantry_weapon_akm_long_idle_entity"
+		pdxmesh = "infantry_weapon_akm_mesh"
+		scale = 1.0
+	}	
+
+	# AKМ
+	entity = {
+		name = "SOV_infantry_weapon_ak47M_entity"
+		pdxmesh = "SOV_infantry_weapon_ak47M_mesh"
+		
+		get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	state = { name = "attack"	animation = "attack" 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = AKM_rifle_attack } } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = AKM_rifle_attack } } 
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = AKM_rifle_attack } } 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes light = "mg_muzzle_flash" } 
+	event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+	
+	# VZ58
+	entity = {
+		name = "CZE_infantry_weapon_vz58_entity"
+		pdxmesh = "CZE_infantry_weapon_vz58_mesh"
+		
+		get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	state = { name = "attack"	animation = "attack" 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = AKM_rifle_attack } } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = AKM_rifle_attack } } 
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = AKM_rifle_attack } } 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes light = "mg_muzzle_flash" } 
+	event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+
+# RK62
+	entity = {
+		name = "FIN_infantry_weapon_RK62_entity"
+		pdxmesh = "FIN_infantry_weapon_RK62_mesh"
+		
+		get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	state = { name = "attack"	animation = "attack" 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = AKM_rifle_attack } } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = AKM_rifle_attack } } 
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = AKM_rifle_attack } } 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes light = "mg_muzzle_flash" } 
+	event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+	
+	# AK-74
+	entity = {
+		name = "SOV_infantry_weapon_AK74_entity"
+		pdxmesh = "SOV_infantry_weapon_AK74_mesh"
+		
+		get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	state = { name = "attack"	animation = "attack" 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = AK74_rifle_attack } } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = AK74_rifle_attack } } 
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = AK74_rifle_attack } } 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes light = "mg_muzzle_flash" } 
+	event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+	
+	# AK-74M
+	entity = {
+		name = "SOV_infantry_weapon_AK74M_entity"
+		pdxmesh = "SOV_infantry_weapon_AK74M_mesh"
+		
+		get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	state = { name = "attack"	animation = "attack" 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = AK74_rifle_attack } } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = AK74_rifle_attack } } 
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = AK74_rifle_attack } } 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes light = "mg_muzzle_flash" } 
+	event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+	
+	# PPS
+	entity = {
+		name = "SOV_infantry_weapon_PPS_entity"
+		pdxmesh = "SOV_infantry_weapon_PPS_mesh"
+		
+		get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	state = { name = "attack"	animation = "attack" 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = ppsh_rifle_attack } } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = ppsh_rifle_attack } } 
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = ppsh_rifle_attack } } 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes light = "mg_muzzle_flash" } 
+	event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+	
+	
+	# AKSU
+	entity = {
+		name = "SOV_infantry_weapon_AKSU_entity"
+		pdxmesh = "SOV_infantry_weapon_AKSU_mesh"
+		
+		get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	state = { name = "attack"	animation = "attack" 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = AK74_rifle_attack } } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = AK74_rifle_attack } } 
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = AK74_rifle_attack } } 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes light = "mg_muzzle_flash" } 
+	event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+	
+	# ДП
+	entity = {
+		name = "SOV_infantry_weapon_DP_entity"
+		pdxmesh = "SOV_infantry_weapon_DP_mesh"
+		
+		get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	state = { name = "attack"	animation = "attack" 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } } 
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } } 
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } } 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } } 
+	event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+	
+	# mosinka
+	entity = {
+		name = "SOV_infantry_weapon_mosin_entity"
+		pdxmesh = "SOV_infantry_weapon_mosin_mesh"
+		
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	} 
+	
+	state = { 
+	name = "attack"	animation = "attack" 
+	event = { time = 1.15 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = mosin_rifle_attack } }
+	event = { time = 2.2 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
+	}
+	
+	state = { 
+	name = "defend"
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = mosin_rifle_attack } } 
+	event = { time = 1.2 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle"  particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = mosin_rifle_attack } }
+	event = { time = 1.2 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
+	}
+}
+
+# svd
+	entity = {
+		name = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "SOV_infantry_weapon_svd_mesh"
+		
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	
+	state = { 
+	name = "attack"	
+	event = { time = 1.15 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } }
+	event = { time = 1.15 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
+	}
+	
+	state = { 
+	name = "defend"
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } } 
+	event = { time = 0 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
+	event = { time = 1.015 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" } 
+	event = { time = 1.015 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } }  
+	event = { time = 0 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
+	event = { time = 1.015 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" }
+	event = { time = 1.015 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	}
+}	
+
+# ппш42
+	entity = {
+		name = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "SOV_infantry_weapon_ppsh42_mesh"
+		
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	state = { name = "attack"	animation = "attack" 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = ppsh_rifle_attack } } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = ppsh_rifle_attack } } 
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = ppsh_rifle_attack } } 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes light = "mg_muzzle_flash" } 
+	event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+
+# ппш
+	entity = {
+		name = "SOV_infantry_weapon_ppsh_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "SOV_infantry_weapon_ppsh_mesh"		
+}
+# скс
+   entity = {
+		name = "SOV_infantry_weapon_sks_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "SOV_infantry_weapon_sks_mesh"		
+}
+# M1 Carbine
+entity = {
+	name = "infantry_weapon_m1carbine_entity"
+	pdxmesh = "infantry_weapon_M1carbine_mesh"
+	
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	
+	state = { 
+	name = "attack"	
+	event = { time = 1.15 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = m1carbine_rifle_attack } }
+	event = { time = 1.15 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	}
+	
+	state = { 
+	name = "defend"
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = m1carbine_rifle_attack } } 
+	event = { time = 0 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	event = { time = 1.015 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = m1carbine_rifle_attack } } 
+	event = { time = 1.015 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = m1carbine_rifle_attack } }  
+	event = { time = 0 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	event = { time = 1.015 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = m1carbine_rifle_attack } }
+	event = { time = 1.015 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	}
+}	
+# M2 Carbine
+	entity = {
+		name = "infantry_weapon_m2carbine_entity"
+		clone = "infantry_weapon_m1carbine_entity"
+		pdxmesh = "infantry_weapon_M2carbine_mesh"		
+}
+
+# M14
+entity = {
+	name = "USA_infantry_weapon_m14_entity"
+	pdxmesh = "USA_infantry_weapon_m14_mesh"
+	
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	
+	state = { 
+	name = "attack"	
+	event = { time = 1.15 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = M14_rifle_attack } }
+	event = { time = 1.15 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	}
+	
+	state = { 
+	name = "defend"
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = M14_rifle_attack } } 
+	event = { time = 0 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	event = { time = 1.015 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = M14_rifle_attack } } 
+	event = { time = 1.015 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = M14_rifle_attack } }  
+	event = { time = 0 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	event = { time = 1.015 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = M14_rifle_attack } }
+	event = { time = 1.015 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	}
+}	
+
+# Thompson
+	entity = {
+		name = "USA_infantry_weapon_TOM_entity"
+		pdxmesh = "USA_infantry_weapon_TOM_mesh"
+		
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	state = { name = "attack"	animation = "attack" 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = thompson_rifle_attack } } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = thompson_rifle_attack } } 
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = thompson_rifle_attack } } 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes light = "mg_muzzle_flash" } 
+	event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+
+# томпсон-изр
+	entity = {
+		name = "ISR_infantry_weapon_TOM_entity"
+		clone = "USA_infantry_weapon_TOM_entity"
+		pdxmesh = "ISR_infantry_weapon_TOM_mesh"		
+}
+
+#M3mg
+	entity = {
+		name = "USA_infantry_weapon_M1mg_entity"
+		clone = "USA_infantry_weapon_TOM_entity"
+		pdxmesh = "USA_infantry_weapon_M1mg_mesh"		
+}
+
+ #M3
+	entity = {
+		name = "USA_infantry_weapon_M3_entity"
+		clone = "USA_infantry_weapon_TOM_entity"
+		pdxmesh = "USA_infantry_weapon_M3_mesh"		
+}
+
+#M1 Garand
+entity = {
+	name = "USA_infantry_weapon_M1_entity"
+	pdxmesh = "USA_infantry_weapon_M1_mesh"
+	
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	
+	state = { 
+	name = "attack"	
+	event = { time = 1.15 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = garand_rifle_attack } }
+	event = { time = 1.15 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	}
+	
+	state = { 
+	name = "defend"
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = garand_rifle_attack } } 
+	event = { time = 0 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	event = { time = 1.015 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = garand_rifle_attack } } 
+	event = { time = 1.015 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = garand_rifle_attack } }  
+	event = { time = 0 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	event = { time = 1.015 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = garand_rifle_attack } }
+	event = { time = 1.015 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	}
+}	
+
+#CAR-15
+   entity = {
+		name = "USA_infantry_weapon_CAR15_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "USA_infantry_weapon_CAR15_mesh"		
+}
+
+# M4A1 без рамки
+	entity = {
+		name = "USA_infantry_weapon_m4a1_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "USA_infantry_weapon_m4a1_mesh"
+	}
+
+#M249
+   entity = {
+		name = "USA_infantry_weapon_M249_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "USA_infantry_weapon_M249_mesh"		
+}
+
+#coltXM
+   entity = {
+		name = "USA_infantry_weapon_coltXM_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "USA_infantry_weapon_coltXM_mesh"		
+}
+
+#barret
+   entity = {
+		name = "USA_infantry_weapon_barret_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "USA_infantry_weapon_barret_mesh"		
+}
+
+#M16A1
+   entity = {
+		name = "USA_infantry_weapon_m15_entity"
+		pdxmesh = "USA_infantry_weapon_m15_mesh"
+		
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	state = { name = "attack"	animation = "attack" 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = thompson_rifle_attack } } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = thompson_rifle_attack } } 
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = thompson_rifle_attack } } 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes light = "mg_muzzle_flash" } 
+	event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+
+#AR10
+   entity = {
+		name = "USA_infantry_weapon_AR10_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "USA_infantry_weapon_AR10_mesh"		
+}
+
+#M16A2
+   entity = {
+		name = "USA_infantry_weapon_M16A2_entity"
+		pdxmesh = "USA_infantry_weapon_M16A2_mesh"
+		
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	state = { name = "attack"	animation = "attack" 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = thompson_rifle_attack } } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = thompson_rifle_attack } } 
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = thompson_rifle_attack } } 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes light = "mg_muzzle_flash" } 
+	event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+#G3 OLD
+   entity = {
+		name = "GER_infantry_weapon_G3_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "GER_infantry_weapon_G3_mesh"		
+}
+#Sten
+	entity = {
+		name = "ENG_infantry_weapon_sten_entity"
+		pdxmesh = "ENG_infantry_weapon_sten_mesh"
+		
+		get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	state = { name = "attack"	animation = "attack" 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = sten_rifle_attack } } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = sten_rifle_attack } } 
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = sten_rifle_attack } } 
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes light = "mg_muzzle_flash" } 
+	event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+#Sten LATE
+   entity = {
+		name = "infantry_weapon_Stenlate_entity"
+		clone = "ENG_infantry_weapon_sten_entity"
+		pdxmesh = "infantry_weapon_Stenlate_mesh"		
+}
+
+#Sterling SMG
+   entity = {
+		name = "infantry_weapon_Sterling_entity"
+		clone = "ENG_infantry_weapon_sten_entity"
+		pdxmesh = "infantry_weapon_Sterling_mesh"		
+}
+
+#Uzi
+   entity = {
+		name = "infantry_weapon_Uzi_entity"
+		clone = "ENG_infantry_weapon_sten_entity"
+		pdxmesh = "infantry_weapon_Uzi_mesh"		
+}
+
+#FN FAL
+	entity = {
+		name = "infantry_weapon_FNFAL_entity"
+		pdxmesh = "infantry_weapon_FNFAL_mesh"
+		
+		get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	state = { 
+	name = "attack"	
+	event = { time = 0.5 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = fal_rifle_attack } }
+	event = { time = 0.5 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	event = { time = 0.9 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" }
+	event = { time = 0.9 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	}
+	
+	state = { 
+	name = "defend"
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = fal_rifle_attack } } 
+	event = { time = 0 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	event = { time = 0.4 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" }
+	event = { time = 0.4 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = fal_rifle_attack } } 
+	event = { time = 0 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	event = { time = 0.4 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" } 
+	event = { time = 0.4 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	}
+}
+
+#FN FAL polymer
+   entity = {
+		name = "infantry_weapon_FNFALpolymer_entity"
+		clone = "infantry_weapon_FNFAL_entity"
+		pdxmesh = "infantry_weapon_FNFALpolymer_mesh"		
+}
+
+#FN FAL G1
+   entity = {
+		name = "infantry_weapon_G1_entity"
+		clone = "infantry_weapon_FNFAL_entity"
+		pdxmesh = "infantry_weapon_G1_mesh"		
+}
+
+#L85
+   entity = {
+		name = "infantry_weapon_L85A2_entity"
+		clone = "infantry_weapon_FNFAL_entity"
+		pdxmesh = "infantry_weapon_L85A2_mesh"		
+}
+#IDF Romat FAL
+   entity = {
+		name = "infantry_weapon_FNFALIDF_entity"
+		clone = "infantry_weapon_FNFAL_entity"
+		pdxmesh = "infantry_weapon_FNFALIDF_mesh"		
+}
+#G3 NEW
+	entity = {
+		name = "infantry_weapon_G3_entity"
+		pdxmesh = "infantry_weapon_G3_mesh"
+		
+		get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+	
+	state = { 
+	name = "attack"	
+	event = { time = 0.5 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = G3_rifle_attack } }
+	event = { time = 0.5 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	event = { time = 0.9 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" }
+	event = { time = 0.9 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	}
+	
+	state = { 
+	name = "defend"
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = G3_rifle_attack } } 
+	event = { time = 0 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	event = { time = 0.4 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" }
+	event = { time = 0.4 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = G3_rifle_attack } } 
+	event = { time = 0 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	event = { time = 0.4 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" } 
+	event = { time = 0.4 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes }
+	}
+}
+
+#изр
+   entity = {
+		name = "ISR_infantry_weapon_G3_entity"
+		clone = "infantry_weapon_G3_entity"
+		pdxmesh = "ISR_infantry_weapon_G3_mesh"		
+}
+
+#индия
+   entity = {
+		name = "RAJ_infantry_weapon_G3_entity"
+		clone = "infantry_weapon_G3_entity"
+		pdxmesh = "RAJ_infantry_weapon_G3_mesh"		
+}
+
+
+#G36
+   entity = {
+		name = "GER_infantry_weapon_G36_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "GER_infantry_weapon_G36_mesh"		
+}
+
+#G36C
+   entity = {
+		name = "GER_infantry_weapon_G36C_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "GER_infantry_weapon_G36C_mesh"		
+}
+
+#StG 44
+   entity = {
+		name = "GER_infantry_weapon_StG44_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "GER_infantry_weapon_StG44_mesh"		
+}
+
+#Mg42
+   entity = {
+		name = "GER_infantry_weapon_Mg42_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "GER_infantry_weapon_Mg42_mesh"		
+}
+
+#Mg3
+   entity = {
+		name = "GER_infantry_weapon_Mg3_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "GER_infantry_weapon_Mg3_mesh"		
+}
+
+#Fg42
+   entity = {
+		name = "GER_infantry_weapon_Fg42_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "GER_infantry_weapon_Fg42_mesh"		
+}
+
+#G3opt
+   entity = {
+		name = "GER_infantry_weapon_G3opt_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "GER_infantry_weapon_G3opt_mesh"		
+}
+
+#G41
+   entity = {
+		name = "GER_infantry_weapon_G41_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "GER_infantry_weapon_G41_mesh"		
+}
+
+#Enfield Infantry
+entity = {
+	name = "ENG_infantry_weapon_LI_entity"
+	pdxmesh = "ENG_infantry_weapon_LI_mesh"
+	
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	} 
+	
+	state = { 
+	name = "attack"	animation = "attack" 
+	event = { time = 1.15 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = enfield_rifle_attack } }
+	event = { time = 2.2 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
+	}
+	
+	state = { 
+	name = "defend"
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = enfield_rifle_attack } } 
+	event = { time = 1.2 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle"  particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = enfield_rifle_attack } }
+	event = { time = 1.2 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
+	}
+}
+
+#K98
+entity = {
+	name = "infantry_weapon_K98_entity"
+	pdxmesh = "infantry_weapon_K98_mesh"
+	
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	} 
+	
+	state = { 
+	name = "attack"	animation = "attack" 
+	event = { time = 1.15 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = K98_rifle_attack } }
+	event = { time = 2.2 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
+	}
+	
+	state = { 
+	name = "defend"
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = K98_rifle_attack } } 
+	event = { time = 1.2 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle"  particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = K98_rifle_attack } }
+	event = { time = 1.2 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
+	}
+}
+
+#Mosin Infantry
+   entity = {
+		name = "infantry_weapon_Mosin_entity"
+		clone = "SOV_infantry_weapon_mosin_entity"
+		pdxmesh = "infantry_weapon_Mosin_mesh"		
+}
+
+#лиэнфилд_0
+   entity = {
+		name = "ENG_infantry_weapon_4_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "ENG_infantry_weapon_4_mesh"		
+}
+
+#тип95
+   entity = {
+		name = "PRC_infantry_weapon_type95_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "PRC_infantry_weapon_type95_mesh"		
+}
+
+#китайская винтовка
+   entity = {
+		name = "PRC_infantry_weapon_hanyang88_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "PRC_infantry_weapon_hanyang88_mesh"		
+}
+
+#G3opt
+   entity = {
+		name = "GER_infantry_weapon_G43_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "GER_infantry_weapon_G43_mesh"		
+}
+
+#Брен
+   entity = {
+		name = "ENG_infantry_weapon_bren_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "ENG_infantry_weapon_bren_mesh"		
+}
+
+#Брен Талибан
+   entity = {
+		name = "TAL_infantry_weapon_bren_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "TAL_infantry_weapon_bren_mesh"		
+}
+
+#снайперка
+   entity = {
+		name = "GER_infantry_weapon_g43_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "GER_infantry_weapon_g43_mesh"		
+}
+
+#с глушаком
+   entity = {
+		name = "ENG_infantry_weapon_delis_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "ENG_infantry_weapon_delis_mesh"		
+}
+
+#L85S
+   entity = {
+		name = "ENG_infantry_weapon_L85S_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "ENG_infantry_weapon_L85S_mesh"		
+}
+
+#L85
+   entity = {
+		name = "ENG_infantry_weapon_L85_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "ENG_infantry_weapon_L85_mesh"		
+}
+
+#фин
+   entity = {
+		name = "FIN_infantry_weapon_mg_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "FIN_infantry_weapon_mg_mesh"		
+}
+
+#финАК
+   entity = {
+		name = "FIN_infantry_weapon_AK_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "FIN_infantry_weapon_AK_mesh"		
+}
+
+#MAS-44
+   entity = {
+		name = "FRA_infantry_weapon_MAS-44_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "FRA_infantry_weapon_MAS-44_mesh"		
+}
+
+#MAS-49
+   entity = {
+		name = "FRA_infantry_weapon_MAS-49_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "FRA_infantry_weapon_MAS-49_mesh"		
+}
+
+#MAS-38
+   entity = {
+		name = "FRA_infantry_weapon_MAS-38_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "FRA_infantry_weapon_MAS-38_mesh"		
+}
+
+#MAT49
+   entity = {
+		name = "FRA_infantry_weapon_MAT49_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "FRA_infantry_weapon_MAT49_mesh"		
+}
+
+#M/45
+   entity = {
+		name = "SWE_infantry_weapon_M45_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "SWE_infantry_weapon_M45_mesh"		
+}
+
+#пулемет1
+   entity = {
+		name = "FRA_infantry_weapon_LMG1_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "FRA_infantry_weapon_LMG1_mesh"		
+}
+
+#FAMAS F1
+   entity = {
+		name = "FRA_infantry_weapon_FAMASF1_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "FRA_infantry_weapon_FAMASF1_mesh"		
+}
+
+#фамас
+   entity = {
+		name = "FRA_infantry_weapon_FAMAS_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "FRA_infantry_weapon_FAMAS_mesh"		
+}
+
+#спецназ фамас
+   entity = {
+		name = "FRA_infantry_weapon_SPECFAMAS_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "FRA_infantry_weapon_SPECFAMAS_mesh"		
+}
+
+#qbz95s
+   entity = {
+		name = "PRC_qbz95s_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "PRC_qbz95s_mesh"		
+}
+
+#дп39
+   entity = {
+		name = "SOV_dp39_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "SOV_dp39_mesh"		
+}
+
+#Китайский АК
+   entity = {
+		name = "PRC_АК_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "PRC_АК_mesh"		
+}
+
+#СВТ
+   entity = {
+		name = "SOV_SVT_entity"
+		pdxmesh = "SOV_SVT_mesh"
+		
+		get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	} 
+	
+	state = { 
+	name = "attack"	animation = "attack" 
+	event = { time = 1.15 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } }
+	
+	}
+	
+	state = { 
+	name = "defend"
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } } 
+	
+	}
+	
+	state = { 
+	name = "support_attack"	animation = "support_attack" 
+	event = { time = 0 node="muzzle"  particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } }
+	
+	}
+}
+		
+		
+
+#фра
+   entity = {
+		name = "FRA_lebel_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "FRA_lebel_mesh"		
+}
+
+#Югославия винтовка
+   entity = {
+		name = "YUG_rifle_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "YUG_rifle_mesh"		
+}
+
+#Югославия пп
+   entity = {
+		name = "YUG_mg_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "YUG_mg_mesh"		
+}
+
+#это товарищ Сухов
+   entity = {
+		name = "IRQ_mg_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "IRQ_mg_mesh"		
+}
+
+#пятачок неси ружье
+   entity = {
+		name = "african_rifle_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "african_rifle_mesh"		
+}
+
+#африка пп
+   entity = {
+		name = "african_mg_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "african_mg_mesh"		
+}
+
+#африка авт
+   entity = {
+		name = "african_AK_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "african_AK_mesh"	
+}
+
+#ита ружье
+   entity = {
+		name = "ITA_rifle_M91_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "ITA_rifle_M91_mesh"		
+}
+
+#ита FNAB43
+   entity = {
+		name = "ITA_mg_FNAB43_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "ITA_mg_FNAB43_mesh"		
+}
+
+#ита OG44
+   entity = {
+		name = "ITA_rifle_OG44_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "ITA_rifle_OG44_mesh"	
+}
+#ита mg_M38
+   entity = {
+		name = "ITA_mg_M38_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "ITA_mg_M38_mesh"	
+}
+#ита BM59
+   entity = {
+		name = "ITA_mg_BM59_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "ITA_mg_BM59_mesh"	
+}
+#ита AR70
+   entity = {
+		name = "ITA_mg_AR70_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "ITA_mg_AR70_mesh"				
+}
+
+# AUG
+	entity = {
+		name = "infantry_weapon_AUG_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "infantry_weapon_AUG_mesh"	
+}
+
+# SPA_m38
+	entity = {
+		name = "SPA_infantry_weapon_m38_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "SPA_infantry_weapon_m38_mesh"	
+}
+
+# SPA_hafdasa
+	entity = {
+		name = "SPA_infantry_weapon_hafdasa_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "SPA_infantry_weapon_hafdasa_mesh"	
+}
+
+# SPA_M35
+	entity = {
+		name = "SPA_infantry_weapon_M35_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "SPA_infantry_weapon_M35_mesh"	
+}
+
+# SPA_Z45
+	entity = {
+		name = "SPA_infantry_weapon_Z45_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "SPA_infantry_weapon_Z45_mesh"	
+}
+
+# SPA_CEAM50
+	entity = {
+		name = "SPA_infantry_weapon_CEAM50_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "SPA_infantry_weapon_CEAM50_mesh"	
+}
+# SPR_rifle_FP7
+   entity = {
+		name = "SPR_rifle_FP7_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "SPR_rifle_FP7_mesh"		
+}
+
+#китнац ружье
+   entity = {
+		name = "CHI_rifle_chiang_kai_shek_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "CHI_rifle_chiang_kai_shek_mesh"		
+}
+
+# китнац мг
+	entity = {
+		name = "CHI_smg_tsin_tao_mp18_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "CHI_smg_tsin_tao_mp18_mesh"	
+}
+
+# SPA_CETME
+	entity = {
+		name = "SPA_infantry_weapon_CETME_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "SPA_infantry_weapon_CETME_mesh"	
+}
+
+# Mg13
+	entity = {
+		name = "POR_infantry_weapon_Mg13_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "POR_infantry_weapon_Mg13_mesh"	
+}
+
+# SWE mg M45
+	entity = {
+		name = "SWE_mg_M45_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "SWE_mg_M45_mesh"	
+}
+
+# SWE rifle M42
+   entity = {
+		name = "SWE_rifle_M42_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "SWE_rifle_M42_mesh"		
+}
+
+# DEN_mg_M50
+	entity = {
+		name = "DEN_mg_M50_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "DEN_mg_M50_mesh"	
+}
+
+# DEN_M1950
+	entity = {
+		name = "DEN_M1950_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "DEN_M1950_mesh"	
+}
+
+# BEL_rifle_M89b
+   entity = {
+		name = "BEL_rifle_M89b_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "BEL_rifle_M89b_mesh"		
+}
+
+# JAP_rifle_M14
+	entity = {
+		name = "JAP_rifle_M14_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "JAP_rifle_M14_mesh"	
+}
+
+# JAP_T64
+	entity = {
+		name = "JAP_T64_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "JAP_T64_mesh"	
+}
+
+# JAP_type96
+	entity = {
+		name = "JAP_type96_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "JAP_type96_mesh"	
+}
+
+# JAP_type100
+	entity = {
+		name = "JAP_type100_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "JAP_type100_mesh"	
+}
+
+# JAP_rifle_T4
+   entity = {
+		name = "JAP_rifle_T4_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "JAP_rifle_T4_mesh"		
+}
+
+# JAP_type99s
+   entity = {
+		name = "JAP_type99s_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "JAP_type99s_mesh"		
+}
+
+# JAP_type38
+   entity = {
+		name = "JAP_type38_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "JAP_type38_mesh"		
+}
+
+# BEL_mg_Vigneron
+	entity = {
+		name = "BEL_mg_Vigneron_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "BEL_mg_Vigneron_mesh"	
+}
+
+
+# BEL_rifle_FN49
+   entity = {
+		name = "BEL_rifle_FN49_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "BEL_rifle_FN49_mesh"		
+}
+
+# ARG_mg_Halcon
+	entity = {
+		name = "ARG_mg_Halcon_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "ARG_mg_Halcon_mesh"	
+}
+	
+# SWI_mg_ST57
+	entity = {
+		name = "SWI_mg_ST57_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "SWI_mg_ST57_mesh"	
+}
+
+# SWI_mg_M41
+	entity = {
+		name = "SWI_mg_M41_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "SWI_mg_M41_mesh"	
+}
+
+
+# HOL_rifle_m42
+   entity = {
+		name = "HOL_rifle_m42_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "HOL_rifle_m42_mesh"		
+}
+
+# SOV_rifle_Mosin
+   entity = {
+		name = "SOV_rifle_Mosin_entity"
+		clone = "SOV_infantry_weapon_mosin_entity"
+		pdxmesh = "SOV_rifle_Mosin_mesh"		
+}
+
+# SWI_rifle_AK44
+   entity = {
+		name = "SWI_rifle_AK44_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "SWI_rifle_AK44_mesh"		
+}
+
+# MEX_G3_weapon
+	entity = {
+		name = "MEX_G3_weapon_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "MEX_G3_weapon_mesh"	
+}
+
+# MEX_mendoza_rm2
+	entity = {
+		name = "MEX_smg_mendoza_rm2_entity"
+		clone = "SOV_infantry_weapon_ppsh42_entity"
+		pdxmesh = "MEX_smg_mendoza_rm2_mesh"	
+}
+
+
+# MEX mondragon m1908
+   entity = {
+		name = "MEX_rifle_mondragon_m1908_entity"
+		clone = "SOV_infantry_weapon_svd_entity"
+		pdxmesh = "MEX_rifle_mondragon_m1908_mesh"		
+}
+
+
+
+
+
+	
+	
+	

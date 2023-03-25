@@ -1,0 +1,1273 @@
+add_namespace = CulRevPurge
+add_namespace = Enlais_Tour
+add_namespace = PRCUN
+add_namespace = CulRev
+add_namespace = PLA_CulRev
+add_namespace = HyperCulRev
+add_namespace = PRC_Congress
+add_namespace = BeijingSpring
+add_namespace = PRC_Japan
+add_namespace = ZhenbaoConflict
+add_namespace = Mao_Return
+add_namespace = Cultural_Rev
+add_namespace = Red_Guard
+add_namespace = GLP
+add_namespace = PRC_Tibet
+
+country_event = {
+	id = PRC_Tibet.1
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Tibet.1"}
+	title = "The Tibet Situation"
+	desc = PRC_Tibet.1.d
+	picture = GFX_PRC_Tibet1
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Demand authority over Tibet"
+		TIB = {
+			country_event = { id = PRC_Tibet.3 days = 1 }
+		}
+	}
+	option = {
+		name = "Abandon our claims"
+		news_event = PRC_Tibet.2
+		867 = {
+			remove_core_of = PRC
+		}
+		1359 = {
+			remove_core_of = PRC
+		}
+		1549 = {
+			remove_core_of = PRC
+		}
+		1548 = {
+			remove_core_of = PRC
+		}
+		322 = {
+			remove_core_of = PRC
+		}
+		1361 = {
+			remove_core_of = PRC
+		}
+	}
+}
+
+news_event = {
+	id = PRC_Tibet.2
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Tibet.2"}
+	title = "[GetNewspaperHeader]China Abandons Claims on Tibet"
+	desc = PRC_Tibet.2.d
+	picture = GFX_Tibetan_Uprising
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Very Suprising"
+	}
+}
+
+country_event = {
+	id = PRC_Tibet.3
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Tibet.3"}
+	title = "China Demands Authority Over Tibet"
+	desc = PRC_Tibet.3.d
+	picture = GFX_PRC_Tibet1
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Comply with ther demands"
+		set_cosmetic_tag = PRC_TIB
+		PRC = {
+			country_event = { id = PRC_Tibet.4 days = 5 }
+		}
+		ai_chance  = {
+			base = 40 
+			modifier = {
+				factor = 0 
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	option = {
+		name = "Resist with arms!"
+		PRC = {
+			country_event = { id = PRC_Tibet.5 days = 5 }
+		}
+		ai_chance  = {
+			base = 60 
+			modifier = {
+				factor = 100 
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = PRC_Tibet.4 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Tibet.4"}
+	title = "Tibet Complies With Our Demands"
+	desc = PRC_Tibet.4.d
+	picture = GFX_PRC_Tibet4
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Greatest of News!"
+		puppet = TIB
+	}
+}
+
+country_event = {
+	id = PRC_Tibet.5
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Tibet.5"}
+	title = "Tibet Refuses Our Demands"
+	desc = PRC_Tibet.5.d
+	picture = GFX_PRC_Tibet5
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Long live the great Chinese People's Liberation Army!"
+			declare_war_on = {
+				target = TIB
+				type = annex_everything
+			}
+			set_country_flag = Tibet_Invasion_1
+			activate_mission = The_Invasion_of_Tibet
+			RAJ = {
+				country_event = PRC_TIBETAN.10
+			}
+	}
+}
+
+country_event = {
+	id = PRC_Tibet.6
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Tibet.6"}
+	title = "Seventeen Point Agreement"
+	desc = PRC_Tibet.6.d
+	picture = GFX_PRC_Tibet4
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Very well"
+		news_event = PRC_TIBETAN.1
+		set_cosmetic_tag = PRC_TIB
+		PRC = {
+			puppet = TIB
+			white_peace = {
+				tag = TIB
+				message = "Tibet has agreed to the Seventeen Point Agreement."
+			}
+		}
+		if = {
+			limit = {
+				RAJ = {
+					has_war_with = PRC
+				}
+			}
+			RAJ = {
+				white_peace = PRC
+				dismantle_faction = yes
+			}
+			KAS = { white_peace = PRC }
+		}
+	}
+}
+
+country_event = {
+	id = PRC_Tibet.7
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Tibet.7"}
+	title = "The Tibetan Uprising"
+	desc = PRC_Tibet.7.d
+	picture = GFX_PRC_Tibet1
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Show The Might of the Army"
+		unlock_national_focus = PRC_Crush_the_Insurgency
+	}
+	option = {
+		name = "Leave them, there's more important things"
+		unlock_national_focus = PRC_Preserve_Sino_Indian_Relations
+	}
+}
+
+country_event = {
+	id = CulRevPurge.2 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = CulRevPurge.2"}
+	title = "Deng Xiaoping Purged"
+	desc = CulRevPurge.2.d
+	picture = GFX_Deng_Purged
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Counter-revolutionaries must be dealt with"
+	}
+}
+ 
+country_event = {
+	id = CulRevPurge.3 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = CulRevPurge.3"}
+	title = "The Arrest of Liu Shaoqi"
+	desc = CulRevPurge.3.d
+	picture = GFX_CulRevPurge_3
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Good riddance"
+	}
+}
+country_event = {
+	id = HyperCulRev.3 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = HyperCulRev.3"}
+	title = "Deployment of the Red Guard to Tibet and Xinjiang"
+	desc = HyperCulRev.3.d
+	picture = GFX_HyperCulRev_3
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Good news"
+	}
+}
+country_event = {
+	id = HyperCulRev.4 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = HyperCulRev.4"}
+	title = "Eastern European Influence Campaign"
+	desc = HyperCulRev.4.d
+	picture = GFX_HyperCulRev_4 
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "We must educate them on their errors"
+	}
+}
+country_event = {
+	id = BeijingSpring.5 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = BeijingSpring.5"}
+	title = "Purging the Old Guard"
+	desc = BeijingSpring.5.d
+	picture = GFX_BeijingSpring_5
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "We can not allow the Maoists a foothold"
+	}
+}
+country_event = {
+	id = PRC_Japan.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Japan.1"}
+	title = "The Expulsion of the Japanese Population"
+	desc = PRC_Japan.1.d
+	picture = GFX_Expel_Japanese
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Good riddance"
+	}
+}
+country_event = {
+	id = BeijingSpring.2 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = BeijingSpring.2"}
+	
+	title = "The Fall of Jiang Qing"
+	desc = BeijingSpring.2.d
+	picture = GFX_BeijingSpring_2
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Good"
+	}
+}
+country_event = {
+	id = BeijingSpring.4 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = BeijingSpring.4"}
+	
+	title = "The Dismissal of Lin Biao"
+	desc = BeijingSpring.4.d
+	picture = GFX_BeijingSpring_4
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "We must seperate the army from politics"
+	}
+}
+country_event = {
+	id = BeijingSpring.6 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = BeijingSpring.6"}
+	
+	title = "Seven Parts Good, Three Parts Bad"
+	desc = BeijingSpring.6.d
+	picture = GFX_BeijingSpring_6
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "A solid critique"
+	}
+}
+country_event = {
+	id = Mao_Return.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Mao_Return.1"}
+	
+	title = "Mao Begins Effort to Retake Power"
+	desc = Mao_Return.1.d
+	picture = GFX_Mao_Return_1
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "We will see if his gambit works"
+	}
+}
+country_event = {
+	id = Mao_Return.2 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Mao_Return.2"}
+	
+	title = "CPC Openly Hostile to Mao's Return"
+	desc = Mao_Return.2.d
+	picture = GFX_Mao_Return_2
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "A shame"
+	}
+}
+country_event = {
+	id = Mao_Return.3 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Mao_Return.3"}
+	
+	title = "PLA Supportive of Mao's Return"
+	desc = Mao_Return.3.d
+	picture = GFX_Mao_Return_3
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Excellent news!"
+	}
+	option = {
+		name = "This can not stand!"
+		load_focus_tree = LIU_60s
+		country_event = Mao_Return.4
+	}
+}
+country_event = {
+	id = Mao_Return.4 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Mao_Return.4"}
+	
+	title = "Mao Zedong Forced into Permanent Retirement"
+	desc = Mao_Return.4.d
+	picture = GFX_Mao_Return_4
+	major = yes
+	is_triggered_only = yes
+
+
+	option = {
+		name = "He is but a relic of old wars"
+	}
+}
+country_event = {
+	id = ZhenbaoConflict.3 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = ZhenbaoConflict.3"}
+	title = "The Zhenbao Island Conflict"
+	desc = ZhenbaoConflict.3.d
+	picture = GFX_ZhenbaoConflict_Soviet
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Declare a Ceasefire"
+		news_event = ZhenbaoConflict.25
+		PRC = {
+			complete_national_focus = PRC_60s_Issue_a_Ceasefire
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 10
+			}
+		}
+	}
+	option = {
+		name = "Offer Negotiations"
+		news_event = ZhenbaoConflict.31
+		PRC = {
+			complete_national_focus = PRC_60s_Settle_the_Issue
+		}
+		add_threat = -5
+		ai_chance = {
+			factor = 25
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = "This Means War"
+		ai_chance = {
+			factor = 25
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		PRC = {
+			complete_national_focus = PRC_60s_Escalate_to_Global_Conflict
+		}
+		declare_war_on = {
+			target = PRC
+			type = annex_everything
+		}
+		news_event = ZhenbaoConflict.30
+	}
+}
+country_event = {
+	id = ZhenbaoConflict.2 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = ZhenbaoConflict.2"}
+	
+	title = "The Zhenbao Island Conflict"
+	desc = ZhenbaoConflict.2.d
+	picture = GFX_ZhenbaoConflict_China
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "How will the Soviets respond?"
+	}
+}
+country_event = {
+	id = GLP.100 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = GLP.100"}
+	
+	title = "The Failure of the Great Leap Forward"
+	desc = GLP.100.d
+	picture = GFX_Great_Leap_Forward_Failure
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "We can rebuild from this failure!"
+		
+	}
+}
+country_event = {
+	id = Cultural_Rev.4 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Cultural_Rev.4"}
+	
+	title = "The May 16th Notification"
+	desc = Cultural_Rev.4.d
+	picture = GFX_Cultural_Rev_4
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "There is a storm coming..."
+		news_event = Cultural_Rev.2
+	}
+}
+country_event = {
+	id = Cultural_Rev.200 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Cultural_Rev.200"}
+	
+	title = "Mao Removed as Chairman of the PRC"
+	desc = Cultural_Rev.200.d
+	picture = GFX_Cultural_Rev_200
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "He has proven himself incapable of leading China!"
+	}
+}
+country_event = {
+	id = Cultural_Rev.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Cultural_Rev.1"}
+	
+	title = "Jiang Qing Seizes Control of the Beijing Opera"
+	desc = Cultural_Rev.1.d
+	picture = GFX_Cultural_Rev_1
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Another step towards crushing the counterrevolutionaries!"
+	}
+}
+country_event = {
+	id = Cultural_Rev.3 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Cultural_Rev.3"}
+	title = "President Liu's Objections Overruled"
+	desc = Cultural_Rev.3.d
+	picture = GFX_Cultural_Rev_3
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Down with the counterrevolutionaries!"
+	}
+}
+ 
+news_event = {
+	id = CulRevPurge.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = CulRevPurge.1"}
+	title = "[GetNewspaperHeader]Purges in the Chinese Communist Party"
+	picture = GFX_CulRevPurge_1
+	is_triggered_only = yes
+	major = yes
+	desc = CulRevPurge.1.d
+
+	option = {
+		name = "Concerning"
+	}
+}
+news_event = {
+	id = Enlais_Tour.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Enlais_Tour.1"}
+	title = "[GetNewspaperHeader]Zhou Enlai's World Tour"
+	picture = GFX_Enlais_Tour_1
+	is_triggered_only = yes
+	major = yes
+	desc = Enlais_Tour.1.d
+
+	option = {
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = PRCUN.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRCUN.1"}
+	title = "[GetNewspaperHeader]PRC Lobbying for UN Recognition"
+	picture = GFX_PRCUN_1
+	is_triggered_only = yes
+	major = yes
+	desc = PRCUN.1.d
+
+	option = {
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = CulRev.11 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = CulRev.11"}
+	title = "[GetNewspaperHeader]Purge of Reactionary Literature in China"
+	picture = GFX_CulRev_11
+	is_triggered_only = yes
+	major = yes
+	desc = CulRev.11.d
+
+	option = {
+		name = "A tragic loss of knowledge"
+	}
+}
+news_event = {
+	id = CulRev.12 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = CulRev.12"}
+	title = "[GetNewspaperHeader]The Desecration of Noble Graves"
+	picture = GFX_CulRev_12
+	is_triggered_only = yes
+	major = yes
+	desc = CulRev.12.d
+
+	option = {
+		name = "A major cultural loss"
+	}
+}
+news_event = {
+	id = CulRevPurge.4 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = CulRevPurge.4"}
+	title = "[GetNewspaperHeader]Assault on Confucian Religious Sites"
+	picture = GFX_CulRevPurge_4
+	is_triggered_only = yes
+	major = yes
+	desc = CulRevPurge.4.d
+
+	option = {
+		name = "They are going too far"
+	}
+}
+news_event = {
+	id = PLA_CulRev.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PLA_CulRev.1"}
+	title = "[GetNewspaperHeader]The Deployment of the People's Liberation Army"
+	picture = GFX_PLA_CulRev_1
+	is_triggered_only = yes
+	major = yes
+	desc = PLA_CulRev.1.d
+
+	option = {
+		name = "Hopefully this will restore stability"
+	}
+}
+news_event = {
+	id = HyperCulRev.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = HyperCulRev.1"}
+	title = "[GetNewspaperHeader]The Execution of Liu Shaqoi"
+	picture = GFX_HyperCulRev_1
+	is_triggered_only = yes
+	major = yes
+	desc = HyperCulRev.1.d
+
+	option = {
+		name = "What is going on in China?"
+	}
+}
+news_event = {
+	id = HyperCulRev.2 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = HyperCulRev.2"}
+	title = "[GetNewspaperHeader]The Execution of Deng Xiaoping"
+	picture = GFX_HyperCulRev_2
+	is_triggered_only = yes
+	major = yes
+	desc = HyperCulRev.2.d
+
+	option = {
+		name = "Barbaric"
+	}
+}
+news_event = {
+	id = HyperCulRev.5 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = HyperCulRev.5"}
+	title = "[GetNewspaperHeader]Zhou Enlai Purged"
+	picture = GFX_HyperCulRev_5
+	is_triggered_only = yes
+	major = yes
+	desc = HyperCulRev.5.d
+
+	option = {
+		name = "A betrayal of the highest order"
+	}
+}
+news_event = {
+	id = HyperCulRev.6 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = HyperCulRev.6"}
+	title = "[GetNewspaperHeader]The Death of Puyi"
+	picture = GFX_HyperCulRev_6
+	is_triggered_only = yes
+	major = yes
+	desc = HyperCulRev.6.d
+
+	option = {
+		name = "Barbaric"
+	}
+}
+news_event = {
+	id = PRC_Congress.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Congress.1"}
+	title = "[GetNewspaperHeader]The IXth Congress of the CPC"
+	picture = GFX_PRC_Congress_1
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Congress.1.d
+
+	option = {
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = PRC_Congress.2 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Congress.2"}
+	title = "[GetNewspaperHeader]The IXth Congress of the CPC"
+	picture = GFX_PRC_Congress_2
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Congress.2.d
+
+	option = {
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = PRC_Congress.3 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Congress.3"}
+	title = "[GetNewspaperHeader]The IXth Congress of the CPC"
+	picture = GFX_PRC_Congress_3
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Congress.3.d
+
+	option = {
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = BeijingSpring.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = BeijingSpring.1"}
+	title = "[GetNewspaperHeader]The Beijing Spring"
+	picture = GFX_BeijingSpring_1
+	is_triggered_only = yes
+	major = yes
+	desc = BeijingSpring.1.d
+
+	option = {
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = ZhenbaoConflict.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = ZhenbaoConflict.1"}
+	title = "[GetNewspaperHeader]Growing Tensions in Zhenbao"
+	picture = GFX_ZhenbaoConflict_1
+	is_triggered_only = yes
+	major = yes
+	desc = ZhenbaoConflict.1.d
+
+	option = {
+		name = "Why die for Siberia?"
+	}
+}
+news_event = {
+	id = ZhenbaoConflict.10 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = ZhenbaoConflict.10"}
+	title = "[GetNewspaperHeader]The Zhenbao Island Conflict"
+	picture = GFX_ZhenbaoConflict_10
+	is_triggered_only = yes
+	major = yes
+	desc = ZhenbaoConflict.10.d
+
+	option = {
+		name = "Hopefully war will be averted"
+	}
+}
+news_event = {
+	id = ZhenbaoConflict.30 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = ZhenbaoConflict.30"}
+	title = "[GetNewspaperHeader]The Sino-Soviet War"
+	picture = GFX_ZhenbaoConflict_30
+	is_triggered_only = yes
+	major = yes
+	desc = ZhenbaoConflict.30.d
+
+	option = {
+		name = "War once again ravages the world"
+	}
+}
+news_event = {
+	id = ZhenbaoConflict.25 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = ZhenbaoConflict.25"}
+	title = "[GetNewspaperHeader]Ceasefire in Zhenbao"
+	picture = GFX_ZhenbaoConflict_25
+	is_triggered_only = yes
+	major = yes
+	desc = ZhenbaoConflict.25.d
+
+	option = {
+		name = "Hopefully this stops a war"
+	}
+}
+news_event = {
+	id = ZhenbaoConflict.31 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = ZhenbaoConflict.31"}
+	title = "[GetNewspaperHeader]Peace Negotiations over Zhenbao"
+	picture = GFX_ZhenbaoConflict_31
+	is_triggered_only = yes
+	major = yes
+	desc = ZhenbaoConflict.31.d
+
+	option = {
+		name = "An embarrassment for the Soviets"
+	}
+}
+news_event = {
+	id = Cultural_Rev.2 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Cultural_Rev.2"}
+	title = "[GetNewspaperHeader]The Little Red Book"
+	picture = GFX_Cultural_Rev_2
+	is_triggered_only = yes
+	major = yes
+	desc = Cultural_Rev.2.d
+	option = {	
+		trigger = {
+			NOT = { has_government = maoism }
+		}
+		name = "Revolutions are rarely bloodless..."
+	}
+	option = {	
+		trigger = {
+			has_government = maoism
+		}
+		name = "Long Live Chairman Mao!"
+	}
+}
+
+add_namespace = PRC_Focus
+
+news_event = {
+	id = PRC_Focus.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.1"}
+	title = "[GetNewspaperHeader]The Taiwan Straits Crisis"
+	picture = GFX_First_Taiwan_Straits_Crisis
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_1_desc
+
+
+	option = {
+
+		name = "Concerning"
+	}
+
+}
+
+news_event = {
+	id = PRC_Focus.2 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.2"}
+	title = "[GetNewspaperHeader]The Anti-Rightist Campaign"
+	picture = GFX_Anti_Rightist_Campaign
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_2_desc
+
+
+	option = {
+
+		name = "Interesting"
+	}
+}
+
+news_event = {
+	id = PRC_Focus.3 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.3"}
+	title = "[GetNewspaperHeader]Ethnic and Religious Persecution in the People's Republic of China"
+	picture = GFX_Anti_Rightist_Campaign2
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_3_desc
+
+
+	option = {
+
+		name = "Concerning"
+	}
+}
+
+news_event = {
+	id = PRC_Focus.4 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.4"}
+	title = "[GetNewspaperHeader]The Hundred Flowers Campaign"
+	picture = GFX_Hundred_Flowers_Campaign
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_4_desc
+
+
+	option = {
+
+		name = "Interesting"
+	}
+}
+
+news_event = {
+	id = PRC_Focus.5 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.5"}
+	title = "[GetNewspaperHeader]The Three-Anti Campaign"
+	picture = GFX_Three_Anti_Campaign
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_5_desc
+
+
+	option = {
+
+		name = "Interesting"
+	}
+}
+
+news_event = {
+	id = PRC_Focus.6 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.6"}
+	title = "[GetNewspaperHeader]The Five-Anti Campaign"
+	picture = GFX_Five_Anti_Campaign
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_6_desc
+
+
+	option = {
+
+		name = "Interesting"
+	}
+}
+
+news_event = {
+	id = PRC_Focus.7 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.7"}
+	title = "[GetNewspaperHeader]The Executions of Dissidents in the Anti-Rightist Campaign"
+	picture = GFX_Anti_Rightist_Campaign3
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_7_desc
+
+
+	option = {
+
+		name = "Concerning"
+	}
+}
+
+news_event = {
+	id = PRC_Focus.8 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.8"}
+	title = "[GetNewspaperHeader]Purge of the Legal System in the Anti-Rightist Campaign"
+	picture = GFX_Anti_Rightist_Campaign4
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_8_desc
+
+
+	option = {
+
+		name = "Concerning"
+	}
+}
+news_event = {
+	id = PRC_Focus.9 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.9"}
+	title = "[GetNewspaperHeader]The Death of Mao Anying"
+	picture = GFX_Mao_Anyang_Death
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_9_desc
+
+
+	option = {
+
+		name = "Rest in Peace"
+	}
+}
+news_event = {
+	id = PRC_Focus.10 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.10"}
+	title = "[GetNewspaperHeader]The Death of Mao Zedong"
+	picture = GFX_Mao_Funeral
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_10_desc
+
+	immediate = {
+		hidden_effect = {
+			create_country_leader = {
+				 name = "Hua Guofeng"
+				 picture = "Hua_Guofeng.dds"
+				 ideology = maoist
+			}		
+		}
+	}
+	option = {
+
+		name = "What will happen in the People's Republic now?"
+	}
+}
+news_event = {
+	id = PRC_Focus.11 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.11"}
+	title = "[GetNewspaperHeader]The Invasion of Tibet"
+	picture = GFX_Invasion_of_Tibet
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_11_desc
+
+
+	option = {
+
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = PRC_Focus.12 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.12"}
+	title = "[GetNewspaperHeader]The Crushing of the Kuomintang-Islamic Insurgency"
+	picture = GFX_KMT_Generic_Soldiers
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_12_desc
+
+
+	option = {
+
+		name = "Interesting"
+	}
+}
+
+news_event = {
+	id = PRC_Focus.13 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.13"}
+	title = "[GetNewspaperHeader]The End of the Tibetan Uprising"
+	picture = GFX_Tibetan_Uprising
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_13_desc
+
+
+	option = {
+
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = PRC_Focus.14 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.14"}
+	title = "[GetNewspaperHeader]The Four Pests Campaign"
+	picture = GFX_Four_Pests_Campaign
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_14_desc
+
+
+	option = {
+
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = PRC_Focus.15 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.15"}
+	title = "[GetNewspaperHeader]Sino-Korean Treaty of Friendship"
+	picture = GFX_Korean_Sino_Treaty
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_15_desc
+
+
+	option = {
+
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = PRC_Focus.25 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.25"}
+	title = "[GetNewspaperHeader]People's Republic of China Offers General Elections with Taiwan"
+	picture = GFX_PRC_Mao_Taiwan
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_25_desc
+
+
+	option = {
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = PRC_Focus.16 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.16"}
+	title = "[GetNewspaperHeader]The Chinese National People's Congress"
+	picture = GFX_PRC_Congress
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_16_desc
+
+	option = {
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = PRC_Focus.17 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.17"}
+	title = "[GetNewspaperHeader]Reconsidering the Legitimacy of the Regime"
+	picture = GFX_PRC_Legitimacy_of_the_Regime
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_17_desc
+
+
+	option = {
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = PRC_Focus.18 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.18"}
+	title = "[GetNewspaperHeader]The Tibetan Uprising"
+	picture = GFX_PRC_Tibetan_Uprising
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_18_desc
+
+	trigger = {
+		NOT = { has_country_flag = tib_uprising }
+	}
+
+	immediate = {
+		set_country_flag = tib_uprising
+	}
+	option = {
+		name = "Interesting"
+		trigger = {
+			NOT = {
+				tag = PRC
+			}
+		}
+	}
+	option = {
+		name = "Insulting!"
+		trigger = {
+			tag = PRC
+		}
+		country_event = PRC_Tibet.7
+	}
+}
+news_event = {
+	id = PRC_Focus.19 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.19"}
+	title = "[GetNewspaperHeader]Landlord Classicide"
+	picture = GFX_PRC_Landlord_Classicide
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_19_desc
+
+
+	option = {
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = PRC_Focus.20 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.20"}
+	title = "[GetNewspaperHeader]The People's Volunteer Army Enters Korea"
+	picture = GFX_PRC_Korea
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_20_desc
+
+	option = {
+		name = "Disconcerting"
+	}
+}
+news_event = {
+	id = PRC_Focus.21 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.21"}
+	title = "[GetNewspaperHeader]People's Republic of China Lobbying Efforts for European Recognition"
+	picture = GFX_PRC_Foriegn
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_22_desc
+
+
+	option = {
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = PRC_Focus.22 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.22"}
+	title = "[GetNewspaperHeader]People's Republic of China Lobbying Efforts for Asian Recognition"
+	picture = GFX_PRC_Foriegn
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_21_desc 
+
+
+	option = {
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = PRC_Focus.23 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.23"}
+	title = "[GetNewspaperHeader]Prosecution of the Rural Cults"
+	picture = GFX_PRC_Suppression_of_Cults
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_23_desc
+
+
+	option = {
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = PRC_Focus.24 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.24"}
+	title = "[GetNewspaperHeader] The Great Leap Forward"
+	picture = GFX_PRC_Great_Leap_Forward
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_24_desc
+
+
+	option = {
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = PRC_Focus.26 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.26"}
+	title = "[GetNewspaperHeader]The Bandung Conference"
+	picture = GFX_Bandung_Conference
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_26_desc
+
+
+	option = {
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = PRC_Focus.27 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.27"}
+	title = "[GetNewspaperHeader]The Occupation of the Democratic People's Republic of Korea"
+	picture = GFX_PRC_Korea_Two
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_27_desc
+
+
+	option = {
+		name = "Concerning"
+	}
+}
+news_event = {
+	id = PRC_Focus.28 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = PRC_Focus.28"}
+	title = "[GetNewspaperHeader]The Lushan Conference"
+	picture = GFX_PRC_Lushan_Conference
+	is_triggered_only = yes
+	major = yes
+	desc = PRC_Focus_28_desc
+
+
+	option = {
+		name = "Concerning"
+	}
+}

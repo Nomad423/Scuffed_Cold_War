@@ -1,0 +1,118 @@
+ideas = {
+	hidden_ideas = {
+		Liu_Yalou = {
+		picture = Liu_Yalou
+			allowed = {
+				always = no
+			}
+			
+			#traits = { hidden_ideas_old_guard }
+		}
+		Wu_Faxian = {
+			picture = Wu_Faxian
+			allowed = {
+				always = no
+			}
+			
+			#traits = { hidden_ideas_ground_support_1 }
+		}
+
+		Zhang_Tingfa = {
+			picture = Zhang_Tingfa
+			allowed = {
+				always = no
+			}
+			
+			#traits = { hidden_ideas_all_weather_1 }
+		}
+   }
+   	hidden_ideas = {
+		Zhou_Xihan = {
+			picture = Zhou_Xihan
+			allowed = {
+				always = no
+			}
+			
+			#traits = { hidden_ideas_maneuver_1 }
+		}
+		Luo_Shunchu = {
+			picture = Luo_Shunchu
+			allowed = {
+				always = no
+			}
+			
+			traits = { navy_fleet_logistics_1 }
+		}
+	}
+	hidden_ideas = {
+		zhou_enlai = {
+		   picture = zhou_enlai
+		   allowed = {
+				always = no
+			   }
+			available = {
+				NOT = { has_country_flag = Purged_Enlai }
+			}
+		
+		   traits = { Foriegn_Adventurist_minister }
+		}
+
+		Ji_Pengfei = {
+		   picture = Ji_Pengfei
+		   allowed = {
+				always = no
+			   }
+		
+		   traits = { Revolutionary_Exporter_minister }
+		}
+
+		Qiao_Guanhua = {
+		   picture = Qiao_Guanhua
+		   allowed = {
+				always = no
+			   }
+		
+		   traits = { Globalist_minister }
+		}
+
+		Chen_Yi = {
+		   picture = Chen_Yi
+		   allowed = {
+				always = no
+				
+			   }
+			   available = {
+				NOT = { has_country_flag = Purged_Chen_Yi }
+			   }
+		
+		   traits = { Foreign_Aid_Advocate_minister }
+		}
+    }
+
+		hidden_ideas = {
+		 Ma_Xulun = {
+			picture = Ma_Xulun
+			allowed = {
+			   always = no
+			}
+		traits = { Radical_Educator_minister }
+		 
+		}
+		 Lu_Dingyi = {
+			picture = LuDingyi
+			allowed = {
+			   always = no
+			}
+		traits = { Progressive_Educator_minister }
+		 
+		}
+		 Mao_Dun = {
+			picture = Mao_Dun
+			allowed = {
+			   always = no
+			}
+		traits = { Traditional_Educator_minister }
+		 
+		}
+	}
+}

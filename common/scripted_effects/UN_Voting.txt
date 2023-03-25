@@ -1,0 +1,594 @@
+un_ai_vote_weights ={
+    #var:UNS.un_nation_target is the UN Voting Target
+    #influence_array^0 is the largest foreign influencer
+
+    if = {
+        limit = {
+            check_variable = { UNS.un_action_set = 9 }
+        }
+        set_variable = {
+            UNS.un_nation_target = UNS.un_state_target_owner
+        }
+    }
+    set_variable = {
+        ai_un_voting_weight = 0
+    }
+    var:UNS.un_nation_target = {
+        set_variable = {
+            PREV.target_badboy = badboy
+        }
+    }
+    subtract_from_variable = {
+        ai_un_voting_weight = target_badboy
+    }
+    meta_effect = {
+        text = {
+            add_to_variable = { ai_un_voting_weight = THIS.opinion@[CHECKTAG] }
+        }
+        CHECKTAG = "[?var:UNS.un_nation_target.GetTag]"
+    }       
+    if = {
+        limit = {
+            has_war_with = UNS.un_nation_target
+        }
+        add_to_variable = { ai_un_voting_weight = -500 }
+    }
+    if = {
+        limit = {
+            tag = USA
+            var:UNS.un_nation_target = {
+                tag = ISR
+            }
+        }
+        add_to_variable = { ai_un_voting_weight = 25 }
+    }
+    if = {
+        limit = {
+            OR = {
+                tag = USA
+                tag = ENG
+            }
+            NOT = {
+                has_country_flag = Anti_Apartheid_FP
+            }
+            var:UNS.un_nation_target = {
+                tag = SAF
+            }
+        }
+        add_to_variable = { ai_un_voting_weight = 25 }
+    }
+    if = {
+        limit = {
+            var:UNS.un_nation_target = {
+                is_subject_of = PREV
+            }
+        }
+        add_to_variable = { ai_un_voting_weight = 400 }
+    }
+    if = {
+        limit = {
+            var:UNS.un_nation_target = {
+                NOT = { check_variable = { influence_array^0 = 0 } }
+                var:influence_array^0 = {
+                    tag = PREV.PREV
+                }
+            }
+        }
+        add_to_variable = { ai_un_voting_weight = 200 }
+    }
+    if = {
+        limit = {
+            NOT = { check_variable = { influence_array^0 = 0 } }
+            var:influence_array^0 = {
+                tag = var:UNS.un_nation_target
+            }
+        }
+        add_to_variable = { ai_un_voting_weight = 200 }
+    }
+    if = {
+        limit = {
+            OR = {
+                has_idea = SEATO_member
+                has_idea = CENTO_member
+                has_idea = nato_member
+            }
+        }
+        if = {
+            limit = {
+                var:UNS.un_nation_target = {
+                    OR = {
+                        has_idea = SEATO_member
+                        has_idea = CENTO_member
+                        has_idea = nato_member
+                    }
+                }
+            }
+            add_to_variable = { ai_un_voting_weight = 200 }
+        }
+        #if = {
+        #    limit = {
+        #        var:UNS.un_nation_target = {
+        #            OVERLORD = {
+        #                OR = {
+        #                    has_idea = SEATO_member
+        #                    has_idea = CENTO_member
+        #                    has_idea = nato_member
+        #                }
+        #            }
+        #        }
+        #    }
+        #    add_to_variable = { ai_un_voting_weight = 200 }
+        #} Didn't work either way, maybe OVERLORD scope doesn't work with variables (hoi4 is a great game)
+    }
+    if = {
+        limit = {
+            OR = {
+                has_government = fascism
+                has_government = nationalist
+            }
+        }
+        if = {
+            limit = {
+                var:UNS.un_nation_target = {
+                    OR = {
+                        has_government = communism
+                        has_government = maoism
+                        has_government = trotskyism
+                    }
+                }
+            }
+            add_to_variable = { ai_un_voting_weight = -50 }
+        }
+        if = {
+            limit = {
+                var:UNS.un_nation_target = {
+                    OR = {
+                        has_government = fascism
+                        has_government = nationalist
+                    }
+                }
+            }
+            add_to_variable = { ai_un_voting_weight = 50 }
+        }
+    }
+    if = {
+        limit = {
+            OR = {
+                has_government = communism
+                has_government = maoism
+                has_government = trotskyism
+            }
+        }
+        if = {
+            limit = {
+                var:UNS.un_nation_target = {
+                    OR = {
+                        has_government = communism
+                        has_government = maoism
+                        has_government = trotskyism
+                    }
+                }
+            }
+            add_to_variable = { ai_un_voting_weight = 50 }
+        }
+        if = {
+            limit = {
+                var:UNS.un_nation_target = {
+                    has_government = fascism
+                }
+            }
+            add_to_variable = { ai_un_voting_weight = -50 }
+        }
+        if = {
+            limit = {
+                var:UNS.un_nation_target = {
+                    OR = {
+                        has_idea = SEATO_member
+                        has_idea = CENTO_member
+                        has_idea = nato_member
+                    }
+                }
+            }
+            add_to_variable = { ai_un_voting_weight = -50 }
+        }
+    }
+    
+    #if = {
+       # limit = {
+      #      is_subject = yes
+     #   }
+    #}   
+}
+monthly_infamy_calc = {
+    if = {
+		limit = { NOT = { has_variable = badboy } } # check to prevent error if empty
+		set_variable = { badboy = 0 }
+	}
+    clamp_variable = {
+        var = badboy
+        min = 0
+        max = 100
+    }
+    add_to_variable = {
+        badboy = generated_badboy_current
+    }
+    set_variable = {
+        generated_badboy = THIS.has_added_tension_amount 
+    }
+    set_variable = {
+        generated_badboy_current = generated_badboy 
+    }
+    multiply_variable = { generated_badboy_current = -1 }
+    add_to_variable = { badboy = generated_badboy }
+    if = {
+        limit = {
+            has_idea = gulag_politic
+        }
+        add_to_variable = {
+            badboy = 0.10
+        }
+    }
+    if = {
+        limit = {
+            has_idea = repression
+        }
+        add_to_variable = {
+            badboy = 0.05
+        }
+    }
+    if = {
+        limit = {
+            has_idea = gulag_politic_expanded
+        }
+        add_to_variable = {
+            badboy = 0.15
+        }
+    }
+    if = {
+        limit = {
+            has_idea = rightwing_deathsquads
+        }
+        add_to_variable = {
+            badboy = 0.15
+        }
+    }
+    if = {
+        limit = {
+            has_idea = leftwing_deathsquads
+        }
+        add_to_variable = {
+            badboy = 0.15
+        }
+    }
+    if = {
+        limit = {
+            has_idea = cocacolawing_deathsquads
+        }
+        add_to_variable = {
+            badboy = 0.15
+        }
+    }
+    if = {
+        limit = {
+            has_idea = martial_law_perm
+        }
+        add_to_variable = {
+            badboy = 0.25
+        }
+    }
+    if = {
+        limit = {
+            has_idea = opposition_banned
+        }
+        add_to_variable = {
+            badboy = 0.25
+        }
+    }
+    if = {
+        limit = {
+            has_idea = policy_voting_temp_0
+        }
+        add_to_variable = {
+            badboy = 0.1
+        }
+    }
+    if = {
+        limit = {
+            has_idea = policy_religion_temp_0
+        }
+        add_to_variable = {
+            badboy = 0.1
+        }
+    }
+    if = {
+        limit = {
+            has_idea = policy_religion_temp_0a
+        }
+        add_to_variable = {
+            badboy = 0.1
+        }
+    }
+    if = {
+        limit = {
+            has_idea = policy_media_temp_0
+        }
+        add_to_variable = {
+            badboy = 0.1
+        }
+    }
+    if = {
+        limit = {
+            has_idea = policy_women_temp_0
+        }
+        add_to_variable = {
+            badboy = 0.1
+        }
+    }
+    if = {
+        limit = {
+            has_idea = policy_minorities_temp_0
+        }
+        add_to_variable = {
+            badboy = 0.15
+        }
+    }
+    if = {
+        limit = {
+            check_variable = { apartheidValue > 0 }
+        }
+        add_to_variable = {
+            badboy = 0.15
+        }
+    }
+    if = {
+        limit = {
+            check_variable = { segregationValue < 0 }
+        }
+        add_to_variable = {
+            badboy = 0.05
+        }
+    }
+        
+
+    subtract_from_variable = {
+        badboy = -0.25
+    }
+}
+
+UN_ai_vote_sorting = {
+    un_ai_vote_weights = yes
+	if = {
+        limit = {
+            OR = {
+                check_variable = { UNS.un_action_set = 0 }
+                check_variable = { UNS.un_action_set = 1 }
+                check_variable = { UNS.un_action_set = 2 }
+                check_variable = { UNS.un_action_set = 3 }
+                check_variable = { UNS.un_action_set = 4 }
+                check_variable = { UNS.un_action_set = 5 }
+                check_variable = { UNS.un_action_set = 6 }
+                check_variable = { UNS.un_action_set = 7 }
+                check_variable = { UNS.un_action_set = 8 }
+                check_variable = { UNS.un_action_set = 17 }
+            }
+        }
+        
+            if = {
+                limit = {
+                    has_idea = UN_Security_Council_Member_Perm
+                    has_political_power > 249
+                    check_variable = {
+                        ai_un_voting_weight > 24
+                    }
+                }
+                add_to_array = { UNS.un_vote_veto_list = THIS.id }
+                add_to_array = { UNS.un_vote_ = THIS.id }
+                 add_to_variable = { UNS.un_no_count = 1 }
+                add_to_variable = { UNS.un_veto_count = 1 }
+                add_political_power = -250
+               set_country_flag = UN_VETO_ONGOING
+            }
+            else_if = {
+                limit = {
+                   check_variable = {
+                        ai_un_voting_weight > 24
+                    }
+                }
+                add_to_array = { UNS.un_vote_no_list = THIS.id }
+                add_to_variable = { UNS.un_no_count = 1 }
+                set_country_flag = UN_NO_ONGOING
+            }
+            else_if = {
+                limit = {
+                   check_variable = {
+                        ai_un_voting_weight < -24
+                    }
+
+                }
+                add_to_array = { UNS.un_vote_yes_list = THIS.id }
+                add_to_variable = { UNS.un_yes_count = 1 }
+                set_country_flag = UN_YES_ONGOING
+            }
+            else = {
+                 add_to_array = { UNS.un_vote_abstain_list = THIS.id }
+                add_to_variable = { UNS.un_abstain_count = 1 }  
+                set_country_flag = UN_ABSTAIN_ONGOING                 
+            }
+        }
+    
+	if = {
+        limit = {
+            check_variable = { UNS.un_action_set = 9 }
+        }
+            if = {
+                limit = {
+                    has_idea = UN_Security_Council_Member_Perm
+                    has_political_power > 249
+                    check_variable = {
+                        ai_un_voting_weight > 49
+                    }
+                }
+                add_to_array = { UNS.un_vote_veto_list = THIS.id }
+                add_to_array = { UNS.un_vote_ = THIS.id }
+                 add_to_variable = { UNS.un_no_count = 1 }
+                add_to_variable = { UNS.un_veto_count = 1 }
+                add_political_power = -250
+               set_country_flag = UN_VETO_ONGOING
+            }
+            else_if = {
+                limit = {
+                    check_variable = {
+                        ai_un_voting_weight > 24
+                    }
+                }
+                add_to_array = { UNS.un_vote_no_list = THIS.id }
+                add_to_variable = { UNS.un_no_count = 1 }
+                set_country_flag = UN_NO_ONGOING
+            }
+            else_if = {
+                limit = {
+                  check_variable = { ai_un_voting_weight < 0 }
+                }
+                add_to_array = { UNS.un_vote_yes_list = THIS.id }
+                add_to_variable = { UNS.un_yes_count = 1 }
+                set_country_flag = UN_YES_ONGOING
+            }
+            else = {
+                 add_to_array = { UNS.un_vote_abstain_list = THIS.id }
+                add_to_variable = { UNS.un_abstain_count = 1 }  
+                set_country_flag = UN_ABSTAIN_ONGOING                 
+            }
+    }
+	if = {
+        limit = {
+            OR = {
+                check_variable = { UNS.un_action_set = 10 }
+                check_variable = { UNS.un_action_set = 11 }
+                check_variable = { UNS.un_action_set = 12 }
+            }
+        }
+            if = {
+                limit = {
+                    has_idea = UN_Security_Council_Member_Perm
+                    has_political_power > 249
+                    check_variable = { ai_un_voting_weight < 0 }
+                }
+                add_to_array = { UNS.un_vote_veto_list = THIS.id }
+                add_to_array = { UNS.un_vote_ = THIS.id }
+                 add_to_variable = { UNS.un_no_count = 1 }
+                add_to_variable = { UNS.un_veto_count = 1 }
+                add_political_power = -250
+               set_country_flag = UN_VETO_ONGOING
+            }
+            else_if = {
+                limit = {
+                    check_variable = { ai_un_voting_weight < 0 }
+                }
+                add_to_array = { UNS.un_vote_no_list = THIS.id }
+                add_to_variable = { UNS.un_no_count = 1 }
+                set_country_flag = UN_NO_ONGOING
+            }
+            else_if = {
+                limit = {
+                    check_variable = { ai_un_voting_weight > 14 }
+                }
+                add_to_array = { UNS.un_vote_yes_list = THIS.id }
+                add_to_variable = { UNS.un_yes_count = 1 }
+                set_country_flag = UN_YES_ONGOING
+            }
+            else = {
+                 add_to_array = { UNS.un_vote_abstain_list = THIS.id }
+                add_to_variable = { UNS.un_abstain_count = 1 }  
+                set_country_flag = UN_ABSTAIN_ONGOING                 
+            }
+    }
+	if = {
+        limit = {
+            check_variable = { UNS.un_action_set = 13 }
+        }
+            if = {
+                limit = {
+                    has_idea = UN_Security_Council_Member_Perm
+                    has_political_power > 249
+                    check_variable = { ai_un_voting_weight > 74 }
+                }
+                add_to_array = { UNS.un_vote_veto_list = THIS.id }
+                add_to_array = { UNS.un_vote_ = THIS.id }
+                 add_to_variable = { UNS.un_no_count = 1 }
+                add_to_variable = { UNS.un_veto_count = 1 }
+                add_political_power = -250
+               set_country_flag = UN_VETO_ONGOING
+            }
+            else_if = {
+                limit = {
+                    check_variable = { ai_un_voting_weight > 44 }
+                }
+                add_to_array = { UNS.un_vote_no_list = THIS.id }
+                add_to_variable = { UNS.un_no_count = 1 }
+                set_country_flag = UN_NO_ONGOING
+            }
+            else_if = {
+                limit = {
+                    check_variable = { ai_un_voting_weight < 15 }
+                }
+                add_to_array = { UNS.un_vote_yes_list = THIS.id }
+                add_to_variable = { UNS.un_yes_count = 1 }
+                set_country_flag = UN_YES_ONGOING
+            }
+            else = {
+                 add_to_array = { UNS.un_vote_abstain_list = THIS.id }
+                add_to_variable = {  UNS.un_abstain_count = 1 }  
+                set_country_flag = UN_ABSTAIN_ONGOING                 
+            }
+
+    }
+	if = {
+        limit = {
+            OR = {
+                check_variable = { UNS.un_action_set = 14 }
+                check_variable = { UNS.un_action_set = 15 }
+            }
+        }
+            if = {
+                limit = {
+                    has_idea = UN_Security_Council_Member_Perm
+                    has_political_power > 249
+                    check_variable = { ai_un_voting_weight < 0 }
+                }
+                add_to_array = { UNS.un_vote_veto_list = THIS.id }
+                add_to_array = { UNS.un_vote_ = THIS.id }
+                 add_to_variable = { UNS.un_no_count = 1 }
+                add_to_variable = { UNS.un_veto_count = 1 }
+                add_political_power = -250
+               set_country_flag = UN_VETO_ONGOING
+            }
+            else_if = {
+                limit = {
+                    check_variable = { ai_un_voting_weight < 0 }
+                }
+                add_to_array = { UNS.un_vote_no_list = THIS.id }
+                add_to_variable = { UNS.un_no_count = 1 }
+                set_country_flag = UN_NO_ONGOING
+            }
+            else_if = {
+                limit = {
+                    check_variable = { ai_un_voting_weight > 34 }
+                }
+                add_to_array = { UNS.un_vote_yes_list = THIS.id }
+                add_to_variable = { UNS.un_yes_count = 1 }
+                set_country_flag = UN_YES_ONGOING
+            }
+            else = {
+                 add_to_array = { UNS.un_vote_abstain_list = THIS.id }
+                add_to_variable = { UNS.un_abstain_count = 1 }  
+                set_country_flag = UN_ABSTAIN_ONGOING                 
+            }
+
+    }
+	if = {
+        limit = {
+            check_variable = { UNS.un_action_set = 16 }
+        }
+        country_event = UN_RESOLUTION.1000
+    }
+}

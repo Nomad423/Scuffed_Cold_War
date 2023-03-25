@@ -1,0 +1,207 @@
+add_namespace = swfs
+add_namespace = Romania_Purge
+news_event = {
+	id = Romania_Purge.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Romania_Purge.1"}
+	title = "[GetNewspaperHeader]The Purging of the Muscovite Wing"
+	desc = Romania_Purge.1.d
+	picture = GFX_Romania_One
+
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = "Some stability in the Balkans, at last"
+		trigger = {
+			has_government = communism
+		}
+	 }
+	 option = {
+		name = "Will the Balkans ever stabilise?"
+		trigger = {
+			NOT = { has_government = communism }
+		}
+	 }
+}
+news_event = {
+	id = Romania_Purge.2 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Romania_Purge.2"}
+	title = "[GetNewspaperHeader]The Fall of General Secretary Gheorghiu Dej"
+	desc = Romania_Purge.2.d
+	picture = GFX_Romania_Two
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "Maybe she is a little more stable"
+	}
+
+}
+news_event = {
+	id = Romania_Purge.3 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Romania_Purge.3"}
+	title = "[GetNewspaperHeader]Romania Embraces Destalinization"
+	desc = Romania_Purge.3.d
+	picture = GFX_Romania_Three
+
+	is_triggered_only = yes
+	major = yes
+
+
+	option = {
+		name = "Another Stalinist gone"
+	 }
+
+}
+news_event = {
+	id = Romania_Purge.4 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Romania_Purge.4"}
+	title = "[GetNewspaperHeader]The Fall of Ana Pauker"
+	desc = Romania_Purge.4.d
+	picture = GFX_Romania_Four
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "Zionism will not stand"
+		trigger = {
+			has_government = communism
+		}
+	 }
+	 option = {
+		name = "How disturbing"
+		trigger = {
+			NOT = { has_government = communism }
+			NOT = { tag = ROM }
+		}
+	 }
+}
+news_event = {
+	id = Romania_Purge.5 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Romania_Purge.5"}
+	title = "[GetNewspaperHeader]The Execution of Lucretiu Patrascanu"
+	desc = Romania_Purge.5.d
+	picture = GFX_Romania_Five
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "He was a threat"
+		trigger = {
+			has_government = communism
+		}
+	 }
+	 option = {
+		name = "A kangaroo court"
+		trigger = {
+			NOT = { has_government = communism }
+		}
+	 }
+}
+
+
+country_event = {
+	id = swfs.3 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = swfs.3"}
+	title = "Romania Demands The Return of Moldavia"
+	desc = "The Romanian government has asked for the Bessarabian region to be returned to them. While the region was historically owned by us, the region is ethnically Romanian and there has been some amount of resistance to the integration into the Greater USSR."
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Demands"
+		ai_chance = {
+			factor = 90
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		ROM = { transfer_state = 78 }
+		ROM = { transfer_state = 911 }
+		ROM = { transfer_state = 1235 }
+		ROM = { transfer_state = 949 }
+		hidden_effect = {
+			78 = { add_core_of = ROM }
+			911 = { add_core_of = ROM }
+			1235 = { add_core_of = ROM }
+			949 = { add_core_of = ROM }
+		   	949 = { set_state_name = "Transnistriei" }
+		   	78 = { set_state_name = "Basarabia de Sud" }
+		   	911 = { set_state_name = "Basarabia de Nord" }
+		   	1235 = { set_state_name = "Gaugauzia" }
+		}
+	}
+	option = {
+		name = "Bessarabia is Russian and shall remain Russian!"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1000
+			}
+		}
+
+	}
+}
+country_event = {
+	id = swfs.4 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = swfs.4"}
+	title = "Romania Demands The Return of the Northern Bucovina"
+	desc = "The Romanian government has further requested the return of the Northern Bucovina region. The area, while only 56% Romanian, mostly having been populated by a Ukrainian minority for the rest, the region is historically Romanian."
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Allow the Reunification"
+		ROM = { transfer_state = 80 }
+			hidden_effect = {
+		80 = { add_core_of = ROM }
+		80 = { set_state_name = "Bucovina de Nord" }
+		set_province_name = { id = 577 name = "Cernauti" } 
+			}
+		ai_chance = {
+			factor = 80
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "We shall continue to control the region."
+
+	}
+}
+add_namespace = ROM
+country_event = {
+	id = ROM.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = ROM.1"}
+	title = "Nicolae Ceausescu becomes the General Secretary"
+	desc = ""
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+		date > 1965.4.2
+		date < 1965.4.22
+	}
+
+	option = {
+		name = "God bless Romania"
+		ai_chance = {
+			factor = 100
+		}
+		set_politics = { ruling_party = communism elections_allowed = no }
+	create_country_leader = {
+		name = "Nicolae Ceausescu"
+		picture = "Nicolae_Ceausescu.dds"
+		expire = "1989.12.25"
+		ideology = stalinism
+	}
+	 }
+}

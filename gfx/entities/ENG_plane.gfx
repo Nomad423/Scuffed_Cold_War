@@ -1,0 +1,278 @@
+objectTypes = {
+
+#old_fighter#
+
+
+    pdxmesh = {
+		name = "ENG_SeaFury_mesh"
+		file = "gfx/models/units/planes/Seafury.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "ENG_mosquito_fighter_mesh"
+		file = "gfx/models/units/planes/Mosquito.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "ENG_beaufighter_mesh"
+		file = "gfx/models/units/planes/beaufighter.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "ENG_meteor_mesh"
+		file = "gfx/models/units/planes/ENG_meteor.mesh"
+		#animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "Meteormk4_mesh"
+		file = "gfx/models/units/planes/Meteormk4.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	pdxmesh = {
+		name = "Meteornf11_mesh"
+		file = "gfx/models/units/planes/meteor_nf11.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	pdxmesh = {
+		name = "Javelin_mesh"
+		file = "gfx/models/units/planes/Javelin.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "F3Lightning_mesh"
+		file = "gfx/models/units/planes/Lightning.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "ENG_SpitfireXIV_mesh"
+		file = "gfx/models/units/planes/ENG_SpitfireXIV.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	pdxmesh = {
+		name = "ENG_SpitfireIX_mesh"
+		file = "gfx/models/units/planes/Spitfiremkix.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "ENG_Spitfiremk22_mesh"
+		file = "gfx/models/units/planes/ENG_Spitfiremk22.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "ENG_jet_interceptor_2_mesh"
+		file = "gfx/models/units/planes/Meteor.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+		meshsettings = {
+			texture_diffuse = "ENG_jet_interceptor_2.dds"
+		}
+	}
+	
+	pdxmesh = {
+		name = "ENG_light_plane_jet_mesh"
+		file = "gfx/models/units/planes/ENG_light_plane_jet.mesh"
+		#animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "ENG_hunter_mesh"
+		file = "gfx/models/units/planes/ENG_hunter.mesh"
+		#animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "hunter_mesh"
+		file = "gfx/models/units/planes/Hunter.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "ENG_F86_mesh"
+		file = "gfx/models/units/planes/F86.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	meshsettings = {
+			texture_diffuse = "F86ENG_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ENG_F4K_mesh"
+		file = "gfx/models/units/planes/F4N.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	meshsettings = {
+			texture_diffuse = "F4NENG_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ENG_F4J_mesh"
+		file = "gfx/models/units/planes/F4N.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	meshsettings = {
+			texture_diffuse = "F4NENG2_diffuse.dds"
+		}
+	}
+	
+	pdxmesh = {
+		name = "ENG_Seafire_mesh"
+		file = "gfx/models/units/planes/ENG_Seafire.mesh"
+		#animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	pdxmesh = {
+		name = "ENG_Seafirelate_mesh"
+		file = "gfx/models/units/planes/Seafire.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "ENG_firefly_mesh"
+		file = "gfx/models/units/planes/ENG_firefly.mesh"
+		#animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+
+	pdxmesh = {
+		name = "ENG_Venom_mesh"
+		file = "gfx/models/units/planes/vampire.mesh"
+		animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	pdxmesh = {
+		name = "ENG_vampire_mesh"
+		file = "gfx/models/units/planes/vampire.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	pdxmesh = {
+		name = "ENG_Seavixen_mesh"
+		file = "gfx/models/units/planes/Seaxiven.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	pdxmesh = {
+		name = "ENG_Seahawk_mesh"
+		file = "gfx/models/units/planes/Seahawk.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	pdxmesh = {
+		name = "ENG_Wyvern_mesh"
+		file = "gfx/models/units/planes/Wyvern.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	pdxmesh = {
+		name = "ENG_Firebrand_mesh"
+		file = "gfx/models/units/planes/Firebrand.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+	pdxmesh = {
+		name = "ENG_Buccaneer_mesh"
+		file = "gfx/models/units/planes/Buccaneer.mesh"
+		animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "ENG_Jaguarearly_mesh"
+		file = "gfx/models/units/planes/Jaguarearly.mesh"
+		animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	pdxmesh = {
+		name = "ENG_Jaguarlate_mesh"
+		file = "gfx/models/units/planes/Jaguarlate.mesh"
+		animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	pdxmesh = {
+		name = "ENG_TornadoGR_mesh"
+		file = "gfx/models/units/planes/TornadoGR.mesh"
+		animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	pdxmesh = {
+		name = "ENG_TornadoADV_mesh"
+		file = "gfx/models/units/planes/TornadoADV.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+    
+	pdxmesh = {
+		name = "ENG_AV8A_mesh"
+		file = "gfx/models/units/planes/av8a.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+		meshsettings = {
+			texture_diffuse = "AV8AENG_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ENG_AV8B_mesh"
+		file = "gfx/models/units/planes/av8b.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+		meshsettings = {
+			texture_diffuse = "AV8BENG_diffuse.dds"
+		}
+	}
+
+	pdxmesh = {
+		name = "ENG_Tempest_mesh"
+		file = "gfx/models/units/planes/ENG_CAS_Tempest.mesh"
+		#animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "ENG_nav_bomb2_mesh"
+		file = "gfx/models/units/planes/ENG_nav_bomb2.mesh"
+		#animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "ENG_beaufort_mesh"
+		file = "gfx/models/units/planes/ENG_beaufort.mesh"
+		#animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "ENG_mosquito_mesh"
+		file = "gfx/models/units/planes/Mosquito.mesh"
+		animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "ENG_lancaster_mesh"
+		file = "gfx/models/units/planes/ENG_lancaster.mesh"
+		#animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "ENG_lincoln_mesh"
+		file = "gfx/models/units/planes/ENG_lincoln.mesh"
+		#animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "Valiantb1_mesh"
+		file = "gfx/models/units/planes/valiant.mesh"
+		animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "Vulcanb1_mesh"
+		file = "gfx/models/units/planes/vulcan.mesh"
+		animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "Victorb1_mesh"
+		file = "gfx/models/units/planes/Victor.mesh"
+		animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "ENG_avro698_mesh"
+		file = "gfx/models/units/planes/ENG_avro698.mesh"
+		#animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "ENG_Canberra_mesh"
+		file = "gfx/models/units/planes/ENG_Canberra.mesh"
+		#animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+
+}

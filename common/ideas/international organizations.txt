@@ -1,0 +1,24 @@
+ideas = {
+    country = {
+        idea_OAS_member = {
+            allowed = {
+				always = no
+            }
+            modifier = {
+                
+            }
+        }
+        idea_OAU_member = {
+	        	
+		    picture = oau_icon
+			
+            allowed = {
+				always = no
+            }
+            modifier = {
+
+            }
+			
+        }
+    }
+}

@@ -1,0 +1,411 @@
+# Shoutout to SimpleFlips for all they have contributed to this mod and HOI4 modding! #
+
+battlecruisers = {
+	category = naval
+	
+	blocked_for = {
+	}
+	available_for = {
+	}
+	roles = {
+		naval_capital
+	}
+	
+	priority = {
+		factor = 500
+		modifier = {
+            num_of_naval_factories < 20
+            factor = 0
+        }
+	}
+	
+	battlecruisers_ww = {
+	
+
+        priority = {
+            factor = 250
+			modifier = {
+                has_tech = battle_hull_medium_0
+                factor = 0
+            }
+        }
+		
+		enable = {
+			always = yes
+		}
+
+        role_icon_index = 12
+
+        target_variant = {
+            match_value = 1000.0
+
+            type = battle_hull_medium_ww
+			modules = {
+				front_1_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+				front_2_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+				front_3_custom_slot = { any_of = { VLS_module ship_SAM_long_range ship_SAM_mid_range ship_armament_medium ship_armament_light ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_long_range ship_SAM_mid_range ship_armament_medium ship_armament_light ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+			}
+        }
+
+        allowed_modules = {
+					ship_armament_super_heavy
+					ship_armament_heavyasm
+					ship_armament_heavy
+					VLS_module
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_asm
+					ship_armament_medium
+					ship_armament_light
+					ship_subkiller
+					ship_AA_gun
+					capital_nuclear_engine
+					capital_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+        }
+    }
+	
+	battlecruisers_0 = {
+	
+
+        priority = {
+            factor = 250
+			modifier = {
+                has_tech = battle_hull_medium_1
+                factor = 0.5
+            }
+			modifier = {
+                has_tech = battle_hull_medium_2
+                factor = 0
+            }
+        }
+		
+		enable = { 
+			always = yes
+		}
+
+        role_icon_index = 12
+
+        target_variant = {
+            match_value = 1000.0
+
+            type = battle_hull_medium_0
+			modules = {
+				front_1_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+				front_2_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+				front_3_custom_slot = { any_of = { VLS_module ship_SAM_long_range ship_SAM_mid_range ship_armament_medium ship_armament_light ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_long_range ship_SAM_mid_range ship_armament_medium ship_armament_light ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+			}
+        }
+
+        allowed_modules = {
+					ship_armament_super_heavy
+					ship_armament_heavyasm
+					ship_armament_heavy
+					VLS_module
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_asm
+					ship_armament_medium
+					ship_armament_light
+					ship_subkiller
+					ship_AA_gun
+					capital_nuclear_engine
+					capital_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+        }
+    }
+	battlecruisers_1 = {
+	
+
+        priority = {
+            factor = 250
+			modifier = {
+                has_tech = battle_hull_medium_2
+                factor = 0.5
+            }
+			modifier = {
+                has_tech = battle_hull_medium_3
+                factor = 0
+            }
+        }
+		
+		enable = { 
+			always = yes
+		}
+
+        role_icon_index = 12
+
+        target_variant = {
+            match_value = 1000.0
+
+            type = battle_hull_medium_1	#1955
+			modules = {
+				front_1_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+				front_2_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+				front_3_custom_slot = { any_of = { VLS_module ship_SAM_long_range ship_SAM_mid_range ship_armament_medium ship_armament_light ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_long_range ship_SAM_mid_range ship_armament_medium ship_armament_light ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+
+            }
+        }
+
+        allowed_modules = {
+					ship_armament_super_heavy
+					ship_armament_heavyasm
+					ship_armament_heavy
+					VLS_module
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_asm
+					ship_armament_medium
+					ship_armament_light
+					ship_subkiller
+					ship_AA_gun
+					capital_nuclear_engine
+					capital_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+        }
+    }
+	battlecruisers_2 = {
+	
+
+        priority = {
+            factor = 250
+			modifier = {
+                has_tech = battle_hull_medium_3
+                factor = 0.5
+            }
+			modifier = {
+                has_tech = battle_hull_medium_4
+                factor = 0
+            }
+        }
+		
+		enable = { 
+			always = yes
+		}
+
+        role_icon_index = 12
+
+        target_variant = {
+            match_value = 1000.0
+
+            type = battle_hull_medium_2
+			modules = {
+				front_1_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+				front_2_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+				front_3_custom_slot = { any_of = { VLS_module ship_SAM_long_range ship_SAM_mid_range ship_armament_medium ship_armament_light ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_long_range ship_SAM_mid_range ship_armament_medium ship_armament_light ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+
+            }
+        }
+
+        allowed_modules = {
+					ship_armament_super_heavy
+					ship_armament_heavyasm
+					ship_armament_heavy
+					VLS_module
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_asm
+					ship_armament_medium
+					ship_armament_light
+					ship_subkiller
+					ship_AA_gun
+					capital_nuclear_engine
+					capital_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+        }
+    }
+	battlecruisers_3 = {
+	
+
+        priority = {
+            factor = 250
+			modifier = {
+                has_tech = battle_hull_medium_4
+                factor = 0.5
+            }
+        }
+		
+		enable = { 
+			always = yes
+		}
+
+        role_icon_index = 12
+
+        target_variant = {
+            match_value = 1000.0
+
+            type = battle_hull_medium_3	#1985
+			modules = {
+				front_1_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+				front_2_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+				front_3_custom_slot = { any_of = { VLS_module ship_SAM_long_range ship_SAM_mid_range ship_armament_medium ship_armament_light ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_long_range ship_SAM_mid_range ship_armament_medium ship_armament_light ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+            }
+        }
+
+        allowed_modules = {
+					ship_armament_super_heavy
+					ship_armament_heavyasm
+					ship_armament_heavy
+					VLS_module
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_asm
+					ship_armament_medium
+					ship_armament_light
+					ship_subkiller
+					ship_AA_gun
+					capital_nuclear_engine
+					capital_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+        }
+    }
+	battlecruisers_4 = {
+	
+
+        priority = {
+            factor = 250
+        }
+		
+		enable = { 
+			always = yes
+		}
+
+        role_icon_index = 12
+
+        target_variant = {
+            match_value = 1000.0
+
+            type = battle_hull_medium_4	#2000
+			modules = {
+				front_1_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+				front_2_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+				front_3_custom_slot = { any_of = { VLS_module ship_SAM_long_range ship_SAM_mid_range ship_armament_medium ship_armament_light ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_long_range ship_SAM_mid_range ship_armament_medium ship_armament_light ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+            }
+        }
+
+        allowed_modules = {
+					ship_armament_super_heavy
+					ship_armament_heavyasm
+					ship_armament_heavy
+					VLS_module
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_asm
+					ship_armament_medium
+					ship_armament_light
+					ship_subkiller
+					ship_AA_gun
+					capital_nuclear_engine
+					capital_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+        }
+    }
+}
+battleships = {
+	category = naval
+	
+	blocked_for = {
+	}
+	available_for = {
+	}
+	roles = {
+		naval_capital_largo
+	}
+	
+	priority = {
+		factor = 500
+		modifier = {
+            num_of_naval_factories < 15
+            factor = 0
+        }
+	}
+	
+	battleships_ww = {
+	
+
+        priority = {
+            factor = 250
+			modifier = {
+                has_tech = battle_hull_medium_0
+                factor = 0
+            }
+        }
+		
+		enable = {
+			always = yes
+		}
+
+        role_icon_index = 14
+
+        target_variant = {
+            match_value = 1000.0
+
+            type = battle_hull_heavy_ww
+			modules = {
+				front_1_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+				front_2_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+				front_3_custom_slot = { any_of = { VLS_module ship_SAM_long_range ship_SAM_mid_range ship_armament_medium ship_armament_light ship_AA_gun } }
+				mid_1_custom_slot = { any_of = { VLS_module ship_SAM_long_range ship_SAM_mid_range ship_armament_medium ship_armament_light ship_AA_gun } }
+				rear_1_custom_slot = { any_of = { ship_armament_super_heavy ship_armament_heavyasm ship_armament_heavy } }
+				rear_2_custom_slot = { any_of = { VLS_module ship_SAM_long_range ship_SAM_mid_range ship_armament_medium ship_armament_light ship_AA_gun } }
+			}
+        }
+
+        allowed_modules = {
+					ship_armament_super_heavy
+					ship_armament_heavyasm
+					ship_armament_heavy
+					VLS_module
+					ship_SAM_long_range
+					ship_SAM_mid_range
+					ship_armament_asm
+					ship_armament_medium
+					ship_armament_light
+					ship_subkiller
+					ship_AA_gun
+					capital_nuclear_engine
+					capital_engine
+					countermeasures 
+					maritime_sonar
+					maritime_ta_fcs
+					A2A_navalradar
+					ciws
+        }
+    }
+}

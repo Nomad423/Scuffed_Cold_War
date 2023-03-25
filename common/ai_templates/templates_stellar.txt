@@ -1,0 +1,1457 @@
+####################
+##### REGULARS #####
+####################
+
+##### ARMOR ##### CONSCRIPT #####
+armor_conscript = {
+	roles = {
+		armor_conscript
+	}
+	upgrade_prio = {
+		factor = 2
+	}
+	match_to_count = 0.5
+#TEMPLATES
+	armor_conscript_early = { #"Light Armor Unit"#
+		upgrade_prio = {
+			factor = 10
+		}
+		production_prio = {
+			factor = 10
+		}
+		target_width = 20.0
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 2
+		
+		target_template = {
+			weight = 0.95
+			match_value = 1000
+			
+			regiments = {
+				light_armor = 4
+				
+				mechanized_infantry = 2
+				motorized_infantry = 3
+				
+				tank_destroyer = 2
+			}
+			support = {
+				#Support Brigade Full
+				recon_motorized = 1
+				engineer = 1
+				signal_company = 1
+				logistics_company = 1
+				field_hospital = 1
+				#Fire Support/Maintenance
+				auto_cannon_support = 1
+				artillery_support = 1
+				light_artillery_support = 1
+				direct_fire_gun_support = 1
+				maintenance_company = 1
+			}
+		}
+		allowed_types = {
+			light_armor
+			
+			mechanized_infantry
+			motorized_infantry
+			
+			tank_destroyer
+			
+			recon_motorized
+			engineer
+			signal_company
+			logistics_company
+			field_hospital
+
+			auto_cannon_support
+			artillery_support
+			light_artillery_support
+			direct_fire_gun_support
+			maintenance_company
+		}
+	}
+	
+	armor_conscript_mid = { #"Light Armor Unit 60"#
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				add = 20
+				AND = {
+					num_of_military_factories > 13
+					has_tech = atgm_carrier_0
+					has_tech = atgm_0
+				}
+			}
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				add = 20
+				AND = {
+					num_of_military_factories > 13
+					has_tech = atgm_carrier_0
+					has_tech = atgm_0
+				}
+			}
+		}
+		target_width = 20.0
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 2
+		
+		target_template = {
+			weight = 0.95
+			match_value = 1000
+			
+			regiments = {
+				light_armor = 4
+				
+				mechanized_infantry = 2
+				motorized_infantry = 3
+				
+				atgm_carrier = 2
+			}
+			support = {
+				#Support Brigade Full
+				recon_motorized = 1
+				engineer = 1
+				signal_company = 1
+				logistics_company = 1
+				field_hospital = 1
+				#Fire Support/Maintenance
+				auto_cannon_support = 1
+				artillery_support = 1
+				light_artillery_support = 1
+				atgm_support = 1
+				maintenance_company = 1
+			}
+		}
+		allowed_types = {
+			light_armor
+			
+			mechanized_infantry
+			motorized_infantry
+			
+			atgm_carrier
+			
+			recon_motorized
+			engineer
+			signal_company
+			logistics_company
+			field_hospital
+
+			auto_cannon_support
+			artillery_support
+			light_artillery_support
+			atgm_support
+			maintenance_company
+		}
+	}
+	
+}
+##### ARMOR ##### MEDIUM #####
+armor_medium = {
+	roles = {
+		armor_medium
+	}
+	upgrade_prio = {
+		factor = 2
+	}
+	match_to_count = 0.5
+#TEMPLATES
+	armor_medium_early = { #"MBT Division"#
+		upgrade_prio = {
+			factor = 10
+		}
+		production_prio = {
+			factor = 10
+		}
+		target_width = 40.0
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 2
+		
+		target_template = {
+			weight = 0.95
+			match_value = 1000
+			
+			regiments = {
+				light_armor = 1
+				medium_armor = 6
+				heavy_armor = 1
+				
+				armored_infantry = 2
+				mechanized_infantry = 4
+				motorized_infantry = 1
+				
+				rocket_sp_artillery = 1
+				light_sp_artillery = 1
+				sp_artillery = 1
+				spaag = 1
+			}
+			support = {
+				#Support Brigade Full
+				recon_mechanized = 1
+				engineer_armored = 1
+				signal_company = 1
+				logistics_company = 1
+				field_hospital = 1
+				#Fire Support/Maintenance
+				auto_cannon_support = 1
+				artillery_support = 1
+				heavy_artillery_support = 1
+				direct_fire_gun_support = 1
+				maintenance_company = 1
+			}
+			
+			
+		}
+		allowed_types = {
+			light_armor
+			medium_armor
+			heavy_armor
+			
+			armored_infantry
+			mechanized_infantry
+			motorized_infantry
+			
+			rocket_sp_artillery
+			light_sp_artillery
+			sp_artillery
+			spaag
+			
+			recon_mechanized
+			engineer_armored
+			signal_company
+			logistics_company
+			field_hospital
+
+			auto_cannon_support
+			artillery_support
+			heavy_artillery_support
+			direct_fire_gun_support
+			maintenance_company
+		}
+	}
+	
+	armor_medium_mid = { #"MBT Division 60"#
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				add = 20
+				AND = {
+					num_of_military_factories > 20
+					has_tech = atgm_carrier_0
+					has_tech = atgm_0
+					has_tech = tech_mech_recon
+					has_tech = tech_armor_engineers
+					has_tech = sam_short_range_0
+					has_tech = tech_logistics_company_helicopter3
+				}
+			}
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				add = 20
+				AND = {
+					num_of_military_factories > 20
+					has_tech = atgm_carrier_0
+					has_tech = atgm_0
+					has_tech = tech_mech_recon
+					has_tech = tech_armor_engineers
+					has_tech = sam_short_range_0
+					has_tech = tech_logistics_company_helicopter3
+				}
+			}
+		}
+		target_width = 40.0
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 2
+		
+		target_template = {
+			weight = 0.95
+			match_value = 1000
+			
+			regiments = {
+				light_armor = 1
+				medium_armor = 6
+				heavy_armor = 1
+				
+				armored_infantry = 4
+				mechanized_infantry = 2
+				motorized_infantry = 1
+				
+				rocket_sp_artillery = 1
+				light_sp_artillery = 1
+				sp_artillery = 1
+				sam_carrier = 1
+			}
+			support = {
+				#Support Brigade Full
+				recon_mechanized = 1
+				engineer_armored = 1
+				signal_company = 1
+				logistics_helicopter = 1
+				field_hospital = 1
+				#Fire Support/Maintenance
+				auto_cannon_support = 1
+				artillery_support = 1
+				heavy_artillery_support = 1
+				atgm_support = 1
+				maintenance_company = 1
+			}
+		}
+		allowed_types = {
+			light_armor
+			medium_armor
+			heavy_armor
+			
+			armored_infantry
+			mechanized_infantry
+			motorized_infantry
+			
+			rocket_sp_artillery
+			light_sp_artillery
+			sp_artillery
+			sam_carrier
+			
+			recon_mechanized
+			engineer_armored
+			signal_company
+			logistics_helicopter
+			field_hospital
+
+			auto_cannon_support
+			artillery_support
+			heavy_artillery_support
+			atgm_support
+			maintenance_company
+		}
+	}
+	
+	armor_medium_late = { #"MBT Division 80"#
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				add = 40
+				AND = {
+					num_of_military_factories > 45
+					has_tech = atgm_carrier_0
+					has_tech = atgm_0
+					has_tech = tech_mech_recon
+					has_tech = tech_armor_engineers
+					has_tech = sam_short_range_0
+					has_tech = tech_logistics_company_helicopter3
+					has_tech = tech_field_hospital_helicopter3
+					has_tech = attack_helicopter_1
+					has_tech = scout_helicopter_1
+				}
+			}
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				add = 40
+				AND = {
+					num_of_military_factories > 45
+					has_tech = atgm_carrier_0
+					has_tech = atgm_0
+					has_tech = tech_mech_recon
+					has_tech = tech_armor_engineers
+					has_tech = sam_short_range_0
+					has_tech = tech_logistics_company_helicopter3
+					has_tech = tech_field_hospital_helicopter3
+					has_tech = attack_helicopter_1
+					has_tech = scout_helicopter_1
+				}
+			}
+		}
+		target_width = 40.0
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 2
+		
+		target_template = {
+			weight = 0.95
+			match_value = 1000
+			
+			regiments = {
+				light_armor = 1
+				medium_armor = 7
+				
+				armored_infantry = 4
+				mechanized_infantry = 3
+				
+				rocket_sp_artillery = 1
+				light_sp_artillery = 1
+				sp_artillery = 1
+				sam_carrier = 1
+			}
+			support = {
+				#Support Brigade Full
+				recon_helicopter = 1
+				engineer_armored = 1
+				signal_company = 1
+				logistics_helicopter = 1
+				field_hospital_helicopter = 1
+				#Fire Support/Maintenance
+				auto_cannon_support = 1
+				artillery_support = 1
+				heavy_artillery_support = 1
+				attack_helicopter_support = 1
+				maintenance_company = 1
+			}
+			
+			
+		}
+		allowed_types = {
+			light_armor
+			medium_armor
+			
+			armored_infantry
+			mechanized_infantry
+			
+			rocket_sp_artillery
+			light_sp_artillery
+			sp_artillery
+			sam_Carrier
+			
+			recon_helicopter
+			engineer_armored
+			signal_company
+			logistics_helicopter
+			field_hospital_helicopter
+
+			auto_cannon_support
+			artillery_support
+			heavy_artillery_support
+			attack_helicopter_support
+			maintenance_company
+		}
+	}
+}
+##### ARMOR ##### HEAVY #####
+armor_heavy = {
+	roles = {
+		armor_heavy
+	}
+	upgrade_prio = {
+		factor = 2
+	}
+	match_to_count = 0.5
+#TEMPLATES
+	armor_heavy_early = { #"Heavy Division"#
+		upgrade_prio = {
+			factor = 10
+			modifier = {
+				factor = 0
+				
+				date > 1960.04.20
+			}
+		}
+		production_prio = {
+			factor = 10
+			
+			modifier = {
+				factor = 0
+				
+				date > 1960.04.20
+			}
+		}
+		target_width = 40.0
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 2
+		
+		target_template = {
+			weight = 0.95
+			match_value = 1000
+			
+			regiments = {
+				light_armor = 1
+				medium_armor = 1
+				heavy_armor = 6
+				
+				armored_infantry = 6
+				motorized_infantry = 1
+				
+				rocket_sp_artillery = 1
+				sp_artillery = 1
+				heavy_sp_artillery = 1
+				spaag = 1
+			}
+			support = {
+				#Support Brigade Full
+				recon_mechanized = 1
+				engineer_armored = 1
+				signal_company = 1
+				logistics_company = 1
+				field_hospital = 1
+				#Fire Support/Maintenance
+				auto_cannon_support = 1
+				artillery_support = 1
+				heavy_artillery_support = 1
+				direct_fire_gun_support = 1
+				maintenance_company = 1
+			}
+		}
+		allowed_types = {
+			light_armor
+			medium_armor
+			heavy_armor
+			
+			armored_infantry
+			motorized_infantry
+			
+			rocket_sp_artillery
+			sp_artillery
+			heavy_sp_artillery
+			spaag
+			
+			recon_mechanized
+			engineer_armored
+			signal_company
+			logistics_company
+			field_hospital
+
+			auto_cannon_support
+			artillery_support
+			heavy_artillery_support
+			direct_fire_gun_support
+			maintenance_company
+		}
+	}
+}
+
+##### INFANTRY ##### CONSCRIPT #####
+infantry_conscript = {
+	roles = {
+		infantry_conscript
+	}
+	upgrade_prio = {
+		factor = 2
+	}
+	match_to_count = 0.5
+#TEMPLATES
+
+	infantry_conscript_militia = { #"National Militia Division"#
+		upgrade_prio = {
+			factor = 10
+		}
+		production_prio = {
+			factor = 10
+		}
+		target_width = 40.0
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 2
+		
+		target_template = {
+			weight = 0.95
+			match_value = 1000
+			
+			regiments = {
+				light_armor = 2
+				
+				militia = 14
+				
+				direct_fire_gun = 1
+				light_artillery = 2
+				auto_cannon = 1
+			}
+			support = {
+				#Support Brigade Full
+				recon = 1
+				engineer = 1
+				maintenance_company = 1
+				field_hospital = 1
+				#Fire Support/Maintenance
+				auto_cannon_support = 1
+				light_artillery_support = 1
+				direct_fire_gun_support = 1
+			}
+		}
+		allowed_types = {
+			light_armor
+			
+			militia
+			
+			direct_fire_gun
+			light_artillery
+			auto_cannon
+
+			recon
+			engineer
+			logistics_company
+			field_hospital
+			
+			auto_cannon_support
+			light_artillery_support
+			direct_fire_gun_support
+		}
+	}
+	infantry_brigade_early = { #"Infantry Brigade"#
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+		}
+		target_width = 10.0
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 2
+		
+		target_template = {
+			weight = 0.95
+			match_value = 1000
+			
+			regiments = {
+				infantry = 5
+			}
+			support = {
+				#Support Brigade
+				recon = 1
+				field_hospital = 1
+				#Fire Support/Maintenance
+				auto_cannon_support = 1
+				light_artillery_support = 1
+				direct_fire_gun_support = 1
+			}
+		}
+		allowed_types = {
+			light_armor
+			
+			infantry
+			militia
+			
+			direct_fire_gun
+			light_artillery
+			auto_cannon
+
+			recon
+			field_hospital
+			
+			auto_cannon_support
+			light_artillery_support
+			direct_fire_gun_support
+		}
+	}
+	infantry_conscript_early = { #"Infantry Division"#
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				add = 20
+				num_of_military_factories > 4
+			}
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				add = 20
+				num_of_military_factories > 4
+			}
+		}
+		target_width = 40.0
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 2
+		
+		target_template = {
+			weight = 0.95
+			match_value = 1000
+			
+			regiments = {
+				light_armor = 2
+				tank_destroyer = 1
+				
+				infantry = 11
+				
+				direct_fire_gun = 2
+				light_artillery = 1
+				artillery = 1
+				heavy_artillery = 1
+				auto_cannon = 2
+			}
+			support = {
+				#Support Brigade Full
+				recon = 1
+				engineer = 1
+				signal_company = 1
+				logistics_company = 1
+				field_hospital = 1
+				#Fire Support/Maintenance
+				auto_cannon_support = 1
+				light_artillery_support = 1
+				artillery_support = 1
+				direct_fire_gun_support = 1
+				maintenance_company = 1
+			}
+		}
+		allowed_types = {
+			light_armor
+			tank_destroyer
+			
+			infantry
+			
+			direct_fire_gun
+			light_artillery
+			artillery
+			heavy_artillery
+			auto_cannon
+
+			recon
+			engineer
+			signal_company
+			logistics_company
+			field_hospital
+			
+			auto_cannon_support
+			light_artillery_support
+			artillery_support
+			direct_fire_gun_support
+			maintenance_company
+		}
+	}
+}
+##### INFANTRY ##### MOTORIZED #####
+infantry_motor = {
+	roles = {
+		infantry_motor
+	}
+	upgrade_prio = {
+		factor = 2
+	}
+	match_to_count = 0.5
+#TEMPLATES
+	infantry_motor_early = { #"Motorized Division"#
+		upgrade_prio = {
+			factor = 10
+		}
+		production_prio = {
+			factor = 10
+		}
+		target_width = 40.0
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 2
+		
+		target_template = {
+			weight = 0.95
+			match_value = 1000
+			
+			regiments = {
+				medium_armor = 1
+				light_armor = 2
+				tank_destroyer = 2
+				
+				mechanized_infantry = 3
+				motorized_infantry = 8
+				
+				rocket_sp_artillery = 1
+				light_sp_artillery = 1
+				sp_artillery = 1
+				spaag = 1
+			}
+			support = {
+				#Support Brigade Full
+				recon_motorized = 1
+				engineer = 1
+				signal_company = 1
+				logistics_company = 1
+				field_hospital = 1
+				#Fire Support/Maintenance
+				auto_cannon_support = 1
+				artillery_support = 1
+				heavy_artillery_support = 1
+				direct_fire_gun_support = 1
+				maintenance_company = 1
+			}
+		}
+		allowed_types = {
+			medium_armor
+			light_armor
+			tank_destroyer
+			
+			mechanized_infantry
+			motorized_infantry
+			
+			rocket_sp_artillery
+			light_sp_artillery
+			sp_artillery
+			spaag
+			
+			recon_motorized
+			engineer
+			signal_company
+			logistics_company
+			field_hospital
+			
+			auto_cannon_support
+			artillery_support
+			heavy_artillery_support
+			direct_fire_gun_support
+			maintenance_company
+		}
+	}
+	infantry_motor_mid = { #"Motorized Division 60"#
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				add = 20
+				AND = {
+					num_of_military_factories > 20
+					has_tech = atgm_carrier_0
+					has_tech = atgm_0
+					has_tech = tech_mech_recon
+				}
+			}
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				add = 20
+				AND = {
+					num_of_military_factories > 20
+					has_tech = atgm_carrier_0
+					has_tech = atgm_0
+					has_tech = tech_mech_recon
+				}
+			}
+		}
+		target_width = 40.0
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 2
+		
+		target_template = {
+			weight = 0.95
+			match_value = 1000
+			
+			regiments = {
+				medium_armor = 1
+				light_armor = 2
+				tank_destroyer = 2
+				
+				armored_infantry = 1
+				mechanized_infantry = 5
+				motorized_infantry = 5
+				
+				rocket_sp_artillery = 1
+				light_sp_artillery = 1
+				sp_artillery = 1
+				spaag = 1
+			}
+			support = {
+				#Support Brigade Full
+				recon_motorized= 1
+				engineer = 1
+				signal_company = 1
+				logistics_company = 1
+				field_hospital = 1
+				#Fire Support/Maintenance
+				auto_cannon_support = 1
+				artillery_support = 1
+				heavy_artillery_support = 1
+				atgm_support = 1
+				maintenance_company = 1
+			}
+		}
+		allowed_types = {
+			medium_armor
+			light_armor
+			tank_destroyer
+			
+			armored_infantry
+			mechanized_infantry
+			motorized_infantry
+			
+			rocket_sp_artillery
+			light_sp_artillery
+			sp_artillery
+			spaag
+			
+			recon_motorized
+			engineer
+			signal_company
+			logistics_company
+			field_hospital
+			
+			auto_cannon_support
+			artillery_support
+			heavy_artillery_support
+			atgm_support
+			maintenance_company
+		}
+	}
+
+}
+##### INFANTRY ##### MECHANIZED #####
+infantry_mech = {
+	roles = {
+		infantry_mech
+	}
+	upgrade_prio = {
+		factor = 2
+	}
+	match_to_count = 0.5
+#TEMPLATES
+	infantry_mech_early = { #"Mechanized Division"#
+		upgrade_prio = {
+			factor = 10
+		}
+		production_prio = {
+			factor = 10
+		}
+		target_width = 40.0
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 2
+		
+		target_template = {
+			weight = 0.95
+			match_value = 1000
+			
+			regiments = {
+				medium_armor = 3
+				light_armor = 1
+				tank_destroyer = 1
+				
+				armored_infantry = 3
+				mechanized_infantry = 6
+				motorized_infantry = 1
+				
+				rocket_sp_artillery = 1
+				light_sp_artillery = 1
+				sp_artillery = 1
+				spaag = 2
+			}
+			support = {
+				#Support Brigade Full
+				recon_mechanized = 1
+				engineer_armored = 1
+				signal_company = 1
+				logistics_company = 1
+				field_hospital = 1
+				#Fire Support/Maintenance
+				auto_cannon_support = 1
+				artillery_support = 1
+				heavy_artillery_support = 1
+				direct_fire_gun_support = 1
+				maintenance_company = 1
+			}
+		}
+		allowed_types = {
+			medium_armor
+			light_armor
+			tank_destroyer
+			
+			armored_infantry
+			mechanized_infantry
+			motorized_infantry
+			
+			rocket_sp_artillery
+			light_sp_artillery
+			sp_artillery
+			spaag
+			
+			recon_mechanized
+			engineer_armored
+			signal_company
+			logistics_company
+			field_hospital
+			
+			auto_cannon_support
+			artillery_support
+			heavy_artillery_support
+			direct_fire_gun_support
+			maintenance_company
+		}
+	}
+	infantry_mech_mid = { #"Mechanized Division 60"#
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				add = 20
+				AND = {
+					num_of_military_factories > 29
+					has_tech = atgm_carrier_0
+					has_tech = atgm_0
+					has_tech = tech_mech_recon
+					has_tech = tech_armor_engineers
+					has_tech = sam_short_range_0
+					has_tech = tech_logistics_company_helicopter3
+				}
+			}
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				add = 20
+				AND = {
+					num_of_military_factories > 29
+					has_tech = atgm_carrier_0
+					has_tech = atgm_0
+					has_tech = tech_mech_recon
+					has_tech = tech_armor_engineers
+					has_tech = sam_short_range_0
+					has_tech = tech_logistics_company_helicopter3
+				}
+			}
+		}
+		target_width = 40.0
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 2
+		
+		target_template = {
+			weight = 0.95
+			match_value = 1000
+			
+			regiments = {
+				medium_armor = 3
+				light_armor = 1
+				tank_destroyer = 1
+				
+				armored_infantry = 6
+				mechanized_infantry = 3
+				motorized_infantry = 1
+				
+				rocket_sp_artillery = 1
+				light_sp_artillery = 1
+				sp_artillery = 1
+				sam_carrier = 1
+				spaag = 1
+			}
+			support = {
+				#Support Brigade Full
+				recon_mechanized = 1
+				engineer_armored = 1
+				signal_company = 1
+				logistics_helicopter = 1
+				field_hospital = 1
+				#Fire Support/Maintenance
+				auto_cannon_support = 1
+				artillery_support = 1
+				heavy_artillery_support = 1
+				atgm_support = 1
+				maintenance_company = 1
+			}
+		}
+		allowed_types = {
+			medium_armor
+			light_armor
+			tank_destroyer
+			
+			armored_infantry
+			mechanized_infantry
+			motorized_infantry
+			
+			rocket_sp_artillery
+			light_sp_artillery
+			sp_artillery
+			sam_carrier
+			spaag
+			
+			recon_mechanized
+			engineer_armored
+			signal_company
+			logistics_helicopter
+			field_hospital
+			
+			auto_cannon_support
+			artillery_support
+			heavy_artillery_support
+			atgm_support
+			maintenance_company
+		}
+	}
+	infantry_mech_late = { #"Mechanized Division 80"#
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				add = 40
+				AND = {
+					num_of_military_factories > 45
+					has_tech = atgm_carrier_0
+					has_tech = atgm_0
+					has_tech = tech_mech_recon
+					has_tech = tech_armor_engineers
+					has_tech = sam_short_range_0
+					has_tech = tech_logistics_company_helicopter3
+					has_tech = tech_field_hospital_helicopter3
+					has_tech = attack_helicopter_1
+					has_tech = scout_helicopter_1
+				}
+			}
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				add = 40
+				AND = {
+					num_of_military_factories > 45
+					has_tech = atgm_carrier_0
+					has_tech = atgm_0
+					has_tech = tech_mech_recon
+					has_tech = tech_armor_engineers
+					has_tech = sam_short_range_0
+					has_tech = tech_logistics_company_helicopter3
+					has_tech = tech_field_hospital_helicopter3
+					has_tech = attack_helicopter_1
+					has_tech = scout_helicopter_1
+				}
+			}
+		}
+		target_width = 40.0
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 2
+		
+		target_template = {
+			weight = 0.95
+			match_value = 1000
+			
+			regiments = {
+				medium_armor = 3
+				light_armor = 1
+				tank_destroyer = 1
+				
+				armored_infantry = 7
+				mechanized_infantry = 2
+				air_cavalry = 1
+				
+				rocket_sp_artillery = 1
+				light_sp_artillery = 1
+				sp_artillery = 1
+				sam_carrier = 1
+				spaag = 1
+			}
+			support = {
+				#Support Brigade Full
+				recon_helicopter = 1
+				engineer_armored = 1
+				signal_company = 1
+				logistics_helicopter = 1
+				field_hospital_helicopter = 1
+				#Fire Support/Maintenance
+				auto_cannon_support = 1
+				artillery_support = 1
+				heavy_artillery_support = 1
+				attack_helicopter_support = 1
+				maintenance_company = 1
+			}
+		}
+		allowed_types = {
+			medium_armor
+			light_armor
+			tank_destroyer
+			
+			armored_infantry
+			mechanized_infantry
+			air_cavalry
+			
+			rocket_sp_artillery
+			light_sp_artillery
+			sp_artillery
+			sam_carrier
+			spaag
+			
+			recon_helicopter
+			engineer_armored
+			signal_company
+			logistics_helicopter
+			field_hospital_helicopter
+			
+			auto_cannon_support
+			artillery_support
+			heavy_artillery_support
+			attack_helicopter_support
+			maintenance_company
+		}
+	}
+}
+
+##########################
+##### SPECIAL FORCES ##### #Also niche
+##########################
+
+##### SF-FORCES ##### AIRBORNE #####
+sf_forces_airborne = {
+	roles = {
+		sf_forces_airborne
+	}
+	upgrade_prio = {
+		factor = 2
+	}
+	match_to_count = 0.5
+#TEMPLATES
+	airborne_early = { #"Airborne Infantry"#
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+		}
+		target_width = 20.0
+		width_weight = 1.5
+		column_swap_factor = 0.5
+	}
+	airborne_mid = { #"Airborne Mechanized"#
+		upgrade_prio = {
+			factor = 1
+			#modifier = {
+			#	add = 2
+			#	has_tech = 
+			#}
+		}
+		production_prio = {
+			factor = 1
+			#modifier = {
+			#	add = 2
+			#	has_tech = 
+			#}
+		}
+		target_width = 20.0
+		width_weight = 1.5
+		column_swap_factor = 0.5
+	}
+}
+##### SF-FORCES ##### MARINES ######
+sf_forces_marine = {
+	roles = {
+		sf_forces_marine
+	}
+	upgrade_prio = {
+		factor = 2
+	}
+	match_to_count = 0.5
+#TEMPLATES
+	marines_early = { #"Naval Infantry"#
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+		}
+		target_width = 20.0
+		width_weight = 1.5
+		column_swap_factor = 0.5
+	}
+	marines_mid = { #"Marine Unit"#
+		upgrade_prio = {
+			factor = 1
+			#modifier = {
+			#	add = 2
+			#	has_tech = 
+			#}
+		}
+		production_prio = {
+			factor = 1
+			#modifier = {
+			#	add = 2
+			#	has_tech = 
+			#}
+		}
+		target_width = 20.0
+		width_weight = 1.5
+		column_swap_factor = 0.5
+	}
+}
+##### MOUNTAINEERS #####
+sf_forces_mountaineers = {
+	roles = {
+		sf_forces_marine
+	}
+	upgrade_prio = {
+		factor = 2
+	}
+	match_to_count = 0.5
+#TEMPLATES
+	mountaineers_early = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+		}
+		target_width = 20.0
+		width_weight = 1.5
+		column_swap_factor = 0.5
+	}
+}
+#####################
+##### DEFENSIVE #####
+#####################
+
+##### OCCUPATIONS #####
+occupation_unit = {
+	roles = {
+		garrison
+	}
+	upgrade_prio = {
+		factor = 2
+	}
+	match_to_count = 0.5
+	occupation_unit_early = {
+		upgrade_prio = {
+			factor = 2
+		}
+		production_prio = {
+			factor = 2
+		}
+		target_width = 10.0
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		
+		target_template = {
+			weight = 0.95
+			match_value = 1000
+			
+			regiments = {
+				motorized_infantry = 3
+				infantry = 7
+			}
+			support = {
+				#Support Brigade Full
+				recon = 1
+				engineer = 1
+				military_police = 1
+			}
+		}
+		allowed_types = {
+			infantry
+			motorized_infantry
+			
+			recon
+			engineer
+			military_police
+		}
+	}
+	occupation_unit_mid = {
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				add = 40
+				AND = {
+					num_of_military_factories > 44
+				}
+			}
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				add = 40
+				AND = {
+					num_of_military_factories > 44
+				}
+			}
+		}
+		target_width = 10.0
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		
+		target_template = {
+			weight = 0.95
+			match_value = 1000
+			
+			regiments = {
+				motorized_infantry = 7
+				mechanized_infantry = 3
+			}
+			support = {
+				#Support Brigade Full
+				recon = 1
+				engineer = 1
+				military_police = 1
+			}
+		}
+		allowed_types = {
+			mechanized_infantry
+			motorized_infantry
+			
+			recon
+			engineer
+			military_police
+		}
+	}
+	occupation_unit_mid = {
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				add = 80
+				AND = {
+					num_of_military_factories > 85
+				}
+			}
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				add = 80
+				AND = {
+					num_of_military_factories > 85
+				}
+			}
+		}
+		target_width = 10.0
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		
+		target_template = {
+			weight = 0.95
+			match_value = 1000
+			
+			regiments = {
+				air_cavalry = 2
+				motorized_infantry = 4
+				mechanized_infantry = 4
+			}
+			support = {
+				#Support Brigade Full
+				recon = 1
+				engineer = 1
+				military_police = 1
+			}
+		}
+		allowed_types = {
+			mechanized_infantry
+			motorized_infantry
+			air_cavalry
+			
+			recon
+			engineer
+			military_police
+		}
+	}
+}
+##### AIRBASE GUARD #####
+
+#EARLY
+
+airguard_early = {
+}
+
+#LATE
+
+airguard_late = {
+}
+
+##### PORT/ISLAND GUARD #####
+
+#EARLY
+
+maritimeguard_early = {
+}
+
+#MID
+
+maritimeguard_mid = {
+}

@@ -1,0 +1,191 @@
+add_namespace = Iran60
+add_namespace = Clerical_Opposition
+add_namespace = Cyrus
+add_namespace = NF_Iran
+add_namespace = Khomenei
+add_namespace = Iran_Coronation
+add_namespace = Iranian_Elections
+country_event  = {
+	id = Iranian_Elections.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Iranian_Elections.1"}
+	title = "Elections of 1963"
+	desc = "WIP"
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "New Iran Party"
+		complete_national_focus = PER_Elecitons_of_1963
+		complete_national_focus = PER_New_Iran_Party_Victory
+	}
+	option = {
+		name = "Peoples Party"
+		complete_national_focus = PER_Elecitons_of_1963
+		complete_national_focus = PER_Peoples_Party_Victory_63
+	}
+	option = {
+		name = "Leftist National Front"
+		complete_national_focus = PER_Elecitons_of_1963
+		complete_national_focus = PER_Leftist_National_Front_Victory
+	}
+} 
+country_event  = {
+	id = Iranian_Elections.2
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Iranian_Elections.2"}
+	title = "Elections of 1967"
+	desc = "WIP"
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "New Iran Party"
+		complete_national_focus = PER_Elections_of_1967
+		complete_national_focus = PER_New_Iran_Party_Victory_67
+	}
+	option = {
+		name = "Peoples Party"
+		complete_national_focus = PER_Elections_of_1967
+		complete_national_focus = PER_Peoples_Party_Victory_67
+	}
+	option = {
+		name = "Leftist National Front"
+		complete_national_focus = PER_Elections_of_1967
+		complete_national_focus = PER_Lefitist_National_Front_Victory_67
+	}
+} 
+country_event  = {
+	id = Iranian_Elections.3
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Iranian_Elections.3"}
+	title = "Elections of 1971"
+	desc = "WIP"
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "NIP-PP Coalition"
+		complete_national_focus = PER_1971_Elections
+		complete_national_focus = PER_NIP_PP_Coalition_Victory
+	}
+	option = {
+		name = "Pan-Iranist"
+		complete_national_focus = PER_1971_Elections
+		complete_national_focus = PER_Pan_Iranist_Victory
+	}
+} 
+
+#Country Events
+
+country_event  = {
+	id = Iran60.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Iran60.1"}
+	title = "The White Revolution"
+	desc = Iran60.1.d
+	picture = GFX_Iran60_1
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "Onwards to Progress"
+	}
+} 
+country_event  = {
+	id = Iran60.10 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Iran60.10"}
+	title = "Mossadegh Released from Prison"
+	desc = Iran60.10.d
+	picture = GFX_Iran60_10
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "A risky move"
+	}
+}  
+country_event  = {
+	id = Clerical_Opposition.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Clerical_Opposition.1"}
+	title = "The 15 Khordad Uprising"
+	desc = Clerical_Opposition.1.d
+	picture = GFX_Clerical_Opposition_1
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "Unfortunate"
+	}
+}  
+country_event  = {
+	id = Iran60.5 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Iran60.5"}
+	title = "The Celebration of the Persian Empire"
+	desc = Iran60.5.d
+	picture = GFX_Iran60_5
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "Great News"
+	}
+}  
+country_event  = {
+	id = Iran60.6 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Iran60.6"}
+	title = "Celebrating Zoroastrianism"
+	desc = Iran60.6.d
+	picture = GFX_Iran60_6
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "We have a truly rich culture"
+	}
+} 
+country_event  = {
+	id = Cyrus.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Cyrus.1"}
+	title = "A Modern Day Cyrus"
+	desc = Cyrus.1.d
+	picture = GFX_Cyrus_1
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "Glory to the Empire"
+	}
+}  
+
+#News Events
+news_event = {
+	id = NF_Iran.10 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = NF_Iran.10"}
+	title = "[GetNewspaperHeader]Leadership Crisis in Iran"
+	desc = NF_Iran.10.d
+	picture = GFX_NF_Iran
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = Khomenei.1  
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Khomenei.1 "}
+	title = "[GetNewspaperHeader]Ayatollah Khomeini Exiled"
+	desc = Khomenei.1.d
+	picture = GFX_Khomenei_1
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "Unsurprising"
+	}
+}
+
+news_event = {
+	id = Iran_Coronation.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = Iran_Coronation.1"}
+	title = "[GetNewspaperHeader]The Coronation of Mohammed Reza Pahalvi"
+	desc = Iran_Coronation.1.d
+	picture = GFX_Iran_Coronation_1
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "A spectacle"
+	}
+}

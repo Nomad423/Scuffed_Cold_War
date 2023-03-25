@@ -1,0 +1,294 @@
+ideas = {
+	country = {
+		
+		idea_IRQ_Mobilizate_League_Arabe = {
+			
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.02
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				industrial_capacity_factory = 0.05
+				MONTHLY_POPULATION = 0.05
+				research_speed_factor = 0.01
+				political_power_factor = 0.2
+				conscription = 0.015
+			}
+
+			picture = Rally_the_League
+		}
+		
+		idea_IRQ_Infantery_equipment = {
+			
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			equipment_bonus = {
+
+				infantry_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+
+			picture = generic_manpower_bonus
+		}
+		
+		idea_IRQ_Motorized_Equipment = {
+			
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			equipment_bonus = {
+
+				mechanized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				lt_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				mbt_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ht_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				 
+			}
+
+			picture = generic_manpower_bonus
+		}
+		
+		idea_IRQ_Industrial = {
+		
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.02
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+
+			picture = generic_manpower_bonus
+		}
+		idea_british_pressure = {
+		
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = 0.50
+				military_leader_cost_factor = 0.33
+			}
+
+			picture = IRQ_british_influence
+		}
+		idea_iraqi_dinar = {
+		
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				trade_laws_cost_factor = -0.25
+			}
+
+			picture = IRQ_iraqi_dinar
+		}
+		idea_unpopular_rule = {
+		
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.10
+				stability_factor = -0.05
+			}
+
+			picture = IRQ_unpopular_rule
+		}
+		idea_shia_revolts = {
+		
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				conscription_factor = -0.05
+			}
+
+			picture = IRQ_unpopular_rule
+		}
+		idea_forced_labor_in_kirkuk = {
+		
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		idea_youth_organized = {
+		
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.005
+			}
+		}
+		idea_concessions_for_nouri = {
+		
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
+		}
+		idea_suwaidi_government = {
+		
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				encryption_factor = 0.1
+				resistance_growth = 0.25
+			}
+		}
+		idea_countering_operation_ezrah = {
+		
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				decryption_factor = 0.15
+				resistance_growth = 0.25
+			}
+		}
+		idea_air_crackdowns = {
+		
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				air_interception_defence_factor = 0.02
+
+			}
+		}
+		idea_AJJDC_gains = {
+		
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.25
+				production_speed_industrial_complex_factor = 0.10
+			}
+		}
+		idea_new_government = {
+		
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				##political_advisor_cost_factor = -0.10
+				political_power_gain = 0.10
+			}
+		}
+		idea_state_funded_programs = {
+		
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.10
+				drift_defence_factor = 0.25	
+			}
+		}
+		idea_new_ministers = {
+		
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+
+			removal_cost = -1
+
+			modifier = {
+				monarchism_drift = 0.10	
+				political_power_gain = 0.05
+			}
+		}
+		
+		idea_IRQ_rights_for_minorities = {
+			allowed = { always = no }
+			allowed_civil_war = {  }
+			removal_cost = -1
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+				research_speed_factor = 0.01
+				stability_factor = 0.025
+			}
+		}
+	}
+}

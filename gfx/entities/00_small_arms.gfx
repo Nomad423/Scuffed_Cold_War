@@ -1,0 +1,904 @@
+objectTypes = {
+
+	# AK
+	pdxmesh = {
+		name = "infantry_weapon_akm_mesh"
+		file = "gfx/models/units/AKM.mesh"
+		scale = 1.0
+	}	
+	# AKM
+	pdxmesh = {
+		name = "SOV_infantry_weapon_ak47M_mesh"
+		file = "gfx/models/units/AKM.mesh"
+		scale = 1.0
+	}
+	
+	# vz. 58
+	pdxmesh = {
+		name = "CZE_infantry_weapon_vz58_mesh"
+		file = "gfx/models/units/vz58.mesh"
+		scale = 1.0
+	}
+	
+	# RK62
+	pdxmesh = {
+		name = "FIN_infantry_weapon_RK62_mesh"
+		file = "gfx/models/units/rk62.mesh"
+		scale = 1.0
+	}
+	
+	# AK74
+	pdxmesh = {
+		name = "SOV_infantry_weapon_AK74_mesh"
+		file = "gfx/models/units/AK74.mesh"
+		scale = 1.0
+	}
+	
+	# AK74M
+	pdxmesh = {
+		name = "SOV_infantry_weapon_AK74M_mesh"
+		file = "gfx/models/units/AK74M.mesh"
+		scale = 1.0
+	}
+	
+	# PPS
+	pdxmesh = {
+		name = "SOV_infantry_weapon_PPS_mesh"
+		file = "gfx/models/units/PPS.mesh"
+		scale = 1.0
+	}
+	
+	# AKSU
+	pdxmesh = {
+		name = "SOV_infantry_weapon_AKSU_mesh"
+		file = "gfx/models/units/AKSU.mesh"
+		scale = 1.0
+	}
+	
+	# AKSU
+	pdxmesh = {
+		name = "SOV_infantry_weapon_DP_mesh"
+		file = "gfx/models/units/DP.mesh"
+		scale = 1.0
+	}
+	
+	# mosin
+	pdxmesh = {
+		name = "SOV_infantry_weapon_mosin_mesh"
+		file = "gfx/models/units/snipermosin.mesh"
+		scale = 1.0
+	}
+	
+	# svd
+	pdxmesh = {
+		name = "SOV_infantry_weapon_svd_mesh"
+		file = "gfx/models/units/SVD.mesh"
+		scale = 1.0
+	}
+	
+	# ппш42
+	pdxmesh = {
+		name = "SOV_infantry_weapon_ppsh42_mesh"
+		file = "gfx/models/units/ppsh42.mesh"
+		scale = 1.0
+	}
+	
+	# ппш42
+	pdxmesh = {
+		name = "SOV_infantry_weapon_ppsh_mesh"
+		file = "gfx/models/units/weapon_SOV_mg_PPSh.mesh"
+		scale = 1.1
+	}
+	
+	# скс
+	pdxmesh = {
+		name = "SOV_infantry_weapon_sks_mesh"
+		file = "gfx/models/units/weapon_SOV_rifle SKS45.mesh"
+		scale = 1.0
+	}
+	
+	# M1 Carbine
+	pdxmesh = {
+		name = "infantry_weapon_M1carbine_mesh"
+		file = "gfx/models/units/M1Carbine.mesh"
+		scale = 0.9
+	}
+	
+	# M2 Carbine
+	pdxmesh = {
+		name = "infantry_weapon_M2carbine_mesh"
+		file = "gfx/models/units/M2Carbine.mesh"
+		scale = 0.9
+	}
+	
+	# M14
+	pdxmesh = {
+		name = "USA_infantry_weapon_m14_mesh"
+		file = "gfx/models/units/weapon_USA_rifle_M14.mesh"
+		scale = 0.9
+	}
+	
+	# thompson
+	pdxmesh = {
+		name = "USA_infantry_weapon_TOM_mesh"
+		file = "gfx/models/units/thompson.mesh"
+		scale = 1
+	}
+	
+	# thompson-изр
+	pdxmesh = {
+		name = "ISR_infantry_weapon_TOM_mesh"
+		file = "gfx/models/units/YUN_smg_thompson.mesh"
+		scale = 1.0
+	}
+	
+	# M1mg
+	pdxmesh = {
+		name = "USA_infantry_weapon_M1mg_mesh"
+		file = "gfx/models/units/weapon_USA_mg_M1.mesh"
+		scale = 1.0
+	}
+	
+	# M3
+	pdxmesh = {
+		name = "USA_infantry_weapon_M3_mesh"
+		file = "gfx/models/units/weapon_USA_mg_M3.mesh"
+		scale = 1.0
+	}
+	
+	# M1 Garand
+	pdxmesh = {
+		name = "USA_infantry_weapon_M1_mesh"
+		file = "gfx/models/units/M1garand.mesh"
+		scale = 0.9
+	}
+	
+	# CAR15
+	pdxmesh = {
+		name = "USA_infantry_weapon_CAR15_mesh"
+		file = "gfx/models/units/CAR15.mesh"
+		scale = 1.0
+	}
+	
+	# M249
+	pdxmesh = {
+		name = "USA_infantry_weapon_M249_mesh"
+		file = "gfx/models/units/M249.mesh"
+		scale = 1.0
+	}
+	
+	# coltXM с глушаком
+	pdxmesh = {
+		name = "USA_infantry_weapon_coltXM_mesh"
+		file = "gfx/models/units/coltXM.mesh"
+		scale = 1.0
+	}
+	
+	# M4A1 без рамки
+	pdxmesh = {
+		name = "USA_infantry_weapon_m4a1_mesh"
+		file = "gfx/models/units/m4a1.mesh"
+		scale = 1.0
+	}
+	
+	# barret
+	pdxmesh = {
+		name = "USA_infantry_weapon_barret_mesh"
+		file = "gfx/models/units/barret.mesh"
+		meshsettings = {
+			texture_normal = "barret_n.dds"
+			texture_specular = "barret_s.dds"
+		}
+		scale = 0.35
+	}
+	
+	# M16A1
+	pdxmesh = {
+		name = "USA_infantry_weapon_m15_mesh"
+		file = "gfx/models/units/m16a1.mesh"
+		scale = 1.0
+	}
+	
+	# AR10
+	pdxmesh = {
+		name = "USA_infantry_weapon_AR10_mesh"
+		file = "gfx/models/units/m15.mesh"
+		meshsettings = {
+			texture_diffuse = "AR10_d.dds"
+		}
+		scale = 1.0
+	}
+	
+	# M16A2
+	pdxmesh = {
+		name = "USA_infantry_weapon_M16A2_mesh"
+		file = "gfx/models/units/m16A2.mesh"
+		scale = 1.0
+	}
+	
+	# Sten Late
+	pdxmesh = {
+		name = "infantry_weapon_Stenlate_mesh"
+		file = "gfx/models/units/Stenlate.mesh"
+		scale = 1.0
+	}
+	
+	# Sterling SMG
+	pdxmesh = {
+		name = "infantry_weapon_Sterling_mesh"
+		file = "gfx/models/units/sterlingsmg.mesh"
+		scale = 1.0
+	}
+	
+	# IDF Romat FAL
+	pdxmesh = {
+		name = "infantry_weapon_FNFALIDF_mesh"
+		file = "gfx/models/units/FALIDF.mesh"
+		scale = 0.9
+	}
+	
+	# UZI
+	pdxmesh = {
+		name = "infantry_weapon_Uzi_mesh"
+		file = "gfx/models/units/Uzi.mesh"
+		scale = 0.9
+	}
+	
+	# FNFAL
+	pdxmesh = {
+		name = "infantry_weapon_FNFAL_mesh"
+		file = "gfx/models/units/FAL.mesh"
+		scale = 0.9
+	}
+	
+	# FNFAL Polymer
+	pdxmesh = {
+		name = "infantry_weapon_FNFALpolymer_mesh"
+		file = "gfx/models/units/FAL.mesh"
+		scale = 0.9
+		meshsettings = {
+			texture_diffuse = "FALpolymer_diffuse.dds"
+		}
+	}
+	
+	# FNFAL G1
+	pdxmesh = {
+		name = "infantry_weapon_G1_mesh"
+		file = "gfx/models/units/FAL.mesh"
+		scale = 0.9
+		meshsettings = {
+			texture_diffuse = "FALG1_diffuse.dds"
+		}
+	}
+	
+	# L85A2
+	pdxmesh = {
+		name = "infantry_weapon_L85A2_mesh"
+		file = "gfx/models/units/L85A2.mesh"
+		scale = 1.0
+	}
+	
+	# G3 NEW
+	pdxmesh = {
+		name = "infantry_weapon_G3_mesh"
+		file = "gfx/models/units/G3.mesh"
+		scale = 0.9
+	}
+	
+	# G3 OLD
+	pdxmesh = {
+		name = "GER_infantry_weapon_G3_mesh"
+		file = "gfx/models/units/fnfal.mesh"
+		scale = 1.0
+	}
+	
+	# израиль
+	pdxmesh = {
+		name = "ISR_infantry_weapon_G3_mesh"
+		file = "gfx/models/units/weapon_BEL_rifle_FNFAL.mesh"
+		
+		scale = 1.2
+	}
+	
+	# индия
+	pdxmesh = {
+		name = "RAJ_infantry_weapon_G3_mesh"
+		file = "gfx/models/units/weapon_BEL_rifle_FNFAL.mesh"
+		meshsettings = {
+			texture_diffuse = "INSAS_diffuse.dds"
+		}
+		scale = 1.2
+	}
+	
+	# G36
+	pdxmesh = {
+		name = "GER_infantry_weapon_G36_mesh"
+		file = "gfx/models/units/XP.mesh"
+		scale = 1.1
+	}
+	
+	# G36C
+	pdxmesh = {
+		name = "GER_infantry_weapon_G36C_mesh"
+		file = "gfx/models/units/G36M.mesh"
+		scale = 1.14
+	}
+	
+	#StG 44
+	pdxmesh = {
+		name = "GER_infantry_weapon_StG44_mesh"
+		file = "gfx/models/units/GER_infantry_weapon_smg3_mp44.mesh"
+		scale = 1.1
+	}
+	
+	#Mg42
+	pdxmesh = {
+		name = "GER_infantry_weapon_Mg42_mesh"
+		file = "gfx/models/units/GER_infantry_weapon_lmg2_mg34.mesh"
+		scale = 1.0
+	}
+	
+	#Mg3
+	pdxmesh = {
+		name = "GER_infantry_weapon_Mg3_mesh"
+		file = "gfx/models/units/MG3.mesh"
+		scale = 1.0
+	}
+	
+	#Fg42
+	pdxmesh = {
+		name = "GER_infantry_weapon_Fg42_mesh"
+		file = "gfx/models/units/weapon_GER_rifle_FG42.mesh"
+		scale = 1.05
+	}
+	
+	#G3opt
+	pdxmesh = {
+		name = "GER_infantry_weapon_G3opt_mesh"
+		file = "gfx/models/units/G3.mesh"
+		scale = 1.1
+	}
+	
+	#G41
+	pdxmesh = {
+		name = "GER_infantry_weapon_G41_mesh"
+		file = "gfx/models/units/GER_infantry_weapon_rifle2_g41.mesh"
+		scale = 1.0
+	}
+	
+	#Mosin Infantry
+	pdxmesh = {
+		name = "infantry_weapon_Mosin_mesh"
+		file = "gfx/models/units/Mosin.mesh"
+		scale = 0.9
+	}
+	
+	#Kar98
+	pdxmesh = {
+		name = "infantry_weapon_K98_mesh"
+		file = "gfx/models/units/Kar98.mesh"
+		scale = 0.8
+	}
+	
+	#Lee Enfield
+	pdxmesh = {
+		name = "ENG_infantry_weapon_LI_mesh"
+		file = "gfx/models/units/weapon_ENG_rifle_SMLE.mesh"
+		scale = 0.9
+	}
+	
+	#лиэнфилд_0
+	pdxmesh = {
+		name = "ENG_infantry_weapon_4_mesh"
+		file = "gfx/models/units/weapon_ENG_rifle_No4.mesh"
+		scale = 1.0
+	}
+	
+	#Sten Early
+	pdxmesh = {
+		name = "ENG_infantry_weapon_sten_mesh"
+		file = "gfx/models/units/weapon_ENG_mg_Sten.mesh"
+		scale = 1.15
+	}
+	
+	#тип95
+	pdxmesh = {
+		name = "PRC_infantry_weapon_type95_mesh"
+		file = "gfx/models/units/Type95.mesh"
+		scale = 1.1
+	}
+	
+	#китайская винтовка
+	pdxmesh = {
+		name = "PRC_infantry_weapon_hanyang88_mesh"
+		file = "gfx/models/units/PRC_rifle_hanyang88.mesh"
+		scale = 1.0
+	}
+	
+	#G43
+	pdxmesh = {
+		name = "GER_infantry_weapon_G43_mesh"
+		file = "gfx/models/units/weapon_GER_rifle_G43.mesh"
+		scale = 1.0
+	}
+	
+	#bren
+	pdxmesh = {
+		name = "ENG_infantry_weapon_bren_mesh"
+		file = "gfx/models/units/ENG_infantry_weapon_lmg2_bren.mesh"
+		scale = 0.94
+	}
+	
+	#Брен Талибан
+	pdxmesh = {
+		name = "TAL_infantry_weapon_bren_mesh"
+		file = "gfx/models/units/ENG_infantry_weapon_lmg2_bren.mesh"
+		scale = 2.0
+	}
+	
+	#снайперка
+	pdxmesh = {
+		name = "GER_infantry_weapon_g43_mesh"
+		file = "gfx/models/units/GER_infantry_weapon_rifle3_g43.mesh"
+		scale = 1.0
+	}
+	
+	#delis
+	pdxmesh = {
+		name = "ENG_infantry_weapon_delis_mesh"
+		file = "gfx/models/units/ENG_infantry_weapon_smg3_delisle.mesh"
+		scale = 1.1
+	}
+	
+	#L85S
+	pdxmesh = {
+		name = "ENG_infantry_weapon_L85S_mesh"
+		file = "gfx/models/units/SPP.mesh"
+		scale = 1.0
+	}
+	
+	#L85
+	pdxmesh = {
+		name = "ENG_infantry_weapon_L85_mesh"
+		file = "gfx/models/units/L85.mesh"
+		scale = 1.3
+	}
+	
+	#фин
+	pdxmesh = {
+		name = "FIN_infantry_weapon_mg_mesh"
+		file = "gfx/models/units/weapon_FIN_mg_M31.mesh"
+		scale = 1.05
+	}
+	
+	#АКфин
+	pdxmesh = {
+		name = "FIN_infantry_weapon_AK_mesh"
+		file = "gfx/models/units/OLD/AK_Joro.mesh"
+		scale = 0.2
+	}
+	
+	
+	#MAS-44 #OBSOLETE
+	pdxmesh = {
+		name = "FRA_infantry_weapon_MAS-44_mesh"
+		file = "gfx/models/units/mas36.mesh"
+		scale = 0.9
+	}
+	
+	#MAS-49
+	pdxmesh = {
+		name = "FRA_infantry_weapon_MAS-49_mesh"
+		file = "gfx/models/units/MAS49.mesh"
+		scale = 0.9
+	}
+	
+	#MAS-38
+	pdxmesh = {
+		name = "FRA_infantry_weapon_MAS-38_mesh"
+		file = "gfx/models/units/weapon_FRA_mg_MAS-38.mesh"
+		scale = 1.0
+	}
+	
+	#MAT49
+	pdxmesh = {
+		name = "FRA_infantry_weapon_MAT49_mesh"
+		file = "gfx/models/units/MAT49.mesh"
+		scale = 0.9
+	}
+	
+	#M/45
+	pdxmesh = {
+		name = "SWE_infantry_weapon_M45_mesh"
+		file = "gfx/models/units/m45.mesh"
+		scale = 0.9
+	}
+	
+	#пулемет1
+	pdxmesh = {
+		name = "FRA_infantry_weapon_LMG1_mesh"
+		file = "gfx/models/units/wEUO_lmg_2.mesh"
+		scale = 1.0
+	}
+	
+	#Famas F1
+	pdxmesh = {
+		name = "FRA_infantry_weapon_FAMASF1_mesh"
+		file = "gfx/models/units/FamasF1.mesh"
+		scale = 0.9
+	}
+	
+	#фамас
+	pdxmesh = {
+		name = "FRA_infantry_weapon_FAMAS_mesh"
+		file = "gfx/models/units/Famas.mesh"
+		scale = 1.0
+	}
+	
+	#спецназ фамас
+	pdxmesh = {
+		name = "FRA_infantry_weapon_SPECFAMAS_mesh"
+		file = "gfx/models/units/FamasF1.mesh"
+		scale = 0.9
+	}
+	
+	#qbz95s
+	pdxmesh = {
+		name = "PRC_qbz95s_mesh"
+		file = "gfx/models/units/qbz95.mesh"
+		scale = 0.65
+	}
+	
+	#дп39
+	pdxmesh = {
+		name = "SOV_dp39_mesh"
+		file = "gfx/models/units/RUS_infantry_weapon_lmg2_dp29.mesh"
+		scale = 1.0
+	}
+	
+	#Китайский АК
+	pdxmesh = {
+		name = "PRC_АК_mesh"
+		file = "gfx/models/units/IC_PRC_infantry_weapon_ak47_type56.mesh"
+		scale = 1.0
+	}
+	
+	#СВТ-40
+	pdxmesh = {
+		name = "SOV_SVT_mesh"
+		file = "gfx/models/units/weapon_SOV_rifle_STV40.mesh"
+		scale = 1.0
+	}
+	
+	#Lebel
+	pdxmesh = {
+		name = "FRA_lebel_mesh"
+		file = "gfx/models/units/weapon_FRA_rifle_Lebel.mesh"
+		scale = 1.1
+	}
+	
+	
+	#юг винтовка
+	pdxmesh = {
+		name = "YUG_rifle_mesh"
+		file = "gfx/models/units/rifle_2.mesh"
+		scale = 1.0
+	}
+	
+	#юг пп
+	pdxmesh = {
+		name = "YUG_mg_mesh"
+		file = "gfx/models/units/weapon_YUG_mg_M49.mesh"
+		scale = 1.0
+	}
+	
+	#это товарищ Сухов
+	pdxmesh = {
+		name = "IRQ_mg_mesh"
+		file = "gfx/models/units/wEUO_lmg_1.mesh"
+		scale = 1.2
+	}
+	
+	#пятачок неси ружье
+	pdxmesh = {
+		name = "african_rifle_mesh"
+		file = "gfx/models/units/Afr_rifle.mesh"
+		scale = 1.0
+	}
+	
+	#африка пп
+	pdxmesh = {
+		name = "african_mg_mesh"
+		file = "gfx/models/units/wEUO_smg_2.mesh"
+		scale = 1.0
+	}
+	
+	#африка авт
+	pdxmesh = {
+		name = "african_AK_mesh"
+		file = "gfx/models/units/FAL_w.mesh"
+		scale = 1.1
+	}
+	
+	#ита ружье
+	pdxmesh = {
+		name = "ITA_rifle_M91_mesh"
+		file = "gfx/models/units/ITA_rifle_M91.mesh"
+		scale = 1.0
+	}
+	
+#ита FNAB43
+	pdxmesh = {
+		name = "ITA_mg_FNAB43_mesh"
+		file = "gfx/models/units/ITA_mg_FNAB43.mesh"
+		scale = 1.0
+	}
+	
+#ита OG44
+	pdxmesh = {
+		name = "ITA_rifle_OG44_mesh"
+		file = "gfx/models/units/ITA_rifle_OG44.mesh"
+		scale = 1.1
+	}
+	
+#ита mg_M38
+	pdxmesh = {
+		name = "ITA_mg_M38_mesh"
+		file = "gfx/models/units/ITA_mg_M38.mesh"
+		scale = 1.0
+	}
+	
+#ита BM59
+	pdxmesh = {
+		name = "ITA_mg_BM59_mesh"
+		file = "gfx/models/units/ITA_mg_BM59.mesh"
+		scale = 1.1
+	}
+	
+#ита AR70
+	pdxmesh = {
+		name = "ITA_mg_AR70_mesh"
+		file = "gfx/models/units/ITA_mg_AR70.mesh"
+		scale = 1.1
+	}
+	
+# AUG
+	pdxmesh = {
+		name = "infantry_weapon_AUG_mesh"
+		file = "gfx/models/units/AUG.mesh"
+		scale = 0.7
+	}
+	
+# SPA_m38
+	pdxmesh = {
+		name = "SPA_infantry_weapon_m38_mesh"
+		file = "gfx/models/units/SPA_infantry_weapon_fontbernat_m38_mg.mesh"
+		scale = 1.0
+	}
+	
+# SPA_hafdasa
+	pdxmesh = {
+		name = "SPA_infantry_weapon_hafdasa_mesh"
+		file = "gfx/models/units/weapon_SPA_mg_hafdasa.mesh"
+		scale = 1.0
+	}
+
+# SPA_M35
+	pdxmesh = {
+		name = "SPA_infantry_weapon_M35_mesh"
+		file = "gfx/models/units/weapon_SPR_mg_M35.mesh"
+		scale = 1.0
+	}
+	
+# SPA_Z45
+	pdxmesh = {
+		name = "SPA_infantry_weapon_Z45_mesh"
+		file = "gfx/models/units/weapon_SPR_mg_Z45.mesh"
+		scale = 1.0
+	}
+	
+# SPA_CEAM50
+	pdxmesh = {
+		name = "SPA_infantry_weapon_CEAM50_mesh"
+		file = "gfx/models/units/weapon_SPR_rifle_CEAM50.mesh"
+		scale = 1.2
+	}
+	
+# китнац ружье
+	pdxmesh = {
+		name = "CHI_rifle_chiang_kai_shek_mesh"
+		file = "gfx/models/units/CHI_rifle_chiang_kai_shek.mesh"
+		scale = 1.0
+	}
+	
+# китнац мг
+	pdxmesh = {
+		name = "CHI_smg_tsin_tao_mp18_mesh"
+		file = "gfx/models/units/CHI_smg_tsin_tao_mp18.mesh"
+		scale = 1.0
+	}
+	
+# SPA_CETME
+	pdxmesh = {
+		name = "SPA_infantry_weapon_CETME_mesh"
+		file = "gfx/models/units/CETME.mesh"
+		scale = 1.1
+	}
+
+# SPR_rifle_FP7
+	pdxmesh = {
+		name = "SPR_rifle_FP7_mesh"
+		file = "gfx/models/units/SPR_rifle_FP7.mesh"
+		scale = 1.0
+	}
+	
+# Mg13
+	pdxmesh = {
+		name = "POR_infantry_weapon_Mg13_mesh"
+		file = "gfx/models/units/Mg13.mesh"
+		scale = 1.0
+	}
+# SWE mg M45
+	pdxmesh = {
+		name = "SWE_mg_M45_mesh"
+		file = "gfx/models/units/SWE_mg_M45.mesh"
+		scale = 1.0
+	}
+	
+# SWE rifle M42
+	pdxmesh = {
+		name = "SWE_rifle_M42_mesh"
+		file = "gfx/models/units/SWE_rifle_M42.mesh"
+		scale = 1.0
+	}
+
+# DEN_mg_M50
+	pdxmesh = {
+		name = "DEN_mg_M50_mesh"
+		file = "gfx/models/units/DEN_mg_M50.mesh"
+		scale = 1.0
+	}
+	
+# DEN_M1950
+	pdxmesh = {
+		name = "DEN_M1950_mesh"
+		file = "gfx/models/units/M1950.mesh"
+		scale = 1.1
+	}
+	
+# BEL_rifle_M89b
+	pdxmesh = {
+		name = "BEL_rifle_M89b_mesh"
+		file = "gfx/models/units/BEL_rifle_M89b.mesh"
+		scale = 1.0
+	}
+
+# JAP_rifle_M14
+	pdxmesh = {
+		name = "JAP_rifle_M14_mesh"
+		file = "gfx/models/units/JAP_rifle_M14.mesh"
+		scale = 1.0
+	}
+	
+# JAP_T64
+	pdxmesh = {
+		name = "JAP_T64_mesh"
+		file = "gfx/models/units/JAP_T64.mesh"
+		scale = 1.1
+	}
+	
+# JAP_type96
+	pdxmesh = {
+		name = "JAP_type96_mesh"
+		file = "gfx/models/units/JAP_type96.mesh"
+		scale = 1.25
+	}
+	
+# JAP_type100
+	pdxmesh = {
+		name = "JAP_type100_mesh"
+		file = "gfx/models/units/JAP_type100.mesh"
+		scale = 1.0
+	}
+	
+# JAP_rifle_T4
+	pdxmesh = {
+		name = "JAP_rifle_T4_mesh"
+		file = "gfx/models/units/JAP_rifle_T4.mesh"
+		scale = 1.0
+	}
+	
+# JAP_type99s
+	pdxmesh = {
+		name = "JAP_type99s_mesh"
+		file = "gfx/models/units/JAP_type99s.mesh"
+		scale = 1.0
+	}
+	
+# JAP_type38
+	pdxmesh = {
+		name = "JAP_type38_mesh"
+		file = "gfx/models/units/JAP_type38.mesh"
+		scale = 1.0
+	}
+	
+# BEL_mg_Vigneron
+	pdxmesh = {
+		name = "BEL_mg_Vigneron_mesh"
+		file = "gfx/models/units/BEL_mg_Vigneron.mesh"
+		scale = 1.0
+	}
+	
+# BEL_rifle_FN49
+	pdxmesh = {
+		name = "BEL_rifle_FN49_mesh"
+		file = "gfx/models/units/BEL_rifle_FN49.mesh"
+		scale = 1.0
+	}
+	
+# ARG_mg_Halcon
+	pdxmesh = {
+		name = "ARG_mg_Halcon_mesh"
+		file = "gfx/models/units/ARG_mg_Halcon.mesh"
+		scale = 1.0
+	}
+	
+# SWI_mg_ST57
+	pdxmesh = {
+		name = "SWI_mg_ST57_mesh"
+		file = "gfx/models/units/SWI_mg_ST57.mesh"
+		scale = 1.1
+	}
+	
+# SWI_mg_M41
+	pdxmesh = {
+		name = "SWI_mg_M41_mesh"
+		file = "gfx/models/units/SWI_mg_M41.mesh"
+		scale = 1.0
+	}
+	
+# HOL_rifle_m42
+	pdxmesh = {
+		name = "HOL_rifle_m42_mesh"
+		file = "gfx/models/units/HOL_rifle_m42.mesh"
+		scale = 0.95
+	}
+	
+# SOV_rifle_Mosin
+	pdxmesh = {
+		name = "SOV_rifle_Mosin_mesh"
+		file = "gfx/models/units/SOV_rifle_Mosin.mesh"
+		scale = 1.0
+	}
+	
+# SWI_rifle_AK44
+	pdxmesh = {
+		name = "SWI_rifle_AK44_mesh"
+		file = "gfx/models/units/SWI_rifle_AK44.mesh"
+		scale = 1.0
+	}
+	
+# MEX_G3_weapon
+	pdxmesh = {
+		name = "MEX_G3_weapon_mesh"
+		file = "gfx/models/units/MEX_G3_weapon.mesh"
+		scale = 1.2
+	}
+	
+# MEX_mendoza_rm2
+	pdxmesh = {
+		name = "MEX_smg_mendoza_rm2_mesh"
+		file = "gfx/models/units/MEX_smg_mendoza_rm2.mesh"
+		scale = 0.9`
+	}
+	
+	
+# MEX_mondragon_m1908
+	pdxmesh = {
+		name = "MEX_rifle_mondragon_m1908_mesh"
+		file = "gfx/models/units/MEX_rifle_mondragon_m1908.mesh"
+		scale = 1.0
+	}
+	
+}
+

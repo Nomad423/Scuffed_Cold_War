@@ -1,0 +1,28 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# alliance
+# ignore
+# invade
+
+CHI_Protect_Taiwan = {
+	allowed = {
+		tag = CHI
+	}	
+	enable = {
+		original_tag = CHI 
+	}
+	ai_strategy = {
+		type = area_priority
+		id = taiwan
+		value = 500
+	}
+}

@@ -1,0 +1,25 @@
+ideas = {
+
+	country = {
+		the_lagacy_of_khana_ratsadon = {
+		
+			picture = the_lagacy_of_khana_ratsadon
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				nationalist_drift = 0.005
+				neutrality_drift = 0.005
+			}
+		}
+	}
+}	

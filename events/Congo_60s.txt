@@ -1,0 +1,428 @@
+add_namespace = congo_mutiny
+add_namespace = mobutu_cos
+add_namespace = lumumba_deposed
+add_namespace = un_congo
+add_namespace = congo_un
+add_namespace = belgium_congo
+add_namespace = lumumba_death
+add_namespace = mobutu
+add_namespace = zaire
+add_namespace = tshombe
+add_namespace = mobutu_execution
+add_namespace = cabinda_trade
+add_namespace = congo_name_change
+add_namespace = congoflavor
+
+#congo_mutiny.1        #The Soldiers Mutiny  TAKEN
+#mobutu_cos.1        #Mobutu Appointed Chief of Staff  TAKEN
+#lumumba_deposed.1    #Patrice Lumumba Deposed  TAKEN
+#un_congo.1            #Appeal for UN Intervention  TAKEN
+#un_congo.2            #Congo Issues Diplomatic Protests over UN Incompetence  TAKEN
+#congo_un.20            #Congo Demands Withdrawal of UN Forces  TAKEN
+#un_congo.3            #Congo Issues Final Ultimatum Over UN Forces  TAKEN
+#belgium_congo.1        #Congo Demands Belgian Withdrawal  TAKEN
+#lumumba_death.1        #Execution of Patrice Lumumba	TAKEN
+#mobutu.2            #Failed Coup Attempt in the Congo
+#mobutu.3            #Mercenary Crackdown in the Congo
+#zaire.1                #The Nation of Zaire		#TAKEN
+#tshombe.1            #The Savior of the Congo
+#mobutu_execution.1    #Execution of Mobutu
+#mobutu.100
+#	DOC_Failure_of_the_Coup
+#	DOC_Lumumba_Deposed
+
+#cabinda_trade.1		#State ID 902
+
+country_event = {
+	id = cabinda_trade.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = cabinda_trade.1"}
+	title = "The Cabinda Proposal"
+	desc = "The Tshombe regime in the Congo has made us an interesting proposal.... for the cost of the province of Cabinda, the Republic of Congo will cut off the FNLA and intervene against the insurgents in Angola..."
+	picture = GFX_news_event_india_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Proposal"
+		DOC = {
+			declare_war_on = {
+				target = ANG
+				type = annex_everything
+			}
+			transfer_state = 902
+			902 = { add_core_of = DOC }
+		}
+	}
+	option = { #Uprising
+		name = "Reject the Offer"
+
+	}
+}
+country_event = {
+	id = mobutu.100 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = mobutu.100"}
+	title = "Anti Lumumba Coup in Progress"
+	desc = "Due to the recent events in the country, forces under Chief of Staff Mobutu are attempting a coup against our government.... How should we handle the situation."
+   picture = GFX_news_event_india_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		complete_national_focus = DOC_The_Mobutu_Coup
+	}
+
+	option = {
+		name = "Accept Defeat"
+		complete_national_focus = DOC_Lumumba_Deposed
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	option = { #Uprising
+		name = "Crush the Coup"
+		complete_national_focus = DOC_Failure_of_the_Coup
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = congo_name_change.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = congo_name_change.1"}
+	title = "The Renaming of Our Nation"
+	desc = "In a referendum held last night the Congolese people decided that the name of our nation will be renamed to 'The Democratic Republic of the Congo' with its flag being changed to one selected by the government."
+    fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		set_cosmetic_tag = DOC_1964_1966
+	}
+	option = {
+		name = "Long live the DRC!"
+	}
+}
+country_event = {
+	id = congo_name_change.2 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = congo_name_change.2"}
+	title = "The Changing of Our Flag"
+	desc = "Following a flag competition held by Mobutu over the past month, a new flag was chosen for the DRC. The new flag has a thicker half saltire which is easier to see and simpler to make."
+
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_cosmetic_tag = DOC_1966_1971
+		}
+	}
+	option = {
+		name = "Long live the DRC!"
+	}
+}
+country_event = {
+	id = congoflavor.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = congoflavor.1"}
+	title = "Léonard Mulamba Forced to Resign"
+	desc = congoflavor.1.d
+
+	is_triggered_only = yes
+	immediate = {
+		retire_character = DOC_leonard_mulamba
+	}
+	option = {
+		name = "He could never be trusted"
+	}
+}
+news_event = {
+	id = congo_mutiny.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = congo_mutiny.1"}
+	title = "[GetNewspaperHeader]The Soldiers Mutiny"
+	desc = congo_mutiny.1.d
+	picture = GFX_congoelse_mutiny
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "This is what happens when you make someone serve hand and foot!"
+	}
+}
+news_event = {
+	id = mobutu_cos.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = mobutu_cos.1"}
+	title = "[GetNewspaperHeader]Mobutu Appointed Chief of Staff of the Congolese Military"
+	desc = mobutu_cos.1.d
+	picture = GFX_mobutu_cos
+
+	is_triggered_only = yes
+	major = yes
+
+
+	option = {
+		name = "An Interesting Development"
+	}
+}
+news_event = {
+	id = lumumba_deposed.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = lumumba_deposed.1"}
+	title = "[GetNewspaperHeader]Patrice Lumumba Deposed"
+	desc = lumumba_deposed.1.d
+	picture = GFX_Lumumba_Deposed
+
+	is_triggered_only = yes
+	major = yes
+	immediate = { set_global_flag = lumumba_deposed_already }
+
+	option = {
+		name = "An Interesting Development"
+	}
+}
+country_event = {
+	id = lumumba_deposed.2 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = lumumba_deposed.2"}
+	title = "##"
+	desc = lumumba_deposed.2.d
+	hidden = yes
+	is_triggered_only = yes
+	major = yes
+	immediate = { 
+		create_country_leader = {
+		name = "Patrice Lumumba"
+		picture = "Patrice_Lumumba.dds"
+		desc = POLITICS_LAMUMBA_DESC
+		ideology = african_socialism
+			traits = {
+				boldy_resistant_to_belgian_imperialism
+				humanist_egalitarian
+				vehemently_against_tribalism
+				isolated_political_maverick
+			}
+		}
+		set_popularities = { 
+			democratic = 0
+			communism = 0
+			fascism = 0
+			nationalist = 0
+			monarchism = 0
+			neutrality = 0
+			islamism = 0
+			radical_shiaism = 0
+			Social_Democratic = 12.6 
+			Social_Liberalism = 0
+			Salafism = 0
+			Liberal_Conservatism = 9.5 
+			conservative = 0
+			Christian_Democratic = 0
+			socialist = 77.9 
+			centrist = 0
+			liberal = 0
+			trotskyism = 0
+			maoism = 0
+			
+		}
+	
+		set_politics = {
+			ruling_party = socialist
+			last_election = "1960.5.22"
+			election_frequency = 60
+			elections_allowed = yes
+		}
+	}
+
+
+	option = {
+		name = "####"
+	}
+}
+news_event = {
+	id = un_congo.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = un_congo.1"}
+	title = "[GetNewspaperHeader]Congo Appeals for UN Intervention"
+	desc = un_congo.1.d
+	picture = GFX_un_intervention
+
+	is_triggered_only = yes
+	major = yes
+
+
+	option = {
+		name = "An Interesting Development"
+	}
+}
+news_event = {
+	id = congo_un.2 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = congo_un.2"}
+	title = "[GetNewspaperHeader]Congo Issues Diplomatic Protests over UN Incompetence"
+	desc = congo_un.20.d
+	picture = GFX_un_congo_two
+
+	is_triggered_only = yes
+	major = yes
+
+
+	option = {
+		name = "An Interesting Development"
+	}
+}
+news_event = {
+	id = congo_un.20 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = congo_un.20"}
+	title = "[GetNewspaperHeader]Congo Demands Withdrawal of UN Forces"
+	desc = congo_un.20.d
+	picture = GFX_un_congo_three
+
+	is_triggered_only = yes
+	major = yes
+
+
+	option = {
+		name = "An Interesting Development"
+	}
+}
+news_event = {
+	id = un_congo.3 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = un_congo.3"}
+	title = "[GetNewspaperHeader]Congo Issues Final Ultimatum Over UN Forces"
+	desc = un_congo.3.d
+	picture = GFX_un_congo_four
+
+	is_triggered_only = yes
+	major = yes
+
+
+	option = {
+		name = "An Interesting Development"
+	}
+}
+news_event = {
+	id = belgium_congo.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = belgium_congo.1"}
+	title = "[GetNewspaperHeader]Congo Demands Belgian Withdrawal"
+	desc = belgium_congo.1.d
+	picture = GFX_belgian_katanga
+
+	is_triggered_only = yes
+	major = yes
+
+
+	option = {
+		name = "An Interesting Development"
+	}
+}
+news_event = {
+	id = lumumba_death.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = lumumba_death.1"}
+	title = "[GetNewspaperHeader]The Execution of Patrice Lumumba"
+	desc = lumumba_death.1.d
+	picture = GFX_lumumba_execution
+
+	is_triggered_only = yes
+	major = yes
+	immediate = {
+		hidden_effect = {
+			NGA = {
+				country_event = nga60.59
+			}
+		}
+	}
+
+	option = {
+		name = "Without dignity there is no liberty, without justice there is no dignity, and without independence there are no free men"
+	}
+}
+news_event = {
+	id = mobutu.2 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = mobutu.2"}
+	title = "[GetNewspaperHeader]Failed Coup Attempt in the Congo"
+	desc = mobutu.2.d
+	picture = GFX_congo_fail_mobutu
+
+	is_triggered_only = yes
+	major = yes
+
+
+	option = {
+		name = "An Interesting Development"
+	}
+}
+news_event = {
+	id = mobutu.3 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = mobutu.3"}
+	title = "[GetNewspaperHeader]Mercenary Crackdown in the Congo"
+	desc = mobutu.3.d
+	picture = GFX_congo_merc
+
+	is_triggered_only = yes
+	major = yes
+
+
+	option = {
+		name = "An Interesting Development"
+	}
+}
+news_event = {
+	id = zaire.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = zaire.1"}
+	title = "[GetNewspaperHeader]The Nation of Zaire"
+	desc = zaire.1.d
+	picture = GFX_zaire_decleration
+
+	is_triggered_only = yes
+	major = yes
+
+
+	option = {
+		name = "Another African Dictator....."
+	}
+}
+news_event = {
+	id = tshombe.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = tshombe.1"}
+	title = "[GetNewspaperHeader]The Savior of the Congo"
+	desc = tshombe.1.d
+	picture = GFX_tshombe_congo
+
+	is_triggered_only = yes
+	major = yes
+
+
+	option = {
+		name = "An Interesting Development"
+	}
+}
+news_event = {
+	id = mobutu_execution.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = mobutu_execution.1"}
+	title = "[GetNewspaperHeader]The Execution of Mobutu"
+	desc = mobutu_execution.1.d
+	picture = GFX_mobutu_execution
+
+	is_triggered_only = yes
+	major = yes
+
+
+	option = {
+		name = "An Interesting Development"
+	}
+}
+news_event = {
+	id = mobutu.10 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = mobutu.10"}
+	title = "[GetNewspaperHeader]The Bloodless Coup"
+	desc = mobutu.10.d
+	picture = GFX_mobutu_coup_65
+
+	is_triggered_only = yes
+	major = yes
+
+
+	option = {
+		name = "Long live Mobutu!"
+	}
+}

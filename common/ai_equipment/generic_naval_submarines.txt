@@ -1,0 +1,697 @@
+# Shoutout to SimpleFlips for all they have contributed to this mod and HOI4 modding! #
+
+attack_submarines = {
+	category = naval
+	
+	blocked_for = {
+	}
+	available_for = {
+	}
+	roles = {
+		naval_submarine_light
+	}
+	
+	priority = {
+		factor = 250
+		modifier = {
+			num_of_naval_factories < 10
+			factor = 0.5
+		}
+	}
+	
+	attack_submarines_ww = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = ww_submarines
+				factor = 0.5
+			}
+		}
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 25
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = sub_hull_ww
+			modules = {
+			}
+		}
+
+		allowed_modules = {
+							maritime_ta_fcs
+							maritime_sonar
+							ship_armament_heavyasm
+							VLS_module
+							ship_armament_asm
+							sub_torpedo_large
+							sub_torpedo_small
+							sub_engine_beta
+							sub_engine_alpha 
+							countermeasures
+		}
+	}
+	
+	attack_submarines_0 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = sub_hull_small_single_1
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = sub_hull_small_single_2
+				factor = 0
+			}
+		}
+		
+		enable = {
+			always = yes
+		}
+
+		role_icon_index = 25
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = sub_hull_small_single_0
+			modules = {
+			}
+		}
+
+		allowed_modules = {
+							maritime_ta_fcs
+							maritime_sonar
+							ship_armament_heavyasm
+							VLS_module
+							ship_armament_asm
+							sub_torpedo_large
+							sub_torpedo_small
+							sub_engine_beta
+							sub_engine_alpha 
+							countermeasures
+		}
+	}
+	attack_submarines_1 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = sub_hull_small_single_2
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = sub_hull_small_single_3
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 25
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = sub_hull_small_single_1
+			modules = {
+			}
+		}
+
+		allowed_modules = {
+							maritime_ta_fcs
+							maritime_sonar
+							ship_armament_heavyasm
+							VLS_module
+							ship_armament_asm
+							sub_torpedo_large
+							sub_torpedo_small
+							sub_engine_beta
+							sub_engine_alpha 
+							countermeasures
+		}
+	}
+	attack_submarines_2 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = sub_hull_small_single_3
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = sub_hull_small_single_4
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 25
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = sub_hull_small_single_2
+			modules = {
+			}
+		}
+
+		allowed_modules = {
+							maritime_ta_fcs
+							maritime_sonar
+							ship_armament_heavyasm
+							VLS_module
+							ship_armament_asm
+							sub_torpedo_large
+							sub_torpedo_small
+							sub_engine_beta
+							sub_engine_alpha 
+							countermeasures
+		}
+	}
+	attack_submarines_3 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = sub_hull_small_single_4
+				factor = 0.5
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 25
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = sub_hull_small_single_3
+			modules = {
+			}
+			
+		}
+
+		allowed_modules = {
+							maritime_ta_fcs
+							maritime_sonar
+							ship_armament_heavyasm
+							VLS_module
+							ship_armament_asm
+							sub_torpedo_large
+							sub_torpedo_small
+							sub_engine_beta
+							sub_engine_alpha 
+							countermeasures
+		}
+	}
+	attack_submarines_4 = {
+	
+
+		priority = {
+			factor = 250
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 25
+
+		target_variant = {
+			match_value = 1000.0
+
+			type = sub_hull_small_single_4
+			modules = {
+			}
+		}
+
+		allowed_modules = {
+							maritime_ta_fcs
+							maritime_sonar
+							ship_armament_heavyasm
+							VLS_module
+							ship_armament_asm
+							sub_torpedo_large
+							sub_torpedo_small
+							sub_engine_beta
+							sub_engine_alpha 
+							countermeasures
+		}
+	}
+}
+ballistic_submarines = {
+	category = naval
+	
+	blocked_for = {
+	}
+	available_for = {
+	}
+	roles = {
+		naval_submarine_medium
+	}
+	
+	priority = {
+		factor = 250
+		modifier = {
+			num_of_naval_factories < 20
+			factor = 0.5
+		}
+	}
+	
+	ballistic_submarines_0 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = sub_hull_large_single_1
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = sub_hull_large_single_2
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 26
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = sub_hull_large_single_0
+			modules = {
+			}
+		}
+
+		allowed_modules = {
+							maritime_ta_fcs
+							maritime_sonar
+							ship_armament_heavyasm
+							VLS_module
+							ship_armament_asm
+							sub_torpedo_large
+							sub_torpedo_small
+							sub_engine_beta
+							sub_engine_alpha 
+							countermeasures
+		}
+	}
+	ballistic_submarines_1 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = sub_hull_large_single_2
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = sub_hull_large_single_3
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 26
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = sub_hull_large_single_1
+			modules = {
+			}
+		}
+
+		allowed_modules = {
+							maritime_ta_fcs
+							maritime_sonar
+							ship_armament_heavyasm
+							VLS_module
+							ship_armament_asm
+							sub_torpedo_large
+							sub_torpedo_small
+							sub_engine_beta
+							sub_engine_alpha 
+							countermeasures
+		}
+	}
+	ballistic_submarines_2 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = sub_hull_large_single_3
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = sub_hull_large_single_4
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 26
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = sub_hull_large_single_2
+			modules = {
+			}
+		}
+
+		allowed_modules = {
+							maritime_ta_fcs
+							maritime_sonar
+							ship_armament_heavyasm
+							VLS_module
+							ship_armament_asm
+							sub_torpedo_large
+							sub_torpedo_small
+							sub_engine_beta
+							sub_engine_alpha 
+							countermeasures
+		}
+	}
+	ballistic_submarines_3 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = sub_hull_large_single_4
+				factor = 0.5
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 26
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = sub_hull_large_single_3
+			modules = {
+			}
+		}
+
+		allowed_modules = {
+							maritime_ta_fcs
+							maritime_sonar
+							ship_armament_heavyasm
+							VLS_module
+							ship_armament_asm
+							sub_torpedo_large
+							sub_torpedo_small
+							sub_engine_beta
+							sub_engine_alpha 
+							countermeasures
+		}
+	}
+	ballistic_submarines_4 = {
+	
+
+		priority = {
+			factor = 250
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 26
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = sub_hull_large_single_4
+			modules = {
+			}
+		}
+
+		allowed_modules = {
+							maritime_ta_fcs
+							maritime_sonar
+							ship_armament_heavyasm
+							VLS_module
+							ship_armament_asm
+							sub_torpedo_large
+							sub_torpedo_small
+							sub_engine_beta
+							sub_engine_alpha 
+							countermeasures
+		}
+	}
+}
+nuclear_submarines = {
+	category = naval
+	
+	blocked_for = {
+	}
+	available_for = {
+	}
+	roles = {
+		naval_submarine_heavy
+	}
+	
+	priority = {
+		factor = 250
+		modifier = {
+			num_of_naval_factories > 30
+			factor = 0.5
+		}
+		modifier = {
+			num_of_naval_factories < 20
+			factor = 0
+		}
+	}
+	
+	nuclear_submarines_0 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = sub_hull_large_double_2
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = sub_hull_large_double_1
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 30
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = sub_hull_large_double_0	#1960
+			modules = {
+			}
+		}
+
+		allowed_modules = {
+							maritime_ta_fcs
+							maritime_sonar
+							ship_armament_heavyasm
+							VLS_module
+							ship_armament_asm
+							sub_torpedo_large
+							sub_torpedo_small
+							sub_engine_beta
+							sub_engine_alpha 
+							countermeasures
+		}
+	}
+	
+	nuclear_submarines_1 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = sub_hull_large_double_2
+				factor = 0.5
+			}
+			modifier = {
+				has_tech = sub_hull_large_double_3
+				factor = 0
+			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 30
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = sub_hull_large_double_1	#1960
+			modules = {
+			}
+		}
+
+		allowed_modules = {
+							maritime_ta_fcs
+							maritime_sonar
+							ship_armament_heavyasm
+							VLS_module
+							ship_armament_asm
+							sub_torpedo_large
+							sub_torpedo_small
+							sub_engine_beta
+							sub_engine_alpha 
+							countermeasures
+		}
+	}
+	nuclear_submarines_2 = {
+	
+
+		priority = {
+			factor = 250
+			modifier = {
+				has_tech = sub_hull_large_double_3
+				factor = 0.5
+			}
+#			modifier = {
+#				has_tech = sub_hull_large_double_4
+#				factor = 0
+#			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 30
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = sub_hull_large_double_2	#1980
+			modules = {
+			}
+		}
+
+		allowed_modules = {
+							maritime_ta_fcs
+							maritime_sonar
+							ship_armament_heavyasm
+							VLS_module
+							ship_armament_asm
+							sub_torpedo_large
+							sub_torpedo_small
+							sub_engine_beta
+							sub_engine_alpha 
+							countermeasures
+		}
+	}
+	nuclear_submarines_3 = {
+	
+
+		priority = {
+			factor = 250
+#			modifier = {
+#				has_tech = sub_hull_large_double_4
+#				factor = 0.5
+#			}
+		}
+		
+		enable = { 
+			always = yes
+		}
+
+		role_icon_index = 30
+
+		target_variant = {
+			match_value = 3000.0
+
+			type = sub_hull_large_double_3
+			modules = {
+			}
+		}
+
+		allowed_modules = {
+							maritime_ta_fcs
+							maritime_sonar
+							ship_armament_heavyasm
+							VLS_module
+							ship_armament_asm
+							sub_torpedo_large
+							sub_torpedo_small
+							sub_engine_beta
+							sub_engine_alpha 
+							countermeasures
+		}
+	}
+#	nuclear_submarines_4 = {
+#	
+#
+#		priority = {
+#			factor = 250
+#		}
+#		
+#		enable = { 
+#			always = yes
+#		}
+#
+#		role_icon_index = 1
+#
+#		target_variant = {
+#			match_value = 3000.0
+#
+#			type = sub_hull_large_double_4
+#			modules = {
+#				fixed_sub_torpedo_slot = sub_torpedo_large_3
+#				fixed_sub_torpedo_slot_2 = sub_torpedo_large_3
+#				fixed_maritime_slot = maritime_navigation_3
+#				fixed_mega_sub_engine_slot = sub_engine_mega_nuclear_2
+#				front_1_custom_slot = sub_slbm_tube_3
+#				mid_1_custom_slot = sub_slbm_tube_3
+#				rear_1_custom_slot = sub_slbm_tube_3
+#			}
+#		}
+#
+#		allowed_modules = {
+#		}
+#	}
+}

@@ -1,0 +1,6 @@
+category = {
+	name = "Epic Speeches"
+	soundeffects = {
+		sp_usa_kennedy
+	}
+}

@@ -1,0 +1,4 @@
+sound = {
+	name = "sp_usa_kennedy"
+	file = "usa_speeches/sp_usa_kennedy.wav"
+}
